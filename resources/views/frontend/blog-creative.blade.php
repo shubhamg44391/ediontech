@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  
+<!-- Mirrored from mixdesign.dev/themeforest/azurio/blog-creative.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2026 03:41:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+   
+  </style>
+    <meta charset="UTF-8">
+
+    <!-- Page Title -->
+    <title></title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.">
+    <meta name="keywords" content="mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean">
+    <meta name="author" content="mix_design">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="Azurio - Digital Agency & Personal Portfolio HTML Template">
+    <meta property="og:description" content="Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.">
+    <meta property="og:url" content="https://mixdesign.club/themeforest/azurio">
+    <meta property="og:image" content="../../../mixdesign.club/themeforest/azurio/img/og-image.html">
+    <!-- Facebook Metadata End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" type="text/css" href="css/loader.min.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <!-- Template Styles End -->
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#EEEAE8">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f0f">
+    <meta name="msapplication-navbutton-color" content="#0f0f0f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Custom Browser Color End -->
+     
+  </head>
+
+  <body>
+
+  
+
+    <!-- Menu Hamburger Start -->
+    <div class="mxd-menu__contain loading-fade">
+      <div class="mxd-menu__toggle">
+        <a href="#0" class="mxd-menu__hamburger" aria-label="Menu">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </a>
+      </div>
+    </div>
+    <!-- Menu Hamburger End -->
+
+    <!-- Navigation Start -->
+    <nav class="mxd-menu">
+      <div class="mxd-menu__backdrop"></div>
+
+      <!-- Menu Overlay Start -->
+      <div class="mxd-menu__overlay">
+        <div class="mxd-menu__content" data-lenis-prevent>
+
+          <!-- Menu Logo Start -->
+          <div class="mxd-menu__logo">
+            <a href="index-branding-studio.html" class="menu-logo">
+              <!-- logo icon -->
+                            <img class="menu-logo__image logo-w-h-d"  src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="">
+
+              <!-- logo text -->
+              <div class="menu-logo__text">
+               
+              </div>
+            </a>
+          </div>
+          <!-- Menu Logo End -->
+
+          <!-- Menu Media Start -->
+          <div class="mxd-menu__media">
+            <div class="menu-media__wrapper">
+              <!-- <img src="img/gifs/dolores.gif" alt="Image"> -->
+              <video preload="auto" autoplay muted loop playsinline poster="video/900x1280_menu.webp">
+                <source type="video/mp4" src="video/900x1280_menu.mp4">
+                <source type="video/webm" src="video/900x1280_menu.webm">
+              </video>
+            </div>
+          </div>
+          <!-- Menu Media End -->
+
+          <!-- Main Navigation Start -->
+          <div class="mxd-menu__navigation">
+            <div class="mxd-menu__inner">
+              <div class="mxd-menu__shadow shadow-top"></div>
+              <div class="mxd-menu__caption">
+               
+
+              </div>
+               <!-- left side -->
+               <div class="mxd-menu__left">
+              <div class="main-menu">
+                <div class="main-menu__content">
+                  <ul id="main-menu" class="main-menu__accordion">
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 01</span>
+                          <a href="/" class="main-menu__caption">
+                            Home
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 02</span>
+                          <a href="/about" class="main-menu__caption">
+                            About us
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 03</span>
+                           <a href="/services" class="main-menu__caption">
+                            Services
+                          </a>
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 04</span>
+                          <a href="/seo-package" class="main-menu__caption">
+                            Pricing
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 05</span>
+                          <a href="/free-consultation" class="main-menu__caption">
+                            Free Consultation
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 06</span>
+                          <a href="/works" class="main-menu__caption">
+                            Works
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 07</span>
+                          <a href="/faq" class="main-menu__caption">
+                            FAQ
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 08</span>
+                          <a href="/blog" class="main-menu__caption">
+                            Insights
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    <li class="main-menu__item">
+                      <div class="main-menu__divider divider-top"></div>
+                      <div class="main-menu__toggle">
+                        <div class="main-menu__link">
+                          <span class="main-menu__number">/ 09</span>
+                          <a href="/contact" class="main-menu__caption">
+                            Contact
+                          </a>
+                        </div>
+
+                        <div class="main-menu__arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path
+                              d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="main-menu__divider divider-bottom"></div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {{-- left side end --}}
+              <!-- right side -->
+              <div class="mxd-menu__right">
+                <div class="menu-contact">
+                  <div class="menu-contact__item">
+                    <ul class="menu-contact__list">
+                      <li>
+                        <a class="tag tag-m" href="mailto:example@example.com?subject=Message%20from%20your%20site">
+                          <span class="mxd-scramble">hello@azurio.com</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="tag tag-m" href="tel:+12127089400">
+                          <span class="mxd-scramble">+1 212-708-9400</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="menu-contact__item">
+                    <ul class="menu-contact__list">
+                      <li>
+                        <a class="tag tag-m" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">
+                          <span>11 West 53 Street,<br>New York, NY<br>10019</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- data bottom line -->
+              <div class="mxd-menu__shadow"></div>
+              <div class="mxd-menu__data">
+                <div class="menu-data__left">
+                  <p class="menu-data__text">
+                    Made with
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                      <path d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z"/>
+                    </svg>
+                   
+                  </p>
+                </div>
+                <div class="menu-data__right">
+                  <p class="menu-data__text">Copyright Edion</p>
+                  <p class="menu-data__text">©2026</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- Main Navigation End -->
+
+        </div>
+      </div>
+      <!-- Menu Overlay End -->
+
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- Header Start -->
+    <header id="header" class="mxd-header mxd-header-permanent">
+      <!-- header logo -->
+      <div class="mxd-header__logo loading-fade">
+        <a class="mxd-logo" href="/">
+          <!-- logo icon -->
+                        <img class="menu-logo__image"  src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="">
+
+          <!-- logo text -->
+          <div class="mxd-logo__text">
+            <span class="mxd-scramble"></span>
+            <span class="mxd-scramble"></span>
+          </div>
+        </a>
+      </div>
+      <!-- header controls -->
+      <div class="mxd-header__controls loading-fade">
+        <a class="btn mxd-header__link slide-right-up" href="/contact" aria-label="Say Hello">
+          <span class="btn-caption mxd-scramble">Say Hello</span>
+          <i>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+              <path d="M18,0v14.4h-3.6v-7.2h-3.6v-3.6H3.6V0h14.4ZM7.2,10.8h3.6v-3.6h-3.6s0,3.6,0,3.6ZM3.6,14.4h3.6v-3.6h-3.6v3.6ZM0,18h3.6v-3.6H0v3.6Z"/>
+            </svg>
+          </i>
+          <!-- Phosphor icon -->
+          <!-- <i class="ph-bold ph-arrow-up-right"></i> -->
+        </a>
+        <button id="color-switcher" class="btn mxd-color-switcher permanent" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      </div>
+    </header>
+    <!-- Header End -->
+   
+
+
+    <!-- Page Content Start -->
+    <main id="mxd-page-content" class="mxd-page-content">
+
+      <!-- Blur Effect Start -->
+      <div class="blur-container">
+        <div class="blur-layer blur-1"></div>
+        <div class="blur-layer blur-2"></div>
+        <div class="blur-layer blur-3"></div>
+        <div class="blur-layer blur-4"></div>
+        <div class="blur-layer blur-5"></div>
+        <div class="blur-layer blur-6"></div>
+        <div class="blur-layer blur-7"></div>
+        <div class="blur-layer blur-8"></div>
+      </div>
+      <!-- Blur Effect End -->
+
+      <!-- Section - Inner Headline Article Start -->
+      <div class="mxd-section">
+        <div class="mxd-container fullwidth-container">
+
+          <!-- Block - Featured Article Fullscreen Start -->
+          <div class="mxd-block loading-wrap">
+            <article class="mxd-post post-featured-fullscreen">
+              <!-- breadcrumbs block -->
+              <div class="mxd-container grid-l-container">
+                <div class="p-0 container-fluid">
+                  <div class="row g-0">
+                    <div class="col-12 mxd-grid-item">
+                      <!-- breadcrumbs -->
+                      <div class="inner-headline__breadcrumbs loading-fade">
+                        <div class="breadcrumbs__nav permanent">
+                          <span>
+                            <a href="/">
+                              <span class="mxd-scramble">Home</span>
+                            </a>
+                          </span>
+                          <span class="current-item">Insights
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- post -->
+              <div class="post-featured-fullscreen__thumb">
+                <img src="img/blog/1920x1200_pf-01.webp" alt="Featured Post Thumb">
+               
+              
+                <div class="post-featured-fullscreen__cover"></div>
+              </div>
+              <div class="post-featured-fullscreen__container">
+                <div class="mxd-container grid-l-container">
+                  <div class="p-0 container-fluid">
+                    <div class="row g-0">
+                      <!-- link -->
+                      <div class="col-12 mxd-grid-item">
+                        <div class="post-featured-fullscreen__link loading-fade">
+                          <a class="btn btn-line btn-line-permanent" href="blog-article.html">
+                            <span class="btn-caption mxd-scramble">Featured</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- info -->
+                      <div class="col-12 col-xl-8 mxd-grid-item">
+                        <a class="post-featured-fullscreen__info active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <h2 class="post-featured-fullscreen__title permanent loading-split">My journey into the future of art</h2>
+                          <div class="post-featured-fullscreen__excerpt loading-item">
+                            <p class="t-large t-permanent">Discover how artificial intelligence is transforming artistic processes, pushing 
+                              boundaries, and inspiring new possibilities in digital design.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- aside -->
+                      <div class="col-12 col-xl-4 mxd-grid-item">
+                        <div class="post-featured-fullscreen__aside">
+                          <!-- meta -->
+                          <div class="post-featured-fullscreen__meta">
+                            <div class="post-featured-fullscreen__data">
+                              <span class="tag tag-s-mobile tag-permanent loading-item">January 27, 2026</span>
+                              <span class="tag tag-s-mobile tag-permanent loading-item">5min read</span>
+                            </div>
+                            <div class="post-featured-fullscreen__categories">
+                              <a class="loading-item" href="#0">
+                                <span class="tag tag-s-mobile tag-permanent mxd-scramble">Midjourney</span>
+                              </a>
+                              <a class="loading-item" href="#0">
+                                <span class="tag tag-s-mobile tag-permanent mxd-scramble">Motion</span>
+                              </a>
+                              <a class="loading-item" href="#0">
+                                <span class="tag tag-s-mobile tag-permanent mxd-scramble">Editorial</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- button -->
+                          <div class="post-featured-fullscreen__btngroup align-end-desktop tags-medium-title loading-fade">
+                            <a class="btn btn-line-icon btn-line-icon-small btn-line-permanent slide-down" href="#posts">
+                              <span class="btn-caption mxd-scramble">Scroll to explore</span>
+                              <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                                  <path d="M18,10.8h-3.6v-3.6h3.6v3.6ZM7.2,14.4v3.6h3.6v-3.6h3.6v-3.6h-3.6V0h-3.6v10.8h-3.6v3.6s3.6,0,3.6,0ZM3.6,10.8v-3.6H0v3.6h3.6Z"/>
+                                </svg>
+                              </i>
+                            </a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Block - Featured Article Fullscreen End -->
+
+        </div>
+      </div>
+      <!-- Section - Inner Headline Article End -->
+
+      <!-- Section - Blog Grid Start -->
+      <div id="posts" class="mxd-section bg-color-base blur-section padding-bottom-tag-m">
+        <div class="mxd-container grid-l-container">
+
+          <div class="mxd-posts-area">
+            <div class="mxd-posts-container fullwidth-posts-container">
+
+              <!-- Regular Posts Alt Grid Start -->
+              <div class="mxd-posts-grid">
+                <div class="p-0 container-fluid">
+                  <div class="row g-0 mxd-posts-grid__row">
+                    <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-posts-grid__item animate-card-3">
+                      <article class="mxd-post post-simple-alt">
+                        <div class="post-simple-alt__date">
+                          <span class="meta-date">02 February, 2026</span>
+                        </div>
+                        <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <img class="" src="img/blog/pr-01.webp" alt="Blog Preview Image">
+                        </a>
+                        <div class="post-simple-alt__caption">
+                          <div class="post-simple-alt__title">
+                            <h3>
+                              <a href="/blog">Frontend innovations and user journeys</a>
+                            </h3>
+                          </div>
+                          <div class="post-simple-alt__tags">
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">UI/UX</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Development</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Insights</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-posts-grid__item animate-card-3">
+                      <article class="mxd-post post-simple-alt">
+                        <div class="post-simple-alt__date">
+                          <span class="meta-date">28 January, 2026</span>
+                        </div>
+                        <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <img class="" src="img/blog/pr-02.webp" alt="Blog Preview Image">
+                        </a>
+                        <div class="post-simple-alt__caption">
+                          <div class="post-simple-alt__title">
+                            <h3>
+                              <a href="/blog">Branding in creating digital experiences</a>
+                            </h3>
+                          </div>
+                          <div class="post-simple-alt__tags">
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Concept</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Editorial</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Event</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-posts-grid__item animate-card-3">
+                      <article class="mxd-post post-simple-alt">
+                        <div class="post-simple-alt__date">
+                          <span class="meta-date">15 January, 2026</span>
+                        </div>
+                        <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <img class="" src="img/blog/pr-03.webp" alt="Blog Preview Image">
+                        </a>
+                        <div class="post-simple-alt__caption">
+                          <div class="post-simple-alt__title">
+                            <h3>
+                              <a href="/blog">Designing for the future of interactive digital spaces</a>
+                            </h3>
+                          </div>
+                          <div class="post-simple-alt__tags">
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Midjourney</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">News</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Editorial</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-posts-grid__item animate-card-3">
+                      <article class="mxd-post post-simple-alt">
+                        <div class="post-simple-alt__date">
+                          <span class="meta-date">03 January, 2026</span>
+                        </div>
+                        <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <img class="" src="img/blog/pr-04.webp" alt="Blog Preview Image">
+                        </a>
+                        <div class="post-simple-alt__caption">
+                          <div class="post-simple-alt__title">
+                            <h3>
+                              <a href="/blog">Frontend innovations and user journeys</a>
+                            </h3>
+                          </div>
+                          <div class="post-simple-alt__tags">
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">UI/UX</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Development</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Insights</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-posts-grid__item animate-card-3">
+                      <article class="mxd-post post-simple-alt">
+                        <div class="post-simple-alt__date">
+                          <span class="meta-date">21 December, 2025</span>
+                        </div>
+                        <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <img class="" src="img/blog/pr-05.webp" alt="Blog Preview Image">
+                        </a>
+                        <div class="post-simple-alt__caption">
+                          <div class="post-simple-alt__title">
+                            <h3>
+                              <a href="/blog">Branding in creating digital experiences</a>
+                            </h3>
+                          </div>
+                          <div class="post-simple-alt__tags">
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Concept</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Editorial</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Event</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-posts-grid__item animate-card-3">
+                      <article class="mxd-post post-simple-alt">
+                        <div class="post-simple-alt__date">
+                          <span class="meta-date">15 December, 2025</span>
+                        </div>
+                        <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
+                          <img class="" src="img/blog/pr-06.webp" alt="Blog Preview Image">
+                        </a>
+                        <div class="post-simple-alt__caption">
+                          <div class="post-simple-alt__title">
+                            <h3>
+                              <a href="/blog">Designing for the future of interactive digital spaces</a>
+                            </h3>
+                          </div>
+                          <div class="post-simple-alt__tags">
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Midjourney</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">News</a>
+                            <a class="tag tag-s tag-medium mxd-scramble" href="#0">Editorial</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Regular Posts Alt Grid End -->
+
+              <!-- Blog Pagination Start -->
+              <div class="mxd-blog-pagination pagination-fullwidth mxd-grid-item">
+                <div class="mxd-blog-pagination__inner">
+                  <nav class="mxd-blog-pagination__items">
+                    <a class="mxd-blog-pagination__item blog-pagination-control prev btn btn-line-icon btn-line-default slide-left" href="#0" aria-label="Previous Page">
+                      <!-- <i class="ph ph-arrow-left"></i> -->
+                      <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                          <path d="M7.2,18v-3.6h3.6v3.6h-3.6ZM3.6,7.2H0v3.6h3.6v3.6h3.6v-3.6h10.8v-3.6H7.2v-3.6h-3.6s0,3.6,0,3.6ZM7.2,3.6h3.6V0h-3.6v3.6Z"/>
+                        </svg>
+                      </i>
+                      <span class="btn-caption mxd-scramble">Prev</span>
+                    </a>
+                    <a href="#0" class="mxd-blog-pagination__item blog-pagination-number btn mxd-scramble">
+                      <span class="btn-caption">01</span>
+                    </a>
+                    <a href="#0" class="mxd-blog-pagination__item blog-pagination-number btn mxd-scramble active">
+                      <span class="btn-caption">02</span>
+                    </a>
+                    <a href="#0" class="mxd-blog-pagination__item blog-pagination-number btn mxd-scramble">
+                      <span class="btn-caption">03</span>
+                    </a>
+                    <a class="mxd-blog-pagination__item blog-pagination-control next btn btn-line-icon btn-line-default slide-right" href="#0" aria-label="Next Page">
+                      <span class="btn-caption mxd-scramble">Next</span>
+                      <!-- <i class="ph ph-arrow-right"></i> -->
+                      <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                        </svg>
+                      </i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+              <!-- Blog Pagination End -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Section - Blog Grid End -->
+      
+      <!-- Section - CTA with Matter.js Objects Start -->
+      <div class="mxd-section bg-color-accent">
+        <!-- background video -->
+        <div class="mxd-background">
+          <div class="mxd-background__video">
+            <video class="video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" poster="video/1920x660_cta.webp">
+              <source type="video/mp4" src="video/1920x660_cta.mp4">
+              <source type="video/webm" src="video/1920x660_cta.webm">
+              <source type="video/ogv" src="video/1920x660_cta.html">
+            </video>
+          </div>
+          <div class="mxd-background__cover accent"></div>
+        </div>
+        <div class="mxd-container fullwidth-container">
+
+          <!-- Block - CTA with Matter.js Objects Start -->
+          <div class="mxd-block">
+            <div class="mxd-promo mxd-gravity-section transparent">
+              <div class="mxd-promo__wrap">
+                <div class="mxd-promo__objects object-container">
+                  <div class="object object-permanent">
+                    <p>Web design</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Brand strategy</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>3D Models</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Interactions</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>IU/UX</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Guidelines</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>App design</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Packaging</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Development</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Print Design</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Branding</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Applications</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Visual identity</p>
+                  </div>
+                  <div class="object object-permanent">
+                    <p>Logo design</p>
+                  </div>
+                </div>
+                <div class="mxd-promo__content">
+                  <div class="mxd-promo__btngroup anim-uni-in-up">
+                    <a class="btn btn-line btn-line-permanent" href="/contact">
+                      <span class="btn-caption mxd-scramble">Write a line</span>
+                    </a>
+                  </div>
+                  <div class="mxd-promo__caption">
+                    <a class="active-cursor-permanent" data-cursor-text="Contact" href="/contact">
+                      <h2 class="mxd-split-lines permanent">Let's talk about your project</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Block - CTA with Matter.js Objects End -->
+
+        </div>
+      </div>
+      <!-- Section - CTA with Matter.js Objects End -->
+
+    </main>
+    <!-- Page Content End -->
+
+
+
+
+    {{-- footer Start --}}
+
+    
+    <!-- Footer Start -->
+    <footer id="mxd-footer" class="mxd-footer blur-section">
+      <div class="mxd-container grid-l-container">
+
+        <!-- Footer Block - Navigation v2 Start -->
+        <div class="mxd-block">
+          <div class="p-0 container-fluid">
+            <div class="row g-0">
+              <div class="col-12 col-xl-6 mxd-footer__item">
+                <nav class="mxd-footer__nav02">
+                  <div class="p-0 container-fluid">
+                    <div class="row g-0">
+                      <div class="col-12 col-md-6 mxd-footer-nav02__item mxd-grid-item">
+                        <div class="mxd-footer-nav02__block">
+                          <div class="mxd-footer-nav02__title">
+                            <p class="footer-data anim-uni-slide-down">
+                              <span>/ Discover</span>
+                            </p>
+                          </div>
+                          <div class="mxd-footer-nav02__list">
+                            <ul>
+                              <li><a class="anim-uni-slide-down" href="/"><span>Home</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/about"><span>About us</span></a></li>
+                            
+                              <li><a class="anim-uni-slide-down" href="/services"><span>Services</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/seo-package"><span>Pricing</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/works"><span>Works</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/faq"><span>FAQ</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/blog"><span>Insights</span></a></li>
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 mxd-footer-nav02__item mxd-grid-item">
+                        <div class="mxd-footer-nav02__block">
+                          <div class="mxd-footer-nav02__title">
+                            <p class="footer-data anim-uni-slide-down">
+                              <span>/ Contact</span>
+                            </p>
+                          </div>
+                          <div class="mxd-footer-nav02__list">
+                            <ul>
+                              <li>
+                                <a class="anim-uni-slide-down" href="mailto:example@example.com?subject=Message%20from%20your%20site">
+                                  <span>hello@azurio.com</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="anim-uni-slide-down" href="tel:+12127089400">
+                                  <span>+1 212-708-9400</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mxd-footer-nav02__block">
+                          <div class="mxd-footer-nav02__title">
+                            <p class="footer-data anim-uni-slide-down">
+                              <span>/ Info</span>
+                            </p>
+                            <div class="mxd-footer-nav02__list">
+                            <ul class="mt-4">
+                              <li><a class="anim-uni-slide-down" href="/contact"><span>Contact</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/privacy-policy"><span>Privacy Policy</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="/term-and-condition"><span>Terms of Use</span></a></li>
+                            
+                              <li><a class="anim-uni-slide-down" href="/refund-and-cancellation-policy"><span>Refund & Cancellation Policy</span></a></li>
+                              
+                              
+                            </ul>
+                          </div>
+                      
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                <div class="mxd-footer__socials-list">
+                  <div class="p-0 container-fluid">
+                    <div class="row g-0">
+                      <div class="col-12 mxd-footer-nav02__item">
+                        <div class="mxd-footer-nav02__block">
+                          {{-- <div class="mxd-footer-nav02__title">
+                            <p class="footer-data anim-uni-slide-down">
+                              <span>/ Ecosystem</span>
+                            </p>
+                          </div> --}}
+                          {{-- <div class="mxd-footer-nav02__list">
+                            <a class="socials-list__item slide-right-up" href="https://dribbble.com/" target="_blank">
+                              <div class="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div class="socials-list__info">
+                                <div class="socials-list__number anim-uni-slide-down">
+                                  <span>[01]</span>
+                                </div>
+                                <div class="socials-list__name anim-uni-slide-down">
+                                  <span>Dribbble</span>
+                                </div>
+                              </div>
+                              <div class="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div class="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a class="socials-list__item slide-right-up" href="https://www.behance.net/" target="_blank">
+                              <div class="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div class="socials-list__info">
+                                <div class="socials-list__number anim-uni-slide-down">
+                                  <span>[02]</span>
+                                </div>
+                                <div class="socials-list__name anim-uni-slide-down">
+                                  <span>Behance</span>
+                                </div>
+                              </div>
+                              <div class="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div class="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a class="socials-list__item slide-right-up" href="https://github.com/" target="_blank">
+                              <div class="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div class="socials-list__info">
+                                <div class="socials-list__number anim-uni-slide-down">
+                                  <span>[03]</span>
+                                </div>
+                                <div class="socials-list__name anim-uni-slide-down">
+                                  <span>Github</span>
+                                </div>
+                              </div>
+                              <div class="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div class="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a class="socials-list__item slide-right-up" href="https://codepen.io/" target="_blank">
+                              <div class="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div class="socials-list__info">
+                                <div class="socials-list__number anim-uni-slide-down">
+                                  <span>[04]</span>
+                                </div>
+                                <div class="socials-list__name anim-uni-slide-down">
+                                  <span>Codepen</span>
+                                </div>
+                              </div>
+                              <div class="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div class="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a class="socials-list__item slide-right-up" href="https://www.figma.com/community" target="_blank">
+                              <div class="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div class="socials-list__info">
+                                <div class="socials-list__number anim-uni-slide-down">
+                                  <span>[05]</span>
+                                </div>
+                                <div class="socials-list__name anim-uni-slide-down">
+                                  <span>Figma Community</span>
+                                </div>
+                              </div>
+                              <div class="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div class="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                          </div> --}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Block - Navigation v2 End -->
+
+        <!-- Footer Block - Controls Start -->
+        <div class="mxd-block">
+          <div class="p-0 container-fluid">
+            <div class="row g-0">
+              <div class="col-12 col-xl-6 mxd-footer__item"></div>
+              <div class="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                <div class="mxd-footer__controls-middle">
+                  <div class="anim-uni-slide-down">
+                    <a id="to-top" class="btn btn-line-icon btn-line-default slide-up" href="#">
+                      <span class="btn-caption mxd-scramble">Back to Top</span>
+                      <i>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                          viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+                        <path d="M0,7.2h3.6v3.6H0V7.2z M10.8,3.6V0H7.2v3.6H3.6v3.6h3.6V18h3.6V7.2h3.6V3.6H10.8z M14.4,7.2v3.6H18V7.2H14.4z"/>
+                        </svg>
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Block - Controls End -->
+
+        <!-- Footer Block - Fullwidth Text Start -->
+        <div class="mxd-block">
+          <div class="mxd-footer__fw-mark mxd-grid-item">
+            <div class="fw-mark__wrap">
+              <div class="fw-mark__content " >
+                <span  class="anim-uni-chars">EDIONWEBTECH</span>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Block - Fullwidth Text End -->
+
+        <!-- Footer Block - Data Start -->
+        <div class="mxd-block">
+          <div class="mxd-footer__data">
+            <div class="p-0 container-fluid">
+              <div class="row g-0">
+                <div class="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                  <div class="mxd-footer__data-item anim-uni-fade-in">
+                    <p class="footer-data">
+                      <span>Copyright Edion. All rights reserved</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-6 mxd-footer__item">
+                  <div class="p-0 container-fluid">
+                    <div class="row g-0">
+                      <div class="col-12 col-xl-6 mxd-grid-item">
+                        <div class="mxd-footer__data-item anim-uni-fade-in">
+                         
+                        </div>
+                      </div>
+                      <div class="col-12 col-xl-6 mxd-grid-item">
+                        <div class="justify-end mxd-footer__data-item anim-uni-fade-in">
+                          <p class="footer-data">
+                            <span>©2026</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Block - Data End -->
+
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- To Top Button Start -->
+    <!-- <a href="#0" id="to-top" class="btn btn-to-top slide-up anim-no-delay">
+      <i class="ph ph-arrow-up"></i>
+    </a> -->
+    <!-- To Top Button End -->
+
+    <div id="mxd-cursor" class="mxd-cursor">
+      <div id="mxd-cursor__dot" class="mxd-cursor__dot"></div>
+      <p id="mxd-cursor__text" class="mxd-cursor__text"></p>
+      <div id="mxd-cursor__image" class="mxd-cursor__image"></div>
+    </div>
+
+    <!-- Load Scripts Start -->
+
+<script src="{{ asset('js/libs.min.js') }}"></script>
+<script src="{{ asset('js/app.min.js') }}"></script>
+
+    <!-- Load Scripts End -->
+    
+  </body>
+
+
+<!-- Mirrored from mixdesign.dev/themeforest/azurio/index-software-development-company.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2026 03:37:35 GMT -->
+</html>

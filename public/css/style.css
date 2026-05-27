@@ -1,0 +1,6 @@
+
+.pricing-plan__item{
+    height:auto !important;
+    min-height:auto !important;
+    align-self:flex-start !important;
+}
