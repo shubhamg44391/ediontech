@@ -30,7 +30,7 @@
                                     <div class="inner-headline__breadcrumbs loading-fade">
                                         <div class="breadcrumbs__nav">
                                             <span>
-                                                <a href="/">
+                                                <a href="{{ route('frontend.home') }}">
                                                     <span class="mxd-scramble">Home</span>
                                                 </a>
                                             </span>
@@ -204,7 +204,7 @@
                                                     <div class="section-heading heading-light">
                                                         <span class="subtitle">Let's Work Together</span>
                                                         <h2 class="title">Need a successful project?</h2>
-                                                        <a href="contact.html"
+                                                        <a href="{{ route('frontend.contact') }}"
                                                             class="axil-btn btn-large btn-fill-white">Estimate Project</a>
                                                     </div>
                                                     <div class="thumbnail">

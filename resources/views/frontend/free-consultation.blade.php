@@ -32,7 +32,7 @@
                                     <div class="inner-headline__breadcrumbs loading-fade">
                                         <div class="breadcrumbs__nav">
                                             <span>
-                                                <a href="/">
+                                                <a href="{{ route('frontend.home') }}">
                                                     <span class="mxd-scramble">Home</span>
                                                 </a>
                                             </span>

@@ -24,7 +24,7 @@
         <!-- fullscreen hero -->
         <div class="mxd-hero-03">
           <div class="mxd-hero-03__headline">
-            <a class="active-cursor-accent" data-cursor-text="Let's Chat" href="/contact">
+            <a class="active-cursor-accent" data-cursor-text="Let's Chat" href="{{ route('frontend.contact') }}">
               <h1 class="permanent loading-split">Innovative software development company</h1>
             </a>
             <div class="mxd-hero-media__small">
@@ -47,13 +47,13 @@
           </div>
           <!-- control left -->
           <div class="mxd-hero-03__control-left loading-item">
-            <a class="btn btn-line btn-line-small btn-line-medium" href="/contact">
+            <a class="btn btn-line btn-line-small btn-line-medium" href="{{ route('frontend.contact') }}">
               <span class="btn-caption mxd-scramble">Studio</span>
             </a>
           </div>
           <!-- control right -->
           <div class="mxd-hero-03__control-right loading-item">
-            <a class="btn btn-line btn-line-small btn-line-medium" href="/works">
+            <a class="btn btn-line btn-line-small btn-line-medium" href="{{ route('frontend.works') }}">
               <span class="btn-caption mxd-scramble">Works</span>
             </a>
           </div>
@@ -106,7 +106,7 @@
 
                     <!-- Manifest Start -->
                     <div class="mxd-section-title__manifest title-manifest-s no-padding-mobile">
-                      <a class="manifest manifest-s mxd-split-lines active-cursor-accent" data-cursor-text="About us" href="/about">
+                      <a class="manifest manifest-s mxd-split-lines active-cursor-accent" data-cursor-text="About us" href="{{ route('frontend.about') }}">
                         From pixel-perfect designs to flawless code, 
                         <span>every aspect of our projects is crafted with care to ensure the highest standards of quality.</span></a>
                     </div>
@@ -319,7 +319,7 @@
                   </div>
                   <div class="col-12 col-xl-8 mxd-grid-item">
                     <div class="mxd-section-title__title">
-                      <a class="active-cursor-accent" data-cursor-text="All Services" href="/services">
+                      <a class="active-cursor-accent" data-cursor-text="All Services" href="{{ route('frontend.services') }}">
                         <h2 class="mxd-split-lines">Our<br>capabilities</h2>
                       </a>
                     </div>
@@ -637,7 +637,7 @@
                     </div>
                     <div class="col-12 col-xl-8 mxd-grid-item">
                       <div class="mxd-section-title__title">
-                        <a class="active-cursor-accent" data-cursor-text="More Works" href="/works">
+                        <a class="active-cursor-accent" data-cursor-text="More Works" href="{{ route('frontend.works') }}">
                           <h2 class="mxd-split-lines">Featured case<br>studies</h2>
                         </a>
                       </div>
@@ -654,7 +654,7 @@
                 <div class="container-fluid p-0">
                   <div class="row g-0 mxd-projects-grid__gallery">
                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
-                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="/works">
+                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/dunyacarental.png" alt="Project Preview Image">
                         {{-- <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/dunyacarental.png" alt="Project Preview Image"> --}}
                         {{-- <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/dunyacarental.png" alt="Project Preview Image"> --}}
@@ -663,7 +663,7 @@
                       </a>
                       <div class="mxd-project-item__caption">
                         <div class="mxd-project-item__name">
-                          <a class="project-name-s" href="/works">Illustrations set</a>
+                          <a class="project-name-s" href="{{ route('frontend.works') }}">Illustrations set</a>
                         </div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-s tag-medium mxd-scramble">Design</span>
@@ -674,7 +674,7 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
-                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="/works">
+                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/trivocase-study.png" alt="Project Preview Image">
                         {{-- <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/trivocase-study.png" alt="Project Preview Image"> --}}
                         {{-- <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/trivocase-study.png" alt="Project Preview Image"> --}}
@@ -683,7 +683,7 @@
                       </a>
                       <div class="mxd-project-item__caption">
                         <div class="mxd-project-item__name">
-                          <a class="project-name-s" href="/services">Interactive concept</a>
+                          <a class="project-name-s" href="{{ route('frontend.services') }}">Interactive concept</a>
                         </div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-s tag-medium mxd-scramble">UI/UX</span>
@@ -693,7 +693,7 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
-                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="/works">
+                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr03-06.webp" alt="Project Preview Image">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr03-02.webp" alt="Project Preview Image">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr03-05.webp" alt="Project Preview Image">
@@ -703,7 +703,7 @@
                       </a>
                       <div class="mxd-project-item__caption">
                         <div class="mxd-project-item__name">
-                          <a class="project-name-s" href="/works">Creative studio Edion</a>
+                          <a class="project-name-s" href="{{ route('frontend.works') }}">Creative studio Edion</a>
                         </div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-s tag-medium mxd-scramble">Brand</span>
@@ -713,7 +713,7 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
-                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="/works">
+                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr04-02.webp" alt="Project Preview Image">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr04-03.webp" alt="Project Preview Image">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr04-04.webp" alt="Project Preview Image">
@@ -724,7 +724,7 @@
                       </a>
                       <div class="mxd-project-item__caption">
                         <div class="mxd-project-item__name">
-                          <a class="project-name-s" href="/works">Interactive concept</a>
+                          <a class="project-name-s" href="{{ route('frontend.works') }}">Interactive concept</a>
                         </div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-s tag-medium mxd-scramble">Brand</span>
@@ -745,7 +745,7 @@
                       </a>
                       <div class="mxd-project-item__caption">
                         <div class="mxd-project-item__name">
-                          <a class="project-name-s" href="/works">Interactive concept</a>
+                          <a class="project-name-s" href="{{ route('frontend.works') }}">Interactive concept</a>
                         </div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-s tag-medium mxd-scramble">Brand</span>
@@ -755,7 +755,7 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
-                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="/works">
+                      <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr06-07.webp" alt="Project Preview Image">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr06-06.webp" alt="Project Preview Image">
                         <img class="mxd-img-anim__absolute" src="img/works/showcase-grid-x3/pr06-05.webp" alt="Project Preview Image">
@@ -766,7 +766,7 @@
                       </a>
                       <div class="mxd-project-item__caption">
                         <div class="mxd-project-item__name">
-                          <a class="project-name-s" href="/works">Interactive concept</a>
+                          <a class="project-name-s" href="{{ route('frontend.works') }}">Interactive concept</a>
                         </div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-s tag-medium mxd-scramble">Brand</span>
@@ -792,11 +792,11 @@
                           <div class="col-12 col-md-6 col-xl-4 mxd-object-link__item justify-end">
                             <div class="mxd-object-link__content">
                               <div class="mxd-object-link__btnholder anim-uni-in-up">
-                                <a class="btn btn-line btn-line-default" href="/works">
+                                <a class="btn btn-line btn-line-default" href="{{ route('frontend.works') }}">
                                   <span class="btn-caption mxd-scramble">All Works</span>
                                 </a>
                               </div>
-                              <a class="mxd-object-link__media mxd-img-anim active-cursor-permanent anim-uni-in-up" data-cursor-text="All Works" href="/works">
+                              <a class="mxd-object-link__media mxd-img-anim active-cursor-permanent anim-uni-in-up" data-cursor-text="All Works" href="{{ route('frontend.works') }}">
                                 <img class="mxd-img-anim__absolute centered-y" src="img/works/800x450_all02.webp" alt="Project Preview Image">
                                 <img class="mxd-img-anim__absolute centered-y" src="img/works/800x450_all01.webp" alt="Project Preview Image">
                                 <img class="mxd-img-anim__absolute centered-y" src="img/works/800x450_all04.webp" alt="Project Preview Image">
@@ -836,12 +836,12 @@
             <!-- content -->
             <div class="mxd-divider__content">
               <div class="mxd-divider__btngroup anim-uni-slide-up">
-                <a class="btn btn-line btn-line-permanent" href="/">
+                <a class="btn btn-line btn-line-permanent" href="{{ route('frontend.home') }}">
                   <span class="btn-caption mxd-scramble">Let's meet</span>
                 </a>
               </div>
               <div class="mxd-divider__caption">
-                <a class="active-cursor-accent" data-cursor-text="Our Team" href="/">
+                <a class="active-cursor-accent" data-cursor-text="Our Team" href="{{ route('frontend.home') }}">
                   <h2 class="reveal-type permanent">Small but powerful team</h2>
                 </a>
               </div>
@@ -1104,7 +1104,7 @@
                     </div>
                     <div class="col-12 col-xl-6 mxd-grid-item">
                       <div class="mxd-section-title__title pre-controls-mobile">
-                        <a class="active-cursor-accent" data-cursor-text="More Posts" href="/">
+                        <a class="active-cursor-accent" data-cursor-text="More Posts" href="{{ route('frontend.home') }}">
                           <h2 class="mxd-split-lines">Recent<br>insights</h2>
                         </a>
                       </div>
@@ -1112,7 +1112,7 @@
                     <div class="col-12 col-xl-2 mxd-grid-item">
                       <div class="mxd-section-title__data top-controls">
                         <div class="mxd-section-title__controls justify-end anim-uni-in-up">
-                          <a class="btn btn-line btn-line-default" href="/">
+                          <a class="btn btn-line btn-line-default" href="{{ route('frontend.home') }}">
                             <span class="btn-caption mxd-scramble">News Overview</span>
                           </a>
                         </div>
@@ -1129,60 +1129,35 @@
               <div class="mxd-blog-grid">
                 <div class="container-fluid p-0">
                   <div class="row g-0 mxd-blog-grid__gallery">
+                    @forelse($blogs as $blog)
                     <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
                       <div class="mxd-blog-item__date">
-                        <span class="meta-date">02 February, 2026</span>
+                        <span class="meta-date">{{ \Carbon\Carbon::parse($blog->created_at ?? now())->format('d F, Y') }}</span>
                       </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="/">
-                        <img class="" src="img/blog/preview/grid-x3/pr-01.webp" alt="Blog Preview Image">
+                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="{{ route('frontend.blog-details', $blog->slug) }}">
+                        <img class="" src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
-                          <a class="blog-name-m" href="/">Frontend innovations and user journeys</a>
+                          <a class="blog-name-m" href="{{ route('frontend.blog-details', $blog->slug) }}">{{ $blog->title }}</a>
                         </div>
                         <div class="mxd-blog-item__tags">
-                          <span class="tag tag-s tag-medium mxd-scramble">UI/UX</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Development</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Insights</span>
+                          @if(!empty($blog->meta_keywords))
+                            @foreach(explode(',', $blog->meta_keywords) as $keyword)
+                              <span class="tag tag-s tag-medium mxd-scramble">{{ trim($keyword) }}</span>
+                            @endforeach
+                          @else
+                            <span class="tag tag-s tag-medium mxd-scramble">Insights</span>
+                          @endif
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">28 January, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="/">
-                        <img class="" src="img/blog/preview/grid-x3/pr-02.webp" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-m" href="/">Branding in creating digital experiences</a>
-                        </div>
-                        <div class="mxd-blog-item__tags">
-                          <span class="tag tag-s tag-medium mxd-scramble">Concept</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Editorial</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Event</span>
-                        </div>
-                      </div>
+                    @empty
+                    <div class="col-12 text-center py-5">
+                      <p>No blog posts found at the moment. Please check back later.</p>
                     </div>
-                    <div class="col-12 col-lg-4 mxd-blog-item has-margin-bottom animate-card-3">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">15 January, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="/">
-                        <img class="" src="img/blog/preview/grid-x3/pr-03.webp" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-m" href="/services">Designing for the future of interactive digital spaces</a>
-                        </div>
-                        <div class="mxd-blog-item__tags">
-                          <span class="tag tag-s tag-medium mxd-scramble">Midjourney</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">News</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Editorial</span>
-                        </div>
-                      </div>
-                    </div>
+                    @endforelse
+                   
                   </div>
                 </div>
               </div>
@@ -1249,12 +1224,12 @@
                 </div>
                 <div class="mxd-promo__content">
                   <div class="mxd-promo__btngroup anim-uni-in-up">
-                    <a class="btn btn-line btn-line-permanent" href="contact.html">
+                    <a class="btn btn-line btn-line-permanent" href="{{ route('frontend.contact') }}">
                       <span class="btn-caption mxd-scramble">Write a line</span>
                     </a>
                   </div>
                   <div class="mxd-promo__caption">
-                    <a class="active-cursor-permanent" data-cursor-text="Contact Us" href="contact.html">
+                    <a class="active-cursor-permanent" data-cursor-text="Contact Us" href="{{ route('frontend.contact') }}">
                       <h2 class="mxd-split-lines permanent">Let's talk about your project</h2>
                     </a>
                   </div>

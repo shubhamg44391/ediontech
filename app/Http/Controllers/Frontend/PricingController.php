@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 
 class PricingController extends Controller
 {
-     public function index(){
-return view('frontend.pricing');
+    public function index()
+    {
+        return view('frontend.pricing');
     }
 }
 ?>

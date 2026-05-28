@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 
 
-<!-- Mirrored from mixdesign.dev/themeforest/azurio/index-software-development-company.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2026 03:36:07 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 
@@ -68,6 +67,7 @@
 
     // Load saved theme
     let currentTheme = localStorage.getItem("theme") || "dark";
+    // alert(currentTheme);
 
     document.documentElement.setAttribute("data-theme", currentTheme);
 
@@ -77,8 +77,7 @@
       e.preventDefault();
       e.stopPropagation();
 
-      currentTheme = currentTheme === "dark" ? "light" : "dark";
-
+      currentTheme = currentTheme === "light" ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", currentTheme);
 
       localStorage.setItem("theme", currentTheme);
@@ -90,31 +89,6 @@
 {{-- end script for theme --}}
 
 <body>
-
-  <!-- Loader Start -->
-  {{-- <div class="mxd-page-transition"></div>
-  <div class="mxd-loader">
-    <div class="mxd-loader__top">
-
-    </div>
-    <div class="mxd-loader__images">
-      <img src="{{ asset('frontend/img/loa_01.webp') }}" alt="">
-      <img src="{{ asset('img/loa_02.webp') }}" alt="">
-      <img src="{{ asset('img/loa_03.webp') }}" alt="">
-      <img src="{{ asset('img/loa_04.webp') }}" alt="">
-      <img src="{{ asset('img/loa_05.webp') }}" alt="">
-      <img src="{{ asset('img/loa_06.webp') }}" alt="">
-      <img src="{{ asset('img/loa_07.webp') }}" alt="">
-    </div>
-    <div class="mxd-loader__bottom">
-      <div class="mxd-loader__count">
-        <span class="count__text">0</span>
-        <span class="count__percent">%</span>
-      </div>
-      <span class="mxd-loader__caption">Loading</span>
-    </div>
-  </div> --}}
-  <!-- Loader End -->
 
   <!-- Menu Hamburger Start -->
   <div class="mxd-menu__contain loading-fade">
@@ -138,7 +112,7 @@
         <!-- Menu Logo Start -->
         <div class="mxd-menu__logo " id="header">
 
-          <a href="/" class="menu-logo d-inline-block position-relative">
+          <a href="{{ route('frontend.home') }}" class="menu-logo d-inline-block position-relative">
 
             <img class="menu-logo__image img-fluid" style="width:70px; height:70px; object-fit:contain"
               src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="Edion Web Tech Brand Logo">
@@ -418,24 +392,47 @@
   <header id="header" class="mxd-header">
     <!-- header logo -->
     <div class="mxd-header__logo loading-fade">
-      <a class="mxd-logo" href="index-branding-studio.html">
+      <a class="mxd-logo" href="{{route('frontend.home')}}">
         <!-- logo icon -->
-        {{-- <svg class="mxd-logo__image" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42.4 36">
-          <path
-            d="M25.8,13.8h2.8v5.5h-2.8v-5.5ZM13.8,16.6v2.8h2.8v-5.5h-2.8v2.8ZM32.2,0v2.8h-2.8V0h2.8ZM26.7,5.5h2.8v-2.8h-2.8v2.8ZM21.2,5.5h-5.5v2.8h11.1v-2.8h-5.5ZM12.8,2.8v2.8h2.8v-2.8h-2.8ZM10.1,0v2.8h2.8V0h-2.8ZM7.3,5.5v5.5h2.8V2.8h-2.8v2.8ZM4.5,13.8v2.8H0v2.8h2.8v2.8H0v2.8h2.8v11.1h2.8v-8.3h5.5v-2.8h-5.5v-8.3h1.9v-5.5h-2.9v2.8ZM35,5.5v-2.8h-2.8v8.3h2.8v-5.5ZM42.4,19.4v-2.8h-4.7v-5.5h-2.8v5.5h1.9v8.3h-5.5v2.8h5.5v8.3h2.8v-11.1h2.8v-2.8h-2.8v-2.8h2.8Z" />
-        </svg> --}}
-        <img class="mxd-logo__image" src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="Logo"
-          style="width:42px; height:36px; object-fit:contain;">
+
+        <style>
+          .mxd-header__logo {
+            display: flex !important;
+            align-items: center !important;
+            height: 100% !important;
+          }
+
+          .mxd-logo {
+            display: flex !important;
+            align-items: center !important;
+          }
+
+          .custom-brand-logo {
+            height: 100px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+            padding: 0;
+          }
+
+          @media (max-width: 768px) {
+            .custom-brand-logo {
+              height: 32px;
+              max-width: 150px;
+            }
+          }
+        </style>
+        <img class="custom-brand-logo" src="{{ asset('img/favicon/edion-web-technologies.png') }}"
+          alt="Edion Web Technologies">
         <!-- logo text -->
-        {{-- <div class="mxd-logo__text">
-          <span class="mxd-scramble text-danger">Edion Web </span>
-          <span class="mxd-scramble text-danger">Technology</span>
-        </div> --}}
+
       </a>
     </div>
     <!-- header controls -->
     <div class="mxd-header__controls loading-fade">
-      <a class="btn mxd-header__link slide-right-up" href="contact.html" aria-label="Say Hello">
+      <a class="btn mxd-header__link slide-right-up" href="{{ route('frontend.contact') }}" aria-label="Say Hello">
         <span class="btn-caption mxd-scramble">Say Hello</span>
         <i>
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">

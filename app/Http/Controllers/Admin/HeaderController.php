@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class HeaderController extends Controller
@@ -35,16 +36,16 @@ class HeaderController extends Controller
         ]);
         if ($request->hasFile('website_logo')) {
             $file = $request->file('website_logo');
-        
+
             if ($file->isValid()) {
-                $imagePath = $file->store('public/header'); // This should store the file in storage/app/public/header
+                $imagePath = $file->store('header', 'public');
                 $data['website_logo'] = $imagePath;
             } else {
                 // Handle the file upload error
                 return redirect()->back()->with('error', 'File upload failed.');
             }
         }
-        
+
 
         $data = [
             'website_name' => $request->website_name,
@@ -53,9 +54,9 @@ class HeaderController extends Controller
             'website_number' => $request->website_number,
             'website_address' => $request->website_address,
             'website_email' => $request->website_email,
-            
+
         ];
-        
+
 
         DB::table('headers')->insert($data); // Replace 'header' with your actual table name
 
@@ -89,35 +90,35 @@ class HeaderController extends Controller
         ];
         if ($request->hasFile('website_logo_light')) {
             $file = $request->file('website_logo_light');
-        
+
             if ($file->isValid()) {
-                $imagePath = $file->store('public/header'); // This should store the file in storage/app/public/header
+                $imagePath = $file->store('header', 'public');
                 $data['website_logo_light'] = $imagePath;
             } else {
                 // Handle the file upload error
                 return redirect()->back()->with('error', 'File upload failed.');
             }
-        }else {
+        } else {
             // No new file uploaded, keep the existing 'website_logo' value
             $data['website_logo_light'] = $request->input('current_website_logo_light');
         }
 
         if ($request->hasFile('website_logo_dark')) {
             $file = $request->file('website_logo_dark');
-        
+
             if ($file->isValid()) {
-                $imagePath = $file->store('public/header'); // This should store the file in storage/app/public/header
+                $imagePath = $file->store('header', 'public');
                 $data['website_logo_dark'] = $imagePath;
             } else {
                 // Handle the file upload error
                 return redirect()->back()->with('error', 'File upload failed.');
             }
-        }else {
+        } else {
             // No new file uploaded, keep the existing 'website_logo' value
             $data['website_logo_dark'] = $request->input('current_website_logo_dark');
         }
 
-        
+
 
         DB::table('headers')->where('id', $id)->update($data); // Replace 'header' with your actual table name
 

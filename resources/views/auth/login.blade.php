@@ -25,12 +25,15 @@
     <link rel="stylesheet" href="{{asset('admin-assets/assets/vendor/fonts/boxicons.css')}}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{asset('admin-assets/assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{asset('admin-assets/assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{asset('admin-assets/assets/vendor/css/core.css')}}"
+        class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{asset('admin-assets/assets/vendor/css/theme-default.css')}}"
+        class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{asset('admin-assets/assets/css/demo.css')}}" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{asset('admin-assets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
+    <link rel="stylesheet"
+        href="{{asset('admin-assets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
 
     <!-- Page CSS -->
     <!-- Page -->
@@ -41,6 +44,39 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('admin-assets/assets/js/config.js')}}"></script>
+
+    <style>
+        .btn-primary {
+            background-color: #e60000 !important;
+            border-color: #e60000 !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #cc0000 !important;
+            border-color: #cc0000 !important;
+        }
+
+        .app-brand-link:hover {
+            opacity: 0.9;
+        }
+
+        .authentication-inner .card {
+            border-top: 4px solid #e60000;
+        }
+
+        .app-brand-logo img {
+            width: 170px !important;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #e60000;
+        }
+
+        a:hover {
+            color: #cc0000;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,9 +90,10 @@
                     <div class="card-body">
                         <!-- Logo -->
                         <div class="app-brand justify-content-center">
-                            <a href="index.html" class="gap-2 app-brand-link">
+                            <a href="{{ route('frontend.home') }}" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo">
-                                    <img class="dark-mode" width="150px" src="{{ Storage::url('app/'.$headers->website_logo_light) }}" alt="Site Logo">
+                                    <img class="dark-mode" width="150px"
+                                        src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="Site Logo">
                                 </span>
                             </a>
                         </div>
@@ -65,59 +102,62 @@
                         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
                         <!-- Session Status -->
-                      <!-- Session Status -->
-                    <x-auth-session-status class="mb-4 text-success" :status="session('status')" />
-
-                    <form method="POST" action="">
-                        @csrf
-                        <!-- Email Address -->
-                        <div class="mb-3 form-group">
-                            <x-input-label for="email" class="form-label" :value="__('Email')" />
-                            <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-                            <x-input-error :messages="$errors->get('email')" class="mt-2 text-danger" />
-                        </div>
-
-                        <!-- Password -->
-
-                        <div class="mb-3 form-password-toggle">
-                            <div class="d-flex justify-content-between align-items-baseline">
-                                <x-input-label for="password" class="form-label" :value="__('Password')" />
-                              <label class="form-label" for="password">Password</label>
-                              
-                              @if (Route::has('password.request'))
-                              <a class="btn btn-link" href="{{ route('password.request') }}">
-                                  {{ __('Forgot your password?') }}
-                              </a>
-                          @endif
-                             
+                        @if (session('status'))
+                            <div class="mb-4 text-success">
+                                {{ session('status') }}
                             </div>
-                            <div class="input-group input-group-merge">
-                                <x-text-input id="password" class="form-control" type="password" name="password" required autocomplete="current-password" />
-                                <x-input-error :messages="$errors->get('password')" class="mt-2 text-danger" />
-                              <span class="cursor-pointer input-group-text"><i class="bx bx-hide"></i></span>
+                        @endif
+
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <!-- Email Address -->
+                            <div class="form-group mb-3">
+                                <label for="email" class="form-label">{{ __('Email') }}</label>
+                                <input id="email" class="form-control" type="email" name="email"
+                                    value="{{ old('email') }}" required autofocus autocomplete="username" />
+                                @error('email')
+                                    <div class="mt-2 text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
-                          </div>
-                        
 
-                        <!-- Remember Me -->
-                        <div class="mb-3 form-group form-check">
-                            <input class="form-check-input" type="checkbox" id="remember_me" name="remember">
-                            <label class="form-check-label" for="remember_me">{{ __('Remember me') }}</label>
-                        </div>
+                            <!-- Password -->
 
-                        <div class="mb-3 form-group">
-                           
-                            <div class="mb-3">
-                                <x-primary-button class="btn btn-primary d-grid w-100" >
-                                    {{ __('Log in') }}
-                                </x-primary-button>
-                                {{-- <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button> --}}
-                              </div>
-                            
-                        </div>
-                    </form>
+                            <div class="mb-3 form-password-toggle">
+                                <div class="d-flex justify-content-between align-items-baseline">
+                                    <label class="form-label" for="password">Password</label>
 
-                       
+
+
+                                </div>
+                                <div class="input-group input-group-merge">
+                                    <input id="password" class="form-control" type="password" name="password" required
+                                        autocomplete="current-password" />
+                                    @error('password')
+                                        <div class="mt-2 text-danger">{{ $message }}</div>
+                                    @enderror
+                                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                </div>
+                            </div>
+
+
+                            <!-- Remember Me -->
+                            <div class="form-group form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="remember_me" name="remember">
+                                <label class="form-check-label" for="remember_me">{{ __('Remember me') }}</label>
+                            </div>
+
+                            <div class="form-group mb-3">
+
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary d-grid w-100">
+                                        {{ __('Log in') }}
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+
+
                     </div>
                 </div>
                 <!-- /Register -->
@@ -148,4 +188,3 @@
 </body>
 
 </html>
-

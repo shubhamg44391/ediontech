@@ -34,7 +34,7 @@
                     <div class="inner-headline__breadcrumbs loading-fade">
                       <div class="breadcrumbs__nav">
                         <span>
-                          <a href="/">
+                          <a href="{{ route('frontend.home') }}">
                             <span class="mxd-scramble">Home</span>
                           </a>
                         </span>
@@ -382,12 +382,12 @@
                 <!-- content -->
                 <div class="mxd-promo__content">
                   <div class="mxd-promo__btngroup anim-uni-in-up">
-                    <a class="btn btn-line btn-line-opposite" href="/contact">
+                    <a class="btn btn-line btn-line-opposite" href="{{ route('frontend.contact') }}">
                       <span class="btn-caption mxd-scramble">Write a line</span>
                     </a>
                   </div>
                   <div class="mxd-promo__caption">
-                    <a class="active-cursor-accent" data-cursor-text="Contact Us" href="/contact">
+                    <a class="active-cursor-accent" data-cursor-text="Contact Us" href="{{ route('frontend.contact') }}">
                       <h2 class="reveal-type opposite">Let's talk about your project</h2>
                     </a>
                   </div>

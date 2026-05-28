@@ -20,14 +20,14 @@
                           </div>
                           <div class="mxd-footer-nav02__list">
                             <ul>
-                              <li><a class="anim-uni-slide-down" href="/"><span>Home</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/about"><span>About us</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.home') }}"><span>Home</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.about') }}"><span>About us</span></a></li>
                             
-                              <li><a class="anim-uni-slide-down" href="/services"><span>Services</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/seo-package"><span>Pricing</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/works"><span>Works</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/faq"><span>FAQ</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/blog"><span>Insights</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.services') }}"><span>Services</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.seo-package') }}"><span>Pricing</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.works') }}"><span>Works</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.faq') }}"><span>FAQ</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.blog') }}"><span>Insights</span></a></li>
                               <li></li>
                             </ul>
                           </div>
@@ -62,11 +62,11 @@
                             </p>
                             <div class="mxd-footer-nav02__list">
                             <ul class="mt-4">
-                              <li><a class="anim-uni-slide-down" href="/contact"><span>Contact</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/privacy-policy"><span>Privacy Policy</span></a></li>
-                              <li><a class="anim-uni-slide-down" href="/term-and-condition"><span>Terms of Use</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.contact') }}"><span>Contact</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.privacy-policy') }}"><span>Privacy Policy</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.term-and-condition') }}"><span>Terms of Use</span></a></li>
                             
-                              <li><a class="anim-uni-slide-down" href="/refund-and-cancellation-policy"><span>Refund & Cancellation Policy</span></a></li>
+                              <li><a class="anim-uni-slide-down" href="{{ route('frontend.refund-and-cancellation-policy') }}"><span>Refund & Cancellation Policy</span></a></li>
                               
                               
                             </ul>
@@ -309,5 +309,4 @@
   </body>
 
 
-<!-- Mirrored from mixdesign.dev/themeforest/azurio/index-software-development-company.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2026 03:37:35 GMT -->
 </html>

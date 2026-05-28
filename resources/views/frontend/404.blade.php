@@ -135,13 +135,13 @@
                 </div>
                 <div class="mxd-error__caption">
                   <p class="loading-split">This page doesn't exist. <span>Sorry.</span></p>
-                  <a class="btn btn-default-icon btn-default-icon-left btn-default-outline slide-left loading-fade" href="index-branding-studio.html">
+                  <a class="btn btn-default-icon btn-default-icon-left btn-default-outline slide-left loading-fade" href="{{ route('frontend.home') }}">
                     <i class="btn-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
                         <path d="M7.2,18v-3.6h3.6v3.6h-3.6ZM3.6,7.2H0v3.6h3.6v3.6h3.6v-3.6h10.8v-3.6H7.2v-3.6h-3.6s0,3.6,0,3.6ZM7.2,3.6h3.6V0h-3.6v3.6Z"/>
                       </svg>
                     </i>
-                    <span class="btn-caption mxd-scramble"> <a href="/" class="main-menu__caption">
+                    <span class="btn-caption mxd-scramble"> <a href="{{ route('frontend.home') }}" class="main-menu__caption">
                           Go Home
                           </a></span>
                   </a>

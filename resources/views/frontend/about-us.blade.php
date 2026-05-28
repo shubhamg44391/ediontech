@@ -41,9 +41,9 @@
                     </div>
                     <div class="inner-headline__title banners-hover centered loading-item">
                       <h1 class="small">Creating engaging 
-                        <a class="inner-headline__trigger banners-trigger-1" href="/works">user experiences</a> 
+                        <a class="inner-headline__trigger banners-trigger-1" href="{{ route('frontend.works') }}">user experiences</a> 
                         and 
-                        <a class="inner-headline__trigger banners-trigger-2" href="/works">design solutions</a>
+                        <a class="inner-headline__trigger banners-trigger-2" href="{{ route('frontend.works') }}">design solutions</a>
                       </h1>
                     </div>
                     <!-- banners -->
@@ -102,7 +102,7 @@
                       <div class="inner-headline__breadcrumbs loading-fade">
                         <div class="breadcrumbs__nav">
                           <span>
-                            <a href="/">
+                            <a href="{{ route('frontend.home') }}">
                               <span class="mxd-scramble">Home</span>
                             </a>
                           </span>
@@ -135,7 +135,7 @@
                   <div class="col-12 mxd-grid-item">
                     <div class="mxd-section-manifest__wrap wrap-text-m">
                       <div class="mxd-section-manifest__text manifest-text-m">
-                        <a class="manifest manifest-m mxd-split-lines active-cursor-accent" data-cursor-text="View Works" href="/works">
+                        <a class="manifest manifest-m mxd-split-lines active-cursor-accent" data-cursor-text="View Works" href="{{ route('frontend.works') }}">
                           We are a creative web agency specializing in innovative design and cutting-edge development. 
                           <span>We help businesses stand out and thrive in the modern landscape.</span>
                         </a>
@@ -478,7 +478,7 @@
                 </div>
               </a>
               <!-- awards item -->
-              <a class="mxd-awards__item active-cursor-accent" data-cursor-text="See Page" href="/works" target="_blank">
+              <a class="mxd-awards__item active-cursor-accent" data-cursor-text="See Page" href="{{ route('frontend.works') }}" target="_blank">
                 <div class="px-0 container-fluid mxd-awards__inner">
                   <div class="row g-0 d-flex">
                     <div class="order-2 col-12 col-xl-4 order-xl-1 mxd-grid-item">
@@ -562,7 +562,7 @@
                 </div>
               </a>
               <!-- awards item -->
-              <a class="mxd-awards__item active-cursor-accent" data-cursor-text="See Page" href="/services" target="_blank">
+              <a class="mxd-awards__item active-cursor-accent" data-cursor-text="See Page" href="{{ route('frontend.services') }}" target="_blank">
                 <div class="px-0 container-fluid mxd-awards__inner">
                   <div class="row g-0">
                     <div class="order-2 col-12 col-xl-4 order-xl-1 mxd-grid-item">
@@ -590,7 +590,7 @@
                 </div>
               </a>
               <!-- awards item -->
-              <a class="mxd-awards__item active-cursor-accent" data-cursor-text="Know More" href="/contact" target="_blank">
+              <a class="mxd-awards__item active-cursor-accent" data-cursor-text="Know More" href="{{ route('frontend.contact') }}" target="_blank">
                 <div class="px-0 container-fluid mxd-awards__inner">
                   <div class="row g-0">
                     <div class="order-2 col-12 col-xl-4 order-xl-1 mxd-grid-item">
@@ -950,12 +950,12 @@
                 <!-- content -->
                 <div class="mxd-promo__content">
                   <div class="mxd-promo__btngroup anim-uni-in-up">
-                    <a class="btn btn-line btn-line-opposite" href="/contact">
+                    <a class="btn btn-line btn-line-opposite" href="{{ route('frontend.contact') }}">
                       <span class="btn-caption mxd-scramble">Write a line</span>
                     </a>
                   </div>
                   <div class="mxd-promo__caption">
-                    <a class="active-cursor-accent" data-cursor-text="Contact Us" href="/contact">
+                    <a class="active-cursor-accent" data-cursor-text="Contact Us" href="{{ route('frontend.contact') }}">
                       <h2 class="reveal-type opposite">Let's talk about your project</h2>
                     </a>
                   </div>

@@ -14,6 +14,7 @@ class ContactUsController extends Controller
 
     public function submit(Request $request)
     {
+
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
@@ -23,7 +24,7 @@ class ContactUsController extends Controller
             'captcha' => 'required|captcha',
         ]);
 
-        $data = $request->only(['name', 'email', 'number', 'company', 'message']);
+        $data = $request->only(['name', 'email', 'number', 'company', 'message', 'budget']);
 
         DB::table('leads')->insert($data);
 

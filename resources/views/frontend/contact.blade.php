@@ -34,7 +34,7 @@
                   <div class="inner-headline__breadcrumbs loading-fade">
                     <div class="breadcrumbs__nav">
                       <span>
-                        <a href="/">
+                        <a href="{{ route('frontend.home') }}">
                           <span class="mxd-scramble">Home</span>
                         </a>
                       </span>
@@ -53,8 +53,8 @@
                             <h1 class="medium loading-split">Let's make it happen</h1>
                           </div>
                           <!-- <div class="inner-headline__subtitle">
-                                <p>Everything <span>you need to know</span></p>
-                              </div> -->
+                                                <p>Everything <span>you need to know</span></p>
+                                              </div> -->
                         </div>
                         <div class="col-12 col-xl-6">
                           <!-- split header caption -->
@@ -75,40 +75,40 @@
 
                               <!-- Reply Messages Start -->
                               @if(session('success'))
-                                <div class="text-center form__reply centered" style="display:block;">
-                                  <i class="ph-fill ph-smiley-wink reply__icon"></i>
-                                  <p class="reply__title">Done!</p>
-                                  <span class="reply__text">{{ session('success') }}</span>
+                                <div
+                                  style="background-color: rgba(25, 135, 84, 0.1); border: 1px solid #198754; color: #198754; padding: 15px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="#198754" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                  </svg>
+                                  <div style="font-size: 16px; font-weight: 500;">
+                                    <strong>Success!</strong> {{ session('success') }}
+                                  </div>
                                 </div>
                               @endif
-
-                              @if($errors->any())
-                                <div class="form__reply"
-                                  style="display:block; color:#ff4d4f; text-align: left; padding: 15px; margin-bottom: 20px; border: 1px solid #ff4d4f; border-radius: 8px;">
-                                  <p style="margin-bottom: 10px; font-weight: bold;">Please fix the following errors:</p>
-                                  <ul style="list-style: none; padding: 0; margin: 0;">
-                                    @foreach($errors->all() as $error)
-                                      <li style="margin-bottom: 5px;">- {{ $error }}</li>
-                                    @endforeach
-                                  </ul>
-                                </div>
-                              @endif
-                              <!-- Reply Messages End -->
 
                               <!-- Contact Form Start -->
-                              <form class="form contact-form" id="contact-form"
-                                action="{{ route('frontend.submit-form') }}" method="POST">
+                              <form class="form edion-contact-form" id="edion-contact-form"
+                                action="{{ route('frontend.submit-form') }}" method="POST" novalidate
+                                onsubmit="return validateForm(event)">
                                 @csrf
-                                <!-- Hidden Required Fields -->
-                                <input type="hidden" name="project_name" value="Azurio Template">
-                                <input type="hidden" name="admin_email" value="support@mixdesign.dev">
-                                <input type="hidden" name="form_subject" value="Contact Form Message">
+
                                 <!-- END Hidden Required Fields-->
                                 <div class="p-0 container-fluid">
                                   <div class="row gx-0">
+                                    <style>
+                                      .error-input {
+                                        border-color: red !important;
+                                        outline: none !important;
+                                      }
+                                    </style>
                                     <div class="col-12 col-md-6 mxd-grid-item loading-item">
                                       <input type="text" name="name" placeholder="Your name*" value="{{ old('name') }}"
-                                        required>
+                                        class="{{ $errors->has('name') ? 'error-input' : '' }}" required>
+                                      <span id="err-name"
+                                        style="color:red; font-size:12px; display:{{ $errors->has('name') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('name') }}</span>
                                     </div>
                                     <div class="col-12 col-md-6 mxd-grid-item loading-item">
                                       <input type="text" name="company" placeholder="Company name"
@@ -116,18 +116,29 @@
                                     </div>
                                     <div class="col-12 col-md-6 mxd-grid-item loading-item">
                                       <input type="email" name="email" placeholder="Email*" value="{{ old('email') }}"
-                                        required>
+                                        class="{{ $errors->has('email') ? 'error-input' : '' }}" required>
+                                      <span id="err-email"
+                                        style="color:red; font-size:12px; display:{{ $errors->has('email') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('email') }}</span>
                                     </div>
                                     <div class="col-12 col-md-6 mxd-grid-item loading-item">
-                                      <input type="tel" name="number" placeholder="Phone" value="{{ old('number') }}">
+                                      <input type="tel" name="number" placeholder="Phone" value="{{ old('number') }}"
+                                        class="{{ $errors->has('number') ? 'error-input' : '' }}">
+                                      <span id="err-number"
+                                        style="color:red; font-size:12px; display:{{ $errors->has('number') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('number') }}</span>
                                     </div>
                                     <div class="col-12 mxd-grid-item loading-item">
                                       <textarea name="message" placeholder="A few words about your project*"
+                                        class="{{ $errors->has('message') ? 'error-input' : '' }}"
                                         required>{{ old('message') }}</textarea>
+                                      <span id="err-message"
+                                        style="color:red; font-size:12px; display:{{ $errors->has('message') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('message') }}</span>
                                     </div>
-                                    <div class="col-12 mxd-grid-item loading-item d-flex">
-
-                                      <input type="text" class="form-control" placeholder="Budget in $">
+                                    <div class="col-12 mxd-grid-item loading-item d-flex" style="flex-direction: column;">
+                                      <input type="text" name="budget"
+                                        class="form-control {{ $errors->has('budget') ? 'error-input' : '' }}"
+                                        value="{{ old('budget') }}" placeholder="Budget in $">
+                                      <span id="err-budget"
+                                        style="color:red; font-size:12px; display:{{ $errors->has('budget') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('budget') }}</span>
                                     </div>
                                     <div class="gap-3 col-12 row mxd-grid-item loading-item d-flex">
 
@@ -136,9 +147,14 @@
                                             style="height:40px; width:40px; background-color:whitesmoke;"
                                             src="img/favicon/two-blue-cycle-arrows_78370-7799.avif" alt=""></button></div>
                                     </div>
-                                    <div class="col-12 col-md-6 mxd-grid-item loading-item d-flex">
+                                    <div class="col-12 col-md-6 mxd-grid-item loading-item d-flex"
+                                      style="flex-direction: column;">
                                       <php class="ini"></php>
-                                      <input name="captcha" type="text" class="form-control" placeholder="Captcha">
+                                      <input name="captcha" type="text"
+                                        class="form-control {{ $errors->has('captcha') ? 'error-input' : '' }}"
+                                        placeholder="Captcha">
+                                      <span id="err-captcha"
+                                        style="color:red; font-size:12px; display:{{ $errors->has('captcha') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('captcha') }}</span>
                                     </div>
                                     <div class="col-12 mxd-grid-item loading-item">
                                       <button class="btn btn-default-icon btn-default-accent slide-right" type="submit">
@@ -189,160 +205,6 @@
     </div>
     <!-- Section - Inner Headline v05 End -->
 
-    <!-- Section - Title & Socials Accent Start   we have to remove these lines from 155 - 303 when sir will give final decision-->
-    {{-- <div class="mxd-section bg-color-accent padding-top-title padding-bottom-default">
-      <div class="mxd-container grid-l-container">
-
-        <!-- Block - Section Title & Socials Start -->
-        <div class="mxd-block">
-          <div class="p-0 container-fluid">
-            <div class="row g-0">
-              <div class="col-12 col-xl-6 mxd-grid-item">
-                <!-- section title -->
-                <div class="mxd-section-title">
-                  <div class="mxd-section-title__title pre-grid-split-xl">
-                    <h2 class="mxd-split-lines accent">Connect</h2>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-6 mxd-grid-item">
-                <!-- socials list -->
-                <div class="mxd-socials-list">
-                  <!-- socials item -->
-                  <a class="socials-list__item no-margin slide-right-up" href="https://dribbble.com/" target="_blank">
-                    <div class="socials-list__divider accent divider-top anim-uni-clip-in"></div>
-                    <div class="socials-list__info">
-                      <div class="socials-list__number accent anim-uni-slide-down">
-                        <span>[01]</span>
-                      </div>
-                      <div class="socials-list__name accent anim-uni-slide-down">
-                        <span>Dribbble</span>
-                      </div>
-                    </div>
-                    <div class="socials-list__arrow accent anim-uni-slide-down">
-                      <i>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                          x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;"
-                          xml:space="preserve">
-                          <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                              M0,18h3.6v-3.6H0V18z" />
-                        </svg>
-                      </i>
-                    </div>
-                    <div class="socials-list__divider accent divider-bottom anim-uni-clip-in"></div>
-                  </a>
-                  <!-- socials item -->
-                  <a class="socials-list__item slide-right-up" href="https://www.behance.net/" target="_blank">
-                    <div class="socials-list__divider accent divider-top anim-uni-clip-in"></div>
-                    <div class="socials-list__info">
-                      <div class="socials-list__number accent anim-uni-slide-down">
-                        <span>[02]</span>
-                      </div>
-                      <div class="socials-list__name accent anim-uni-slide-down">
-                        <span>Behance</span>
-                      </div>
-                    </div>
-                    <div class="socials-list__arrow accent anim-uni-slide-down">
-                      <i>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                          x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;"
-                          xml:space="preserve">
-                          <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                              M0,18h3.6v-3.6H0V18z" />
-                        </svg>
-                      </i>
-                    </div>
-                    <div class="socials-list__divider accent divider-bottom anim-uni-clip-in"></div>
-                  </a>
-                  <!-- socials item -->
-                  <a class="socials-list__item slide-right-up" href="https://github.com/" target="_blank">
-                    <div class="socials-list__divider accent divider-top anim-uni-clip-in"></div>
-                    <div class="socials-list__info">
-                      <div class="socials-list__number accent anim-uni-slide-down">
-                        <span>[03]</span>
-                      </div>
-                      <div class="socials-list__name accent anim-uni-slide-down">
-                        <span>Github</span>
-                      </div>
-                    </div>
-                    <div class="socials-list__arrow accent anim-uni-slide-down">
-                      <i>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                          x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;"
-                          xml:space="preserve">
-                          <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                              M0,18h3.6v-3.6H0V18z" />
-                        </svg>
-                      </i>
-                    </div>
-                    <div class="socials-list__divider accent divider-bottom anim-uni-clip-in"></div>
-                  </a>
-                  <!-- socials item -->
-                  <a class="socials-list__item slide-right-up" href="https://codepen.io/" target="_blank">
-                    <div class="socials-list__divider accent divider-top anim-uni-clip-in"></div>
-                    <div class="socials-list__info">
-                      <div class="socials-list__number accent anim-uni-slide-down">
-                        <span>[04]</span>
-                      </div>
-                      <div class="socials-list__name accent anim-uni-slide-down">
-                        <span>Codepen</span>
-                      </div>
-                    </div>
-                    <div class="socials-list__arrow accent anim-uni-slide-down">
-                      <i>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                          x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;"
-                          xml:space="preserve">
-                          <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                              M0,18h3.6v-3.6H0V18z" />
-                        </svg>
-                      </i>
-                    </div>
-                    <div class="socials-list__divider accent divider-bottom anim-uni-clip-in"></div>
-                  </a>
-                  <!-- socials item -->
-                  <a class="socials-list__item slide-right-up" href="https://www.figma.com/community" target="_blank">
-                    <div class="socials-list__divider accent divider-top anim-uni-clip-in"></div>
-                    <div class="socials-list__info">
-                      <div class="socials-list__number accent anim-uni-slide-down">
-                        <span>[05]</span>
-                      </div>
-                      <div class="socials-list__name accent anim-uni-slide-down">
-                        <span>Figma Community</span>
-                      </div>
-                    </div>
-                    <div class="socials-list__arrow accent anim-uni-slide-down">
-                      <i>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                          x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;"
-                          xml:space="preserve">
-                          <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                              M0,18h3.6v-3.6H0V18z" />
-                        </svg>
-                      </i>
-                    </div>
-                    <div class="socials-list__divider accent divider-bottom anim-uni-clip-in"></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Block - Section Title & Socials End -->
-
-      </div>
-    </div> --}}
-    <!-- Section - Title & Socials Accent End -->
-
-    <!-- Section - Parallax Divider Image Start -->
-    {{-- <div class="mxd-section blur-section">
-      <div class="mxd-container fullwidth-container">
-        <div class="mxd-divider">
-          <div class="mxd-divider__image divider-image-9 parallax-img"></div>
-        </div>
-      </div>
-    </div> --}}
-    <!-- Section - Parallax Divider Image End -->
 
     <!-- Section - Section Title & Text Block Start -->
     <div class="mxd-section blur-section bg-color-base padding-top-title padding-bottom-tag-m">
@@ -436,12 +298,12 @@
               <!-- content -->
               <div class="mxd-promo__content">
                 <div class="mxd-promo__btngroup anim-uni-in-up">
-                  <a class="btn btn-line btn-line-opposite" href="/contact">
+                  <a class="btn btn-line btn-line-opposite" href="{{ route('frontend.contact') }}">
                     <span class="btn-caption mxd-scramble">Write a line</span>
                   </a>
                 </div>
                 <div class="mxd-promo__caption">
-                  <a class="active-cursor-accent" data-cursor-text="Contact Us" href="/contact">
+                  <a class="active-cursor-accent" data-cursor-text="Contact Us" href="{{ route('frontend.contact') }}">
                     <h2 class="opposite mxd-split-lines">Let's talk about your project</h2>
                   </a>
                 </div>
@@ -613,6 +475,81 @@
           document.getElementById('captcha-img').innerHTML = data.captcha;
         });
     });
+
+    function validateForm(e) {
+      let errors = [];
+      const form = e.target;
+
+      // Use querySelector to be absolutely safe
+      const nameEl = form.querySelector('[name="name"]');
+      const emailEl = form.querySelector('[name="email"]');
+      const numberEl = form.querySelector('[name="number"]');
+      const messageEl = form.querySelector('[name="message"]');
+      const budgetEl = form.querySelector('[name="budget"]');
+      const captchaEl = form.querySelector('[name="captcha"]');
+
+      const name = nameEl ? nameEl.value.trim() : '';
+      const email = emailEl ? emailEl.value.trim() : '';
+      const number = numberEl ? numberEl.value.trim() : '';
+      const message = messageEl ? messageEl.value.trim() : '';
+      const budget = budgetEl ? budgetEl.value.trim() : '';
+      const captcha = captchaEl ? captchaEl.value.trim() : '';
+
+      [nameEl, emailEl, numberEl, messageEl, budgetEl, captchaEl].forEach(el => {
+        if (el) el.classList.remove('error-input');
+      });
+
+      let hasError = false;
+
+      function showError(id, el, msg) {
+        hasError = true;
+        if (el) el.classList.add('error-input');
+        const span = document.getElementById('err-' + id);
+        if (span) {
+          span.innerHTML = msg;
+          span.style.display = 'block';
+        }
+      }
+
+      ['name', 'email', 'number', 'message', 'budget', 'captcha'].forEach(id => {
+        const span = document.getElementById('err-' + id);
+        if (span) span.style.display = 'none';
+      });
+
+      if (!name) {
+        showError('name', nameEl, 'The name field is required.');
+      }
+
+      if (!email) {
+        showError('email', emailEl, 'The email field is required.');
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('email', emailEl, 'The email must be a valid email address.');
+      }
+
+      if (!number) {
+        showError('number', numberEl, 'The phone number field is required.');
+      } else if (number.length > 15) {
+        showError('number', numberEl, 'The phone number must not be greater than 15 characters.');
+      }
+
+      if (!message) {
+        showError('message', messageEl, 'The message field is required.');
+      }
+
+      if (budget && !/^\d+$/.test(budget)) {
+        showError('budget', budgetEl, 'The budget must be a number.');
+      }
+
+      if (!captcha) {
+        showError('captcha', captchaEl, 'The captcha field is required.');
+      }
+
+      if (hasError) {
+        e.preventDefault();
+        return false;
+      }
+      return true;
+    }
   </script>
 
 @endsection

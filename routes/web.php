@@ -3,12 +3,12 @@
 
 use Illuminate\Support\Facades\Route;
 //Dashboard
-use App\Http\Controllers\HeaderController;
+use App\Http\Controllers\Admin\HeaderController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AuthorController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\LeadController;
+use App\Http\Controllers\Admin\LeadController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\SocialMediaLinkController;
@@ -20,9 +20,9 @@ use App\Http\Controllers\AboutProcessController;
 ;
 
 use App\Http\Controllers\Backend\AdminDashboardController;
-use App\Http\Controllers\Backend\IpAddressController;
+use App\Http\Controllers\Admin\IpAddressController;
 
-
+// blog
 
 // front end imported controller
 use App\Http\Controllers\Frontend\AboutUsController;
@@ -65,6 +65,7 @@ Route::name('frontend.')->group(function () {
 
     // At insights URL we redirect to blog-creative page
     Route::get('/blog', [InsightsController::class, 'index'])->name('blog');
+    Route::get('/blog-details/{slug}', [InsightsController::class, 'blogDetails'])->name('blog-details');
 
     Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
@@ -102,7 +103,7 @@ Route::get('/dashboard', function () {
     $totalIPCount = $ipAddressController->getTotalIPCount();
     $cityVisitorCount = $ipAddressController->showCityVisitorChart();
     $allCities = $ipAddressController->getAllCities();
-    return view('dashboard.frontend.dashboard', [
+    return view('admin.dashboard', [
         'ipAddresses' => $ipAddresses,
         'totalIpCount' => $totalIPCount,
         'cityVisitorCount' => $cityVisitorCount,
@@ -247,5 +248,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin/about/process/{process}', [AboutProcessController::class, 'update'])->name('about_process.update');
 });
 
-
+// Auth routes
+require __DIR__ . '/auth.php';
 ?>

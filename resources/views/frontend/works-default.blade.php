@@ -39,7 +39,7 @@
                         <div class="inner-headline__breadcrumbs loading-fade">
                           <div class="breadcrumbs__nav permanent">
                             <span>
-                              <a href="/">
+                              <a href="{{ route('frontend.home') }}">
                                 <span class="mxd-scramble">Home</span>
                               </a>
                             </span>
@@ -357,7 +357,7 @@
             <div class="mxd-block">
               <!-- projects list -->
               <div class="mxd-projects-list no-margin-bottom">
-                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr04.webp" data-cursor-text="View Work" href="/works">
+                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr04.webp" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                   <div class="mxd-projects-list__divider top"></div>
                   <div class="container-fluid px-0 mxd-projects-list__inner">
                     <div class="row gx-0">
@@ -450,7 +450,7 @@
                   </div>
                   <div class="mxd-projects-list__divider bottom"></div>
                 </a>
-                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/services/services-stack/pr02.webp" data-cursor-text="View Work" href="/works">
+                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/services/services-stack/pr02.webp" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                   <div class="mxd-projects-list__divider top"></div>
                   <div class="container-fluid px-0 mxd-projects-list__inner">
                     <div class="row gx-0">
@@ -835,12 +835,12 @@
                 <!-- content -->
                 <div class="mxd-promo__content">
                   <div class="mxd-promo__btngroup anim-uni-in-up">
-                    <a class="btn btn-line btn-line-opposite" href="contact.html">
+                    <a class="btn btn-line btn-line-opposite" href="{{ route('frontend.contact') }}">
                       <span class="btn-caption mxd-scramble">Write a line</span>
                     </a>
                   </div>
                   <div class="mxd-promo__caption">
-                    <a class="active-cursor-accent" data-cursor-text="Contact Us" href="contact.html">
+                    <a class="active-cursor-accent" data-cursor-text="Contact Us" href="{{ route('frontend.contact') }}">
                       <h2 class="reveal-type opposite">Let's talk about your project</h2>
                     </a>
                   </div>
