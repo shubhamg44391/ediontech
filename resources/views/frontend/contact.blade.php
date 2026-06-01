@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -145,7 +145,7 @@
                                       <div class="col-12"> <span id="captcha-img"> {!! captcha_img()!!}</span></div>
                                       <div class="col-12"> <button id="reloadCaptcha"><img
                                             style="height:40px; width:40px; background-color:whitesmoke;"
-                                            src="img/favicon/two-blue-cycle-arrows_78370-7799.avif" alt=""></button></div>
+                                            src="{{ asset('img/favicon/two-blue-cycle-arrows_78370-7799.avif') }}" alt=""></button></div>
                                     </div>
                                     <div class="col-12 col-md-6 mxd-grid-item loading-item d-flex"
                                       style="flex-direction: column;">
@@ -320,7 +320,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Photography</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_01.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_01.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -329,7 +329,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">3D Models</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_02.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_02.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -338,7 +338,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Development</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_03.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_03.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -347,7 +347,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Illustrations</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_04.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_04.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -356,7 +356,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Fashion</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_05.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_05.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -365,7 +365,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Digital Art</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_06.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_06.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -374,7 +374,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Packaging</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_07.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_07.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -383,7 +383,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Motion</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_08.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_08.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -392,7 +392,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Illustrations</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_09.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_09.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -401,7 +401,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Video Production</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_10.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_10.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -410,7 +410,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Photography</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_01.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_01.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -419,7 +419,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">3D Models</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_02.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_02.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -428,7 +428,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Development</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_03.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_03.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -437,7 +437,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Illustrations</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_04.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_04.webp') }}" alt="">
                       </div>
                     </div>
                     <!-- single item -->
@@ -446,7 +446,7 @@
                         <span class="tag tag-s tag-medium-opposite mxd-scramble">Fashion</span>
                       </div>
                       <div class="marquee__image">
-                        <img src="img/cta/mar_05.webp" alt="">
+                        <img src="{{ asset('img/cta/mar_05.webp') }}" alt="">
                       </div>
                     </div>
                   </div>

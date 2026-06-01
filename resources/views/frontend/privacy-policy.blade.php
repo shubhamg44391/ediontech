@@ -1,4 +1,5 @@
-@extends('Frontend.Layouts.main')
+
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -28,7 +29,7 @@
                                 <div class="col-12 mxd-grid-item">
                                     <!-- breadcrumbs -->
                                     <div class="inner-headline__breadcrumbs loading-fade">
-                                        <div class="breadcrumbs__nav">
+                                        {{-- <div class="breadcrumbs__nav">
                                             <span>
                                                 <a href="{{ route('frontend.home') }}">
                                                     <span class="mxd-scramble">Home</span>
@@ -36,7 +37,7 @@
                                             </span>
                                             <span class=" current-item">Privacy Policy
                                             </span>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -53,21 +54,30 @@
                                             <div class="container px-5 ">
                                                 <div class="px-5 py-5 ">
 
-                                                    <h1 class="px-5 h2">Privacy Policy</h1>
+                                                    <h1 class="text-center h2">Privacy Policy</h1>
+                                                    <div class="gap-5 py-5 justify-content-center d-flex">
+                                                        <span>
+                                                            <a href="{{ route('frontend.home') }}">
+                                                                <span class="mxd-scramble">Home</span>
+                                                            </a>
+                                                        </span>
+                                                        <span class=" current-item">Privacy Policy
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <ul class="shape-group-8 list-unstyled row col-12">
                                                 {{-- <li class="shape shape-1" data-sal="slide-right" data-sal-duration="500"
                                                     data-sal-delay="100">
-                                                    <img src="assets/media/bubble-9.png" alt="Bubble">
+                                                    <img src="{{ asset('assets/media/bubble-9.png') }}" alt="Bubble">
                                                 </li>
                                                 <li class="absolute shape shape-2" data-sal="slide-left" data-sal-duration="500"
                                                     data-sal-delay="200">
-                                                    <img src="assets/media/bubble-11.png" alt="Bubble">
+                                                    <img src="{{ asset('assets/media/bubble-11.png') }}" alt="Bubble">
                                                 </li>
                                                 <li class="shape shape-3" data-sal="slide-up" data-sal-duration="500"
                                                     data-sal-delay="300">
-                                                    <img src="assets/media/line-4.png" alt="Line">
+                                                    <img src="{{ asset('assets/media/line-4.png') }}" alt="Line">
                                                 </li> --}}
                                             </ul>
                                         </div>
@@ -211,38 +221,38 @@
                                                         <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600"
                                                             data-sal-delay="100">
                                                             <img class="paralax-image"
-                                                                src="assets/media/others/chat-group.png" alt="Chat">
+                                                                src="{{ asset('assets/media/others/chat-group.png') }}" alt="Chat">
                                                         </div>
                                                         <ul class="list-unstyled small-thumb">
                                                             <li class="shape shape-1" data-sal="slide-right"
                                                                 data-sal-duration="800" data-sal-delay="400">
                                                                 <img class="paralax-image"
-                                                                    src="assets/media/others/laptop-poses.png"
+                                                                    src="{{ asset('assets/media/others/laptop-poses.png') }}"
                                                                     alt="Laptop">
                                                             </li>
                                                             <li class="shape shape-2" data-sal="slide-left"
                                                                 data-sal-duration="800" data-sal-delay="300">
                                                                 <img class="paralax-image"
-                                                                    src="assets/media/others/bill-pay.png" alt="Bill">
+                                                                    src="{{ asset('assets/media/others/bill-pay.png') }}" alt="Bill">
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <ul class="list-unstyled shape-group-9">
-                                                <li class="shape shape-1"><img src="assets/media/others/bubble-12.png"
+                                                <li class="shape shape-1"><img src="{{ asset('assets/media/others/bubble-12.png') }}"
                                                         alt="Comments"></li>
-                                                <li class="shape shape-2"><img src="assets/media/others/bubble-16.png"
+                                                <li class="shape shape-2"><img src="{{ asset('assets/media/others/bubble-16.png') }}"
                                                         alt="Comments"></li>
-                                                <li class="shape shape-3"><img src="assets/media/others/bubble-13.png"
+                                                <li class="shape shape-3"><img src="{{ asset('assets/media/others/bubble-13.png') }}"
                                                         alt="Comments"></li>
-                                                <li class="shape shape-4"><img src="assets/media/others/bubble-14.png"
+                                                <li class="shape shape-4"><img src="{{ asset('assets/media/others/bubble-14.png') }}"
                                                         alt="Comments"></li>
-                                                <li class="shape shape-5"><img src="assets/media/others/bubble-16.png"
+                                                <li class="shape shape-5"><img src="{{ asset('assets/media/others/bubble-16.png') }}"
                                                         alt="Comments"></li>
-                                                <li class="shape shape-6"><img src="assets/media/others/bubble-15.png"
+                                                <li class="shape shape-6"><img src="{{ asset('assets/media/others/bubble-15.png') }}"
                                                         alt="Comments"></li>
-                                                <li class="shape shape-7"><img src="assets/media/others/bubble-16.png"
+                                                <li class="shape shape-7"><img src="{{ asset('assets/media/others/bubble-16.png') }}"
                                                         alt="Comments"></li>
                                             </ul>
                                         </section> --}}

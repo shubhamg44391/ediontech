@@ -1,0 +1,4 @@
+[01-Jun-2026 01:45:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/edionafe/public_html/config/database.php:20
+Stack trace:
+#0 {main}
+  thrown in /home2/edionafe/public_html/config/database.php on line 20

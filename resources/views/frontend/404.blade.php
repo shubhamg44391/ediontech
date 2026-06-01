@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -121,16 +121,16 @@
                   <span>0</span>
                   <span>4</span>
                   <div class="mxd-error__image image-1 mxd-move-slow loading-fade">
-                    <img src="img/illustrations/404_03.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_03.webp') }}" alt="Azurio Template Sample Image">
                   </div>
                   <div class="mxd-error__image image-2">
-                    <img src="img/illustrations/404_01.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_01.webp') }}" alt="Azurio Template Sample Image">
                   </div>
                   <div class="mxd-error__image image-3">
-                    <img src="img/illustrations/404_02.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_02.webp') }}" alt="Azurio Template Sample Image">
                   </div>
                   <div class="mxd-error__image image-4 mxd-move-slow loading-fade">
-                    <img src="img/illustrations/404_04.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_04.webp') }}" alt="Azurio Template Sample Image">
                   </div>
                 </div>
                 <div class="mxd-error__caption">

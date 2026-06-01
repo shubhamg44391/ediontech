@@ -24,6 +24,13 @@
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+            <div data-i18n="Authentications">Home Page</div>
+        </a>
+
+    </li>
+    <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
             <div data-i18n="Authentications">Blog Page</div>
         </a>
         <ul class="menu-sub">
@@ -36,12 +43,12 @@
 
         </ul>
     </li>
-    <li class="menu-item {{ Request::is('admin/leads*') ? 'active' : '' }}">
+    {{-- <li class="menu-item {{ Request::is('admin/leads*') ? 'active' : '' }}">
         <a href="{{ route('leads.index') }}" class="menu-link ">
             <i class="menu-icon tf-icons bx bxs-envelope"></i>
             <div data-i18n="Basic">Leads</div>
         </a>
-    </li>
+    </li> --}}
 
     <!-- Components -->
 </ul>

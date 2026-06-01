@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 @section('main-container')
 

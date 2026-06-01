@@ -40,36 +40,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Corona Admin</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
-    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/jvectormap/jquery-jvectormap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/owl-carousel-2/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/owl-carousel-2/owl.theme.default.min.css') }}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
   </head>
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="admin-assets/assets/img/edion_logo/brand_logo.png" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="{{ asset('admin-assets/assets/img/edion_logo/brand_logo.png') }}" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="{{ asset('assets/images/logo-mini.svg') }}" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                  <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
@@ -206,7 +206,7 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="flex-row p-0 navbar fixed-top d-flex">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('assets/images/logo-mini.svg') }}" alt="logo" /></a>
           </div>
           <div class="flex-grow navbar-menu-wrapper d-flex align-items-stretch">
             <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -276,7 +276,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
+                      <img src="{{ asset('assets/images/faces/face4.jpg') }}" alt="image" class="rounded-circle profile-pic">
                     </div>
                     <div class="preview-item-content">
                       <p class="mb-1 preview-subject ellipsis">Mark send you a message</p>
@@ -286,7 +286,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
+                      <img src="{{ asset('assets/images/faces/face2.jpg') }}" alt="image" class="rounded-circle profile-pic">
                     </div>
                     <div class="preview-item-content">
                       <p class="mb-1 preview-subject ellipsis">Cregh send you a message</p>
@@ -296,7 +296,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
+                      <img src="{{ asset('assets/images/faces/face3.jpg') }}" alt="image" class="rounded-circle profile-pic">
                     </div>
                     <div class="preview-item-content">
                       <p class="mb-1 preview-subject ellipsis">Profile picture updated</p>
@@ -357,7 +357,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+                    <img class="img-xs rounded-circle" src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
                     <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
@@ -405,7 +405,7 @@
                   <div class="px-0 py-0 card-body px-sm-3">
                     <div class="row align-items-center">
                       <div class="col-4 col-sm-3 col-xl-2">
-                        <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
+                        <img src="{{ asset('assets/images/dashboard/Group126@2x.png') }}" class="gradient-corona-img img-fluid" alt="">
                       </div>
                       <div class="p-0 col-5 col-sm-7 col-xl-8">
                         <h4 class="mb-1 mb-sm-0">Want even more features?</h4>
@@ -726,7 +726,7 @@
                               </div>
                             </td>
                             <td>
-                              <img src="assets/images/faces/face1.jpg" alt="image" />
+                              <img src="{{ asset('assets/images/faces/face1.jpg') }}" alt="image" />
                               <span class="pl-2">Henry Klein</span>
                             </td>
                             <td> 02312 </td>
@@ -747,7 +747,7 @@
                               </div>
                             </td>
                             <td>
-                              <img src="assets/images/faces/face2.jpg" alt="image" />
+                              <img src="{{ asset('assets/images/faces/face2.jpg') }}" alt="image" />
                               <span class="pl-2">Estella Bryan</span>
                             </td>
                             <td> 02312 </td>
@@ -768,7 +768,7 @@
                               </div>
                             </td>
                             <td>
-                              <img src="assets/images/faces/face5.jpg" alt="image" />
+                              <img src="{{ asset('assets/images/faces/face5.jpg') }}" alt="image" />
                               <span class="pl-2">Lucy Abbott</span>
                             </td>
                             <td> 02312 </td>
@@ -789,7 +789,7 @@
                               </div>
                             </td>
                             <td>
-                              <img src="assets/images/faces/face3.jpg" alt="image" />
+                              <img src="{{ asset('assets/images/faces/face3.jpg') }}" alt="image" />
                               <span class="pl-2">Peter Gill</span>
                             </td>
                             <td> 02312 </td>
@@ -810,7 +810,7 @@
                               </div>
                             </td>
                             <td>
-                              <img src="assets/images/faces/face4.jpg" alt="image" />
+                              <img src="{{ asset('assets/images/faces/face4.jpg') }}" alt="image" />
                               <span class="pl-2">Sallie Reyes</span>
                             </td>
                             <td> 02312 </td>
@@ -840,7 +840,7 @@
                     <div class="preview-list">
                       <div class="preview-item border-bottom">
                         <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face6.jpg" alt="image" class="rounded-circle" />
+                          <img src="{{ asset('assets/images/faces/face6.jpg') }}" alt="image" class="rounded-circle" />
                         </div>
                         <div class="flex-grow preview-item-content d-flex">
                           <div class="flex-grow">
@@ -854,7 +854,7 @@
                       </div>
                       <div class="preview-item border-bottom">
                         <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face8.jpg" alt="image" class="rounded-circle" />
+                          <img src="{{ asset('assets/images/faces/face8.jpg') }}" alt="image" class="rounded-circle" />
                         </div>
                         <div class="flex-grow preview-item-content d-flex">
                           <div class="flex-grow">
@@ -868,7 +868,7 @@
                       </div>
                       <div class="preview-item border-bottom">
                         <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face9.jpg" alt="image" class="rounded-circle" />
+                          <img src="{{ asset('assets/images/faces/face9.jpg') }}" alt="image" class="rounded-circle" />
                         </div>
                         <div class="flex-grow preview-item-content d-flex">
                           <div class="flex-grow">
@@ -882,7 +882,7 @@
                       </div>
                       <div class="preview-item border-bottom">
                         <div class="preview-thumbnail">
-                          <img src="assets/images/faces/face11.jpg" alt="image" class="rounded-circle" />
+                          <img src="{{ asset('assets/images/faces/face11.jpg') }}" alt="image" class="rounded-circle" />
                         </div>
                         <div class="flex-grow preview-item-content d-flex">
                           <div class="flex-grow">
@@ -904,20 +904,20 @@
                     <h4 class="card-title">Portfolio Slide</h4>
                     <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
                       <div class="item">
-                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
+                        <img src="{{ asset('assets/images/dashboard/Rectangle.jpg') }}" alt="">
                       </div>
                       <div class="item">
-                        <img src="assets/images/dashboard/Img_5.jpg" alt="">
+                        <img src="{{ asset('assets/images/dashboard/Img_5.jpg') }}" alt="">
                       </div>
                       <div class="item">
-                        <img src="assets/images/dashboard/img_6.jpg" alt="">
+                        <img src="{{ asset('assets/images/dashboard/img_6.jpg') }}" alt="">
                       </div>
                     </div>
                     <div class="py-4 d-flex">
                       <div class="preview-list w-100">
                         <div class="p-0 preview-item">
                           <div class="preview-thumbnail">
-                            <img src="assets/images/faces/face12.jpg" class="rounded-circle" alt="">
+                            <img src="{{ asset('assets/images/faces/face12.jpg') }}" class="rounded-circle" alt="">
                           </div>
                           <div class="flex-grow preview-item-content d-flex">
                             <div class="flex-grow">
@@ -1076,24 +1076,24 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="assets/vendors/chart.js/Chart.min.js"></script>
-    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets/vendors/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/progressbar.js/progressbar.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/jvectormap/jquery-jvectormap.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <script src="{{ asset('assets/vendors/owl-carousel-2/owl.carousel.min.js') }}"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="assets/js/off-canvas.js"></script>
-    <script src="assets/js/hoverable-collapse.js"></script>
-    <script src="assets/js/misc.js"></script>
-    <script src="assets/js/settings.js"></script>
-    <script src="assets/js/todolist.js"></script>
+    <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
+    <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
+    <script src="{{ asset('assets/js/misc.js') }}"></script>
+    <script src="{{ asset('assets/js/settings.js') }}"></script>
+    <script src="{{ asset('assets/js/todolist.js') }}"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="assets/js/dashboard.js"></script>
+    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <!-- End custom js for this page -->
   </body>
 </html>

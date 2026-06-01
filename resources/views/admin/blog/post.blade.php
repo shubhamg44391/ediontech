@@ -16,7 +16,7 @@
                         <div class="table-btn-css">
                             <a href="#">
                                 <button style="position:relative;left:40px;" type="button"
-                                    class="btn btn-primary waves-effect waves-light mt-3" data-bs-toggle="modal"
+                                    class="mt-3 btn btn-primary waves-effect waves-light" data-bs-toggle="modal"
                                     data-bs-target="#addModal">
                                     <span class="ti-xs ti ti-plus me-1"></span>Add
                                 </button>

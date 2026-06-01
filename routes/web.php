@@ -46,7 +46,42 @@ use App\Http\Controllers\refundAndCancellationPolicyController;
 // Frontend controller
 
 
+Route::get('/clear', function () {
 
+    Artisan::call('optimize:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('cache:clear');
+
+    return 'Cache Cleared Successfully';
+});
+Route::get('/migrate', function () {
+
+    Artisan::call('migrate');
+
+    return 'Migration Completed';
+});
+
+// Route::get('/migrate-fresh', function () {
+
+//     Artisan::call('migrate:fresh --seed');
+
+//     return 'Fresh Migration & Seeder Completed';
+// });
+
+Route::get('/seed', function () {
+
+    Artisan::call('db:seed');
+
+    return 'Seeder Completed';
+});
+
+Route::get('/storage-link', function () {
+
+    Artisan::call('storage:link');
+
+    return 'Storage Linked';
+});
 Route::name('frontend.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name("home");
 

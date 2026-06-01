@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -51,7 +51,7 @@
             </div>
             <!-- post -->
             <div class="post-featured-fullscreen__thumb">
-              <img src="img/blog/1920x1200_pf-01.webp" alt="Featured Post Thumb">
+              <img src="{{ asset('img/blog/1920x1200_pf-01.webp') }}" alt="Featured Post Thumb">
 
 
               <div class="post-featured-fullscreen__cover"></div>
@@ -228,10 +228,10 @@
       <div class="mxd-background">
         <div class="mxd-background__video">
           <video class="video" preload="auto" autoplay="autoplay" loop="loop" muted="muted"
-            poster="video/1920x660_cta.webp">
-            <source type="video/mp4" src="video/1920x660_cta.mp4">
-            <source type="video/webm" src="video/1920x660_cta.webm">
-            <source type="video/ogv" src="video/1920x660_cta.html">
+            poster="{{ asset('video/1920x660_cta.webp') }}">
+            <source type="video/mp4" src="{{ asset('video/1920x660_cta.mp4') }}">
+            <source type="video/webm" src="{{ asset('video/1920x660_cta.webm') }}">
+            <source type="video/ogv" src="{{ asset('video/1920x660_cta.html') }}">
           </video>
         </div>
         <div class="mxd-background__cover accent"></div>

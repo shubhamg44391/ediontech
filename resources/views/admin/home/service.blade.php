@@ -6,7 +6,7 @@
         <div class="card">
             <div class="row row-bordered g-0">
                 <div class="col-md-12">
-                    <h5 class="card-header m-0 me-2 pb-3">Home Service</h5>
+                    <h5 class="pb-3 m-0 card-header me-2">Home Service</h5>
                     <script>
                         document.addEventListener('DOMContentLoaded', function () {
                             @if(session('success'))

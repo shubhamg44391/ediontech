@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -35,11 +35,11 @@
                     loop
                     playsinline
                     preload="auto"
-                    poster="video/1280x720_stone-geometry-banner.webp">
-                    <source type="video/mp4" src="video/1280x720_stone-geometry.mp4">
-                    <source type="video/webm" src="video/1280x720_stone-geometry.webm">
+                    poster="{{ asset('video/1280x720_stone-geometry-banner.webp') }}">
+                    <source type="video/mp4" src="{{ asset('video/1280x720_stone-geometry.mp4') }}">
+                    <source type="video/webm" src="{{ asset('video/1280x720_stone-geometry.webm') }}">
                   </video>
-                  <!-- <img src="img/backgrounds/1920x1280_bg01.webp" alt="Azurio Template Sample Image"> -->
+                  <!-- <img src="{{ asset('img/backgrounds/1920x1280_bg01.webp') }}" alt="Azurio Template Sample Image"> -->
                   <div class="inner-headline__cover"></div>
                 </div>
                 <div class="mxd-container grid-l-container">
@@ -149,7 +149,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="img/services/services-stack/s01.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s01.webp') }}" alt="Azurio Template Sample Image">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -186,7 +186,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="img/services/services-stack/s02.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s02.webp') }}" alt="Azurio Template Sample Image">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -222,7 +222,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="img/services/services-stack/s04.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s04.webp') }}" alt="Azurio Template Sample Image">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -258,7 +258,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="img/services/services-stack/s03.webp" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s03.webp') }}" alt="Azurio Template Sample Image">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                <img src="img/services/1200x980_cpb05.webp" alt="Azurio Services Image">
+                <img src="{{ asset('img/services/1200x980_cpb05.webp') }}" alt="Azurio Services Image">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -329,7 +329,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                     <img src="img/services/1200x980_cpb06.webp" alt="Azurio Services Image">
+                     <img src="{{ asset('img/services/1200x980_cpb06.webp') }}" alt="Azurio Services Image">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -390,7 +390,7 @@
                         <span class="meta-date">02 February, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="/insights">
-                        <img class="" src="img/blog/preview/grid-x3/pr-01.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-01.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -408,7 +408,7 @@
                         <span class="meta-date">28 January, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="/insights">
-                        <img class="" src="img/blog/preview/grid-x3/pr-02.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-02.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -426,7 +426,7 @@
                         <span class="meta-date">15 January, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="/insights">
-                        <img class="" src="img/blog/preview/grid-x3/pr-03.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-03.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -484,7 +484,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Photography</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_01.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_01.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -493,7 +493,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">3D Models</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_02.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_02.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -502,7 +502,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Development</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_03.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_03.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -511,7 +511,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Illustrations</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_04.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_04.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -520,7 +520,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Fashion</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_05.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_05.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -529,7 +529,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Digital Art</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_06.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_06.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -538,7 +538,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Packaging</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_07.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_07.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -547,7 +547,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Motion</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_08.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_08.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -556,7 +556,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Illustrations</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_09.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_09.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -565,7 +565,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Video Production</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_10.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_10.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -574,7 +574,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Photography</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_01.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_01.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -583,7 +583,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">3D Models</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_02.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_02.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -592,7 +592,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Development</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_03.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_03.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -601,7 +601,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Illustrations</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_04.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_04.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -610,7 +610,7 @@
                           <span class="tag tag-s tag-medium mxd-scramble">Fashion</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_05.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_05.webp') }}" alt="">
                         </div>
                       </div>
                     </div>

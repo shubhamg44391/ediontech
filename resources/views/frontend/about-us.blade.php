@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -48,28 +48,28 @@
                     </div>
                     <!-- banners -->
                     <div class="headline-banner-01 landscape image-01">
-                      <img src="img/illustrations/about-us-01.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-01.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-01 portrait image-02">
-                      <img src="img/illustrations/about-us-02.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-02.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-01 landscape image-03">
-                      <img src="img/illustrations/about-us-03.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-01 portrait image-04">
-                      <img src="img/illustrations/about-us-03.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-02 portrait image-05">
-                      <img src="img/illustrations/about-us-03.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-02 landscape image-06">
-                      <img src="img/illustrations/about-us-03.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-02 portrait image-07">
-                      <img src="img/illustrations/about-us-03.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                     <div class="headline-banner-02 landscape image-08">
-                      <img src="img/illustrations/about-us-08.webp" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-08.webp') }}" alt="Azurio Template Sample Image">
                     </div>
                   </div>
                 </div>
@@ -226,91 +226,91 @@
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_01.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_01.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_02.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_02.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_03.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_03.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_03.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_03.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_03.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_09.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_09.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_09.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_09.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_10.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_10.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_11.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_11.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_12.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_12.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_13.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_13.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_14.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_14.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_15.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_15.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
               </div>
@@ -321,91 +321,91 @@
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_15.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_15.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_14.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_14.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_13.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_13.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_12.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_12.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_11.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_11.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_10.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_10.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_09.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_09.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_08.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_08.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_07.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_07.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_06.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_06.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_05.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_05.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_04.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_04.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_03.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_02.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_02.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="img/cta/mar_01.webp" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_01.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
               </div>
@@ -460,7 +460,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="img/illustrations/awards01.webp" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards01.webp') }}" alt="Azurio Image">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -488,7 +488,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="img/illustrations/awards02.webp" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards02.webp') }}" alt="Azurio Image">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -516,7 +516,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="img/illustrations/awards03.webp" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards03.webp') }}" alt="Azurio Image">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -544,7 +544,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="img/illustrations/awards04.webp" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards04.webp') }}" alt="Azurio Image">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -572,7 +572,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="img/illustrations/awards05.webp" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards05.webp') }}" alt="Azurio Image">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -600,7 +600,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="img/illustrations/awards06.webp" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards06.webp') }}" alt="Azurio Image">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -668,7 +668,7 @@
                     <div class="mxd-team-grid__inner">
                       <div class="mxd-team-grid__media">
                         <div class="mxd-team-grid__photo">
-                          <img src="img/avatars/800x800_ava-05.webp" alt="Azurio Template Team Member Photo">
+                          <img src="{{ asset('img/avatars/800x800_ava-05.webp') }}" alt="Azurio Template Team Member Photo">
                         </div>
                         {{-- <div class="mxd-team-grid__socials">
                          <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
@@ -690,7 +690,7 @@
                     <div class="mxd-team-grid__inner">
                       <div class="mxd-team-grid__media">
                         <div class="mxd-team-grid__photo">
-                          <img src="img/avatars/800x800_ava-06.webp" alt="Azurio Template Team Member Photo">
+                          <img src="{{ asset('img/avatars/800x800_ava-06.webp') }}" alt="Azurio Template Team Member Photo">
                         </div>
                         {{-- <div class="mxd-team-grid__socials">
                           <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
@@ -712,7 +712,7 @@
                     <div class="mxd-team-grid__inner">
                       <div class="mxd-team-grid__media">
                         <div class="mxd-team-grid__photo">
-                          <img src="img/avatars/800x800_ava-07.webp" alt="Azurio Template Team Member Photo">
+                          <img src="{{ asset('img/avatars/800x800_ava-07.webp') }}" alt="Azurio Template Team Member Photo">
                         </div>
                         {{-- <div class="mxd-team-grid__socials">
                           <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
@@ -877,7 +877,7 @@
                         <span class="meta-date">03 January, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="img/blog/preview/grid-x3/pr-01.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-01.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -891,7 +891,7 @@
                         <span class="meta-date">15 January, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="img/blog/preview/grid-x3/pr-02.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-02.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -905,7 +905,7 @@
                         <span class="meta-date">28 January, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="img/blog/preview/grid-x3/pr-04.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-04.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -919,7 +919,7 @@
                         <span class="meta-date">02 February, 2026</span>
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="img/blog/preview/grid-x3/pr-03.webp" alt="Blog Preview Image">
+                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-03.webp') }}" alt="Blog Preview Image">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
@@ -972,7 +972,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Photography</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_01.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_01.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -981,7 +981,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">3D Models</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_02.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_02.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -990,7 +990,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Development</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_03.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_03.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -999,7 +999,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Illustrations</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_04.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_04.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1008,7 +1008,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Fashion</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_05.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_05.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1017,7 +1017,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Digital Art</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_06.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_06.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1026,7 +1026,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Packaging</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_07.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_07.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1035,7 +1035,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Motion</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_08.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_08.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1044,7 +1044,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Illustrations</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_09.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_09.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1053,7 +1053,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Video Production</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_10.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_10.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1062,7 +1062,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Photography</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_01.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_01.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1071,7 +1071,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">3D Models</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_02.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_02.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1080,7 +1080,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Development</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_03.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_03.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1089,7 +1089,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Illustrations</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_04.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_04.webp') }}" alt="">
                         </div>
                       </div>
                       <!-- single item -->
@@ -1098,7 +1098,7 @@
                           <span class="tag tag-s tag-medium-opposite mxd-scramble">Fashion</span>
                         </div>
                         <div class="marquee__image">
-                          <img src="img/cta/mar_05.webp" alt="">
+                          <img src="{{ asset('img/cta/mar_05.webp') }}" alt="">
                         </div>
                       </div>
                     </div>

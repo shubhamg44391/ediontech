@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.main')
+@extends('frontend.layouts.main')
 
 
 @section('main-container')
@@ -44,27 +44,26 @@
                                 <div class="col-12">
                                     <!-- content -->
                                     <div class="py-5 has-medium-title">
-                                      
-                                            
-                                                {{-- free consultation page content start --}}
 
 
-                                                <!--=====================================-->
-                                                <div class="breadcrum-area">
-                                                    <div class="container">
-                                                        <!-- Google Calendar Appointment Scheduling begin -->
-                                                        <iframe
-                                                            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2q_G-iiyc81JQ7GzBBWj6efjmlRBK9FrqPp0Q5XE6bhz2OKxYEIhTwkmdcRwcHrS-pPI2PpBiS?gv=true"
-                                                            style="border: 0" width="100%" height="600"
-                                                            frameborder="0"></iframe>
-                                                        <!-- end Google Calendar Appointment Scheduling -->
-                                                    </div>
-                                                </div>
-                                                <!--=====================================-->
+                                        {{-- free consultation page content start --}}
 
-                                                {{-- free consultation page content end --}}
 
-                                      
+                                        <!--=====================================-->
+                                        <div class="breadcrum-area">
+                                            <div class="container bg-white">
+                                                <!-- Google Calendar Appointment Scheduling begin -->
+                                                <iframe
+                                                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2q_G-iiyc81JQ7GzBBWj6efjmlRBK9FrqPp0Q5XE6bhz2OKxYEIhTwkmdcRwcHrS-pPI2PpBiS?gv=true"
+                                                    style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                                                <!-- end Google Calendar Appointment Scheduling -->
+                                            </div>
+                                        </div>
+                                        <!--=====================================-->
+
+                                        {{-- free consultation page content end --}}
+
+
                                     </div>
                                 </div>
                             </div>
@@ -75,6 +74,6 @@
             <!-- Block - Inner Headline v04 End -->
 
         </div>
-      
+
     </main>
 @endsection
