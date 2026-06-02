@@ -200,7 +200,7 @@
                         </p>
                       </div>
                       <div class="mxd-niche-cards__image absolute-desktop-bottom">
-                        <img src="{{ asset('img/illustrations/niche01.webp') }}" alt="Azurio Template Sample Image">
+                        <img src="{{ asset('img/illustrations/niche01.webp') }}" alt="Azurio Template Sample Image" loading="lazy">
                       </div>
                     </div>
                   </div>
@@ -230,7 +230,7 @@
                               </p>
                             </div>
                             <div class="mxd-niche-cards__image absolute-desktop-full">
-                              <img src="{{ asset('img/illustrations/niche02.webp') }}" alt="Azurio Template Sample Image">
+                              <img src="{{ asset('img/illustrations/niche02.webp') }}" alt="Azurio Template Sample Image" loading="lazy">
                               <div class="mxd-niche-cards__gradient gradient-linear"></div>
                             </div>
                           </div>
@@ -255,7 +255,7 @@
                               </p>
                             </div>
                             <div class="mxd-niche-cards__image absolute-desktop-full">
-                              <img src="{{ asset('img/illustrations/niche03.webp') }}" alt="Azurio Template Sample Image">
+                              <img src="{{ asset('img/illustrations/niche03.webp') }}" alt="Azurio Template Sample Image" loading="lazy">
                               <div class="mxd-niche-cards__gradient gradient-radial"></div>
                             </div>
                           </div>
@@ -280,7 +280,7 @@
                               </p>
                             </div>
                             <div class="mxd-niche-cards__image absolute-desktop-aside">
-                              <img src="{{ asset('img/illustrations/niche04.webp') }}" alt="Azurio Template Sample Image">
+                              <img src="{{ asset('img/illustrations/niche04.webp') }}" alt="Azurio Template Sample Image" loading="lazy">
                             </div>
                           </div>
                         </div>
@@ -345,7 +345,7 @@
                       <p class="mxd-cpb-list__name">Design</p>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
-                      <img src="{{ asset('img/services/1200x980_cpb01.webp') }}" alt="Azurio Services Image">
+                      <img src="{{ asset('img/services/1200x980_cpb01.webp') }}" alt="Azurio Services Image" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                       <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -390,7 +390,7 @@
                       <p class="mxd-cpb-list__name">Development</p>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
-                      <img src="{{ asset('img/services/1200x980_cpb02.webp') }}" alt="Azurio Services Image">
+                      <img src="{{ asset('img/services/1200x980_cpb02.webp') }}" alt="Azurio Services Image" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                       <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -435,7 +435,7 @@
                       <p class="mxd-cpb-list__name">Online&nbsp;Marketing</p>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
-                      <img src="{{ asset('img/services/1200x980_cpb03.webp') }}" alt="Azurio Services Image">
+                      <img src="{{ asset('img/services/1200x980_cpb03.webp') }}" alt="Azurio Services Image" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                       <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -480,7 +480,7 @@
                       <p class="mxd-cpb-list__name">Business</p>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
-                      <img src="{{ asset('img/services/1200x980_cpb04.webp') }}" alt="Azurio Services Image">
+                      <img src="{{ asset('img/services/1200x980_cpb04.webp') }}" alt="Azurio Services Image" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                       <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -525,7 +525,7 @@
                       <p class="mxd-cpb-list__name">Technology</p>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
-                      <img src="{{ asset('img/services/1200x980_cpb05.webp') }}" alt="Azurio Services Image">
+                      <img src="{{ asset('img/services/1200x980_cpb05.webp') }}" alt="Azurio Services Image" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                       <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -570,7 +570,7 @@
                       <p class="mxd-cpb-list__name">Content&nbsp;Strategy</p>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
-                      <img src="{{ asset('img/services/1200x980_cpb06.webp') }}" alt="Azurio Services Image">
+                      <img src="{{ asset('img/services/1200x980_cpb06.webp') }}" alt="Azurio Services Image" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                       <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -615,7 +615,7 @@
       <div class="mxd-container fullwidth-container">
         <div class="mxd-divider">
           <div class="mxd-divider__image divider-image-4 parallax-img">
-            <img class="parallax-img" src="{{ asset('img/illustrations/1920x1080_divider-01.webp') }}" alt="">
+            <img class="parallax-img" src="{{ asset('img/illustrations/1920x1080_divider-01.webp') }}" alt="" loading="lazy">
           </div>
         </div>
       </div>
@@ -661,18 +661,18 @@
                     <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work"
                       href="{{ route('frontend.works') }}">
                       <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image" loading="lazy">
                       {{-- <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image" loading="lazy">
                       --}}
                       {{-- <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image" loading="lazy">
                       --}}
                       {{-- <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Project Preview Image" loading="lazy">
                       --}}
                       <img class="mxd-img-anim__main" src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                     </a>
                     <div class="mxd-project-item__caption">
                       <div class="mxd-project-item__name">
@@ -690,17 +690,17 @@
                     <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work"
                       href="{{ route('frontend.works') }}">
                       <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Project Preview Image" loading="lazy">
                       {{-- <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Project Preview Image" loading="lazy">
                       --}}
                       {{-- <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Project Preview Image">
+                        src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Project Preview Image" loading="lazy">
                       --}}
                       {{-- <img class="mxd-img-anim__absolute"
-                        src="{{ asset('img/works/showcase-grid-x3/pr02-02.webp') }}" alt="Project Preview Image"> --}}
+                        src="{{ asset('img/works/showcase-grid-x3/pr02-02.webp') }}" alt="Project Preview Image" loading="lazy"> --}}
                       <img class="mxd-img-anim__main" src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                     </a>
                     <div class="mxd-project-item__caption">
                       <div class="mxd-project-item__name">
@@ -717,17 +717,17 @@
                     <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work"
                       href="{{ route('frontend.works') }}">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr03-06.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr03-02.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr03-05.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr03-04.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr03-03.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__main" src="{{ asset('img/works/showcase-grid-x3/pr03-01.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                     </a>
                     <div class="mxd-project-item__caption">
                       <div class="mxd-project-item__name">
@@ -744,19 +744,19 @@
                     <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work"
                       href="{{ route('frontend.works') }}">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr04-02.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr04-03.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr04-04.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr04-05.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr04-06.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr04-07.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__main" src="{{ asset('img/works/showcase-grid-x3/pr04-01.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                     </a>
                     <div class="mxd-project-item__caption">
                       <div class="mxd-project-item__name">
@@ -773,18 +773,18 @@
                     <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work"
                       href="works">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr05-04.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr05-05.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
 
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr05-06.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr05-03.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr05-02.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__main" src="{{ asset('img/works/showcase-grid-x3/pr05-01.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                     </a>
                     <div class="mxd-project-item__caption">
                       <div class="mxd-project-item__name">
@@ -801,19 +801,19 @@
                     <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent" data-cursor-text="View Work"
                       href="{{ route('frontend.works') }}">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr06-07.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr06-06.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr06-05.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr06-04.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr06-03.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__absolute" src="{{ asset('img/works/showcase-grid-x3/pr06-02.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                       <img class="mxd-img-anim__main" src="{{ asset('img/works/showcase-grid-x3/pr06-01.webp') }}"
-                        alt="Project Preview Image">
+                        alt="Project Preview Image" loading="lazy">
                     </a>
                     <div class="mxd-project-item__caption">
                       <div class="mxd-project-item__name">
@@ -838,7 +838,7 @@
                               <path
                                 d="M143.9,0v28.8h-28.8V0h28.8ZM143.9,28.8v28.8h28.8v-28.8h-28.8ZM172.7,57.6v28.8h28.8v-28.8h-28.8ZM230.2,115.2v-28.8h-28.8v28.8H0v28.8h201.4v28.8h28.8v-28.8h28.8v-28.8h-28.8ZM172.7,201.6h28.8v-28.8h-28.8v28.8ZM143.9,230.4h28.8v-28.8h-28.8v28.8ZM114.3,260h28.8v-28.8h-28.8v28.8Z" />
                             </svg>
-                            <!-- <img src="{{ asset('img/cursor-trail-transparent/07_trail.webp') }}" alt="Azurio Image"> -->
+                            <!-- <img src="{{ asset('img/cursor-trail-transparent/07_trail.webp') }}" alt="Azurio Image" loading="lazy"> -->
                           </div>
                         </div>
                         <div class="col-12 col-md-6 col-xl-4 mxd-object-link__item justify-end">
@@ -851,17 +851,17 @@
                             <a class="mxd-object-link__media mxd-img-anim active-cursor-permanent anim-uni-in-up"
                               data-cursor-text="All Works" href="{{ route('frontend.works') }}">
                               <img class="mxd-img-anim__absolute centered-y"
-                                src="{{ asset('img/works/800x450_all02.webp') }}" alt="Project Preview Image">
+                                src="{{ asset('img/works/800x450_all02.webp') }}" alt="Project Preview Image" loading="lazy">
                               <img class="mxd-img-anim__absolute centered-y"
-                                src="{{ asset('img/works/800x450_all01.webp') }}" alt="Project Preview Image">
+                                src="{{ asset('img/works/800x450_all01.webp') }}" alt="Project Preview Image" loading="lazy">
                               <img class="mxd-img-anim__absolute centered-y"
-                                src="{{ asset('img/works/800x450_all04.webp') }}" alt="Project Preview Image">
+                                src="{{ asset('img/works/800x450_all04.webp') }}" alt="Project Preview Image" loading="lazy">
                               <img class="mxd-img-anim__absolute centered-y"
-                                src="{{ asset('img/works/800x450_all05.webp') }}" alt="Project Preview Image">
+                                src="{{ asset('img/works/800x450_all05.webp') }}" alt="Project Preview Image" loading="lazy">
                               <img class="mxd-img-anim__absolute centered-y"
-                                src="{{ asset('img/works/800x450_all06.webp') }}" alt="Project Preview Image">
+                                src="{{ asset('img/works/800x450_all06.webp') }}" alt="Project Preview Image" loading="lazy">
                               <img class="mxd-img-anim__main" src="{{ asset('img/works/800x450_all03.webp') }}"
-                                alt="Project Preview Image">
+                                alt="Project Preview Image" loading="lazy">
                             </a>
                           </div>
                         </div>
@@ -887,7 +887,7 @@
           <!-- image -->
           <div class="mxd-divider__image divider-image-1 parallax-img">
 
-            <img class="parallax-img" src="{{asset('img/illustrations/1920x1080_divider-01.webp')}}" alt="">
+            <img class="parallax-img" src="{{asset('img/illustrations/1920x1080_divider-01.webp')}}" alt="" loading="lazy">
 
           </div>
           <!-- cover layer -->
@@ -1159,7 +1159,7 @@
       <div class="mxd-container fullwidth-container">
         <div class="mxd-divider">
           <div class="mxd-divider__image divider-image-7 parallax-img">
-            <img class="parallax-img" src="{{asset('img/illustrations/1920x1080_divider-01.webp')}}" alt="">
+            <img class="parallax-img" src="{{asset('img/illustrations/1920x1080_divider-01.webp')}}" alt="" loading="lazy">
           </div>
         </div>
       </div>
@@ -1206,46 +1206,7 @@
           <!-- Block - Section Title v05 End -->
 
           <!-- Block - Blog Preview Grid x3 Start -->
-          <div class="mxd-block">
-            <div class="mxd-blog-grid">
-              <div class="container-fluid p-0">
-                <div class="row g-0 mxd-blog-grid__gallery">
-                  @forelse($blogs as $blog)
-                    <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                      <div class="mxd-blog-item__date">
-                        <span
-                          class="meta-date">{{ \Carbon\Carbon::parse($blog->created_at ?? now())->format('d F, Y') }}</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post"
-                        href="{{ route('frontend.blog-details', $blog->slug) }}">
-                        <img class="" src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-m"
-                            href="{{ route('frontend.blog-details', $blog->slug) }}">{{ $blog->title }}</a>
-                        </div>
-                        <div class="mxd-blog-item__tags">
-                          @if(!empty($blog->meta_keywords))
-                            @foreach(explode(',', $blog->meta_keywords) as $keyword)
-                              <span class="tag tag-s tag-medium mxd-scramble">{{ trim($keyword) }}</span>
-                            @endforeach
-                          @else
-                            <span class="tag tag-s tag-medium mxd-scramble">Insights</span>
-                          @endif
-                        </div>
-                      </div>
-                    </div>
-                  @empty
-                    <div class="col-12 text-center py-5">
-                      <p>No blog posts found at the moment. Please check back later.</p>
-                    </div>
-                  @endforelse
-
-                </div>
-              </div>
-            </div>
-          </div>
+         @include('frontend.blog-data');
           <!-- Block - Blog Preview Grid x3 End -->
 
         </div>

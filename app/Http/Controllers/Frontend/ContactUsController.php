@@ -21,6 +21,7 @@ class ContactUsController extends Controller
             'number' => 'required|string|max:15',
             'company' => 'nullable|string',
             'message' => 'nullable|string',
+            'budget' => 'nullable|string',
             'captcha' => 'required|captcha',
         ]);
 

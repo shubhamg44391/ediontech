@@ -3163,72 +3163,7 @@
           <!-- Block - Section Title v04 End -->
 
           <!-- Block - Blog Preview Grid x3 Start -->
-          <div class="mxd-block">
-            <div class="mxd-blog-grid">
-              <div class="container-fluid p-0">
-                <div class="row g-0 mxd-blog-grid__gallery">
-                  <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                    <div class="mxd-blog-item__date">
-                      <span class="meta-date">02 February, 2026</span>
-                    </div>
-                    <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post"
-                      href="blog-article.html">
-                      <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-01.webp') }}" alt="Blog Preview Image">
-                    </a>
-                    <div class="mxd-blog-item__caption">
-                      <div class="mxd-blog-item__title">
-                        <a class="blog-name-m" href="blog-article.html">Frontend innovations and user journeys</a>
-                      </div>
-                      <div class="mxd-blog-item__tags">
-                        <span class="tag tag-s tag-medium mxd-scramble">UI/UX</span>
-                        <span class="tag tag-s tag-medium mxd-scramble">Development</span>
-                        <span class="tag tag-s tag-medium mxd-scramble">Insights</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                    <div class="mxd-blog-item__date">
-                      <span class="meta-date">28 January, 2026</span>
-                    </div>
-                    <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post"
-                      href="blog-article.html">
-                      <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-02.webp') }}" alt="Blog Preview Image">
-                    </a>
-                    <div class="mxd-blog-item__caption">
-                      <div class="mxd-blog-item__title">
-                        <a class="blog-name-m" href="blog-article.html">Branding in creating digital experiences</a>
-                      </div>
-                      <div class="mxd-blog-item__tags">
-                        <span class="tag tag-s tag-medium mxd-scramble">Concept</span>
-                        <span class="tag tag-s tag-medium mxd-scramble">Editorial</span>
-                        <span class="tag tag-s tag-medium mxd-scramble">Event</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                    <div class="mxd-blog-item__date">
-                      <span class="meta-date">15 January, 2026</span>
-                    </div>
-                    <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post"
-                      href="blog-article.html">
-                      <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-03.webp') }}" alt="Blog Preview Image">
-                    </a>
-                    <div class="mxd-blog-item__caption">
-                      <div class="mxd-blog-item__title">
-                        <a class="blog-name-m" href="blog-article.html">Designing for the future of interactive digital
-                          spaces</a>
-                      </div>
-                      <div class="mxd-blog-item__tags">
-                        <span class="tag tag-s tag-medium mxd-scramble">Midjourney</span>
-                        <span class="tag tag-s tag-medium mxd-scramble">News</span>
-                        <span class="tag tag-s tag-medium mxd-scramble">Editorial</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+           @include('frontend.blog-data')
           <!-- Block - Blog Preview Grid x3 End -->
 
         </div>

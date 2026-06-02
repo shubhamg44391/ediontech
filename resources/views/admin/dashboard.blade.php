@@ -82,10 +82,10 @@
                                 </td>
                                 <td>{{ $ipAddress->city }}</td>
                                 <td>
-                                    {{ $ipAddress->region }}
+                                    {{ $ipAddress->region??'' }}
                                 </td>
                                 <td>
-                                    {{ $ipAddress->country }}
+                                    {{ $ipAddress->country??'' }}
                                 </td>
                                 <td>
                                     {{ $ipAddress->created_at }}

@@ -1,4 +1,3 @@
-
 @extends('frontend.layouts.main')
 
 
@@ -42,7 +41,7 @@
                                 </div>
                                 <div class="col-12">
                                     <!-- content -->
-                                    <div class="py-5 inner-headline__content">
+                                    <div class="inner-headline__content">
 
 
                                         {{-- privacy policy content start --}}
@@ -50,47 +49,31 @@
                                         <!--=====================================-->
                                         <!--=       Breadcrumb Area Start       =-->
                                         <!--=====================================-->
-                                        <div class="breadcrum-area">
-                                            <div class="container px-5 ">
-                                                <div class="px-5 py-5 ">
-
-                                                    <h1 class="text-center h2">Privacy Policy</h1>
-                                                    <div class="gap-5 py-5 justify-content-center d-flex">
-                                                        <span>
-                                                            <a href="{{ route('frontend.home') }}">
-                                                                <span class="mxd-scramble">Home</span>
-                                                            </a>
-                                                        </span>
-                                                        <span class=" current-item">Privacy Policy
-                                                        </span>
-                                                    </div>
-                                                </div>
+                                        <div class="inner-headline__breadcrumbs loading-fade">
+                                            <div class="px-5 breadcrumbs__nav">
+                                                <span>
+                                                    <a href="{{ route('frontend.home') }}">
+                                                        <span class="mxd-scramble">Home</span>
+                                                    </a>
+                                                </span>
+                                                <span class="current-item">Privacy Policy
+                                                </span>
                                             </div>
-                                            <ul class="shape-group-8 list-unstyled row col-12">
-                                                {{-- <li class="shape shape-1" data-sal="slide-right" data-sal-duration="500"
-                                                    data-sal-delay="100">
-                                                    <img src="{{ asset('assets/media/bubble-9.png') }}" alt="Bubble">
-                                                </li>
-                                                <li class="absolute shape shape-2" data-sal="slide-left" data-sal-duration="500"
-                                                    data-sal-delay="200">
-                                                    <img src="{{ asset('assets/media/bubble-11.png') }}" alt="Bubble">
-                                                </li>
-                                                <li class="shape shape-3" data-sal="slide-up" data-sal-duration="500"
-                                                    data-sal-delay="300">
-                                                    <img src="{{ asset('assets/media/line-4.png') }}" alt="Line">
-                                                </li> --}}
-                                            </ul>
+                                            <h3 class="p-5">Privacy Policy</h3>
                                         </div>
+                                        <!-- breadcrumbs -->
+
                                         <!--=====================================-->
                                         <!--=    Privacy Policy Area Start      =-->
                                         <!--=====================================-->
-                                        <section class="section-padding privacy-policy-area">
-                                            <div class="container">
+                                        <section class="py-3 section-padding privacy-policy-area">
+                                            <div class="container py-5">
+                                                
                                                 <div class="row justify-content-center">
                                                     <div class="col-lg-10">
                                                         <div class="privacy-policy-content">
                                                             <div class="section-title">
-                                                                <h5 class="title">This Privacy policy was published on
+                                                                <h5 class=" title">This Privacy policy was published on
                                                                     September 10th, 2021.</h5>
                                                             </div>
 

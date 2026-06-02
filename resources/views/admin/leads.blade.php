@@ -30,6 +30,7 @@
                                     <th>Email</th>
                                     <th>Company</th>
                                     <th>Message</th>
+                                    <th>Budget</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -43,6 +44,7 @@
                                             <td>{{ $lead->email }}</td>
                                             <td>{{ $lead->company }}</td>
                                             <td>{{ $lead->message }}</td>
+                                            <td>$ {{ $lead->budget }}</td>
                                             <td class=" justify-content-between">
 
                                                 <button type="button" class="btn-primary" data-bs-toggle="modal"
@@ -63,6 +65,7 @@
                                         <td></td>
                                         <td></td>
                                         <td>No Leads found.</td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -186,6 +189,11 @@
                                             <label for="contact-company">Company</label>
                                             <input type="text" class="form-control" id="contact-company" name="company"
                                                 value="{{ $lead->company }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="contact-budget">Budget</label>
+                                            <input type="text" class="form-control" id="contact-budget" name="budget"
+                                                value="{{ $lead->budget }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="contact-message">Message</label>

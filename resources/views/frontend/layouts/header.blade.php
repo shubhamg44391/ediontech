@@ -60,19 +60,39 @@
     <style>
         @media(max-width:480px) {
             .hamburger_logo {
-                height: 40px;
+                  height: 100px;
                 padding-bottom: 0;
-                width: 80px;
+                width: 150px;
+                postion: absolute;
+                top: 0;
                 object-fit: contain;
+                padding-left: 20px;
+            }
+             .mxd-menu__logo {
+                position: absolute;
+                top: 0rem;
+                left: 1rem;
+                z-index: 9;
             }
         }
 
         @media(min-width:481px) {
             .hamburger_logo {
-                height: 60px;
+                height: 100px;
                 padding-bottom: 0;
-                width: 150px;
+                width: 170px;
+                postion: absolute;
+                top: 0;
                 object-fit: contain;
+                padding-left: 20px;
+            }
+          
+
+            .mxd-menu__logo {
+                position: absolute;
+                top: 0rem;
+                left: 3rem;
+                z-index: 9;
             }
         }
 
@@ -81,6 +101,10 @@
         }
 
         .mxd-header {
+            padding-top: 0 !important;
+        }
+
+        .mxd-menu__logo {
             padding-top: 0 !important;
         }
 
@@ -98,8 +122,8 @@
         .custom-brand-logo {
             justify-content: center;
             height: 60px;
-            width: 200px;
-            max-width: 200px;
+            width: 100px;
+            max-width: 100px;
             object-fit: contain;
             display: block;
             margin: 0;
@@ -110,7 +134,7 @@
         @media (max-width: 768px) {
             .custom-brand-logo {
                 height: 90px;
-                max-width: 150px;
+                max-width: 100px;
                 align-items: center;
 
             }
@@ -119,7 +143,7 @@
         @media (max-width: 1080px) {
             .custom-brand-logo {
                 height: 100px;
-                max-width: 150px;
+                max-width: 100px;
                 align-items: center;
 
             }
@@ -128,7 +152,7 @@
         @media (min-width: 1081px) {
             .custom-brand-logo {
                 height: 120px;
-                max-width: 150px;
+                max-width: 100px;
                 align-items: center;
 
             }
@@ -200,7 +224,7 @@
 
                     <a href="{{ route('frontend.home') }}" class="menu-logo d-inline-block position-relative">
 
-                        <img src="{{ asset('img/favicon/brand_logo_light.png') }}" alt="Edion Web Tech Brand Logo"
+                        <img src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="Edion Web Tech Brand Logo"
                             class="img-fluid hamburger_logo" style="">
 
                     </a>

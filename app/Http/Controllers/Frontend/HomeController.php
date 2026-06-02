@@ -17,5 +17,14 @@ class HomeController extends Controller
             ->get();
         return view('frontend.home', $data);
     }
+       public function blog_data()
+    {
+        $data['blogs'] = DB::table('posts')
+            ->latest()
+            ->limit(3)
+            ->get();
+        return view('frontend.blog_data', $data);
+    }
+
 }
 ?>

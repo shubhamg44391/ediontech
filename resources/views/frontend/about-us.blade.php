@@ -867,70 +867,46 @@
             <!-- Block - Section Title v04 End -->
 
             <!-- Block - Blog Preview Grid x4 Start -->
-            <div class="mxd-block">
-              <div class="mxd-blog-grid">
-                <div class="p-0 container-fluid">
-                  <div class="row g-0 mxd-blog-grid__gallery">
-                    <!-- item -->
-                    <div class="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
+           <div class="mxd-block">
+            <div class="mxd-blog-grid">
+              <div class="container-fluid p-0">
+                <div class="row g-0 mxd-blog-grid__gallery">
+                  @forelse($blogs as $blog)
+                    <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
                       <div class="mxd-blog-item__date">
-                        <span class="meta-date">03 January, 2026</span>
+                        <span
+                          class="meta-date">{{ \Carbon\Carbon::parse($blog->created_at ?? now())->format('d F, Y') }}</span>
                       </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-01.webp') }}" alt="Blog Preview Image">
+                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post"
+                        href="{{ route('frontend.blog-details', $blog->slug) }}">
+                        <img class="" src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" loading="lazy">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">
-                          <a class="blog-name-s" href="blog-article.html">Frontend innovations and user journeys</a>
+                          <a class="blog-name-m"
+                            href="{{ route('frontend.blog-details', $blog->slug) }}">{{ $blog->title }}</a>
+                        </div>
+                        <div class="mxd-blog-item__tags">
+                          @if(!empty($blog->meta_keywords))
+                            @foreach(explode(',', $blog->meta_keywords) as $keyword)
+                              <span class="tag tag-s tag-medium mxd-scramble">{{ trim($keyword) }}</span>
+                            @endforeach
+                          @else
+                            <span class="tag tag-s tag-medium mxd-scramble">Insights</span>
+                          @endif
                         </div>
                       </div>
                     </div>
-                    <!-- item -->
-                    <div class="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">15 January, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-02.webp') }}" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-s" href="blog-article.html">Branding in creating digital experiences</a>
-                        </div>
-                      </div>
+                  @empty
+                    <div class="col-12 text-center py-5">
+                      <p>No blog posts found at the moment. Please check back later.</p>
                     </div>
-                    <!-- item -->
-                    <div class="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">28 January, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-04.webp') }}" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-s" href="blog-article.html">Elevating digital workshops with engaging design</a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- item -->
-                    <div class="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">02 February, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="blog-article.html">
-                        <img class="" src="{{ asset('img/blog/preview/grid-x3/pr-03.webp') }}" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-s" href="blog-article.html">Designing for the future of interactive digital spaces</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  @endforelse
+
                 </div>
               </div>
             </div>
+          </div>
             <!-- Block - Blog Preview Grid x4 End -->
 
           </div>

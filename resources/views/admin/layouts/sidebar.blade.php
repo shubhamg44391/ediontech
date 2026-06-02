@@ -26,6 +26,15 @@
             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
             <div data-i18n="Authentications">Home Page</div>
         </a>
+         <ul class="menu-sub">
+
+            <li class="menu-item {{ Request::is('admin/faq/list*') ? 'active' : '' }}">
+                <a href="{{ route('admin.faq.index') }}" class="menu-link">
+                    <div data-i18n="Basic">FAQ</div>
+                </a>
+            </li>
+
+        </ul>
 
     </li>
     <li class="menu-item">
@@ -43,12 +52,14 @@
 
         </ul>
     </li>
-    {{-- <li class="menu-item {{ Request::is('admin/leads*') ? 'active' : '' }}">
+
+    
+     <li class="menu-item {{ Request::is('admin/leads*') ? 'active' : '' }}">
         <a href="{{ route('leads.index') }}" class="menu-link ">
             <i class="menu-icon tf-icons bx bxs-envelope"></i>
             <div data-i18n="Basic">Leads</div>
         </a>
-    </li> --}}
+    </li> 
 
     <!-- Components -->
 </ul>

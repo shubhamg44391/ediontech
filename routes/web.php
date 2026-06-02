@@ -17,9 +17,10 @@ use App\Http\Controllers\AboutWhoController;
 use App\Http\Controllers\AboutValuesController;
 use App\Http\Controllers\AboutTeamController;
 use App\Http\Controllers\AboutProcessController;
-;
+use App\Http\Controllers\Admin\FaqAdminController;
 
-use App\Http\Controllers\Backend\AdminDashboardController;
+
+
 use App\Http\Controllers\Admin\IpAddressController;
 
 // blog
@@ -38,10 +39,10 @@ use App\Http\Controllers\Frontend\TermsAndConditionsController;
 
 // backend imported controller
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CreateNewProductController;
 
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\FreeConsultationController;
-use App\Http\Controllers\refundAndCancellationPolicyController;
+use App\Http\Controllers\RefundAndCancellationPolicyController;
 
 // Frontend controller
 
@@ -49,12 +50,10 @@ use App\Http\Controllers\refundAndCancellationPolicyController;
 Route::get('/clear', function () {
 
     Artisan::call('optimize:clear');
-    Artisan::call('config:clear');
-    Artisan::call('route:clear');
-    Artisan::call('cache:clear');
 
-    return 'Cache Cleared Successfully';
+    return 'Cache Cleared';
 });
+
 Route::get('/migrate', function () {
 
     Artisan::call('migrate');
@@ -62,12 +61,12 @@ Route::get('/migrate', function () {
     return 'Migration Completed';
 });
 
-// Route::get('/migrate-fresh', function () {
+Route::get('/migrate-fresh', function () {
 
-//     Artisan::call('migrate:fresh --seed');
+    Artisan::call('migrate:fresh --seed');
 
-//     return 'Fresh Migration & Seeder Completed';
-// });
+    return 'Fresh Migration & Seeder Completed';
+});
 
 Route::get('/seed', function () {
 
@@ -114,7 +113,6 @@ Route::name('frontend.')->group(function () {
         '/refund-and-cancellation-policy',
         [RefundAndCancellationPolicyController::class, 'index']
     )->name('refund-and-cancellation-policy');
-
 });
 
 // Backend Controller
@@ -148,7 +146,7 @@ Route::get('/dashboard', function () {
 
 
 
-// home Banner
+// Dashboard Blog Routes Banner
 Route::middleware('auth')->group(function () {
 
     // header Index Page
@@ -164,7 +162,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-// admin dashboard route
+// admin dashboard header route
 
 Route::middleware('auth')->group(function () {
     // header Index Page
@@ -177,7 +175,7 @@ Route::middleware('auth')->group(function () {
     Route::put('admin/header/{header}', [headerController::class, 'update'])->name('header.update');
 });
 
-// home Banner
+// Dashboard Blog Routes  Banner
 Route::middleware('auth')->group(function () {
 
     // header Index Page
@@ -190,6 +188,23 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin/blog/post/{post}', [PostController::class, 'update'])->name('post.update');
 
     Route::delete('/admin/blog/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
+});
+
+// FAQ 
+Route::middleware('auth')->group(function () {
+
+    // header Index Page
+    Route::get('/admin/faq/list', [FaqAdminController::class, 'index'])->name('admin.faq.index');
+    Route::get('/admin/faq/add', [FaqAdminController::class, 'create'])->name('admin.faq.create');
+
+    // Store header (Post)
+    Route::post('/admin/faq/add', [FaqAdminController::class, 'store'])->name('admin.faq.store');
+
+    // Update header (Put/Patch)
+    Route::get('/admin/faq/edit/{faq}', [FaqAdminController::class, 'edit'])->name('admin.faq.edit');
+    Route::put('/admin/faq/edit/{faq}', [FaqAdminController::class, 'update'])->name('admin.faq.update');
+
+    Route::delete('/admin/faq/{id}', [FaqAdminController::class, 'destroy'])->name('admin.faq.destroy');
 });
 
 // home Banner
@@ -219,7 +234,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin/leads/{lead}', [LeadController::class, 'update'])->name('leads.update');
     // Delete a lead
     Route::delete('/admin/leads/{lead}', [LeadController::class, 'destroy'])->name('leads.destroy');
-
 });
 
 // Store data from the form
@@ -236,7 +250,6 @@ Route::middleware('auth')->group(function () {
 
     // header Index Page
     Route::get('/admin/payment', [PaymentController::class, 'index'])->name('payment.index');
-
 });
 
 Route::middleware('auth')->group(function () {
@@ -245,7 +258,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/social-media', [SocialMediaLinkController::class, 'store'])->name('social-media.store');
     Route::get('/admin/social-media/{id}/edit', [SocialMediaLinkController::class, 'edit'])->name('social-media.edit');
     Route::put('/admin/social-media/{id}', [SocialMediaLinkController::class, 'update'])->name('social-media.update');
-
 });
 
 // About Banner
@@ -285,4 +297,3 @@ Route::middleware('auth')->group(function () {
 
 // Auth routes
 require __DIR__ . '/auth.php';
-?>

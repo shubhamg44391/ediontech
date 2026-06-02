@@ -39,17 +39,7 @@
          <!--=====================================-->
          <!--=     Call To Action Area Start     =-->
          <!--=====================================-->
-         <section class="section call-to-action-area mt-5 pt-5 pb-5 bg-light rounded text-center">
-            <div class="container">
-               <div class="call-to-action">
-                  <div class="section-heading">
-                     <span class="subtitle text-primary fw-bold">Let's Work Together</span>
-                     <h2 class="title mb-4">Need a successful project?</h2>
-                     <a href="{{ route('frontend.contact') }}" class="btn btn-primary btn-lg mt-3">Estimate Project</a>
-                  </div>
-               </div>
-            </div>
-         </section>
+       
       </div>
    </main>
 @endsection
