@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 
 
 use Illuminate\Http\Request;
 use App\Models\Lead;
 use Illuminate\Support\Facades\DB;
+
 class LeadController extends Controller
 {
     // Show the form
@@ -20,6 +22,9 @@ class LeadController extends Controller
             'company' => 'nullable|string',
             'message' => 'nullable|string',
         ]);
+
+        $data['created_at'] = now();
+        $data['updated_at'] = now();
 
         DB::table('leads')->insert($data);
 
@@ -36,16 +41,15 @@ class LeadController extends Controller
             'message' => 'nullable|string',
         ]);
 
+        $data['created_at'] = now();
+        $data['updated_at'] = now();
         DB::table('leads')->insert($data);
 
         return redirect()->back()->with('success', 'Form submitted successfully!');
     }
 
     // Store data from the form
-    public function store(Request $request)
-    {
-
-    }
+    public function store(Request $request) {}
 
     // Display the list of leads
     public function index()
@@ -75,6 +79,8 @@ class LeadController extends Controller
             'budget' => 'nullable|string',
         ]);
 
+        $data['created_at'] = now();
+        $data['updated_at'] = now();
         DB::table('leads')->where('id', $id)->update($data);
 
         return redirect()->route('leads.index')->with('success', 'Lead updated successfully.');

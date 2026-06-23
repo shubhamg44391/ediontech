@@ -1,5 +1,5 @@
 <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-end m-4">
+    <ul class="m-4 pagination justify-content-end">
         <li class="page-item prev">
             <a class="page-link" href="{{ $paginator->previousPageUrl() }}"><i
                     class="tf-icon bx bx-chevrons-left"></i></a>

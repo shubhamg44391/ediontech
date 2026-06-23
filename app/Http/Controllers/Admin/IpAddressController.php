@@ -19,10 +19,34 @@ class IpAddressController extends Controller
         if ($existing) {
             // Increment the visit count
             DB::table('ip_addresses')->where('id', $existing->id)->increment('visited');
-            DB::table('ip_addresses')->where('id', $existing->id)->update(['updated_at' => now()]);
+            
+            // Check if geolocation details are missing or generic
+            $needsUpdate = empty($existing->region) || empty($existing->country) || $existing->region === 'Unknown' || $existing->country === 'Unknown' || empty($existing->city) || $existing->city === 'Unknown';
+            
+            $updateData = ['updated_at' => now()];
+
+            if ($needsUpdate && $ip !== '127.0.0.1' && $ip !== '::1') {
+                try {
+                    $response = @file_get_contents("http://ip-api.com/json/{$ip}");
+                    if ($response) {
+                        $location = json_decode($response);
+                        if ($location && $location->status === 'success') {
+                            $updateData['city'] = $location->city ?? $existing->city ?? 'Unknown';
+                            $updateData['region'] = $location->regionName ?? 'Unknown';
+                            $updateData['country'] = $location->country ?? 'Unknown';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    // Silently ignore API errors
+                }
+            }
+
+            DB::table('ip_addresses')->where('id', $existing->id)->update($updateData);
         } else {
             // Try to get the city based on IP
             $city = 'Unknown';
+            $region = 'Unknown';
+            $country = 'Unknown';
             try {
                 // Ignore local IPs
                 if ($ip !== '127.0.0.1' && $ip !== '::1') {
@@ -30,7 +54,9 @@ class IpAddressController extends Controller
                     if ($response) {
                         $location = json_decode($response);
                         if ($location && $location->status === 'success') {
-                            $city = $location->city;
+                            $city = $location->city ?? 'Unknown';
+                            $region = $location->regionName ?? 'Unknown';
+                            $country = $location->country ?? 'Unknown';
                         }
                     }
                 }
@@ -42,6 +68,8 @@ class IpAddressController extends Controller
             DB::table('ip_addresses')->insert([
                 'ip_address' => $ip,
                 'city' => $city,
+                'region' => $region,
+                'country' => $country,
                 'visited' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),

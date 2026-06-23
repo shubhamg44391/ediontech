@@ -10,14 +10,19 @@ class AboutUsController extends Controller
 {
 
 
-     public function index()
+    public function index()
     {
-        $data['blogs'] = DB::table('posts')
+        $blogs = DB::table('posts')
             ->latest()
             ->limit(3)
             ->get();
-        return view('frontend.about-us',$data);
+
+       
+            $slug = 'about';
+      
+
+        $headerdata = DB::table('pages')->where('slug', $slug)->first();
+     
+        return view('frontend.about-us', compact('blogs','headerdata'));
     }
 }
-
- ?>

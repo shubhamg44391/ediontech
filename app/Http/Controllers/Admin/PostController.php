@@ -30,7 +30,6 @@ class PostController extends Controller
                 'meta_description' => 'nullable|string|max:500',
                 'meta_keywords' => 'nullable|string|max:500',
             ]);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             return redirect()->back()
                 ->withErrors($e->validator)
@@ -69,15 +68,19 @@ class PostController extends Controller
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
             'meta_keywords' => $request->input('meta_keywords'),
+            'created_at' => now(),
+            'updated_at' => now(),
+
         ]);
 
         return redirect()->route('post.index')->with('success', 'Post added successfully!');
     }
 
-    public function edit($id)
+    public function edit( $id)
     {
-        $banner = DB::table('banners')->where('id', $id)->first();
-        return view('admin.home.banner', compact('banner'));
+
+        $post = DB::table('posts')->where('id', $id)->first();
+        return view('admin.blog.edit', compact('post'));
     }
 
     public function update(Request $request, $id)

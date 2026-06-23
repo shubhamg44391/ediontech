@@ -14,7 +14,14 @@ class FaqController extends Controller
             ->limit(3)
             ->get();
          $faqs = DB::table('faqs')->latest()->get();
-         return view('frontend.faq', compact('faqs','blogs'));
+
+     
+            $slug = 'faq';
+      
+
+        $headerdata = DB::table('pages')->where('slug', $slug)->first();
+
+         return view('frontend.faq', compact('faqs','blogs', 'headerdata'));
             
     }
 }

@@ -10,16 +10,26 @@ class InsightsController extends Controller
 {
     public function index()
     {
-        $data['blogs'] = DB::table('posts')
+        $blogs = DB::table('posts')
             ->get();
-        return view('frontend.blog-creative', $data);
+
+          
+            $slug = 'insights';
+        
+
+        $headerdata = DB::table('pages')->where('slug', $slug)->first();
+
+        return view('frontend.blog-creative', compact('blogs','headerdata'));
     }
     public function blogDetails(Request $request, $slug)
     {
 
-        $data['blogs'] = DB::table('posts')->where('slug', $slug)
+        $data = DB::table('posts')->where('slug', $slug)
             ->first();
-        return view('frontend.blog-details', $data);
+           
+        return view('frontend.blog-details',['blog'=>$data]);
     }
 }
+
+
 ?>

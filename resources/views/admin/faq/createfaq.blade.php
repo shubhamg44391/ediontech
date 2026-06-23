@@ -5,7 +5,7 @@
     <div class="row">
         <div class="card">
             <div class="card-header">
-                <h4 class="py-3 mb-4">Add New Service</h4>
+                <h4 class="py-3 mb-4">Add New FAQ</h4>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('admin.faq.store') }}">

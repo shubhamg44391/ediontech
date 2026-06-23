@@ -1,6 +1,8 @@
 @extends('frontend.layouts.main')
 
 
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Edion Web Technologies Blogs')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
 @section('main-container')
 
 
@@ -55,15 +57,19 @@
 
 
               <div class="post-featured-fullscreen__cover"></div>
+                     
             </div>
             <div class="post-featured-fullscreen__container">
               <div class="mxd-container grid-l-container">
+                   {{-- page title --}}
+                    <h2 class="px-5 py-5 text-center text-white">Insights</h2>
                 <div class="p-0 container-fluid">
                   <div class="row g-0">
                     <!-- link -->
+                   
                     <div class="col-12 mxd-grid-item">
                       <div class="post-featured-fullscreen__link loading-fade">
-                        <a class="btn btn-line btn-line-permanent" href="blog-article.html">
+                        <a class="btn btn-line btn-line-permanent" href="#blogs">
                           <span class="btn-caption mxd-scramble">Featured</span>
                         </a>
                       </div>
@@ -137,7 +143,7 @@
           <div class="mxd-posts-container fullwidth-posts-container">
 
             <!-- Regular Posts Alt Grid Start -->
-            <div class="mxd-posts-grid">
+            <div class="mxd-posts-grid" id="blogs">
               <div class="p-0 container-fluid">
                 <div class="row g-0 mxd-posts-grid__row">
                   @foreach($blogs as $blog)

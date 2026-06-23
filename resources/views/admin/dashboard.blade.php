@@ -1,6 +1,6 @@
-@extends('admin.layouts.app');
+@extends('admin.layouts.app')
 
-@section('main-content');
+@section('main-content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row">
             <div class="mb-4 col-lg-8 order-0">
@@ -78,7 +78,7 @@
                             <tr>
                                 <td>{{ $startingNumber++ }}</td>
                                 <td>
-                                    {{-- <strong>{{ $ipAddress->ip_address }}</strong> --}}
+                                    <strong>{{ $ipAddress->ip_address }}</strong>
                                 </td>
                                 <td>{{ $ipAddress->city }}</td>
                                 <td>
@@ -95,8 +95,14 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{-- {{ $ipAddresses->links('custom-pagination') }} --}}
-                {{ $ipAddresses->links() }}
+            </div>
+            <div class="d-flex justify-content-between align-items-center px-4 py-2">
+                <div class="text-muted small">
+                    Showing {{ $ipAddresses->firstItem() ?? 0 }} to {{ $ipAddresses->lastItem() ?? 0 }} of {{ $ipAddresses->total() }} results
+                </div>
+                <div>
+                    {{ $ipAddresses->links('custom-pagination') }}
+                </div>
             </div>
         </div>
 

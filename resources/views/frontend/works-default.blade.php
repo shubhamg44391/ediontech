@@ -1,4 +1,8 @@
 @extends('frontend.layouts.main')
+{{-- @section( 'title',$headerdata->meta_title ?? 'Works of Edion Web Technologies') --}}
+
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Works of Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
 
 
 @section('main-container')
@@ -32,7 +36,7 @@
                   <div class="inner-headline__cover"></div>
                 </div>
                 <div class="mxd-container grid-l-container">
-                  <div class="container-fluid p-0">
+                  <div class="p-0 container-fluid">
                     <div class="row g-0">
                       <div class="col-12 mxd-grid-item">
                         <!-- breadcrumbs -->
@@ -54,12 +58,14 @@
                 <!-- bottom positioned headline -->
                 <div class="inner-headline__bottom">
                   <div class="mxd-container grid-l-container">
-                    <div class="container-fluid p-0">
+                    <div class="p-0 container-fluid">
                       <div class="row g-0">
-                        <div class="col-12">
+                        <div class=" col-12">
                           <!-- content -->
+                                   {{-- page title --}}
+                   <div class="mt-5"> <h2 class="mt-5 text-center text-white">Works</h2></div>
                           <div class="inner-headline__content has-medium-title">
-                            <div class="container-fluid p-0">
+                            <div class="p-0 container-fluid">
                               <div class="row g-0">
                                 <div class="col-12 col-xl-10 mxd-grid-item">
                                   <div class="inner-headline__link loading-fade">
@@ -214,7 +220,7 @@
                         <span class="tag tag-m tag-permanent mxd-scramble">marketing</span>
                       </div>
                       <div class="card__btngroup">
-                        <a class="btn btn-line btn-line-permanent" href="project-details.html">
+                        <a class="btn btn-line btn-line-permanent" href="{{route('frontend.contact')}}">
                           <span class="btn-caption mxd-scramble">Know More</span>
                         </a>
                       </div>
@@ -245,7 +251,7 @@
                         <span class="tag tag-m tag-permanent mxd-scramble">marketing</span>
                       </div>
                       <div class="card__btngroup">
-                        <a class="btn btn-line btn-line-permanent" href="project-details.html">
+                        <a class="btn btn-line btn-line-permanent" href="{{route('frontend.contact')}}">
                           <span class="btn-caption mxd-scramble">Know More</span>
                         </a>
                       </div>
@@ -272,7 +278,7 @@
                         <span class="tag tag-m tag-permanent mxd-scramble">marketing</span>
                       </div>
                       <div class="card__btngroup">
-                        <a class="btn btn-line btn-line-permanent" href="project-details.html">
+                        <a class="btn btn-line btn-line-permanent" href="{{route('frontend.contact')}}">
                           <span class="btn-caption mxd-scramble">Know More</span>
                         </a>
                       </div>
@@ -300,7 +306,7 @@
                         <span class="tag tag-m tag-permanent mxd-scramble">marketing</span>
                       </div>
                       <div class="card__btngroup">
-                        <a class="btn btn-line btn-line-permanent" href="project-details.html">
+                        <a class="btn btn-line btn-line-permanent" href="{{route('frontend.contact')}}">
                           <span class="btn-caption mxd-scramble">Know More</span>
                         </a>
                       </div>
@@ -331,7 +337,7 @@
             <!-- Block - Section Title v03 Start -->
             <div class="mxd-block">
               <div class="mxd-section-title pre-grid">
-                <div class="container-fluid p-0">
+                <div class="p-0 container-fluid">
                   <div class="row g-0 d-flex flex-column-reverse flex-xl-row">
                     <div class="col-12 col-xl-8 mxd-grid-item">
                       <div class="mxd-section-title__title">
@@ -340,7 +346,7 @@
                     </div>
                     <div class="col-12 col-xl-4 mxd-grid-item">
                       <div class="mxd-section-title__data top-controls">
-                        <div class="mxd-section-title__controls pre-title justify-end anim-uni-in-up">
+                        <div class="justify-end mxd-section-title__controls pre-title anim-uni-in-up">
                           <a class="btn btn-line btn-line-default" href="#testimonials">
                             <span class="btn-caption mxd-scramble">Clients Approve</span>
                           </a>
@@ -359,7 +365,7 @@
               <div class="mxd-projects-list no-margin-bottom">
                 <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr04.webp" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                   <div class="mxd-projects-list__divider top"></div>
-                  <div class="container-fluid px-0 mxd-projects-list__inner">
+                  <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-padding">
                         <div class="mxd-projects-list__niche">
@@ -390,7 +396,7 @@
                 </a>
                 <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr03.webp" data-cursor-text="View Work" href="project-details.html">
                   <div class="mxd-projects-list__divider top"></div>
-                  <div class="container-fluid px-0 mxd-projects-list__inner">
+                  <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-padding">
                         <div class="mxd-projects-list__niche">
@@ -421,7 +427,7 @@
                 </a>
                 <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr02.webp" data-cursor-text="View Work" href="project-details.html">
                   <div class="mxd-projects-list__divider top"></div>
-                  <div class="container-fluid px-0 mxd-projects-list__inner">
+                  <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-padding">
                         <div class="mxd-projects-list__niche">
@@ -452,7 +458,7 @@
                 </a>
                 <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/services/services-stack/pr02.webp" data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                   <div class="mxd-projects-list__divider top"></div>
-                  <div class="container-fluid px-0 mxd-projects-list__inner">
+                  <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-padding">
                         <div class="mxd-projects-list__niche">
@@ -483,7 +489,7 @@
                 </a>
                 <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/cta/mar_09.webp" data-cursor-text="View Work" href="project-details.html">
                   <div class="mxd-projects-list__divider top"></div>
-                  <div class="container-fluid px-0 mxd-projects-list__inner">
+                  <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-padding">
                         <div class="mxd-projects-list__niche">
@@ -549,7 +555,7 @@
                 <!-- Block - Section Title Standalone Start -->
                 <div class="mxd-block">
                   <div class="mxd-section-title">
-                    <div class="container-fluid p-0">
+                    <div class="p-0 container-fluid">
                       <div class="row g-0 d-flex justify-content-center">
                         <div class="col-12 mxd-grid-item">
                           <div class="mxd-section-title__title centered">
@@ -584,7 +590,7 @@
               <div class="mxd-block">
                 <div class="mxd-testimonials-sticky__cards">
                   <div class="mxd-testimonials-sticky__row">
-                    <div class="container-fluid p-0">
+                    <div class="p-0 container-fluid">
                       <div class="row g-0">
                         <div class="col-12 col-xl-7 mxd-grid-item mxd-testimonials-sticky__column margin-bottom-mobile">
                           <!-- testimonial card -->
@@ -622,7 +628,7 @@
                             </div>
                           </div>
                           <!-- image card -->
-                          <div class="mxd-testimonials-image justify-end has-padding-top">
+                          <div class="justify-end mxd-testimonials-image has-padding-top">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
                               <img src="{{ asset('img/avatars/800x800_ava-01.webp') }}" alt="Azurio Template Example Image">
                             </div>
@@ -649,7 +655,7 @@
                                   </a>
                                 </div>
                               </div>
-                              <p class="mxd-testimonials-card__descr">Azurio team took the time to understand 
+                              <p class="mxd-testimonials-card__descr">Edion team took the time to understand 
                                 our business needs <span>and translated them into a beautifully designed, 
                                   user-friendly website.</span></p>
                             </div>
@@ -670,11 +676,11 @@
                     </div>
                   </div>
                   <div class="mxd-testimonials-sticky__row">
-                    <div class="container-fluid p-0">
+                    <div class="p-0 container-fluid">
                       <div class="row g-0">
                         <div class="col-12 col-xl-3 mxd-grid-item mxd-testimonials-sticky__column margin-bottom-mobile">
                           <!-- image card -->
-                          <div class="mxd-testimonials-image justify-end">
+                          <div class="justify-end mxd-testimonials-image">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
                               <img src="{{ asset('img/avatars/800x800_ava-02.webp') }}" alt="Azurio Template Example Image">
                             </div>
@@ -717,7 +723,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-xl-3 mxd-grid-item mxd-testimonials-sticky__column margin-bottom-mobile">
-                          <div class="mxd-testimonials-image justify-start has-padding-top">
+                          <div class="justify-start mxd-testimonials-image has-padding-top">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
                               <img src="{{ asset('img/avatars/800x800_ava-03.webp') }}" alt="Azurio Template Example Image">
                             </div>
@@ -727,7 +733,7 @@
                     </div>
                   </div>
                   <div class="mxd-testimonials-sticky__row">
-                    <div class="container-fluid p-0">
+                    <div class="p-0 container-fluid">
                       <div class="row g-0">
                         <div class="col-12 col-xl-6 mxd-grid-item mxd-testimonials-sticky__column margin-bottom-mobile has-padding-bottom">
                           <!-- testimonial card -->
@@ -803,7 +809,7 @@
                             </div>
                           </div>
                           <!-- image card -->
-                          <div class="mxd-testimonials-image justify-start has-padding-top">
+                          <div class="justify-start mxd-testimonials-image has-padding-top">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
                               <img src="{{ asset('img/avatars/800x800_ava-04.webp') }}" alt="Azurio Template Example Image">
                             </div>

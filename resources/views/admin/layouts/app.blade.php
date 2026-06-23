@@ -87,7 +87,7 @@
 
         <div class="menu-inner-shadow"></div>
 
-        @include('admin.layouts.sidebar');
+        @include('admin.layouts.sidebar')
       </aside>
       <!-- / Menu -->
 

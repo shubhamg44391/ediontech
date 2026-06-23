@@ -10,17 +10,21 @@ class FaqAdminController extends Controller
 {
     public function index()
     {
-        $faqs =DB::table('faqs')
+        $faqs = DB::table('faqs')
             ->latest()
             ->paginate(10);
 
+                $slug = 'faq';
+      
 
-        return view('admin.faq.indexshow', compact('faqs'));
+        $data = DB::table('pages')->where('slug', $slug)->first();
+
+        return view('admin.faq.indexshow', compact('faqs','data'));
     }
-  
+
     public function create()
     {
-        $faqs =DB::table('faqs')
+        $faqs = DB::table('faqs')
             ->latest()
             ->paginate(10);
 
@@ -33,17 +37,16 @@ class FaqAdminController extends Controller
         try {
             $request->validate([
                 'title' => 'required|string|max:255',
-                
+
                 'description' => 'required',
 
-            ]);
 
-        } 
-        catch (\Illuminate\Validation\ValidationException $e) {
+            ]);
+        } catch (\Illuminate\Validation\ValidationException $e) {
             return redirect()->back()
                 ->withErrors($e->validator)
                 ->withInput()
-                ->with('error', 'Validation failed. Please check the fields.');
+                ->with('faq_error', 'Validation failed. Please check the fields.');
         }
 
         // // Generate unique slug from title
@@ -60,18 +63,20 @@ class FaqAdminController extends Controller
         DB::table('faqs')->insert([
 
             'title' => $request->input('title'),
-        
+
             'description' => $request->input('description'),
-        
+
+            'created_at' => now()
+
         ]);
 
-        return redirect()->route('admin.faq.index')->with('success', 'FAQ added successfully!');
+        return redirect()->route('admin.faq.index')->with('faq_success', 'FAQ added successfully!');
     }
 
     public function edit($id)
     {
         $faq = DB::table('faqs')->where('id', $id)->first();
-        return view('admin.faq.editfaq', compact('faq','id'));
+        return view('admin.faq.editfaq', compact('faq', 'id'));
     }
 
     public function update(Request $request, $id)
@@ -80,16 +85,16 @@ class FaqAdminController extends Controller
         $request->validate([
 
             'title' => 'required|string|max:255',
-           
+
             'description' => 'required|string',
-        
+            'updated_at' => now()
         ]);
 
         $data = [
 
             'title' => $request->input('title'),
             'description' => $request->input('description'),
-        
+
         ];
 
         // $slug = \Illuminate\Support\Str::slug($request->input('title'));
@@ -109,7 +114,7 @@ class FaqAdminController extends Controller
 
         // Redirect with success message
         return redirect()->route('admin.faq.index')
-            ->with('success', 'FAQ updated successfully.');
+            ->with('faq_success', 'FAQ updated successfully.');
     }
 
     public function destroy($id)

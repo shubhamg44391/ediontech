@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="row row-bordered g-0">
                     <div class="col-md-12">
-                        <h5 class="card-header m-0 me-2 pb-3">Website Leads List</h5>
+                        <h5 class="pb-3 m-0 card-header me-2">Website Leads List</h5>
                         <script>
                             document.addEventListener('DOMContentLoaded', function () {
                                 @if(session('success'))
@@ -31,7 +31,9 @@
                                     <th>Company</th>
                                     <th>Message</th>
                                     <th>Budget</th>
+                                    <th>Date/Time</th>
                                     <th>Actions</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +47,7 @@
                                             <td>{{ $lead->company }}</td>
                                             <td>{{ $lead->message }}</td>
                                             <td>$ {{ $lead->budget }}</td>
+                                            <td>{{ $lead->created_at }}</td>
                                             <td class=" justify-content-between">
 
                                                 <button type="button" class="btn-primary" data-bs-toggle="modal"

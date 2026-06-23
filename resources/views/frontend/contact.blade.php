@@ -1,6 +1,9 @@
 @extends('frontend.layouts.main')
 
 
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Contact Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
+
 @section('main-container')
 
 
@@ -23,7 +26,6 @@
     <!-- Section - Inner Headline v05 Start -->
     <div class="mxd-section blur-section">
       <div class="mxd-container grid-l-container">
-
         <!-- Block - Inner Headline v05 Start -->
         <div class="mxd-block loading-wrap">
           <div class="inner-headline">
@@ -45,16 +47,17 @@
                 </div>
                 <div class="col-12">
                   <!-- content -->
-                  <div class="inner-headline__content has-medium-title">
+                     {{-- page title --}}
+                    <h2 class="py-5 mx-5 text-center">Contact Us</a></h2>
+                  <div class="py-5">
                     <div class="p-0 container-fluid">
-                      <div class="row g-0">
+                      <div class="row">
+                      
                         <div class="col-12 col-xl-6 mxd-grid-item">
-                          <div class="inner-headline__title">
+                          <div class="">
                             <h1 class="medium loading-split">Let's make it happen</h1>
                           </div>
-                          <!-- <div class="inner-headline__subtitle">
-                                                <p>Everything <span>you need to know</span></p>
-                                              </div> -->
+                         
                         </div>
                         <div class="col-12 col-xl-6">
                           <!-- split header caption -->
@@ -89,7 +92,7 @@
                               @endif
 
                               <!-- Contact Form Start -->
-                              <form class="form edion-contact-form" id="edion-contact-form"
+                              <form id="contactForm" class="form edion-contact-form" id="edion-contact-form"
                                 action="{{ route('frontend.submit-form') }}" method="POST" novalidate
                                 onsubmit="return validateForm(event)">
                                 @csrf
@@ -234,43 +237,33 @@
                       <!-- contact data item -->
                       <div class="col-12 col-md-6 col-xl-5 datalist__item">
                         <div class="datalist__title">
-                          <p class="t-bold t-large anim-uni-in-up">New York</p>
+                          <p class="t-bold t-large anim-uni-in-up">INDIA</p>
                         </div>
                         <ul>
                           <li class="anim-uni-in-up">
                             <a class="tag tag-s-mobile" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">
-                              11 West 53 Street,<br>New York, NY<br>10019
+                              LUCKNOW <br>UP,INDIA<br>226010
                             </a>
                           </li>
                         </ul>
                         <ul>
-                          <li class="anim-uni-in-up">
-                            <a class="tag tag-s-mobile mxd-scramble" href="tel:+12127089400">+1 212-708-9400</a>
-                          </li>
-                          <li class="anim-uni-in-up">
-                            <!-- <a class="tag tag-s-mobile mxd-scramble" href="mailto:example@example.com?subject=Message%20from%20your%20site">hello@azurio.com</a> -->
-                          </li>
+                         
                         </ul>
                       </div>
                       <!-- contact data item -->
                       <div class="col-12 col-md-6 col-xl-5 datalist__item">
                         <div class="datalist__title">
-                          <p class="t-bold t-large t-caption anim-uni-in-up">Oakland</p>
+                          <p class="t-bold t-large t-caption anim-uni-in-up">JORDAN</p>
                         </div>
                         <ul>
                           <li class="anim-uni-in-up">
                             <a class="tag tag-s-mobile" href="https://goo.gl/maps/xap5o3MZBuC6DFHz8" target="_blank">
-                              3400 Broadway,<br>Oakland, CA<br>94611
+                               <br>AMMAN, JORDAN<br>111004
                             </a>
                           </li>
                         </ul>
                         <ul>
-                          <li class="anim-uni-in-up">
-                            <a class="tag tag-s-mobile mxd-scramble" href="tel:+15104570211">+1 510-457-0211</a>
-                          </li>
-                          <li class="anim-uni-in-up">
-                            <!-- <a class="tag tag-s-mobile mxd-scramble" href="mailto:example@example.com?subject=Message%20from%20your%20site">hello@azurio.com</a> -->
-                          </li>
+                        
                         </ul>
                       </div>
                     </div>

@@ -1,5 +1,10 @@
 @extends('frontend.layouts.main')
 
+{{-- @section( 'title',$headerdata->meta_title ?? 'FAQ from Edion Web Technologies') --}}
+
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'FAQ from Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
+
 
 @section('main-container')
     <!-- Page Content Start -->
@@ -43,7 +48,9 @@
                                 </div>
                                 <div class="col-12">
                                     <!-- content -->
-                                    <div class="inner-headline__content has-medium-title">
+                                           {{-- page title --}}
+                    <h2 class="px-5 py-5 text-center">Frequently Asked Questions</h2>
+                                    <div class="py-5">
                                         <div class="p-0 container-fluid">
                                             <div class="row g-0">
                                                 <div class="col-12 col-xl-6 mxd-grid-item">
@@ -147,7 +154,7 @@
                                 <div class="col-12 col-xl-4 mxd-grid-item">
                                     <div class="mxd-section-title__data top-controls">
                                         <div class="mxd-section-title__controls anim-uni-in-up">
-                                            <a class="btn btn-line btn-line-default" href="blog-standard.html">
+                                            <a class="btn btn-line btn-line-default" href="#overviews">
                                                 <span class="btn-caption mxd-scramble">News Overview</span>
                                             </a>
                                         </div>
@@ -163,11 +170,11 @@
                     </div>
                 </div>
                 <!-- Block - Section Title v04 End -->
-
+<div id="overviews">
                 <!-- Block - Blog Preview Grid x3 Start -->
-                 @include('frontend.blog-data')
+                 @include('frontend.blog-data', ['blogs' => $blogs])
                 <!-- Block - Blog Preview Grid x3 End -->
-
+</div>
             </div>
         </div>
         <!-- Section - Blog Preview Grid x3 Plus Title End -->

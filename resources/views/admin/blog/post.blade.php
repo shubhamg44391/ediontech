@@ -45,6 +45,7 @@
                                     <th>Image</th>
                                     <th>Title</th>
                                     <th>Meta Title</th>
+                                    <th>Date/Time</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -59,6 +60,7 @@
                                                     alt="Website Logo_dark" width="200"></td>
                                             <td>{{ $lead->title }}</td>
                                             <td>{{ Str::limit($lead->meta_title, 30) ?? 'N/A' }}</td>
+                                            <td>{{ $lead->created_at }}</td>
                                             <td class=" justify-content-between">
                                                 <button type="button" class="btn-primary" data-bs-toggle="modal"
                                                     data-bs-target="#editPostModal{{ $lead->id }}">

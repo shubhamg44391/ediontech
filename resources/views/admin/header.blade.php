@@ -1,14 +1,14 @@
-@extends('admin.layouts.app');
-@section('main-content');
+@extends('admin.layouts.app')
+@section('main-content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row">
             <div class="card">
                 <div class="row row-bordered g-0">
                     <div class="col-md-12">
-                        <h5 class="card-header m-0 me-2 pb-3">Website Header Lists</h5>
+                        <h5 class="pb-3 m-0 card-header me-2">Website Header Lists</h5>
                         <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                @if(session('success'))
+                            document.addEventListener('DOMContentLoaded', function() {
+                                @if (session('success'))
                                     Swal.fire({
                                         icon: 'success',
                                         title: 'Success!',
@@ -17,7 +17,7 @@
                                         timer: 2000
                                     });
                                 @endif
-                                });
+                            });
                         </script>
                         <!-- Button trigger modal -->
                         <div class="table-responsive">
@@ -49,6 +49,7 @@
 
                                             <td><img src="{{ asset('storage/' . str_replace('public/', '', $header->website_logo_light)) }}"
                                                     alt="Website Logo_light" width="200"></td>
+                                        
                                         </tr>
                                         <tr>
                                             <th scope="row">Website Logo Dark</th>
@@ -64,8 +65,8 @@
                                         </tr>
 
                                         <!-- Edit Link Modal -->
-                                        <div class="modal fade" id="editLinkModal{{ $header->id }}" tabindex="-1" role="dialog"
-                                            aria-labelledby="editLinkModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="editLinkModal{{ $header->id }}" tabindex="-1"
+                                            role="dialog" aria-labelledby="editLinkModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <form method="POST"
@@ -78,8 +79,8 @@
                                                             <div class="mb-3">
                                                                 <label for="update_website_name" class="form-label">Updated
                                                                     Website Name</label>
-                                                                <input type="text" class="form-control" id="update_website_name"
-                                                                    name="website_name" required
+                                                                <input type="text" class="form-control"
+                                                                    id="update_website_name" name="website_name" required
                                                                     value="{{ $header->website_name }}">
                                                             </div>
                                                             <div class="mb-3">
@@ -95,10 +96,12 @@
                                                                         value="{{ $header->website_logo_light }}">
                                                                 @endif
                                                                 <input type="file" class="form-control-file"
-                                                                    id="update_website_logo_light" name="website_logo_light">
+                                                                    id="update_website_logo_light"
+                                                                    name="website_logo_light">
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="update_website_logo_dark" class="form-label">Website
+                                                                <label for="update_website_logo_dark"
+                                                                    class="form-label">Website
                                                                     Logo Dark(Image)</label>
                                                                 @if ($header->website_logo_dark)
                                                                     <div class="mb-2">
@@ -114,19 +117,21 @@
                                                             </div>
 
                                                             <div class="mb-3">
-                                                                <label for="update_website_number" class="form-label">Updated
+                                                                <label for="update_website_number"
+                                                                    class="form-label">Updated
                                                                     Website Number</label>
                                                                 <input type="text" class="form-control"
-                                                                    id="update_website_number" name="website_number" required
-                                                                    value="{{ $header->website_number }}">
+                                                                    id="update_website_number" name="website_number"
+                                                                    required value="{{ $header->website_number }}">
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="update_website_address" class="form-label">Updated
+                                                                <label for="update_website_address"
+                                                                    class="form-label">Updated
                                                                     Website
                                                                     Address</label>
                                                                 <input type="text" class="form-control"
-                                                                    id="update_website_address" name="website_address" required
-                                                                    value="{{ $header->website_address }}">
+                                                                    id="update_website_address" name="website_address"
+                                                                    required value="{{ $header->website_address }}">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="update_website_email" class="form-label">Updated
@@ -141,7 +146,8 @@
                                                                 data-bs-dismiss="modal">
                                                                 Close
                                                             </button>
-                                                            <button type="submit" class="btn btn-primary">Update header</button>
+                                                            <button type="submit" class="btn btn-primary">Update
+                                                                header</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -158,6 +164,4 @@
         </div>
 
     </div>
-
-
 @endsection

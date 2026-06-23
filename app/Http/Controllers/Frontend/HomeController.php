@@ -11,13 +11,24 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data['blogs'] = DB::table('posts')
+        $blogs = DB::table('posts')
             ->latest()
             ->limit(3)
             ->get();
-        return view('frontend.home', $data);
+
+
+        $headers = DB::table('headers')->get();
+
+       
+      
+            $slug = 'home';
+        
+
+        $headerdata = DB::table('pages')->where('slug', $slug)->first();
+
+        return view('frontend.home', compact( 'headers', 'blogs', 'headerdata'));
     }
-       public function blog_data()
+    public function blog_data()
     {
         $data['blogs'] = DB::table('posts')
             ->latest()
@@ -25,6 +36,4 @@ class HomeController extends Controller
             ->get();
         return view('frontend.blog_data', $data);
     }
-
 }
-?>

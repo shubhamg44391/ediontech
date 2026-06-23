@@ -1,6 +1,11 @@
    @extends('frontend.layouts.main')
+{{-- @section( 'title',$headerdata->meta_title ?? 'Terms and Condition of Edion Web Technologies') --}}
+  
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Terms and Condition of Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
 
-   @section('main-container')
+
+@section('main-container')
 
       <main id="mxd-page-content" class="mxd-page-content inner-page-content">
          <div style="">

@@ -14,7 +14,13 @@ class PricingController extends Controller
             ->latest()
             ->limit(3)
             ->get();
-        return view('frontend.pricing', compact('blogs'));
+
+
+            $slug = 'pricing';
+        
+        $headerdata = DB::table('pages')->where('slug', $slug)->first();
+
+        return view('frontend.pricing', compact('blogs','headerdata'));
     }
 }
 ?>

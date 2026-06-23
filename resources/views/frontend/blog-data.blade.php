@@ -1,7 +1,8 @@
 <div class="mxd-block">
             <div class="mxd-blog-grid">
-              <div class="container-fluid p-0">
+              <div class="p-0 container-fluid">
                 <div class="row g-0 mxd-blog-grid__gallery">
+                 
                   @forelse($blogs as $blog)
                     <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
                       <div class="mxd-blog-item__date">
@@ -29,7 +30,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center py-5">
+                    <div class="py-5 text-center col-12">
                       <p>No blog posts found at the moment. Please check back later.</p>
                     </div>
                   @endforelse

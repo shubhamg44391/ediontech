@@ -1,6 +1,10 @@
 @extends('frontend.layouts.main')
 
 
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Free Consultation by Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
+
+
 @section('main-container')
 
 
@@ -43,6 +47,8 @@
                                 </div>
                                 <div class="col-12">
                                     <!-- content -->
+                                           {{-- page title --}}
+                    <h2 class="px-5 py-5 text-center">Free Consultation</h2>
                                     <div class="py-5 has-medium-title">
 
 

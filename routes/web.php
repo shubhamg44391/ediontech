@@ -22,6 +22,8 @@ use App\Http\Controllers\Admin\FaqAdminController;
 
 
 use App\Http\Controllers\Admin\IpAddressController;
+use App\Http\Controllers\Admin\SeoContentController;
+use App\Http\Controllers\RazorpayPaymentController;
 
 // blog
 
@@ -61,6 +63,44 @@ Route::get('/migrate', function () {
     return 'Migration Completed';
 });
 
+Route::get('/backfill-ips', function () {
+    $ips = \Illuminate\Support\Facades\DB::table('ip_addresses')
+        ->whereNull('region')
+        ->orWhereNull('country')
+        ->orWhere('region', '')
+        ->orWhere('country', '')
+        ->orWhere('region', 'Unknown')
+        ->orWhere('country', 'Unknown')
+        ->get();
+        
+    $updated = 0;
+    foreach ($ips as $ipRecord) {
+        $ip = $ipRecord->ip_address;
+        if ($ip && $ip !== '127.0.0.1' && $ip !== '::1') {
+            try {
+                $response = @file_get_contents("http://ip-api.com/json/{$ip}");
+                if ($response) {
+                    $location = json_decode($response);
+                    if ($location && $location->status === 'success') {
+                        \Illuminate\Support\Facades\DB::table('ip_addresses')->where('id', $ipRecord->id)->update([
+                            'city' => $location->city ?? $ipRecord->city ?? 'Unknown',
+                            'region' => $location->regionName ?? 'Unknown',
+                            'country' => $location->country ?? 'Unknown',
+                            'updated_at' => now(),
+                        ]);
+                        $updated++;
+                    }
+                }
+                usleep(150000); // 0.15s delay to stay within rate limits of free ip-api
+            } catch (\Exception $e) {
+                // Ignore
+            }
+        }
+    }
+    
+    return "Backfilled {$updated} IP addresses.";
+});
+
 Route::get('/migrate-fresh', function () {
 
     Artisan::call('migrate:fresh --seed');
@@ -81,6 +121,9 @@ Route::get('/storage-link', function () {
 
     return 'Storage Linked';
 });
+Route::post('/razorpay/create-order', [RazorpayPaymentController::class, 'createOrder'])->name('razorpay.create-order');
+Route::post('/razorpay/verify-payment', [RazorpayPaymentController::class, 'verifyPayment'])->name('razorpay.verify-payment');
+
 Route::name('frontend.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name("home");
 
@@ -190,6 +233,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/blog/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
 });
 
+
 // FAQ 
 Route::middleware('auth')->group(function () {
 
@@ -205,6 +249,17 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin/faq/edit/{faq}', [FaqAdminController::class, 'update'])->name('admin.faq.update');
 
     Route::delete('/admin/faq/{id}', [FaqAdminController::class, 'destroy'])->name('admin.faq.destroy');
+});
+
+//  SEO Content route
+
+Route::middleware('auth')->group(function () {
+
+    // header Index Page
+    // Route::get('/admin/title/{slug}', [SeoContentController::class, 'seoContent'])->name('');
+    Route::get('/admin/update/{slug}', [SeoContentController::class, 'editSeoContent'])->name('title.content');
+    Route::put('/admin/update/{slug}', [SeoContentController::class, 'updateSeoContent'])->name('title.update');
+
 });
 
 // home Banner

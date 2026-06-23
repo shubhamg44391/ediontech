@@ -1,5 +1,7 @@
 @extends('frontend.layouts.main')
 
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'About Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
 
 @section('main-container')
 
@@ -29,13 +31,21 @@
 
           <!-- Block - Inner Headline v06 Start -->
           <div class="mxd-block">
+            
             <div class="inner-headline fullheight">
+              
               <!-- absolute centered headline -->
               <div class="inner-headline__absolute">
+              
                 <div class="mxd-container">
                   <div class="inner-headline__centered">
+                   
+                             {{-- page title --}}
+                    <h2 class="px-5 py-5 d-flex justify-content-left">About Us</h2>
                     <div class="inner-headline__link loading-item">
+                    
                       <a class="btn btn-line btn-line-default" href="#process">
+                    
                         <span class="btn-caption mxd-scramble">Studio</span>
                       </a>
                     </div>
@@ -136,8 +146,8 @@
                     <div class="mxd-section-manifest__wrap wrap-text-m">
                       <div class="mxd-section-manifest__text manifest-text-m">
                         <a class="manifest manifest-m mxd-split-lines active-cursor-accent" data-cursor-text="View Works" href="{{ route('frontend.works') }}">
-                          We are a creative web agency specializing in innovative design and cutting-edge development. 
-                          <span>We help businesses stand out and thrive in the modern landscape.</span>
+                          We specialize in creative web design and advanced development, helping businesses  
+                          <span>create a strong digital presence and thrive in a competitive market.</span>
                         </a>
                       </div>
                     </div>
@@ -244,31 +254,31 @@
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_04.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_05.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_06.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="{{ asset('img/cta/mar_03.webp') }}" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_07.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
                 <div class="marquee__item item-imageblock">
                   <div class="marquee__image">
-                    <img src="{{ asset('img/cta/mar_09.webp') }}" alt="Edion Web Technology Image">
+                    <img src="{{ asset('img/cta/mar_08.webp') }}" alt="Edion Web Technology Image">
                   </div>
                 </div>
                 <!-- single item -->
@@ -670,10 +680,7 @@
                         <div class="mxd-team-grid__photo">
                           <img src="{{ asset('img/avatars/800x800_ava-05.webp') }}" alt="Azurio Template Team Member Photo">
                         </div>
-                        {{-- <div class="mxd-team-grid__socials">
-                         <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
-                          <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.behance.net/" target="_blank">Behance</a>
-                        </div> --}}
+                        
                       </div>
                       <div class="mxd-team-grid__caption">
                         <div class="mxd-team-grid__name">
@@ -692,10 +699,7 @@
                         <div class="mxd-team-grid__photo">
                           <img src="{{ asset('img/avatars/800x800_ava-06.webp') }}" alt="Azurio Template Team Member Photo">
                         </div>
-                        {{-- <div class="mxd-team-grid__socials">
-                          <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
-                          <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.behance.net/" target="_blank">Behance</a>
-                        </div> --}}
+                       
                       </div>
                       <div class="mxd-team-grid__caption">
                         <div class="mxd-team-grid__name">
@@ -714,10 +718,7 @@
                         <div class="mxd-team-grid__photo">
                           <img src="{{ asset('img/avatars/800x800_ava-07.webp') }}" alt="Azurio Template Team Member Photo">
                         </div>
-                        {{-- <div class="mxd-team-grid__socials">
-                          <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
-                          <a class="tag tag-m tag-bg permanent mxd-scramble" href="https://www.behance.net/" target="_blank">Behance</a>
-                        </div> --}}
+                       
                       </div>
                       <div class="mxd-team-grid__caption">
                         <div class="mxd-team-grid__name">
@@ -869,7 +870,7 @@
             <!-- Block - Blog Preview Grid x4 Start -->
            <div class="mxd-block">
             <div class="mxd-blog-grid">
-              <div class="container-fluid p-0">
+              <div class="p-0 container-fluid">
                 <div class="row g-0 mxd-blog-grid__gallery">
                   @forelse($blogs as $blog)
                     <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
@@ -898,7 +899,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center py-5">
+                    <div class="py-5 text-center col-12">
                       <p>No blog posts found at the moment. Please check back later.</p>
                     </div>
                   @endforelse

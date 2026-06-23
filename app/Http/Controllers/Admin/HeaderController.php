@@ -9,8 +9,9 @@ class HeaderController extends Controller
 {
     public function index()
     {
-        $header = DB::table('headers')->get();
-        return view('admin.header', ['headers' => $header]);
+        $headers = DB::table('headers')->get();
+       
+        return view('admin.header', ['headers' => $headers]);
     }
 
     public function store()

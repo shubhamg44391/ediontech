@@ -1,6 +1,11 @@
 @extends('frontend.layouts.main')
 
 
+
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Services of Edion Web Technologies')
+@section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
+
+
 @section('main-container')
 
 
@@ -43,7 +48,7 @@
                   <div class="inner-headline__cover"></div>
                 </div>
                 <div class="mxd-container grid-l-container">
-                  <div class="container-fluid p-0">
+                  <div class="p-0 container-fluid">
                     <div class="row g-0">
                       <div class="col-12 mxd-grid-item">
                         <!-- breadcrumbs -->
@@ -65,12 +70,14 @@
                 <!-- bottom positioned headline -->
                 <div class="inner-headline__bottom">
                   <div class="mxd-container grid-l-container">
-                    <div class="container-fluid p-0">
+                    <div class="p-0 container-fluid">
                       <div class="row g-0">
                         <div class="col-12">
                           <!-- content -->
+                                   {{-- page title --}}
+                    <h2 class="px-5 py-5 text-center text-white">Services</h2>
                           <div class="inner-headline__content has-medium-title">
-                            <div class="container-fluid p-0">
+                            <div class="p-0 container-fluid">
                               <div class="row g-0">
                                 <div class="col-12 col-xl-10 mxd-grid-item">
                                   <div class="inner-headline__link loading-fade">
@@ -354,7 +361,7 @@
             <!-- Block - Section Title v04 Start -->
             <div class="mxd-block">
               <div class="mxd-section-title pre-subtitle-s">
-                <div class="container-fluid p-0">
+                <div class="p-0 container-fluid">
                   <div class="row g-0">
                     <div class="col-12 col-xl-8 mxd-grid-item">
                       <div class="mxd-section-title__title pre-caption">
@@ -381,7 +388,7 @@
             <!-- Block - Section Title v04 End -->
 
             <!-- Block - Blog Preview Grid x3 Start -->
-            @include('frontend.blog-data')
+            @include('frontend.blog-data', ['blogs' => $blogs])
             <!-- Block - Blog Preview Grid x3 End -->
 
           </div>
