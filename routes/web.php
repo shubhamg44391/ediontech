@@ -24,6 +24,8 @@ use App\Http\Controllers\Admin\FaqAdminController;
 use App\Http\Controllers\Admin\IpAddressController;
 use App\Http\Controllers\Admin\SeoContentController;
 use App\Http\Controllers\RazorpayPaymentController;
+use App\Http\Controllers\Admin\SeoOrderController;
+use App\Http\Controllers\Admin\SeoPackageController;
 
 // blog
 
@@ -48,6 +50,16 @@ use App\Http\Controllers\RefundAndCancellationPolicyController;
 
 // Frontend controller
 
+Route::get('/test-mail', function () {
+    try {
+        \Illuminate\Support\Facades\Mail::raw('This is a test email from Laravel.', function ($message) {
+            $message->to('test1718@yopmail.com')->subject('Test Email');
+        });
+        return 'Test email sent successfully!';
+    } catch (\Exception $e) {
+        return 'Error sending email: ' . $e->getMessage();
+    }
+});
 
 Route::get('/clear', function () {
 
@@ -305,6 +317,18 @@ Route::middleware('auth')->group(function () {
 
     // header Index Page
     Route::get('/admin/payment', [PaymentController::class, 'index'])->name('payment.index');
+});
+
+// SEO Package Payment Transactions
+Route::middleware('auth')->group(function () {
+    Route::get('/admin/seo-orders', [SeoOrderController::class, 'index'])->name('admin.seo-orders.index');
+    Route::delete('/admin/seo-orders/{id}', [SeoOrderController::class, 'destroy'])->name('admin.seo-orders.destroy');
+});
+
+// SEO Package Pricing Management
+Route::middleware('auth')->group(function () {
+    Route::get('/admin/seo-packages', [SeoPackageController::class, 'index'])->name('admin.seo-packages.index');
+    Route::put('/admin/seo-packages', [SeoPackageController::class, 'update'])->name('admin.seo-packages.update');
 });
 
 Route::middleware('auth')->group(function () {

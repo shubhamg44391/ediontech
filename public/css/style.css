@@ -1,6 +1,104 @@
+.pricing-plan__item {
+    height: auto !important;
+    min-height: auto !important;
+    align-self: flex-start !important;
+}
 
-.pricing-plan__item{
-    height:auto !important;
-    min-height:auto !important;
-    align-self:flex-start !important;
+.custom-brand-logo,
+.hamburger_logo {
+    height: 5.5rem !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .custom-brand-logo,
+    .hamburger_logo {
+        height: 7.5rem !important;
+    }
+}
+
+.inner-headline:not(.fullheight) {
+    padding-top: 13rem !important;
+}
+
+/* Theme-specific logo displays */
+.light-image-logo {
+    display: none !important;
+    mix-blend-mode: multiply !important;
+}
+
+.dark-image-logo {
+    display: inline-block !important;
+    mix-blend-mode: screen !important;
+}
+
+[color-scheme="light"] .light-image-logo {
+    display: inline-block !important;
+}
+
+[color-scheme="light"] .dark-image-logo {
+    display: none !important;
+}
+
+/* Automatically invert dark logos in light mode when no light logo exists */
+[color-scheme="light"] .invert-in-light {
+    filter: invert(1) brightness(0.9) contrast(1.2);
+}
+
+/* Adjust size of clients logos and prevent distortion */
+.clients_logo {
+    height: 200px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+
+.mxd-clients__logo {
+    height: 200px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.mxd-clients {
+    gap: 0 !important;
+}
+
+.mxd-clients__item {
+    margin-bottom: 4rem !important;
+}
+
+@media only screen and (min-width: 1200px) {
+    .mxd-clients {
+        gap: 0 !important;
+    }
+
+    .mxd-clients__item {
+        margin-bottom: 6rem !important;
+    }
+}
+
+/* Clients section - bottom padding same as top (padding-top-title) */
+.mxd-section.padding-bottom-title {
+    padding-bottom: 12.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .mxd-section.padding-bottom-title {
+        padding-bottom: 14.9rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .mxd-section.padding-bottom-title {
+        padding-bottom: 16.5rem;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .mxd-section.padding-bottom-title {
+        padding-bottom: 18rem;
+    }
 }

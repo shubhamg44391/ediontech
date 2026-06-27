@@ -39,10 +39,10 @@
                     muted
                     loop
                     playsinline
-                    preload="auto"
+                    preload="none"
                     poster="{{ asset('video/1280x720_stone-geometry-banner.webp') }}">
-                    <source type="video/mp4" src="{{ asset('video/1280x720_stone-geometry.mp4') }}">
                     <source type="video/webm" src="{{ asset('video/1280x720_stone-geometry.webm') }}">
+                    <source type="video/mp4" src="{{ asset('video/1280x720_stone-geometry.mp4') }}">
                   </video>
                   <!-- <img src="{{ asset('img/backgrounds/1920x1280_bg01.webp') }}" alt="Azurio Template Sample Image"> -->
                   <div class="inner-headline__cover"></div>

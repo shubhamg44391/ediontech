@@ -540,6 +540,19 @@
         e.preventDefault();
         return false;
       }
+
+      // Add loading state to button
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        submitBtn.style.cursor = 'not-allowed';
+        const caption = submitBtn.querySelector('.btn-caption');
+        if (caption) {
+            caption.innerText = 'Submitting...';
+        }
+      }
+
       return true;
     }
   </script>

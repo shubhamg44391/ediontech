@@ -117,5 +117,19 @@
         </a>
     </li> 
 
+     <li class="menu-item {{ Request::is('admin/seo-orders*') ? 'active' : '' }}">
+        <a href="{{ route('admin.seo-orders.index') }}" class="menu-link ">
+            <i class="menu-icon tf-icons bx bx-credit-card"></i>
+            <div data-i18n="Basic">SEO Orders</div>
+        </a>
+    </li>
+
+     <li class="menu-item {{ Request::is('admin/seo-packages*') ? 'active' : '' }}">
+        <a href="{{ route('admin.seo-packages.index') }}" class="menu-link ">
+            <i class="menu-icon tf-icons bx bx-dollar-circle"></i>
+            <div data-i18n="Basic">SEO Pricing</div>
+        </a>
+    </li>
+
     <!-- Components -->
 </ul>

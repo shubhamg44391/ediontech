@@ -230,9 +230,9 @@
                     </a>
                   </div>
                   <div class="card__image">
-                    <video class="video card__media" preload="auto" autoplay muted loop playsinline poster="{{ asset('video/1280x720_video-05.webp') }}">
-                      <source type="video/mp4" src="{{ asset('video/1280x720_video-05.mp4') }}">
-                      <source type="video/webm" src="{{ asset('video/1280x720_video-05.webm') }}">
+                    <video class="video card__media lazy-video" preload="none" muted loop playsinline poster="{{ asset('video/1280x720_video-05.webp') }}">
+                      <source type="video/webm" data-src="{{ asset('video/1280x720_video-05.webm') }}">
+                      <source type="video/mp4" data-src="{{ asset('video/1280x720_video-05.mp4') }}">
                     </video>
                      <img src="{{ asset('img/works/showcase-stack/pr03.webp') }}" alt="Project Preview Image"> 
                     <div class="card__cover"></div>
@@ -533,9 +533,9 @@
         <div class="mxd-container fullwidth-container">
           <div class="mxd-divider">
             <div class="mxd-divider__video">
-              <video class="video parallax-video" preload="auto" autoplay muted loop playsinline poster="{{ asset('video/1280x720_tree.webp') }}">
-                <source type="video/mp4" src="{{ asset('video/1280x720_tree.mp4') }}">
-                <source type="video/webm" src="{{ asset('video/1280x720_tree.webm') }}">
+              <video class="video parallax-video lazy-video" preload="none" muted loop playsinline poster="{{ asset('video/1280x720_tree.webp') }}">
+                <source type="video/webm" data-src="{{ asset('video/1280x720_tree.webm') }}">
+                <source type="video/mp4" data-src="{{ asset('video/1280x720_tree.mp4') }}">
               </video>
             </div>
           </div>

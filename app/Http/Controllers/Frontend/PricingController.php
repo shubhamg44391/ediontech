@@ -19,8 +19,9 @@ class PricingController extends Controller
             $slug = 'pricing';
         
         $headerdata = DB::table('pages')->where('slug', $slug)->first();
+        $packages = DB::table('seo_packages')->get()->keyBy('name');
 
-        return view('frontend.pricing', compact('blogs','headerdata'));
+        return view('frontend.pricing', compact('blogs', 'headerdata', 'packages'));
     }
 }
 ?>

@@ -36,8 +36,8 @@
                             <div class="mxd-hero-media__scaling-media" data-flip-element="target">
                                 <video class="scaling-media__video" autoplay muted loop playsinline preload="auto"
                                     poster="{{ asset('video/1280x720_hero-03.webp') }}">
-                                    <source src="{{ asset('video/1280x720_hero-03.mp4') }}" type="video/mp4">
                                     <source src="{{ asset('video/1280x720_hero-03.webm') }}" type="video/webm">
+                                    <source src="{{ asset('video/1280x720_hero-03.mp4') }}" type="video/mp4">
                                 </video>
                             </div>
                         </div>

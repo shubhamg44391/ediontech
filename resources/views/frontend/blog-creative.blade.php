@@ -233,11 +233,11 @@
       <!-- background video -->
       <div class="mxd-background">
         <div class="mxd-background__video">
-          <video class="video" preload="auto" autoplay="autoplay" loop="loop" muted="muted"
+          <video class="video lazy-video" preload="none" muted
             poster="{{ asset('video/1920x660_cta.webp') }}">
-            <source type="video/mp4" src="{{ asset('video/1920x660_cta.mp4') }}">
-            <source type="video/webm" src="{{ asset('video/1920x660_cta.webm') }}">
-            <source type="video/ogv" src="{{ asset('video/1920x660_cta.html') }}">
+            <source type="video/webm" data-src="{{ asset('video/1920x660_cta.webm') }}">
+            <source type="video/mp4" data-src="{{ asset('video/1920x660_cta.mp4') }}">
+            <source type="video/ogv" data-src="{{ asset('video/1920x660_cta.html') }}">
           </video>
         </div>
         <div class="mxd-background__cover accent"></div>
