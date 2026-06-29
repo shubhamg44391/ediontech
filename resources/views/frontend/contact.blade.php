@@ -196,7 +196,6 @@
             <div class="fullwidth-text__wrap">
               <a class="fullwidth-text__content small accent active-cursor" data-cursor-text="Let's chat"
                 href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                <!-- <span class="anim-uni-chars">hello@azurio.com</span> -->
               </a>
             </div>
           </div>

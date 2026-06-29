@@ -14,6 +14,7 @@ class LogVisitorIp
         if ($request->isMethod('GET') && !$request->ajax() && !$request->is('admin*') && !$request->is('clear*') && !$request->is('api*')) {
             try {
                 IpAddressController::logIp($request);
+                IpAddressController::logPageView($request);
             } catch (\Exception $e) {
                 // Silently ignore to avoid breaking any visitor request
             }

@@ -121,16 +121,16 @@
                   <span>0</span>
                   <span>4</span>
                   <div class="mxd-error__image image-1 mxd-move-slow loading-fade">
-                    <img src="{{ asset('img/illustrations/404_03.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_03.webp') }}" alt="">
                   </div>
                   <div class="mxd-error__image image-2">
-                    <img src="{{ asset('img/illustrations/404_01.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_01.webp') }}" alt="">
                   </div>
                   <div class="mxd-error__image image-3">
-                    <img src="{{ asset('img/illustrations/404_02.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_02.webp') }}" alt="">
                   </div>
                   <div class="mxd-error__image image-4 mxd-move-slow loading-fade">
-                    <img src="{{ asset('img/illustrations/404_04.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/illustrations/404_04.webp') }}" alt="">
                   </div>
                 </div>
                 <div class="mxd-error__caption">
@@ -153,7 +153,7 @@
               <div class="mxd-error__dataline loading-fade">
                 <div class="mxd-error__dataitem">
                   <span class="tag tag-m">Copyright 
-                    <a class="mxd-scramble" href="#0" target="_blank">Azurio</a>
+                    <a class="mxd-scramble" href="#" target="_blank">Edion</a>
                     . All rights reserved
                   </span>
                 </div>

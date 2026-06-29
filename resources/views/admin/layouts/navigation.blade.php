@@ -66,10 +66,10 @@
                     <li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="dropdown-item" href="auth-login-basic.html">
+                            <button type="submit" class="dropdown-item">
                                 <i class="bx bx-power-off me-2"></i>
                                 <span class="align-middle">Log Out</span>
-                                </a>
+                            </button>
                         </form>
                     </li>
                 </ul>

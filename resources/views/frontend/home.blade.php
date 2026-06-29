@@ -207,7 +207,7 @@
                                             </div>
                                             <div class="mxd-niche-cards__image absolute-desktop-bottom">
                                                 <img src="{{ asset('img/illustrations/niche01.webp') }}"
-                                                    alt="Azurio Template Sample Image" loading="lazy">
+                                                    alt="" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -240,7 +240,7 @@
                                                         </div>
                                                         <div class="mxd-niche-cards__image absolute-desktop-full">
                                                             <img src="{{ asset('img/illustrations/niche02.webp') }}"
-                                                                alt="Azurio Template Sample Image" loading="lazy">
+                                                                alt="" loading="lazy">
                                                             <div class="mxd-niche-cards__gradient gradient-linear"></div>
                                                         </div>
                                                     </div>
@@ -268,7 +268,7 @@
                                                         </div>
                                                         <div class="mxd-niche-cards__image absolute-desktop-full">
                                                             <img src="{{ asset('img/illustrations/niche03.webp') }}"
-                                                                alt="Azurio Template Sample Image" loading="lazy">
+                                                                alt="" loading="lazy">
                                                             <div class="mxd-niche-cards__gradient gradient-radial"></div>
                                                         </div>
                                                     </div>
@@ -292,7 +292,7 @@
                                                         </div>
                                                         <div class="mxd-niche-cards__image absolute-desktop-aside">
                                                             <img src="{{ asset('img/illustrations/niche04.webp') }}"
-                                                                alt="Azurio Template Sample Image" loading="lazy">
+                                                                alt="" loading="lazy">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -358,7 +358,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
                                             <img src="{{ asset('img/services/1200x980_cpb01.webp') }}"
-                                                alt="Azurio Services Image" loading="lazy">
+                                                alt="" loading="lazy">
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                                             <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -408,7 +408,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
                                             <img src="{{ asset('img/services/1200x980_cpb02.webp') }}"
-                                                alt="Azurio Services Image" loading="lazy">
+                                                alt="" loading="lazy">
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                                             <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -459,7 +459,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
                                             <img src="{{ asset('img/services/1200x980_cpb03.webp') }}"
-                                                alt="Azurio Services Image" loading="lazy">
+                                                alt="" loading="lazy">
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                                             <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -509,7 +509,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
                                             <img src="{{ asset('img/services/1200x980_cpb04.webp') }}"
-                                                alt="Azurio Services Image" loading="lazy">
+                                                alt="" loading="lazy">
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                                             <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -561,7 +561,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
                                             <img src="{{ asset('img/services/1200x980_cpb05.webp') }}"
-                                                alt="Azurio Services Image" loading="lazy">
+                                                alt="" loading="lazy">
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                                             <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -612,7 +612,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-grid-item mxd-cpb-list__image">
                                             <img src="{{ asset('img/services/1200x980_cpb06.webp') }}"
-                                                alt="Azurio Services Image" loading="lazy">
+                                                alt="" loading="lazy">
                                         </div>
                                         <div class="col-12 col-md-6 col-xl-4 mxd-cpb-list__data">
                                             <div class="mxd-cpb-list__descr mxd-grid-item d-flex justify-content-between">
@@ -901,7 +901,6 @@
                                                             <path
                                                                 d="M143.9,0v28.8h-28.8V0h28.8ZM143.9,28.8v28.8h28.8v-28.8h-28.8ZM172.7,57.6v28.8h28.8v-28.8h-28.8ZM230.2,115.2v-28.8h-28.8v28.8H0v28.8h201.4v28.8h28.8v-28.8h28.8v-28.8h-28.8ZM172.7,201.6h28.8v-28.8h-28.8v28.8ZM143.9,230.4h28.8v-28.8h-28.8v28.8ZM114.3,260h28.8v-28.8h-28.8v28.8Z" />
                                                         </svg>
-                                                        <!-- <img src="{{ asset('img/cursor-trail-transparent/07_trail.webp') }}" alt="Azurio Image" loading="lazy"> -->
                                                     </div>
                                                 </div>
                                                 <div class="justify-end col-12 col-md-6 col-xl-4 mxd-object-link__item">

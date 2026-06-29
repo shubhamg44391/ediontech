@@ -77,6 +77,37 @@ class IpAddressController extends Controller
         }
     }
 
+    // Method to log page views page-wise
+    public static function logPageView(Request $request)
+    {
+        $ip = $request->ip();
+        $path = $request->path();
+
+        if (empty($path)) {
+            $path = '/';
+        }
+
+        // Check if page view already exists for this IP and path
+        $existing = DB::table('page_views')
+            ->where('ip_address', $ip)
+            ->where('page_path', $path)
+            ->first();
+
+        if ($existing) {
+            DB::table('page_views')
+                ->where('id', $existing->id)
+                ->increment('views', 1, ['updated_at' => now()]);
+        } else {
+            DB::table('page_views')->insert([
+                'page_path' => $path,
+                'ip_address' => $ip,
+                'views' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+    }
+
     // Method to display all IP addresses and their details
 
     public function getIPAddresses()

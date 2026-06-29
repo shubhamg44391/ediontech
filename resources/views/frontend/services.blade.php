@@ -44,7 +44,6 @@
                     <source type="video/webm" src="{{ asset('video/1280x720_stone-geometry.webm') }}">
                     <source type="video/mp4" src="{{ asset('video/1280x720_stone-geometry.mp4') }}">
                   </video>
-                  <!-- <img src="{{ asset('img/backgrounds/1920x1280_bg01.webp') }}" alt="Azurio Template Sample Image"> -->
                   <div class="inner-headline__cover"></div>
                 </div>
                 <div class="mxd-container grid-l-container">
@@ -156,7 +155,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="{{ asset('img/services/services-stack/s01.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s01.webp') }}" alt="">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -193,7 +192,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="{{ asset('img/services/services-stack/s02.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s02.webp') }}" alt="">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -229,7 +228,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="{{ asset('img/services/services-stack/s04.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s04.webp') }}" alt="">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -265,7 +264,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                    <img src="{{ asset('img/services/services-stack/s03.webp') }}" alt="Azurio Template Sample Image">
+                    <img src="{{ asset('img/services/services-stack/s03.webp') }}" alt="">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -301,7 +300,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                <img src="{{ asset('img/services/1200x980_cpb05.webp') }}" alt="Azurio Services Image">
+                <img src="{{ asset('img/services/1200x980_cpb05.webp') }}" alt="">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>
@@ -336,7 +335,7 @@
                   </div>
                   <!-- image -->
                   <div class="services-card__image">
-                     <img src="{{ asset('img/services/1200x980_cpb06.webp') }}" alt="Azurio Services Image">
+                     <img src="{{ asset('img/services/1200x980_cpb06.webp') }}" alt="">
                     <div class="services-card__cover"></div>
                   </div>
                 </div>

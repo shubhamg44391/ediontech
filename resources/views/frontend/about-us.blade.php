@@ -58,28 +58,28 @@
                     </div>
                     <!-- banners -->
                     <div class="headline-banner-01 landscape image-01">
-                      <img src="{{ asset('img/illustrations/about-us-01.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-01.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-01 portrait image-02">
-                      <img src="{{ asset('img/illustrations/about-us-02.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-02.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-01 landscape image-03">
-                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-01 portrait image-04">
-                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-02 portrait image-05">
-                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-02 landscape image-06">
-                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-02 portrait image-07">
-                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-03.webp') }}" alt="">
                     </div>
                     <div class="headline-banner-02 landscape image-08">
-                      <img src="{{ asset('img/illustrations/about-us-08.webp') }}" alt="Azurio Template Sample Image">
+                      <img src="{{ asset('img/illustrations/about-us-08.webp') }}" alt="">
                     </div>
                   </div>
                 </div>
@@ -470,7 +470,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="{{ asset('img/illustrations/awards01.webp') }}" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards01.webp') }}" alt="">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -498,7 +498,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="{{ asset('img/illustrations/awards02.webp') }}" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards02.webp') }}" alt="">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -526,7 +526,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="{{ asset('img/illustrations/awards03.webp') }}" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards03.webp') }}" alt="">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -554,7 +554,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="{{ asset('img/illustrations/awards04.webp') }}" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards04.webp') }}" alt="">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -582,7 +582,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="{{ asset('img/illustrations/awards05.webp') }}" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards05.webp') }}" alt="">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -610,7 +610,7 @@
                     </div>
                     <div class="order-1 col-12 col-xl-4 order-xl-2 mxd-grid-item">
                       <div class="mxd-awards__image">
-                        <img src="{{ asset('img/illustrations/awards06.webp') }}" alt="Azurio Image">
+                        <img src="{{ asset('img/illustrations/awards06.webp') }}" alt="">
                       </div>
                     </div>
                     <div class="order-3 col-12 col-xl-2 mxd-grid-item">
@@ -653,7 +653,7 @@
                   <div class="col-12 col-xl-4 mxd-grid-item">
                     <div class="mxd-section-title__data top-controls"> 
                       <div class="mxd-section-title__controls anim-uni-in-up">
-                        <a class="btn btn-line btn-line-default" href="team.html">
+                        <a class="btn btn-line btn-line-default" href="#">
                           <span class="btn-caption mxd-scramble">Our Team</span>
                         </a>
                       </div>
@@ -678,7 +678,7 @@
                     <div class="mxd-team-grid__inner">
                       <div class="mxd-team-grid__media">
                         <div class="mxd-team-grid__photo">
-                          <img src="{{ asset('img/avatars/800x800_ava-05.webp') }}" alt="Azurio Template Team Member Photo">
+                          <img src="{{ asset('img/avatars/800x800_ava-05.webp') }}" alt="">
                         </div>
                         
                       </div>
@@ -697,7 +697,7 @@
                     <div class="mxd-team-grid__inner">
                       <div class="mxd-team-grid__media">
                         <div class="mxd-team-grid__photo">
-                          <img src="{{ asset('img/avatars/800x800_ava-06.webp') }}" alt="Azurio Template Team Member Photo">
+                          <img src="{{ asset('img/avatars/800x800_ava-06.webp') }}" alt="">
                         </div>
                        
                       </div>
@@ -716,7 +716,7 @@
                     <div class="mxd-team-grid__inner">
                       <div class="mxd-team-grid__media">
                         <div class="mxd-team-grid__photo">
-                          <img src="{{ asset('img/avatars/800x800_ava-07.webp') }}" alt="Azurio Template Team Member Photo">
+                          <img src="{{ asset('img/avatars/800x800_ava-07.webp') }}" alt="">
                         </div>
                        
                       </div>
@@ -855,7 +855,7 @@
                     <div class="col-12 col-xl-4 mxd-grid-item-s">
                       <div class="mxd-section-title__data top-controls">
                         <div class="justify-end mxd-section-title__controls pre-title anim-uni-in-up">
-                          <a class="btn btn-line btn-line-default" href="blog-standard.html">
+                          <a class="btn btn-line btn-line-default" href="#">
                             <span class="btn-caption mxd-scramble">News Overview</span>
                           </a>
                         </div>

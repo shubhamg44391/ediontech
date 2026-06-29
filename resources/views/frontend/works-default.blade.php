@@ -32,7 +32,7 @@
             <div class="mxd-block loading-wrap">
               <div class="inner-headline fullheight">
                 <div class="inner-headline__bg">
-                  <img src="{{ asset('img/backgrounds/1920x1280_bg02.webp') }}" alt="Azurio Template Sample Image">
+                  <img src="{{ asset('img/backgrounds/1920x1280_bg02.webp') }}" alt="">
                   <div class="inner-headline__cover"></div>
                 </div>
                 <div class="mxd-container grid-l-container">
@@ -225,7 +225,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="project-details.html">
+                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="#">
                       <p class="permanent">NFT project branding</p>
                     </a>
                   </div>
@@ -256,7 +256,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="project-details.html">
+                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="#">
                       <p class="permanent">Interactive app concept</p>
                     </a>
                   </div>
@@ -283,7 +283,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="project-details.html">
+                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="#">
                       <p class="permanent">Editorial illustrations set</p>
                     </a>
                     
@@ -311,7 +311,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="project-details.html">
+                    <a class="card__title active-cursor-permanent" data-cursor-text="View Work" href="#">
                       <p class="permanent">Creative studio template</p>
                     </a>
                   </div>
@@ -394,7 +394,7 @@
                   </div>
                   <div class="mxd-projects-list__divider bottom"></div>
                 </a>
-                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr03.webp" data-cursor-text="View Work" href="project-details.html">
+                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr03.webp" data-cursor-text="View Work" href="#">
                   <div class="mxd-projects-list__divider top"></div>
                   <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
@@ -425,7 +425,7 @@
                   </div>
                   <div class="mxd-projects-list__divider bottom"></div>
                 </a>
-                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr02.webp" data-cursor-text="View Work" href="project-details.html">
+                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/works/showcase-stack/pr02.webp" data-cursor-text="View Work" href="#">
                   <div class="mxd-projects-list__divider top"></div>
                   <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
@@ -487,7 +487,7 @@
                   </div>
                   <div class="mxd-projects-list__divider bottom"></div>
                 </a>
-                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/cta/mar_09.webp" data-cursor-text="View Work" href="project-details.html">
+                <a class="mxd-projects-list__item active-cursor-image active-cursor-permanent" data-cursor-image="img/cta/mar_09.webp" data-cursor-text="View Work" href="#">
                   <div class="mxd-projects-list__divider top"></div>
                   <div class="px-0 container-fluid mxd-projects-list__inner">
                     <div class="row gx-0">
@@ -617,7 +617,7 @@
                             </div>
                             <div class="mxd-testimonials-card__author">
                               <div class="mxd-testimonials-card__photo">
-                                <img src="{{ asset('img/avatars/300x300_ava-01.webp') }}" alt="Azurio Template Example Image">
+                                <img src="{{ asset('img/avatars/300x300_ava-01.webp') }}" alt="">
                               </div>
                               <div class="mxd-testimonials-card__data">
                                 <p class="mxd-testimonials-card__name">John Lemon</p>
@@ -630,7 +630,7 @@
                           <!-- image card -->
                           <div class="justify-end mxd-testimonials-image has-padding-top">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
-                              <img src="{{ asset('img/avatars/800x800_ava-01.webp') }}" alt="Azurio Template Example Image">
+                              <img src="{{ asset('img/avatars/800x800_ava-01.webp') }}" alt="">
                             </div>
                           </div>
                         </div>
@@ -661,7 +661,7 @@
                             </div>
                             <div class="mxd-testimonials-card__author">
                               <div class="mxd-testimonials-card__photo">
-                                <img src="{{ asset('img/avatars/300x300_ava-02.webp') }}" alt="Azurio Template Example Image">
+                                <img src="{{ asset('img/avatars/300x300_ava-02.webp') }}" alt="">
                               </div>
                               <div class="mxd-testimonials-card__data">
                                 <p class="mxd-testimonials-card__name">Ashley Cherry</p>
@@ -682,7 +682,7 @@
                           <!-- image card -->
                           <div class="justify-end mxd-testimonials-image">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
-                              <img src="{{ asset('img/avatars/800x800_ava-02.webp') }}" alt="Azurio Template Example Image">
+                              <img src="{{ asset('img/avatars/800x800_ava-02.webp') }}" alt="">
                             </div>
                           </div>
                         </div>
@@ -711,7 +711,7 @@
                             </div>
                             <div class="mxd-testimonials-card__author">
                               <div class="mxd-testimonials-card__photo">
-                                <img src="{{ asset('img/avatars/300x300_ava-03.webp') }}" alt="Azurio Template Example Image">
+                                <img src="{{ asset('img/avatars/300x300_ava-03.webp') }}" alt="">
                               </div>
                               <div class="mxd-testimonials-card__data">
                                 <p class="mxd-testimonials-card__name">Lea Tomato</p>
@@ -725,7 +725,7 @@
                         <div class="col-12 col-xl-3 mxd-grid-item mxd-testimonials-sticky__column margin-bottom-mobile">
                           <div class="justify-start mxd-testimonials-image has-padding-top">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
-                              <img src="{{ asset('img/avatars/800x800_ava-03.webp') }}" alt="Azurio Template Example Image">
+                              <img src="{{ asset('img/avatars/800x800_ava-03.webp') }}" alt="">
                             </div>
                           </div>
                         </div>
@@ -762,7 +762,7 @@
                             </div>
                             <div class="mxd-testimonials-card__author">
                               <div class="mxd-testimonials-card__photo">
-                                <img src="{{ asset('img/avatars/300x300_ava-04.webp') }}" alt="Azurio Template Example Image">
+                                <img src="{{ asset('img/avatars/300x300_ava-04.webp') }}" alt="">
                               </div>
                               <div class="mxd-testimonials-card__data">
                                 <p class="mxd-testimonials-card__name">Patrick Pineapple</p>
@@ -798,7 +798,7 @@
                             </div>
                             <div class="mxd-testimonials-card__author">
                               <div class="mxd-testimonials-card__photo">
-                                <img src="{{ asset('img/avatars/300x300_ava-05.webp') }}" alt="Azurio Template Example Image">
+                                <img src="{{ asset('img/avatars/300x300_ava-05.webp') }}" alt="">
                               </div>
                               <div class="mxd-testimonials-card__data">
                                 <p class="mxd-testimonials-card__name">Mary Cucumber</p>
@@ -811,7 +811,7 @@
                           <!-- image card -->
                           <div class="justify-start mxd-testimonials-image has-padding-top">
                             <div class="mxd-testimonials-image__wrap mxd-clip-image">
-                              <img src="{{ asset('img/avatars/800x800_ava-04.webp') }}" alt="Azurio Template Example Image">
+                              <img src="{{ asset('img/avatars/800x800_ava-04.webp') }}" alt="">
                             </div>
                           </div>
                         </div>

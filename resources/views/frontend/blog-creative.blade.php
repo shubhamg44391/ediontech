@@ -77,7 +77,7 @@
                     <!-- info -->
                     <div class="col-12 col-xl-8 mxd-grid-item">
                       <a class="post-featured-fullscreen__info active-cursor-permanent" data-cursor-text="Read Post"
-                        href="blog-article.html">
+                        href="#">
                         <h2 class="post-featured-fullscreen__title permanent loading-split">My journey into the future of
                           art</h2>
                         <div class="post-featured-fullscreen__excerpt loading-item">

@@ -191,13 +191,32 @@ Route::get('/dashboard', function () {
     $totalIPCount = $ipAddressController->getTotalIPCount();
     $cityVisitorCount = $ipAddressController->showCityVisitorChart();
     $allCities = $ipAddressController->getAllCities();
+    
+    // Fetch page view statistics paginated (using page_views_page parameter to avoid conflict)
+    $pageViews = \Illuminate\Support\Facades\DB::table('page_views')
+        ->select('page_path', DB::raw('SUM(views) as total_views'), DB::raw('COUNT(distinct ip_address) as unique_visitors'))
+        ->groupBy('page_path')
+        ->orderBy('total_views', 'desc')
+        ->paginate(10, ['*'], 'page_views_page');
+
     return view('admin.dashboard', [
         'ipAddresses' => $ipAddresses,
         'totalIpCount' => $totalIPCount,
         'cityVisitorCount' => $cityVisitorCount,
-        'allCities' => $allCities
+        'allCities' => $allCities,
+        'pageViews' => $pageViews,
     ]);
 })->name('dashboard');
+
+Route::get('/admin/ip-page-views', function (Illuminate\Http\Request $request) {
+    $ip = $request->query('ip');
+    $pageViews = \Illuminate\Support\Facades\DB::table('page_views')
+        ->where('ip_address', $ip)
+        ->select('page_path', 'views')
+        ->orderBy('views', 'desc')
+        ->get();
+    return response()->json($pageViews);
+})->name('admin.ip.page-views');
 
 
 

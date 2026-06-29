@@ -14,10 +14,9 @@
 
     <!-- Meta Tags -->
     <meta name="description"
-        content="Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.">
+        content="">
     <meta name="keywords"
-        content="mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean">
-    <meta name="author" content="mix_design">
+        content="">
 
     <!-- Viewport Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,11 +34,11 @@
     <!-- Facebook Metadata Start -->
     <meta property="og:image:height" content="1200">
     <meta property="og:image:width" content="1200">
-    <meta property="og:title" content="Azurio - Digital Agency & Personal Portfolio HTML Template">
+    <meta property="og:title" content=" ">
     <meta property="og:description"
-        content="Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.">
-    <meta property="og:url" content="https://mixdesign.club/themeforest/azurio">
-    <meta property="og:image" content="../../../mixdesign.club/themeforest/azurio/img/og-image.html">
+        content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
     <!-- Facebook Metadata End -->
 
     <!-- Template Styles Start -->
@@ -142,8 +141,8 @@
 
         @media (max-width: 1080px) {
             .custom-brand-logo {
-                height: 100px;
-                max-width: 100px;
+               height: 100px !important;
+                max-width: 100px !important;
                 align-items: center;
 
             }
@@ -236,10 +235,10 @@
                 <div class="mxd-menu__media bg-dark">
                     <div class="menu-media__wrapper">
                         {{-- <img src="{{ asset('img/gifs/dolores.gif') }}" alt="Image"> --}}
-                        <video preload="auto" autoplay muted loop playsinline
+                        <video id="menu-video" preload="none" muted loop playsinline
                             poster="{{ asset('video/900x1280_menu.webp') }}">
-                            <source type="video/mp4" src="{{ asset('video/900x1280_menu.mp4') }}">
-                            <source type="video/webm" src="{{ asset('video/900x1280_menu.webm') }}">
+                            <source type="video/webm" data-src="{{ asset('video/900x1280_menu.webm') }}">
+                            <source type="video/mp4" data-src="{{ asset('video/900x1280_menu.mp4') }}">
                         </video>
                     </div>
                 </div>
@@ -453,7 +452,7 @@
                         </div>
                         {{-- left side end --}}
                         <!-- right side -->
-                        <div class="mxd-menu__right">
+                        <!-- <div class="mxd-menu__right">
                             <div class="menu-contact">
                                 <div class="menu-contact__item">
                                     <ul class="menu-contact__list">
@@ -482,7 +481,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
                         <!-- data bottom line -->
                         <div class="mxd-menu__shadow"></div>
                         <div class="mxd-menu__data">
@@ -499,7 +498,7 @@
                             </div>
                             <div class="menu-data__right">
                                 <p class="menu-data__text">Copyright Edion</p>
-                                <p class="menu-data__text">©2026</p>
+                                <p class="menu-data__text">®2026</p>
                             </div>
                         </div>
                     </div>
