@@ -745,7 +745,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
+                                    <!-- <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
                                         <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent"
                                             data-cursor-text="View Work" href="{{ route('frontend.works') }}">
                                             <img class="mxd-img-anim__absolute"
@@ -887,7 +887,7 @@
                                                 <span class="tag tag-s tag-medium mxd-scramble">Website</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="row g-0">
                                     <!-- all projects link -->

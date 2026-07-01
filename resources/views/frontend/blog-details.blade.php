@@ -1,5 +1,9 @@
 @extends('frontend.layouts.main')
 
+@section('title', !empty($blog->meta_title) ? $blog->meta_title : ($blog->title ?? 'Blog Details - Edion Web Technologies'))
+@section('description', !empty($blog->meta_description) ? $blog->meta_description : (!empty($blog->description) ? \Illuminate\Support\Str::limit(strip_tags($blog->description), 160) : 'Read the latest blog post from Edion Web Technologies.'))
+@section('keywords', !empty($blog->meta_keywords) ? $blog->meta_keywords : 'website development, digital marketing, SEO, web design, Edion Web Technologies')
+
 @section('main-container')
     <main id="mxd-page-content" class="mxd-page-content inner-page-content">
         <div style="margin-top: 120px; min-height: 100vh; padding-bottom: 60px;">

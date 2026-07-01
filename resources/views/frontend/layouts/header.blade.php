@@ -10,17 +10,20 @@
     <meta charset="UTF-8">
 
     <!-- Page Title -->
-    <title></title>
+    <title>@yield('title', 'Best Website Development & Digital Marketing Company - Edion Web Technologies')</title>
 
     <!-- Meta Tags -->
     <meta name="description"
-        content="">
+        content="@yield('description', 'Edion Web Technologies is a leading technology company delivering innovative digital solutions, including website development, SEO, and digital marketing.')">
     <meta name="keywords"
-        content="">
+        content="@yield('keywords', 'website development, digital marketing, SEO, web design, Edion Web Technologies')">
 
     <!-- Viewport Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Template Favicon & Icons Start -->
     <link rel="icon" href="{{ asset('img/favicon/edion-web-technologies.png') }}" sizes="any">
@@ -34,11 +37,11 @@
     <!-- Facebook Metadata Start -->
     <meta property="og:image:height" content="1200">
     <meta property="og:image:width" content="1200">
-    <meta property="og:title" content=" ">
+    <meta property="og:title" content="@yield('title', 'Best Website Development & Digital Marketing Company - Edion Web Technologies')">
     <meta property="og:description"
-        content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+        content="@yield('description', 'Edion Web Technologies is a leading technology company delivering innovative digital solutions, including website development, SEO, and digital marketing.')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('img/favicon/edion-web-technologies.png') }}">
     <!-- Facebook Metadata End -->
 
     <!-- Template Styles Start -->

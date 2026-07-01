@@ -1,5 +1,13 @@
 <?php
 
+// Adjust script name and PHP self to support removing /public from URL in subdirectory
+if (isset($_SERVER['SCRIPT_NAME']) && strpos($_SERVER['SCRIPT_NAME'], '/public/index.php') !== false) {
+    $_SERVER['SCRIPT_NAME'] = str_replace('/public/index.php', '/index.php', $_SERVER['SCRIPT_NAME']);
+}
+if (isset($_SERVER['PHP_SELF']) && strpos($_SERVER['PHP_SELF'], '/public/index.php') !== false) {
+    $_SERVER['PHP_SELF'] = str_replace('/public/index.php', '/index.php', $_SERVER['PHP_SELF']);
+}
+
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 

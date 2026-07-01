@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent direct access to sensitive files
+    RedirectMatch 404 /\.(env|git|gitignore|gitattributes|editorconfig)$
+    RedirectMatch 404 /(composer\.json|composer\.lock|package\.json|package-lock\.json|artisan|phpunit\.xml|vite\.config\.js|postcss\.config\.js|tailwind\.config\.js)$
+    RedirectMatch 404 ^/ediontech/(app|bootstrap|config|database|resources|routes|storage|tests|vendor)($|/)
+
+    RewriteRule ^$ public/index.php [L]
+    RewriteRule ^((?!public/).*)$ public/$1 [L]
+</IfModule>
