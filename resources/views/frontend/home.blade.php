@@ -36,7 +36,7 @@
                             <div class="mxd-hero-media__scaling-media" data-flip-element="target">
                                 <video class="scaling-media__video" autoplay muted loop playsinline preload="auto"
                                     poster="{{ asset('video/1280x720_hero-03.webp') }}">
-                                    <source src="{{ asset('video/1280x720_hero-03.webm') }}" type="video/webm">
+                                    <source src="{{ asset('video/1280x720_hero-03.mp4') }}" type="video/webm">
                                     <source src="{{ asset('video/1280x720_hero-03.mp4') }}" type="video/mp4">
                                 </video>
                             </div>
@@ -714,12 +714,7 @@
                                                 <a class="project-name-s"
                                                     href="{{ route('frontend.works') }}">Illustrations set</a>
                                             </div>
-                                            <div class="mxd-project-item__tags">
-                                                <span class="tag tag-s tag-medium mxd-scramble">Design</span>
-                                                <span class="tag tag-s tag-medium mxd-scramble">Illustrations</span>
-                                                <span class="tag tag-s tag-medium mxd-scramble">Packaging</span>
-                                                <span class="tag tag-s tag-medium mxd-scramble">Marketing</span>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
@@ -738,11 +733,7 @@
                                                 <a class="project-name-s"
                                                     href="{{ route('frontend.services') }}">Interactive concept</a>
                                             </div>
-                                            <div class="mxd-project-item__tags">
-                                                <span class="tag tag-s tag-medium mxd-scramble">UI/UX</span>
-                                                <span class="tag tag-s tag-medium mxd-scramble">Development</span>
-                                                <span class="tag tag-s tag-medium mxd-scramble">Brand</span>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                     <!-- <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
