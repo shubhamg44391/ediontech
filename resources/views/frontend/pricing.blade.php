@@ -8,6 +8,7 @@
     ? $headerdata->meta_description
     : 'Edion Web Technologies
     is a leading technology company delivering innovative digital solutions.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'website development, digital marketing, SEO, web design, Edion Web Technologies')
 
 
 @section('main-container')

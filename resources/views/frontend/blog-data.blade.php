@@ -18,15 +18,7 @@
                           <a class="blog-name-m"
                             href="{{ route('frontend.blog-details', $blog->slug) }}">{{ $blog->title }}</a>
                         </div>
-                        <div class="mxd-blog-item__tags">
-                          @if(!empty($blog->meta_keywords))
-                            @foreach(explode(',', $blog->meta_keywords) as $keyword)
-                              <span class="tag tag-s tag-medium mxd-scramble">{{ trim($keyword) }}</span>
-                            @endforeach
-                          @else
-                            <span class="tag tag-s tag-medium mxd-scramble">Insights</span>
-                          @endif
-                        </div>
+
                       </div>
                     </div>
                   @empty

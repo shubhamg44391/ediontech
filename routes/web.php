@@ -61,6 +61,7 @@ Route::get('/test-mail', function () {
     }
 });
 
+
 Route::get('/clear', function () {
 
     Artisan::call('optimize:clear');

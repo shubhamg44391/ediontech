@@ -12,7 +12,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/media/edion.png') }}" />
+     <link rel="icon" href="{{ asset('img/favicon/edion-web-technologies.webp') }}" sizes="any">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +93,7 @@
                             <a href="{{ route('frontend.home') }}" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo">
                                     <img class="dark-mode" width="150px"
-                                        src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="Site Logo">
+                                        src="{{ asset('img/favicon/edion-web-technologies.webp') }}" alt="Site Logo">
                                 </span>
                             </a>
                         </div>

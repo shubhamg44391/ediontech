@@ -53,7 +53,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Template Favicon & Icons Start -->
-    <link rel="icon" href="{{ asset('img/favicon/edion-web-technologies.png') }}" sizes="any">
+    <link rel="icon" href="{{ asset('img/favicon/edion-web-technologies.webp') }}" sizes="any">
     {{--
   <link rel="icon" href="{{ asset('img/favicon/icon.svg') }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ asset('img/favicon/apple-touch-icon.png') }}"> --}}
@@ -68,7 +68,7 @@
     <meta property="og:description"
         content="@yield('description', 'Edion Web Technologies is a leading technology company delivering innovative digital solutions, including website development, SEO, and digital marketing.')">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('img/favicon/edion-web-technologies.png') }}">
+    <meta property="og:image" content="{{ asset('img/favicon/edion-web-technologies.webp') }}">
     <!-- Facebook Metadata End -->
 
     <!-- Template Styles Start -->
@@ -260,7 +260,7 @@
 
                     <a href="{{ route('frontend.home') }}" class="menu-logo d-inline-block position-relative">
 
-                        <img src="{{ asset('img/favicon/edion-web-technologies.png') }}" alt="Edion Web Tech Brand Logo"
+                        <img src="{{ asset('img/favicon/edion-web-technologies.webp') }}" alt="Edion Web Tech Brand Logo"
                             class="img-fluid hamburger_logo" style="">
 
                     </a>
@@ -558,7 +558,7 @@
             <a class="mxd-logo" href="{{ route('frontend.home') }}">
                 <!-- logo icon -->
 
-                <img class="custom-brand-logo" src="{{ asset('img/favicon/edion-web-technologies.png') }}"
+                <img class="custom-brand-logo" src="{{ asset('img/favicon/edion-web-technologies.webp') }}"
                     alt="Edion Web Technologies">
                 <!-- logo text -->
                 <!-- logo icon -->

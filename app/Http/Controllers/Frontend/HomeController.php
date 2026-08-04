@@ -16,14 +16,10 @@ class HomeController extends Controller
             ->limit(3)
             ->get();
 
-
-        $headers = DB::table('headers')->get();
-
-       
+        $headers = DB::table('headers')->get();     
       
             $slug = 'home';
         
-
         $headerdata = DB::table('pages')->where('slug', $slug)->first();
 
         return view('frontend.home', compact( 'headers', 'blogs', 'headerdata'));

@@ -31,6 +31,8 @@ class SeoContentController extends Controller
 
             'description' => 'required|string',
 
+            'keywords' => 'nullable|string',
+
         ]);
 
         DB::table('pages')->updateOrInsert(
@@ -38,6 +40,7 @@ class SeoContentController extends Controller
             [
                 'meta_title' => $request->title,
                 'meta_description' => $request->description,
+                'meta_keywords' => $request->keywords,
                 'slug' => $slug,
                 'updated_at' => now(),
             ]

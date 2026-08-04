@@ -50,6 +50,14 @@
                             <div class="text-danger">{{ $message??'' }}</div>
                         @enderror
                     </div>
+
+                    <div class="mb-3">
+                        <label for="keywords" class="form-label">Meta Keywords</label>
+                        <textarea class="form-control" id="keywords" name="keywords" rows="3" placeholder="e.g. FAQ, web development faq, digital marketing faq">{{ old('meta_keywords', $data->meta_keywords??'') }}</textarea>
+                        @error('keywords')
+                            <div class="text-danger">{{ $message??'' }}</div>
+                        @enderror
+                    </div>
                     
             
     

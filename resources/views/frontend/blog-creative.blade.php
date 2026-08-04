@@ -3,6 +3,7 @@
 
 @section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Edion Web Technologies Blogs')
 @section( 'description',!empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a leading technology company delivering innovative digital solutions.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'website development, digital marketing, SEO, web design, Edion Web Technologies')
 @section('main-container')
 
 
@@ -163,15 +164,7 @@
                               <a href="{{ route('frontend.blog-details', $blog->slug) }}">{{ $blog->title }}</a>
                             </h3>
                           </div>
-                          <div class="post-simple-alt__tags">
-                            @if(!empty($blog->meta_keywords))
-                              @foreach(explode(',', $blog->meta_keywords) as $keyword)
-                                <a class="tag tag-s tag-medium mxd-scramble" href="#0">{{ trim($keyword) }}</a>
-                              @endforeach
-                            @else
-                              <a class="tag tag-s tag-medium mxd-scramble" href="#0">Insights</a>
-                            @endif
-                          </div>
+
                         </div>
                       </article>
                     </div>
