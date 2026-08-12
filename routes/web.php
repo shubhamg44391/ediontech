@@ -140,35 +140,7 @@ Route::post('/razorpay/verify-payment', [RazorpayPaymentController::class, 'veri
 Route::name('frontend.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name("home");
 
-    Route::get('/about', [AboutUsController::class, 'index'])->name('about');
-
-    Route::get('/services', [ServicesController::class, 'index'])->name('services');
-
-    Route::get('/seo-package', [PricingController::class, 'index'])->name('seo-package');
-
-    Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
-    Route::post('/submit-form', [ContactUsController::class, 'submit'])->name('submit-form');
-    Route::get('/reload-captcha', function () {
-        return response()->json(['captcha' => captcha_img()]);
-    });
-    Route::get('/works', [WorksController::class, 'index'])->name('works');
-
-    // At insights URL we redirect to blog-creative page
-    Route::get('/blog', [InsightsController::class, 'index'])->name('blog');
-    Route::get('/blog-details/{slug}', [InsightsController::class, 'blogDetails'])->name('blog-details');
-
-    Route::get('/faq', [FaqController::class, 'index'])->name('faq');
-
-    Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy-policy');
-
-    Route::get('/term-and-condition', [TermsAndConditionsController::class, 'index'])->name('term-and-condition');
-
-    Route::get('/free-consultation', [FreeConsultationController::class, 'index'])->name('free-consultation');
-
-    Route::get(
-        '/refund-and-cancellation-policy',
-        [RefundAndCancellationPolicyController::class, 'index']
-    )->name('refund-and-cancellation-policy');
+ 
 });
 
 // Backend Controller

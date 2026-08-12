@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img"
+     aria-label="Abstract geometric skyline representing Dubai">
+<rect width="320" height="340" rx="14" fill="#141A1F"/>
+<g opacity=".5" stroke="#2C3843" stroke-width="1">
+<path d="M0 80h320M0 140h320M0 200h320M0 260h320"/></g>
+<path d="M150 300V150l14-70 14 70v150z" fill="#D6382B"/><path d="M60 300v-90h40v90zM110 300v-60h28v60zM190 300v-70h30v70zM230 300v-110h34v110zM274 300v-50h30v50z" fill="#F6F7F8" opacity=".92"/><path d="M20 300v-40h30v40z" fill="#F6F7F8" opacity=".6"/>
+<path d="M0 300h320v40H0z" fill="#1E262E"/>
+<text x="160" y="326" text-anchor="middle" font-family="monospace" font-size="13"
+      fill="#7A8894" letter-spacing="2.4">DUBAI</text>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" role="img"
+     aria-label="Search visibility growth with ranking positions and AI citations">
+<defs>
+<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity=".02"/></linearGradient>
+<linearGradient id="brandg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#F0705F"/><stop offset="1" stop-color="#D73729"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#D73729" stop-opacity=".34"/>
+  <stop offset="1" stop-color="#D73729" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade2" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#3B82F6" stop-opacity=".30"/>
+  <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0A0F14" flood-opacity=".38"/></filter>
+<filter id="soft2" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0A0F14" flood-opacity=".22"/></filter>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+  <circle cx="1.5" cy="1.5" r="1.1" fill="#2C3843" opacity=".55"/></pattern>
+</defs>
+<rect width="760" height="480" rx="18" fill="#141A1F"/>
+<rect width="760" height="480" rx="18" fill="url(#dots)"/>
+<!-- growth chart -->
+<g filter="url(#soft)">
+<rect x="24" y="24" width="474" height="432" rx="14" fill="#1E262E" stroke="#2C3843"/>
+<text x="46" y="56" font-family="ui-monospace, monospace" font-size="10.5" fill="#7A8894" letter-spacing="1.3">ORGANIC SESSIONS, 12 MONTHS</text>
+<text x="46" y="86" font-family="system-ui, sans-serif" font-size="27" font-weight="800" fill="#F6F7F8">+318%</text>
+<g stroke="#2C3843" stroke-width="1">
+<line x1="46" y1="380" x2="474" y2="380"/><line x1="46" y1="310" x2="474" y2="310"/>
+<line x1="46" y1="240" x2="474" y2="240"/><line x1="46" y1="170" x2="474" y2="170"/></g>
+<g transform="translate(46, 124)">
+  <path d="M0 246 C 60 240 96 208 152 190 S 250 138 316 104 S 420 44 486 24 L486 256 L0 256 Z" fill="url(#fade)"/>
+  <path d="M0 246 C 60 240 96 208 152 190 S 250 138 316 104 S 420 44 486 24" fill="none" stroke="#F0705F" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#F0705F"><circle cx="152" cy="190" r="4.5"/><circle cx="316" cy="104" r="4.5"/></g>
+  <circle cx="486" cy="24" r="7" fill="#F0705F"/>
+  <circle cx="486" cy="24" r="13" fill="none" stroke="#F0705F" stroke-width="2" opacity=".4"/>
+</g>
+<g font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1">
+<text x="46" y="410">M1</text><text x="180" y="410">M4</text>
+<text x="316" y="410">M8</text><text x="452" y="410">M12</text></g>
+<rect x="46" y="426" width="120" height="18" rx="9" fill="#12B981" opacity=".16"/>
+<circle cx="57" cy="435" r="3.4" fill="#12B981"/>
+<text x="66" y="439" font-family="ui-monospace, monospace" font-size="9.5" fill="#12B981" letter-spacing=".8">WHITE-HAT ONLY</text>
+</g>
+<!-- SERP positions -->
+<g filter="url(#soft2)">
+<rect x="516" y="24" width="220" height="228" rx="14" fill="#1E262E" stroke="#2C3843"/>
+<text x="536" y="52" font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1.2">KEYWORD POSITIONS</text>
+<g>
+<rect x="536" y="66" width="180" height="28" rx="7" fill="#141A1F" opacity=".55"/>
+<text x="548" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">car rental software</text>
+<rect x="680" y="71" width="26" height="18" rx="6" fill="#12B981" opacity=".18"/>
+<text x="693" y="84" font-family="ui-monospace, monospace" font-size="11" font-weight="600"
+      fill="#12B981" text-anchor="middle">1</text></g><g>
+<rect x="536" y="102" width="180" height="28" rx="7" fill="#141A1F" opacity=".55"/>
+<text x="548" y="121" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">fleet management</text>
+<rect x="680" y="107" width="26" height="18" rx="6" fill="#12B981" opacity=".18"/>
+<text x="693" y="120" font-family="ui-monospace, monospace" font-size="11" font-weight="600"
+      fill="#12B981" text-anchor="middle">2</text></g><g>
+<rect x="536" y="138" width="180" height="28" rx="7" fill="#141A1F" opacity=".55"/>
+<text x="548" y="157" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">rental booking engine</text>
+<rect x="680" y="143" width="26" height="18" rx="6" fill="#12B981" opacity=".18"/>
+<text x="693" y="156" font-family="ui-monospace, monospace" font-size="11" font-weight="600"
+      fill="#12B981" text-anchor="middle">3</text></g><g>
+<rect x="536" y="174" width="180" height="28" rx="7" fill="#141A1F" opacity=".55"/>
+<text x="548" y="193" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">chauffeur software</text>
+<rect x="680" y="179" width="26" height="18" rx="6" fill="#E0A33C" opacity=".18"/>
+<text x="693" y="192" font-family="ui-monospace, monospace" font-size="11" font-weight="600"
+      fill="#E0A33C" text-anchor="middle">5</text></g><g>
+<rect x="536" y="210" width="180" height="28" rx="7" fill="#141A1F" opacity=".55"/>
+<text x="548" y="229" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">vehicle rental app</text>
+<rect x="680" y="215" width="26" height="18" rx="6" fill="#E0A33C" opacity=".18"/>
+<text x="693" y="228" font-family="ui-monospace, monospace" font-size="11" font-weight="600"
+      fill="#E0A33C" text-anchor="middle">6</text></g>
+</g>
+<!-- AI citations -->
+<g filter="url(#soft2)">
+<rect x="516" y="266" width="220" height="190" rx="14" fill="#1E262E" stroke="#2C3843"/>
+<text x="536" y="294" font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1.2">CITED BY AI SEARCH</text>
+<g>
+<rect x="536" y="308" width="180" height="26" rx="13" fill="#7C3AED" opacity=".14"/>
+<circle cx="551" cy="321" r="4" fill="#7C3AED"/>
+<text x="563" y="325" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">ChatGPT Search</text>
+<text x="706" y="325" font-family="ui-monospace, monospace" font-size="9.5" fill="#7C3AED" text-anchor="end">CITED</text></g><g>
+<rect x="536" y="342" width="180" height="26" rx="13" fill="#7C3AED" opacity=".14"/>
+<circle cx="551" cy="355" r="4" fill="#7C3AED"/>
+<text x="563" y="359" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">Google AI Overview</text>
+<text x="706" y="359" font-family="ui-monospace, monospace" font-size="9.5" fill="#7C3AED" text-anchor="end">CITED</text></g><g>
+<rect x="536" y="376" width="180" height="26" rx="13" fill="#7C3AED" opacity=".14"/>
+<circle cx="551" cy="389" r="4" fill="#7C3AED"/>
+<text x="563" y="393" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">Perplexity</text>
+<text x="706" y="393" font-family="ui-monospace, monospace" font-size="9.5" fill="#7C3AED" text-anchor="end">CITED</text></g><g>
+<rect x="536" y="410" width="180" height="26" rx="13" fill="#7C3AED" opacity=".14"/>
+<circle cx="551" cy="423" r="4" fill="#7C3AED"/>
+<text x="563" y="427" font-family="system-ui, sans-serif" font-size="11" fill="#F6F7F8">Gemini</text>
+<text x="706" y="427" font-family="ui-monospace, monospace" font-size="9.5" fill="#7C3AED" text-anchor="end">CITED</text></g>
+</g>
+</svg>

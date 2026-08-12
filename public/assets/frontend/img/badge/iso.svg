@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" fill="none" role="img" aria-hidden="true">
+<rect x="1.5" y="1.5" width="257" height="117" rx="12" fill="#FFFFFF" stroke="#E7EBEA" stroke-width="1.5"/>
+<path d="M1.5 13.5A12 12 0 0 1 13.5 1.5H20v117h-6.5a12 12 0 0 1-12-12z" fill="#12B981"/>
+<g transform="translate(36,34)"><path d="M14 1l11.5 4.4v8.8c0 7-5.2 11.4-11.5 13.2C7.7 25.6 2.5 21.2 2.5 14.2V5.4z" stroke="#12B981" stroke-width="2.3"/><path d="M8.6 14l4 4 7.4-7.6" stroke="#12B981" stroke-width="2.3" stroke-linecap="round"/></g>
+<text x="72" y="46" font-family="'Archivo','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#0B1B2B" letter-spacing="-.3">ISO 9001</text><text x="72" y="65" font-family="'Archivo','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#0B1B2B" letter-spacing="-.3">&amp; ISO 27001</text>
+<text x="72" y="86" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="9.5" fill="#7C8FA0"
+ letter-spacing=".6" text-transform="uppercase">Certified systems</text>
+<circle cx="238" cy="102" r="5" fill="#12B981"/>
+</svg>

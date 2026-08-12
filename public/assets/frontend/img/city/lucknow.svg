@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img"
+     aria-label="Abstract geometric skyline representing Lucknow">
+<rect width="320" height="340" rx="14" fill="#141A1F"/>
+<g opacity=".5" stroke="#2C3843" stroke-width="1">
+<path d="M0 80h320M0 140h320M0 200h320M0 260h320"/></g>
+<path d="M110 300v-84a48 48 0 0196 0v84z" fill="#D6382B"/><path d="M136 300v-52a22 22 0 0144 0v52z" fill="#141A1F"/><path d="M92 300v-56h14v56zM210 300v-56h14v56z" fill="#D6382B"/><path d="M40 300v-44h34v44zM240 300v-50h34v50z" fill="#F6F7F8" opacity=".92"/>
+<path d="M0 300h320v40H0z" fill="#1E262E"/>
+<text x="160" y="326" text-anchor="middle" font-family="monospace" font-size="13"
+      fill="#7A8894" letter-spacing="2.4">LUCKNOW</text>
+</svg>

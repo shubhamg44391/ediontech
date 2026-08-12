@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 68" role="img" aria-label="Edion Web Technologies mark">
+<defs><linearGradient id="eg" x1="6" y1="6" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D6382B"/><stop offset="1" stop-color="#A82A20"/></linearGradient></defs>
+<path d="M45.4 6.2 8.9 27.3a7.2 7.2 0 0 0 0 12.4l36.5 21.1a7.2 7.2 0 0 0 10.8-6.2V12.4a7.2 7.2 0 0 0-10.8-6.2Zm-2.2 13.1v27.4L19.5 33Z"
+      fill="url(#eg)" fill-rule="evenodd"/></svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img"
+     aria-label="Abstract geometric skyline representing Riyadh">
+<rect width="320" height="340" rx="14" fill="#141A1F"/>
+<g opacity=".5" stroke="#2C3843" stroke-width="1">
+<path d="M0 80h320M0 140h320M0 200h320M0 260h320"/></g>
+<path d="M140 300V140h40v160z" fill="#D6382B"/><path d="M138 140l22-36 22 36z" fill="#D6382B"/><path d="M70 300v-48h18v48zM100 300v-70h26v70zM196 300v-64h24v64z" fill="#F6F7F8" opacity=".92"/><path d="M232 300v-90h14v90zM254 300v-120h14v120z" fill="#F6F7F8" opacity=".7"/>
+<path d="M0 300h320v40H0z" fill="#1E262E"/>
+<text x="160" y="326" text-anchor="middle" font-family="monospace" font-size="13"
+      fill="#7A8894" letter-spacing="2.4">RIYADH</text>
+</svg>

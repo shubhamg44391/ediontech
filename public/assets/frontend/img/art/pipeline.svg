@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img"
+     aria-label="Four phase delivery pipeline with review gates and timelines">
+<rect width="760" height="400" rx="18" fill="#F6F7F8"/>
+<defs>
+<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity=".02"/></linearGradient>
+<linearGradient id="brandg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#F0705F"/><stop offset="1" stop-color="#D73729"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#D73729" stop-opacity=".34"/>
+  <stop offset="1" stop-color="#D73729" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade2" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#3B82F6" stop-opacity=".30"/>
+  <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0A0F14" flood-opacity=".38"/></filter>
+<filter id="soft2" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0A0F14" flood-opacity=".22"/></filter>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+  <circle cx="1.5" cy="1.5" r="1.1" fill="#2C3843" opacity=".55"/></pattern>
+</defs>
+<text x="42" y="62" font-family="ui-monospace, monospace" font-size="10.5" fill="#7A8894" letter-spacing="1.4">DELIVERY PIPELINE</text>
+<text x="42" y="98" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#141A1F">You review at every gate.</text>
+<rect x="42" y="118" width="640" height="1" fill="#E4E8EB"/>
+<g filter="url(#soft2)">
+<rect x="42" y="150" width="152" height="150" rx="13" fill="#FFFFFF" stroke="#E4E8EB"/>
+<rect x="42" y="150" width="152" height="5" rx="2.5" fill="#D73729"/>
+<text x="62" y="187" font-family="ui-monospace, monospace" font-size="10.5" fill="#7A8894" letter-spacing="1.4">01</text>
+<text x="62" y="216" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141A1F">Strategy</text>
+<rect x="62" y="234" width="84" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="62" y="248" width="96" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="62" y="270" width="66" height="18" rx="9" fill="#D73729" opacity=".1"/>
+<text x="72" y="283" font-family="ui-monospace, monospace" font-size="9.5" fill="#D73729" letter-spacing=".6">1-2 wks</text>
+</g><path d="M194 225 h20" stroke="#7A8894" stroke-width="2" stroke-dasharray="4 4" opacity=".6"/><path d="M216 220 l6 5 -6 5z" fill="#7A8894" opacity=".7"/><g filter="url(#soft2)">
+<rect x="214" y="150" width="152" height="150" rx="13" fill="#FFFFFF" stroke="#E4E8EB"/>
+<rect x="214" y="150" width="152" height="5" rx="2.5" fill="#D73729"/>
+<text x="234" y="187" font-family="ui-monospace, monospace" font-size="10.5" fill="#7A8894" letter-spacing="1.4">02</text>
+<text x="234" y="216" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141A1F">Design</text>
+<rect x="234" y="234" width="104" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="234" y="248" width="72" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="234" y="270" width="66" height="18" rx="9" fill="#D73729" opacity=".1"/>
+<text x="244" y="283" font-family="ui-monospace, monospace" font-size="9.5" fill="#D73729" letter-spacing=".6">~2 wks</text>
+</g><path d="M366 225 h20" stroke="#7A8894" stroke-width="2" stroke-dasharray="4 4" opacity=".6"/><path d="M388 220 l6 5 -6 5z" fill="#7A8894" opacity=".7"/><g filter="url(#soft2)">
+<rect x="386" y="150" width="152" height="150" rx="13" fill="#FFFFFF" stroke="#E4E8EB"/>
+<rect x="386" y="150" width="152" height="5" rx="2.5" fill="#D73729"/>
+<text x="406" y="187" font-family="ui-monospace, monospace" font-size="10.5" fill="#7A8894" letter-spacing="1.4">03</text>
+<text x="406" y="216" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141A1F">Build</text>
+<rect x="406" y="234" width="84" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="406" y="248" width="96" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="406" y="270" width="66" height="18" rx="9" fill="#D73729" opacity=".1"/>
+<text x="416" y="283" font-family="ui-monospace, monospace" font-size="9.5" fill="#D73729" letter-spacing=".6">3-4 wks</text>
+</g><path d="M538 225 h20" stroke="#7A8894" stroke-width="2" stroke-dasharray="4 4" opacity=".6"/><path d="M560 220 l6 5 -6 5z" fill="#7A8894" opacity=".7"/><g filter="url(#soft2)">
+<rect x="558" y="150" width="152" height="150" rx="13" fill="#FFFFFF" stroke="#E4E8EB"/>
+<rect x="558" y="150" width="152" height="5" rx="2.5" fill="#12B981"/>
+<text x="578" y="187" font-family="ui-monospace, monospace" font-size="10.5" fill="#7A8894" letter-spacing="1.4">04</text>
+<text x="578" y="216" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141A1F">Launch</text>
+<rect x="578" y="234" width="104" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="578" y="248" width="72" height="6" rx="3" fill="#E4E8EB"/>
+<rect x="578" y="270" width="66" height="18" rx="9" fill="#D73729" opacity=".1"/>
+<text x="588" y="283" font-family="ui-monospace, monospace" font-size="9.5" fill="#D73729" letter-spacing=".6">ongoing</text>
+</g>
+<g font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1">
+<text x="42" y="344">STAGING URL OPEN THROUGHOUT</text>
+<text x="330" y="344">WEEKLY WRITTEN UPDATE</text>
+<text x="580" y="344">YOU OWN THE CODE</text></g>
+</svg>

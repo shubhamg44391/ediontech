@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img"
+     aria-label="Hospitality" fill="none">
+<g fill="#D73729" fill-opacity=".13"><path d="M10 18h28v22a1.5 1.5 0 0 1-1.5 1.5h-25A1.5 1.5 0 0 1 10 40Z"/></g>
+<g stroke="#141A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+   vector-effect="non-scaling-stroke"><path d="M10 41.5V18h28v23.5"/><path d="M6.5 18 24 8l17.5 10"/>
+ <path d="M15.5 24.5h5v5h-5zM27.5 24.5h5v5h-5z"/>
+ <path d="M19.5 41.5v-7a4.5 4.5 0 0 1 9 0v7"/><path d="M4 41.5h40"/></g>
+<g fill="#D73729"><circle cx="24" cy="13.6" r="1.7"/><rect x="23.1" y="31" width="1.8" height="4" rx=".9"/></g>
+</svg>

@@ -1,587 +1,70 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
-<head>
-
-    <!-- Google Tag Manager -->
-    <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;
-    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MMC2V5M');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTYQMFM7YH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      // Google Analytics (GA4)
-      gtag('config', 'G-LTYQMFM7YH');
-
-      // Google Ads
-      gtag('config', 'AW-502456641');
-    </script>
-
-    <meta charset="UTF-8">
-
-    <!-- Page Title -->
-    <title>@yield('title', 'Best Website Development & Digital Marketing Company - Edion Web Technologies')</title>
-
-    <!-- Meta Tags -->
-    <meta name="description"
-        content="@yield('description', 'Edion Web Technologies is a leading technology company delivering innovative digital solutions, including website development, SEO, and digital marketing.')">
-    <meta name="keywords"
-        content="@yield('keywords', 'website development, digital marketing, SEO, web design, Edion Web Technologies')">
-    <link rel="canonical" href="{{ env('APP_URL') }}" />
-    <!-- Viewport Meta-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Template Favicon & Icons Start -->
-    <link rel="icon" href="{{ asset('img/favicon/edion-web-technologies.webp') }}" sizes="any">
-    {{--
-  <link rel="icon" href="{{ asset('img/favicon/icon.svg') }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ asset('img/favicon/apple-touch-icon.png') }}"> --}}
-    {{--
-  <link rel="manifest" href="{{ asset('img/favicon/manifest.webmanifest') }}"> --}}
-    <!-- Template Favicon & Icons End -->
-
-    <!-- Facebook Metadata Start -->
-    <meta property="og:image:height" content="1200">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:title" content="@yield('title', 'Best Website Development & Digital Marketing Company - Edion Web Technologies')">
-    <meta property="og:description"
-        content="@yield('description', 'Edion Web Technologies is a leading technology company delivering innovative digital solutions, including website development, SEO, and digital marketing.')">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('img/favicon/edion-web-technologies.webp') }}">
-    <!-- Facebook Metadata End -->
-
-    <!-- Template Styles Start -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/loader.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <!-- Template Styles End -->
-
-    <!-- Custom Browser Color Start -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#EEEAE8">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f0f">
-    <meta name="msapplication-navbutton-color" content="#0f0f0f">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Custom Browser Color End -->
-
-    <style>
-        @media(max-width:480px) {
-            .hamburger_logo {
-                  height: 100px;
-                padding-bottom: 0;
-                width: 150px;
-                postion: absolute;
-                top: 0;
-                object-fit: contain;
-                padding-left: 20px;
-            }
-             .mxd-menu__logo {
-                position: absolute;
-                top: 0rem;
-                left: 1rem;
-                z-index: 9;
-            }
-        }
-
-        @media(min-width:481px) {
-            .hamburger_logo {
-                height: 100px;
-                padding-bottom: 0;
-                width: 170px;
-                postion: absolute;
-                top: 0;
-                object-fit: contain;
-                padding-left: 20px;
-            }
-          
-
-            .mxd-menu__logo {
-                position: absolute;
-                top: 0rem;
-                left: 3rem;
-                z-index: 9;
-            }
-        }
-
-        .mxd-header__controls {
-            padding-top: 3rem !important;
-        }
-
-        .mxd-header {
-            padding-top: 0 !important;
-        }
-
-        .mxd-menu__logo {
-            padding-top: 0 !important;
-        }
-
-        .mxd-header__logo {
-            display: flex !important;
-            align-items: center !important;
-            height: 100% !important;
-        }
-
-        .mxd-logo {
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        .custom-brand-logo {
-            justify-content: center;
-            height: 60px;
-            width: 100px;
-            max-width: 100px;
-            object-fit: contain;
-            display: block;
-            margin: 0;
-            padding: 0;
-
-        }
-
-        @media (max-width: 768px) {
-            .custom-brand-logo {
-                height: 90px;
-                max-width: 100px;
-                align-items: center;
-
-            }
-        }
-
-        @media (max-width: 1080px) {
-            .custom-brand-logo {
-               height: 100px !important;
-                max-width: 100px !important;
-                align-items: center;
-
-            }
-        }
-
-        @media (min-width: 1081px) {
-            .custom-brand-logo {
-                height: 120px;
-                max-width: 100px;
-                align-items: center;
-
-            }
-        }
-
-        @media(max-width:480px) {
-            .menu-logo_image {
-                height: 70px !important;
-                width: auto !important;
-
-            }
-        }
-    </style>
-
-</head>
-
-{{-- start script to theme change --}}
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-
-        const switchBtn = document.getElementById("color-switcher");
-
-        // Load saved theme
-        let currentTheme = localStorage.getItem("theme") || "dark";
-        // alert(currentTheme);
-
-        document.documentElement.setAttribute("data-theme", currentTheme);
-
-        // Click event
-        switchBtn.addEventListener("click", function(e) {
-
-            e.preventDefault();
-            e.stopPropagation();
-
-            currentTheme = currentTheme === "light" ? "dark" : "light";
-            document.documentElement.setAttribute("data-theme", currentTheme);
-
-            localStorage.setItem("theme", currentTheme);
-
-        });
-
-    });
-</script>
-{{-- end script for theme --}}
-
-<body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMC2V5M"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Menu Hamburger Start -->
-    <div class="mxd-menu__contain loading-fade">
-        <div class="mxd-menu__toggle">
-            <a href="#0" class="mxd-menu__hamburger" aria-label="Menu">
-                <div class="hamburger__line"></div>
-                <div class="hamburger__line"></div>
-            </a>
-        </div>
-    </div>
-    <!-- Menu Hamburger End -->
-
-    <!-- Navigation Start -->
-    <nav class="mxd-menu">
-        <div class="mxd-menu__backdrop"></div>
-
-        <!-- Menu Overlay Start -->
-        <div class="mxd-menu__overlay">
-            <div class="mxd-menu__content " data-lenis-prevent>
-
-                <!-- Menu Logo Start -->
-                <div class="mxd-menu__logo " id="header">
-
-                    <a href="{{ route('frontend.home') }}" class="menu-logo d-inline-block position-relative">
-
-                        <img src="{{ asset('img/favicon/edion-web-technologies.webp') }}" alt="Edion Web Tech Brand Logo"
-                            class="img-fluid hamburger_logo" style="">
-
-                    </a>
-
-                </div>
-                <!-- Menu Logo End -->
-
-                <!-- Menu Media Start -->
-                <div class="mxd-menu__media bg-dark">
-                    <div class="menu-media__wrapper">
-                        {{-- <img src="{{ asset('img/gifs/dolores.gif') }}" alt="Image"> --}}
-                        <video id="menu-video" preload="none" muted loop playsinline
-                            poster="{{ asset('video/900x1280_menu.webp') }}">
-                            <source type="video/webm" data-src="{{ asset('video/900x1280_menu.webm') }}">
-                            <source type="video/mp4" data-src="{{ asset('video/900x1280_menu.mp4') }}">
-                        </video>
-                    </div>
-                </div>
-                <!-- Menu Media End -->
-
-                <!-- Main Navigation Start -->
-                <div class="mxd-menu__navigation">
-                    <div class="mxd-menu__inner">
-                        <div class="mxd-menu__shadow shadow-top"></div>
-                        <div class="mxd-menu__caption">
-                            <p></p>
-                        </div>
-                        <!-- left side -->
-                        <div class="mxd-menu__left">
-                            <div class="main-menu">
-                                <div class="main-menu__content">
-                                    <ul id="main-menu" class="main-menu__accordion">
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 01</span>
-                                                    <a href="{{ route('frontend.home') }}" class="main-menu__caption">
-                                                        Home
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 02</span>
-                                                    <a href="{{ route('frontend.about') }}"
-                                                        class="main-menu__caption">
-                                                        About us
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 03</span>
-                                                    <a href="{{ route('frontend.services') }}"
-                                                        class="main-menu__caption">
-                                                        Services
-                                                    </a>
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 04</span>
-                                                    <a href="{{ route('frontend.seo-package') }}"
-                                                        class="main-menu__caption">
-                                                        Pricing
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 05</span>
-                                                    <a href="{{ route('frontend.free-consultation') }}"
-                                                        class="main-menu__caption">
-                                                        Free Consultation
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 06</span>
-                                                    <a href="{{ route('frontend.works') }}"
-                                                        class="main-menu__caption">
-                                                        Works
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 07</span>
-                                                    <a href="{{ route('frontend.faq') }}" class="main-menu__caption">
-                                                        FAQ
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 08</span>
-                                                    <a href="{{ route('frontend.blog') }}"
-                                                        class="main-menu__caption">
-                                                        Insights
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-                                        <li class="main-menu__item">
-                                            <div class="main-menu__divider divider-top"></div>
-                                            <div class="main-menu__toggle">
-                                                <div class="main-menu__link">
-                                                    <span class="main-menu__number">/ 09</span>
-                                                    <a href="{{ route('frontend.contact') }}"
-                                                        class="main-menu__caption">
-                                                        Contact
-                                                    </a>
-                                                </div>
-
-                                                <div class="main-menu__arrow">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                        viewBox="0 0 18 18">
-                                                        <path
-                                                            d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="main-menu__divider divider-bottom"></div>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- left side end --}}
-                        <!-- right side -->
-                        <!-- <div class="mxd-menu__right">
-                            <div class="menu-contact">
-                                <div class="menu-contact__item">
-                                    <ul class="menu-contact__list">
-                                        <li>
-                                            <a class="tag tag-m"
-                                                href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                                                <span class="mxd-scramble">hello@azurio.com</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="tag tag-m" href="tel:+12127089400">
-                                                <span class="mxd-scramble">+1 212-708-9400</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="menu-contact__item">
-                                    <ul class="menu-contact__list">
-                                        <li>
-                                            <a class="tag tag-m" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA"
-                                                target="_blank">
-                                                <span>11 West 53 Street,<br>New York, NY<br>10019</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div> -->
-                        <!-- data bottom line -->
-                        <div class="mxd-menu__shadow"></div>
-                        <div class="mxd-menu__data">
-                            <div class="menu-data__left">
-                                <p class="menu-data__text">
-                                    Made with
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                                        <path
-                                            d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z" />
-                                    </svg>
-                                    <!-- <i class="ph-fill ph-heart t-additional"></i> -->
-
-                                </p>
-                            </div>
-                            <div class="menu-data__right">
-                                <p class="menu-data__text">Copyright Edion</p>
-                                <p class="menu-data__text">®2026</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Main Navigation End -->
-
-            </div>
-        </div>
-        <!-- Menu Overlay End -->
-
-    </nav>
-    <!-- Navigation End -->
-
-
-    <!-- Header Start -->
-    <header id="header" class="mxd-header">
-        <!-- header logo -->
-        <div class="mxd-header__logo loading-fade">
-            <a class="mxd-logo" href="{{ route('frontend.home') }}">
-                <!-- logo icon -->
-
-                <img class="custom-brand-logo" src="{{ asset('img/favicon/edion-web-technologies.webp') }}"
-                    alt="Edion Web Technologies">
-                <!-- logo text -->
-                <!-- logo icon -->
-
-            </a>
-        </div>
-        <!-- header controls -->
-        <div class="mxd-header__controls loading-fade ">
-            <a class="btn mxd-header__link slide-right-up {{ request()->routeIs('frontend.blog', 'frontend.services', 'frontend.works') ? 'text-white' : '' }} "
-                href="{{ route('frontend.contact') }}" aria-label="Say Hello">
-                <span class="btn-caption mxd-scramble ">Say Hello</span>
-                <i>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                        <path
-                            d="M18,0v14.4h-3.6v-7.2h-3.6v-3.6H3.6V0h14.4ZM7.2,10.8h3.6v-3.6h-3.6s0,3.6,0,3.6ZM3.6,14.4h3.6v-3.6h-3.6v3.6ZM0,18h3.6v-3.6H0v3.6Z" />
-                    </svg>
-                </i>
-                <!-- Phosphor icon -->
-                <!-- <i class="ph-bold ph-arrow-up-right"></i> -->
-            </a>
-            <button id="color-switcher"
-                class="btn mxd-color-switcher {{ request()->routeIs('frontend.blog', 'frontend.services', 'frontend.works') ? 'text-white' : '' }}"
-                type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
-        </div>
-    </header>
-    <!-- Header End -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="utility">
+ <div class="shell utility__in">
+ <span class="utility__award">&#9733; ISO 9001 &amp; 27001 certified &middot; Google, Meta &amp; Microsoft partner</span>
+ <span class="utility__links">
+ <a href="mailto:contact@ediontech.com">contact@ediontech.com</a>
+ <a href="tel:+919696787596">+91 96967 87596</a>
+ <a class="utility__wa" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">
+ <span class="dot dot--live"></span>WhatsApp</a>
+ </span>
+ </div>
+</div>
+<header class="masthead">
+ <div class="shell masthead__in">
+ <a class="brand" href="{{ url('/') }}" aria-label="Edion Web Technologies, home">
+ <img src="{{ asset('assets/frontend/img/brand/logo-lockup.png') }}" alt="Edion Web Technologies"
+ width="1001" height="360" fetchpriority="high" decoding="async">
+ </a>
+ <nav class="nav" aria-label="Primary"><a href="{{ url('/') }}" aria-current="page">Home</a><div class="nav__item" data-open="false" data-mega>
+ <button class="nav__trigger" type="button" aria-expanded="false"
+ aria-controls="mega-0">Rental software<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div class="mega" id="mega-0">
+ <div class="mega__grid"><div class="mega__col"><p class="lbl">Platforms</p><ul><li><a href="{{ url('/car-rental-software-development') }}">Car rental software development</a></li><li><a href="{{ url('/fleet-management-software') }}">Fleet management software</a></li><li><a href="{{ url('/car-rental-booking-engine') }}">Car rental booking engine</a></li><li><a href="{{ url('/vehicle-rental-app-development') }}">Vehicle rental app development</a></li><li><a href="{{ url('/chauffeur-limousine-booking-software') }}">Chauffeur &amp; limousine software</a></li></ul></div><div class="mega__col"><p class="lbl">Modules</p><ul><li><a href="{{ url('/rental-pricing-engine') }}">Dynamic pricing engine</a></li><li><a href="{{ url('/telematics-integration') }}">Telematics integration</a></li><li><a href="{{ url('/damage-inspection-module') }}">Damage &amp; inspection capture</a></li><li><a href="{{ url('/corporate-accounts-billing') }}">Corporate accounts &amp; billing</a></li></ul></div><div class="mega__col"><p class="lbl">By market</p><ul><li><a href="{{ url('/car-rental-software-development-dubai') }}">Rental software in Dubai</a></li><li><a href="{{ url('/car-rental-software-development-amman') }}">Rental software in Amman</a></li><li><a href="{{ url('/car-rental-software-development-riyadh') }}">Rental software in Riyadh</a></li><li><a href="{{ url('/locations') }}">All locations</a></li></ul></div></div>
+ <div class="mega__feature">
+ <p><b>Free tool</b>, Estimate a rental platform build in 60 seconds.</p>
+ <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}">Open the calculator<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ </div>
+ </div>
+</div><div class="nav__item" data-open="false" data-mega>
+ <button class="nav__trigger" type="button" aria-expanded="false"
+ aria-controls="mega-1">Services<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div class="mega" id="mega-1">
+ <div class="mega__grid"><div class="mega__col"><p class="lbl">Build</p><ul><li><a href="{{ url('/website-development') }}">Website development</a></li><li><a href="{{ url('/custom-software-development') }}">Custom software</a></li><li><a href="{{ url('/mobile-app-development') }}">Mobile app development</a></li><li><a href="{{ url('/ecommerce-development') }}">E-commerce development</a></li><li><a href="{{ url('/cms-development') }}">CMS development</a></li></ul></div><div class="mega__col"><p class="lbl">Design</p><ul><li><a href="{{ url('/website-design') }}">Website design</a></li><li><a href="{{ url('/logo-branding') }}">Logo &amp; branding</a></li><li><a href="{{ url('/mobile-app-design') }}">Mobile app design</a></li><li><a href="{{ url('/ui-ux-design') }}">UI/UX design</a></li></ul></div><div class="mega__col"><p class="lbl">Technology</p><ul><li><a href="{{ url('/ai-development') }}">AI &amp; machine learning</a></li><li><a href="{{ url('/cloud-solutions') }}">Cloud solutions</a></li><li><a href="{{ url('/iot-solutions') }}">IoT solutions</a></li><li><a href="{{ url('/big-data-analytics') }}">Big data analytics</a></li></ul></div></div>
+ <div class="mega__feature">
+ <p><b>Full range</b>, Six practices, thirty services, one accountable team.</p>
+ <a class="btn btn--line" href="{{ url('/services') }}">All services<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ </div>
+ </div>
+</div><div class="nav__item" data-open="false" data-mega>
+ <button class="nav__trigger" type="button" aria-expanded="false"
+ aria-controls="mega-2">SEO &amp; marketing<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div class="mega" id="mega-2">
+ <div class="mega__grid"><div class="mega__col"><p class="lbl">Organic SEO</p><ul><li><a href="{{ url('/seo-services') }}">SEO services</a></li><li><a href="{{ url('/local-seo-services') }}">Local SEO</a></li><li><a href="{{ url('/technical-seo-audit') }}">Technical SEO audit</a></li><li><a href="{{ url('/ecommerce-seo') }}">E-commerce SEO</a></li><li><a href="{{ url('/link-building-services') }}">Link building</a></li></ul></div><div class="mega__col"><p class="lbl">Paid &amp; social</p><ul><li><a href="{{ url('/ppc-advertising') }}">Google Ads / PPC</a></li><li><a href="{{ url('/social-media-marketing') }}">Social media marketing</a></li><li><a href="{{ url('/content-marketing') }}">Content marketing</a></li><li><a href="{{ url('/email-marketing') }}">Email marketing</a></li></ul></div><div class="mega__col"><p class="lbl">AI search</p><ul><li><a href="{{ url('/ai-search-optimisation') }}">AI search optimisation</a></li><li><a href="{{ url('/answer-engine-optimisation') }}">Answer engine optimisation</a></li><li><a href="{{ url('/ai-assistant-visibility') }}">ChatGPT &amp; Perplexity visibility</a></li></ul></div></div>
+ <div class="mega__feature">
+ <p><b>Published pricing</b>, Packages from $361.45/month, scope listed in full.</p>
+ <a class="btn btn--line" href="{{ url('/seo-package') }}">See pricing<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ </div>
+ </div>
+</div><div class="nav__item" data-open="false" data-mega>
+ <button class="nav__trigger" type="button" aria-expanded="false"
+ aria-controls="mega-3">Resources<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div class="mega" id="mega-3">
+ <div class="mega__grid"><div class="mega__col"><p class="lbl">Read</p><ul><li><a href="{{ url('/blog') }}">Insights</a></li><li><a href="{{ url('/works') }}">Case studies</a></li><li><a href="{{ url('/faq') }}">FAQ</a></li><li><a href="{{ url('/glossary') }}">Glossary</a></li></ul></div><div class="mega__col"><p class="lbl">Tools</p><ul><li><a href="{{ url('/rental-software-cost-calculator') }}">Rental software cost calculator</a></li><li><a href="{{ url('/free-consultation') }}">Free website audit</a></li></ul></div><div class="mega__col"><p class="lbl">Company</p><ul><li><a href="{{ url('/industries') }}">Industries</a></li><li><a href="{{ url('/about') }}">About us</a></li><li><a href="{{ url('/certifications') }}">Certifications &amp; partners</a></li><li><a href="{{ url('/locations') }}">Locations</a></li><li><a href="{{ url('/contact') }}">Contact</a></li></ul></div></div>
+ <div class="mega__feature">
+ <p><b>Free tool</b>, Rental software cost calculator, no email required.</p>
+ <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}">Open the calculator<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ </div>
+ </div>
+</div><a href="{{ url('/seo-package') }}">Pricing</a><a href="{{ url('/works') }}">Works</a><a href="{{ url('/contact') }}">Contact</a></nav>
+ <div class="masthead__cta">
+ <a class="btn btn--signal" href="{{ url('/free-consultation') }}">Free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <button class="burger" type="button" aria-expanded="false" aria-controls="drawer"
+ aria-label="Open menu"><span></span></button>
+ </div>
+ </div>
+ <div class="drawer" id="drawer" data-open="false">
+ <nav aria-label="Mobile"><ol><li><a href="{{ url('/') }}">Home</a></li><li><details><summary>Rental software</summary><div class="sub"><strong>Platforms</strong><a href="{{ url('/car-rental-software-development') }}">Car rental software development</a><a href="{{ url('/fleet-management-software') }}">Fleet management software</a><a href="{{ url('/car-rental-booking-engine') }}">Car rental booking engine</a><a href="{{ url('/vehicle-rental-app-development') }}">Vehicle rental app development</a><a href="{{ url('/chauffeur-limousine-booking-software') }}">Chauffeur &amp; limousine software</a><strong>Modules</strong><a href="{{ url('/rental-pricing-engine') }}">Dynamic pricing engine</a><a href="{{ url('/telematics-integration') }}">Telematics integration</a><a href="{{ url('/damage-inspection-module') }}">Damage &amp; inspection capture</a><a href="{{ url('/corporate-accounts-billing') }}">Corporate accounts &amp; billing</a><strong>By market</strong><a href="{{ url('/car-rental-software-development-dubai') }}">Rental software in Dubai</a><a href="{{ url('/car-rental-software-development-amman') }}">Rental software in Amman</a><a href="{{ url('/car-rental-software-development-riyadh') }}">Rental software in Riyadh</a><a href="{{ url('/locations') }}">All locations</a></div></details></li><li><details><summary>Services</summary><div class="sub"><strong>Build</strong><a href="{{ url('/website-development') }}">Website development</a><a href="{{ url('/custom-software-development') }}">Custom software</a><a href="{{ url('/mobile-app-development') }}">Mobile app development</a><a href="{{ url('/ecommerce-development') }}">E-commerce development</a><a href="{{ url('/cms-development') }}">CMS development</a><strong>Design</strong><a href="{{ url('/website-design') }}">Website design</a><a href="{{ url('/logo-branding') }}">Logo &amp; branding</a><a href="{{ url('/mobile-app-design') }}">Mobile app design</a><a href="{{ url('/ui-ux-design') }}">UI/UX design</a><strong>Technology</strong><a href="{{ url('/ai-development') }}">AI &amp; machine learning</a><a href="{{ url('/cloud-solutions') }}">Cloud solutions</a><a href="{{ url('/iot-solutions') }}">IoT solutions</a><a href="{{ url('/big-data-analytics') }}">Big data analytics</a></div></details></li><li><details><summary>SEO &amp; marketing</summary><div class="sub"><strong>Organic SEO</strong><a href="{{ url('/seo-services') }}">SEO services</a><a href="{{ url('/local-seo-services') }}">Local SEO</a><a href="{{ url('/technical-seo-audit') }}">Technical SEO audit</a><a href="{{ url('/ecommerce-seo') }}">E-commerce SEO</a><a href="{{ url('/link-building-services') }}">Link building</a><strong>Paid &amp; social</strong><a href="{{ url('/ppc-advertising') }}">Google Ads / PPC</a><a href="{{ url('/social-media-marketing') }}">Social media marketing</a><a href="{{ url('/content-marketing') }}">Content marketing</a><a href="{{ url('/email-marketing') }}">Email marketing</a><strong>AI search</strong><a href="{{ url('/ai-search-optimisation') }}">AI search optimisation</a><a href="{{ url('/answer-engine-optimisation') }}">Answer engine optimisation</a><a href="{{ url('/ai-assistant-visibility') }}">ChatGPT &amp; Perplexity visibility</a></div></details></li><li><details><summary>Resources</summary><div class="sub"><strong>Read</strong><a href="{{ url('/blog') }}">Insights</a><a href="{{ url('/works') }}">Case studies</a><a href="{{ url('/faq') }}">FAQ</a><a href="{{ url('/glossary') }}">Glossary</a><strong>Tools</strong><a href="{{ url('/rental-software-cost-calculator') }}">Rental software cost calculator</a><a href="{{ url('/free-consultation') }}">Free website audit</a><strong>Company</strong><a href="{{ url('/about') }}">About us</a><a href="{{ url('/certifications') }}">Certifications &amp; partners</a><a href="{{ url('/locations') }}">Locations</a><a href="{{ url('/contact') }}">Contact</a></div></details></li><li><a href="{{ url('/seo-package') }}">Pricing</a></li><li><a href="{{ url('/works') }}">Works</a></li><li><a href="{{ url('/faq') }}">FAQ</a></li><li><a href="{{ url('/blog') }}">Insights</a></li><li><a href="{{ url('/contact') }}">Contact</a></li></ol></nav>
+ <a class="btn btn--signal" href="{{ url('/free-consultation') }}">Free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ </div>
+</header>

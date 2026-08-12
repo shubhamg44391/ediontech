@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img"
+     aria-label="Abstract geometric skyline representing New Delhi">
+<rect width="320" height="340" rx="14" fill="#141A1F"/>
+<g opacity=".5" stroke="#2C3843" stroke-width="1">
+<path d="M0 80h320M0 140h320M0 200h320M0 260h320"/></g>
+<path d="M128 300v-96h60v96z" fill="#D6382B"/><path d="M146 300v-58h24v58z" fill="#141A1F"/><path d="M126 204h64v-14h-64z" fill="#D6382B"/><path d="M50 300v-60h32v60zM90 300v-40h28v40zM198 300v-46h30v46zM236 300v-84h32v84z" fill="#F6F7F8" opacity=".92"/>
+<path d="M0 300h320v40H0z" fill="#1E262E"/>
+<text x="160" y="326" text-anchor="middle" font-family="monospace" font-size="13"
+      fill="#7A8894" letter-spacing="2.4">NEW DELHI</text>
+</svg>

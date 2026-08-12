@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img"
+     aria-label="Abstract geometric skyline representing Amman">
+<rect width="320" height="340" rx="14" fill="#141A1F"/>
+<g opacity=".5" stroke="#2C3843" stroke-width="1">
+<path d="M0 80h320M0 140h320M0 200h320M0 260h320"/></g>
+<path d="M120 300v-70h56v70z" fill="#D6382B"/><path d="M132 230v-26h32v26z" fill="#D6382B"/><path d="M30 300v-40h40v40zM76 300v-56h38v56zM182 300v-50h40v50zM228 300v-34h38v34zM272 300v-58h30v58z" fill="#F6F7F8" opacity=".92"/><path d="M0 300v-24h24v24z" fill="#F6F7F8" opacity=".55"/>
+<path d="M0 300h320v40H0z" fill="#1E262E"/>
+<text x="160" y="326" text-anchor="middle" font-family="monospace" font-size="13"
+      fill="#7A8894" letter-spacing="2.4">AMMAN</text>
+</svg>

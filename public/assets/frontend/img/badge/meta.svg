@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" fill="none" role="img" aria-hidden="true">
+<rect x="1.5" y="1.5" width="257" height="117" rx="12" fill="#FFFFFF" stroke="#E7EBEA" stroke-width="1.5"/>
+<path d="M1.5 13.5A12 12 0 0 1 13.5 1.5H20v117h-6.5a12 12 0 0 1-12-12z" fill="#0866FF"/>
+<g transform="translate(36,34)"><circle cx="14" cy="14" r="12.5" stroke="#0866FF" stroke-width="2.6"/><path d="M8 14.5l4.4 4.4L21 10" stroke="#0866FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="72" y="46" font-family="'Archivo','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#0B1B2B" letter-spacing="-.3">Meta Business</text><text x="72" y="65" font-family="'Archivo','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#0B1B2B" letter-spacing="-.3">Partner</text>
+<text x="72" y="86" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="9.5" fill="#7C8FA0"
+ letter-spacing=".6" text-transform="uppercase">Facebook &amp; Instagram</text>
+<circle cx="238" cy="102" r="5" fill="#12B981"/>
+</svg>

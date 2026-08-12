@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" role="img"
+     aria-label="Fleet management dashboard showing vehicle status, utilisation and revenue">
+<defs>
+<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity=".02"/></linearGradient>
+<linearGradient id="brandg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#F0705F"/><stop offset="1" stop-color="#D73729"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#D73729" stop-opacity=".34"/>
+  <stop offset="1" stop-color="#D73729" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade2" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#3B82F6" stop-opacity=".30"/>
+  <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0A0F14" flood-opacity=".38"/></filter>
+<filter id="soft2" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0A0F14" flood-opacity=".22"/></filter>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+  <circle cx="1.5" cy="1.5" r="1.1" fill="#2C3843" opacity=".55"/></pattern>
+</defs>
+<rect width="760" height="480" rx="18" fill="#141A1F"/>
+<rect width="760" height="480" rx="18" fill="url(#dots)"/>
+<g filter="url(#soft)">
+<rect x="24" y="24" width="712" height="432" rx="14" fill="#1E262E" stroke="#2C3843"/>
+<rect x="24" y="24" width="712" height="38" rx="14" fill="#141A1F"/>
+<rect x="24" y="48" width="712" height="14" fill="#141A1F"/>
+<circle cx="44" cy="43" r="4.5" fill="#D73729" opacity=".85"/>
+<circle cx="60" cy="43" r="4.5" fill="#E0A33C" opacity=".6"/>
+<circle cx="76" cy="43" r="4.5" fill="#12B981" opacity=".6"/>
+<text x="94" y="48" font-family="ui-monospace, monospace" font-size="11.5"
+      fill="#7A8894" letter-spacing="1.3">fleet.ediontech.com / operations</text>
+<line x1="24" y1="62" x2="736" y2="62" stroke="#2C3843"/></g>
+<!-- KPI strip -->
+<g>
+<rect x="46" y="76" width="152" height="56" rx="10" fill="#141A1F" opacity=".6"/>
+<text x="62" y="99" font-family="ui-monospace, monospace" font-size="9.5" fill="#7A8894" letter-spacing="1.2">UTILISATION</text>
+<text x="62" y="121" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#F6F7F8">87.4%</text>
+<path d="M168 118 l7 -9 7 9z" fill="#12B981"/>
+</g>
+<g>
+<rect x="210" y="76" width="152" height="56" rx="10" fill="#141A1F" opacity=".6"/>
+<text x="226" y="99" font-family="ui-monospace, monospace" font-size="9.5" fill="#7A8894" letter-spacing="1.2">REV / VEHICLE / DAY</text>
+<text x="226" y="121" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#F6F7F8">AED 312</text>
+</g>
+<g>
+<rect x="374" y="76" width="142" height="56" rx="10" fill="#141A1F" opacity=".6"/>
+<text x="390" y="99" font-family="ui-monospace, monospace" font-size="9.5" fill="#7A8894" letter-spacing="1.2">IDLE DAYS</text>
+<text x="390" y="121" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#F6F7F8">11</text>
+</g>
+<!-- table -->
+<g>
+<rect x="46" y="150" width="470" height="38" rx="8" fill="#141A1F" opacity="0.55"/>
+<text x="62" y="174" font-family="ui-monospace, monospace" font-size="12.5" fill="#F6F7F8" letter-spacing=".6">DXB-4471</text>
+<text x="152" y="174" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">SUV / Full</text>
+<text x="256" y="174" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Dubai Marina</text>
+<rect x="388" y="160" width="72" height="19" rx="9.5" fill="#12B981" opacity=".16"/>
+<circle cx="399" cy="169.5" r="3.4" fill="#12B981"/>
+<text x="408" y="174" font-family="ui-monospace, monospace" font-size="10" fill="#12B981" letter-spacing=".7">ON RENT</text>
+<text x="500" y="174" font-family="ui-monospace, monospace" font-size="12" fill="#F6F7F8" text-anchor="end">94%</text></g><g>
+<rect x="46" y="196" width="470" height="38" rx="8" fill="#141A1F" opacity="0.32"/>
+<text x="62" y="220" font-family="ui-monospace, monospace" font-size="12.5" fill="#F6F7F8" letter-spacing=".6">DXB-2210</text>
+<text x="152" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Sedan / Mid</text>
+<text x="256" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">DXB Terminal 3</text>
+<rect x="388" y="206" width="72" height="19" rx="9.5" fill="#12B981" opacity=".16"/>
+<circle cx="399" cy="215.5" r="3.4" fill="#12B981"/>
+<text x="408" y="220" font-family="ui-monospace, monospace" font-size="10" fill="#12B981" letter-spacing=".7">ON RENT</text>
+<text x="500" y="220" font-family="ui-monospace, monospace" font-size="12" fill="#F6F7F8" text-anchor="end">88%</text></g><g>
+<rect x="46" y="242" width="470" height="38" rx="8" fill="#141A1F" opacity="0.55"/>
+<text x="62" y="266" font-family="ui-monospace, monospace" font-size="12.5" fill="#F6F7F8" letter-spacing=".6">AUH-8830</text>
+<text x="152" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Luxury</text>
+<text x="256" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">In transit</text>
+<rect x="388" y="252" width="72" height="19" rx="9.5" fill="#3B82F6" opacity=".16"/>
+<circle cx="399" cy="261.5" r="3.4" fill="#3B82F6"/>
+<text x="408" y="266" font-family="ui-monospace, monospace" font-size="10" fill="#3B82F6" letter-spacing=".7">TRANSFER</text>
+<text x="500" y="266" font-family="ui-monospace, monospace" font-size="12" fill="#F6F7F8" text-anchor="end">71%</text></g><g>
+<rect x="46" y="288" width="470" height="38" rx="8" fill="#141A1F" opacity="0.32"/>
+<text x="62" y="312" font-family="ui-monospace, monospace" font-size="12.5" fill="#F6F7F8" letter-spacing=".6">DXB-1902</text>
+<text x="152" y="312" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Compact</text>
+<text x="256" y="312" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Workshop</text>
+<rect x="388" y="298" width="72" height="19" rx="9.5" fill="#E0A33C" opacity=".16"/>
+<circle cx="399" cy="307.5" r="3.4" fill="#E0A33C"/>
+<text x="408" y="312" font-family="ui-monospace, monospace" font-size="10" fill="#E0A33C" letter-spacing=".7">SERVICE</text>
+<text x="500" y="312" font-family="ui-monospace, monospace" font-size="12" fill="#F6F7F8" text-anchor="end">42%</text></g><g>
+<rect x="46" y="334" width="470" height="38" rx="8" fill="#141A1F" opacity="0.55"/>
+<text x="62" y="358" font-family="ui-monospace, monospace" font-size="12.5" fill="#F6F7F8" letter-spacing=".6">SHJ-6614</text>
+<text x="152" y="358" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Van / 7 seat</text>
+<text x="256" y="358" font-family="system-ui, sans-serif" font-size="12" fill="#7A8894">Sharjah depot</text>
+<rect x="388" y="344" width="72" height="19" rx="9.5" fill="#12B981" opacity=".16"/>
+<circle cx="399" cy="353.5" r="3.4" fill="#12B981"/>
+<text x="408" y="358" font-family="ui-monospace, monospace" font-size="10" fill="#12B981" letter-spacing=".7">AVAILABLE</text>
+<text x="500" y="358" font-family="ui-monospace, monospace" font-size="12" fill="#F6F7F8" text-anchor="end">83%</text></g>
+<!-- right column: sparkline card + bars -->
+<g filter="url(#soft2)">
+<rect x="534" y="76" width="180" height="132" rx="12" fill="#141A1F" stroke="#2C3843"/>
+<text x="552" y="100" font-family="ui-monospace, monospace" font-size="9.5" fill="#7A8894" letter-spacing="1.2">BOOKINGS, 30D</text>
+<g transform="translate(552, 116)">
+  <path d="M0 54 C 22 50 34 30 56 34 S 92 14 112 20 S 148 44 168 28 S 200 8 216 12 L216 74 L0 74 Z" fill="url(#fade)"/>
+  <path d="M0 54 C 22 50 34 30 56 34 S 92 14 112 20 S 148 44 168 28 S 200 8 216 12" fill="none" stroke="#F0705F" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="216" cy="12" r="4" fill="#F0705F"/>
+</g>
+</g>
+<g filter="url(#soft2)">
+<rect x="534" y="222" width="180" height="176" rx="12" fill="#141A1F" stroke="#2C3843"/>
+<text x="552" y="246" font-family="ui-monospace, monospace" font-size="9.5" fill="#7A8894" letter-spacing="1.2">REVENUE BY CATEGORY</text>
+<rect x="560" y="328" width="18" height="44" rx="4" fill="url(#brandg)" opacity="0.42"/><rect x="590" y="304" width="18" height="68" rx="4" fill="url(#brandg)" opacity="0.53"/><rect x="620" y="320" width="18" height="52" rx="4" fill="url(#brandg)" opacity="0.64"/><rect x="650" y="284" width="18" height="88" rx="4" fill="url(#brandg)" opacity="0.75"/><rect x="680" y="298" width="18" height="74" rx="4" fill="url(#brandg)" opacity="0.86"/><rect x="710" y="266" width="18" height="106" rx="4" fill="url(#brandg)" opacity="0.97"/>
+<line x1="552" y1="376" x2="700" y2="376" stroke="#2C3843"/>
+</g>
+<!-- footer status -->
+<g>
+<circle cx="52" cy="428" r="3.6" fill="#12B981"/>
+<text x="64" y="432" font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1">SYNCED 12s AGO</text>
+<text x="240" y="432" font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1">4 BRANCHES</text>
+<text x="380" y="432" font-family="ui-monospace, monospace" font-size="10" fill="#7A8894" letter-spacing="1">216 VEHICLES</text>
+</g>
+</svg>

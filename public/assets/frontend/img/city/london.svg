@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img"
+     aria-label="Abstract geometric skyline representing London">
+<rect width="320" height="340" rx="14" fill="#141A1F"/>
+<g opacity=".5" stroke="#2C3843" stroke-width="1">
+<path d="M0 80h320M0 140h320M0 200h320M0 260h320"/></g>
+<path d="M154 300V110h26v190z" fill="#D6382B"/><path d="M152 110l14-32 14 32z" fill="#D6382B"/><circle cx="167" cy="132" r="9" fill="#141A1F"/><path d="M60 300v-64a34 34 0 0168 0v64z" fill="#F6F7F8" opacity=".92"/><path d="M200 300v-80h26v80zM234 300v-50h30v50zM28 300v-38h26v38z" fill="#F6F7F8" opacity=".92"/>
+<path d="M0 300h320v40H0z" fill="#1E262E"/>
+<text x="160" y="326" text-anchor="middle" font-family="monospace" font-size="13"
+      fill="#7A8894" letter-spacing="2.4">LONDON</text>
+</svg>

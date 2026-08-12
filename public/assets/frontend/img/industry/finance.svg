@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="finance icon">
+<defs>
+<linearGradient id="tfinance" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+<stop stop-color="#10B981" stop-opacity=".20"/><stop offset="1" stop-color="#065F46" stop-opacity=".08"/></linearGradient>
+<linearGradient id="gfinance" x1="16" y1="12" x2="50" y2="52" gradientUnits="userSpaceOnUse">
+<stop stop-color="#10B981"/><stop offset="1" stop-color="#065F46"/></linearGradient>
+<linearGradient id="hfinance" x1="32" y1="4" x2="32" y2="30" gradientUnits="userSpaceOnUse">
+<stop stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="sfinance" x="-40%" y="-40%" width="180%" height="180%">
+<feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#065F46" flood-opacity=".38"/></filter>
+</defs>
+<rect x="2" y="2" width="60" height="60" rx="17" fill="url(#tfinance)"/>
+<rect x="2" y="2" width="60" height="60" rx="17" fill="none" stroke="#10B981" stroke-opacity=".26"/>
+<path d="M19 2h26a17 17 0 0 1 17 17v3H2v-3A17 17 0 0 1 19 2Z" fill="url(#hfinance)" opacity=".5"/>
+<g filter="url(#sfinance)"><rect x="12" y="18" width="40" height="26" rx="4.5" fill="url(#gfinance)"/><rect x="12" y="24" width="40" height="4.6" fill="#fff" fill-opacity=".85"/><rect x="18" y="34" width="12" height="3.2" rx="1.6" fill="#fff" fill-opacity=".75"/><rect x="38" y="33" width="8" height="5" rx="1.6" fill="#fff" fill-opacity=".55"/></g>
+<path d="M18 52l6-5 5 3 8-8" stroke="#10B981" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 42h5v5" stroke="#10B981" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

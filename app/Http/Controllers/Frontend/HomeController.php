@@ -22,7 +22,7 @@ class HomeController extends Controller
         
         $headerdata = DB::table('pages')->where('slug', $slug)->first();
 
-        return view('frontend.home', compact( 'headers', 'blogs', 'headerdata'));
+        return view('frontend.index', compact( 'headers', 'blogs', 'headerdata'));
     }
     public function blog_data()
     {
