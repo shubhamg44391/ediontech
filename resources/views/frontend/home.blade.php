@@ -29,8 +29,8 @@
             <div class="mxd-hero-03">
                 <div class="mxd-hero-03__headline">
                     <a class="active-cursor-accent" data-cursor-text="Let's Chat" href="{{ route('frontend.contact') }}">
-                        <h1 class="permanent loading-split">Best Website Development and Digital Marketting Company in India
-                            & Jordan</h1>
+                        <h1 class="permanent loading-split">Best Website Development and Digital Marketing Company in India,
+                            Jordan & Dubai</h1>
                     </a>
                     <div class="mxd-hero-media__small">
                         <div class="mxd-hero-media__wrapper" data-flip-element="wrapper" data-flip-id="auto-2">
@@ -89,7 +89,7 @@
         <!-- Hero Section End -->
 
         <!-- Section - Statistics Lines Start -->
-        <div id="about" class="mxd-section blur-section pinned-section padding-top-number padding-bottom-tag-m">
+        <div id="about" class="mxd-section blur-section padding-top-number padding-bottom-tag-m">
             <div class="mxd-container grid-l-container">
                 <div class="mxd-block">
                     <div class="mxd-section-title">
@@ -663,9 +663,8 @@
         <!-- Section - Parallax Divider Image End -->
 
         <!-- Section - Projects Grid x3 Showcase Start -->
-        <div class="mxd-section blur-section pinned-section padding-bottom-default">
-            <div class="pinned-section__inner">
-                <div class="mxd-container grid-l-container">
+        <div class="mxd-section blur-section padding-bottom-default">
+            <div class="mxd-container grid-l-container">
 
                     <!-- Block - Section Title v05 Start -->
                     <div class="mxd-block">
@@ -710,13 +709,7 @@
                                                 src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}"
                                                 alt="Project Preview Image" loading="lazy">
                                         </a>
-                                        <div class="mxd-project-item__caption">
-                                            <div class="mxd-project-item__name">
-                                                <a class="project-name-s"
-                                                    href="{{ route('frontend.works') }}">Illustrations set</a>
-                                            </div>
-                                           
-                                        </div>
+                                       
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
                                         <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent"
@@ -729,13 +722,7 @@
                                                 src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}"
                                                 alt="Project Preview Image" loading="lazy">
                                         </a>
-                                        <div class="mxd-project-item__caption">
-                                            <div class="mxd-project-item__name">
-                                                <a class="project-name-s"
-                                                    href="{{ route('frontend.services') }}">Interactive concept</a>
-                                            </div>
-                                           
-                                        </div>
+                                        
                                     </div>
                                     <!-- <div class="col-12 col-md-6 col-xl-4 mxd-project-item animate-card-3">
                                         <a class="mxd-project-item__media mxd-img-anim active-cursor-permanent"
@@ -937,8 +924,6 @@
                     <!-- Block - Projects Grid x3 Showcase End -->
 
                 </div>
-                <div class="pinned-section__trigger"></div>
-            </div>
         </div>
         <!-- Section - Projects Grid x3 Showcase End -->
 
@@ -1224,9 +1209,8 @@
         <!-- Section - Parallax Divider Image End -->
 
         <!-- Section - Blog Preview Grid x3 Plus Title Start -->
-        <div class="mxd-section blur-section pinned-section padding-top-number padding-bottom-preview">
-            <div class="pinned-section__inner">
-                <div class="mxd-container grid-l-container">
+        <div class="mxd-section blur-section padding-top-number padding-bottom-preview">
+            <div class="mxd-container grid-l-container">
 
                     <!-- Block - Section Title v05 Start -->
                     <div class="mxd-block">
@@ -1269,12 +1253,671 @@
                     <!-- Block - Blog Preview Grid x3 End -->
 
                 </div>
-                <div class="pinned-section__trigger"></div>
-            </div>
         </div>
         <!-- Section - Blog Preview Grid x3 Plus Title End -->
 
-        <!-- Section - CTA with Matter.js Objects Start -->
+        <!-- Section - Additional Services & Content Start -->
+        <div class="mxd-section py-5">
+            <div class="mxd-container grid-l-container">
+
+                    <!-- Block - Digital Marketing Company Start -->
+                    <div class="mxd-block text-center mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row justify-content-center g-0">
+                                <div class="col-12 col-xl-10 mxd-grid-item text-center">
+                                    <div class="mxd-section-title__title text-center mb-4">
+                                        <h2 class="mxd-split-lines text-center">Digital Marketing Company in India, Jordan &amp; Dubai</h2>
+                                    </div>
+                                    <div class="mxd-block__descr anim-uni-in-up text-center">
+                                        <p class="t-large t-medium text-center">
+                                            Looking for a reliable Digital Marketing Company in India, Jordan &amp; Dubai that delivers measurable business growth? Edion Web Technologies helps startups, SMEs, and enterprises improve their online visibility, generate qualified leads, and increase revenue with data-driven digital marketing solutions. Our experienced team combines SEO, paid advertising, social media marketing, web development, and content marketing to create customized strategies that achieve long-term success.
+                                        </p>
+                                        <div class="mt-4 pt-3 d-flex justify-content-center text-center">
+                                            <a class="btn btn-default-icon btn-default-accent slide-right" href="{{ route('frontend.contact') }}">
+                                                <span class="btn-caption">Get a Free Consultation</span>
+                                                <i class="btn-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                                                        <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                                                    </svg>
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Digital Marketing Company End -->
+
+                    <!-- Block - Why Choose Ediontech Start -->
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row align-items-center g-4 g-xl-5">
+                                <!-- Left side image -->
+                                <div class="col-12 col-lg-5 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__image position-relative text-center p-2">
+                                        <img src="{{ asset('img/home/Why_Choose_Ediontech.png') }}" alt="Why Choose Edion Web Technologies" class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: auto; max-height: 580px; object-fit: contain;" loading="lazy">
+                                    </div>
+                                </div>
+                                <!-- Right side content -->
+                                <div class="col-12 col-lg-7 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__content ps-lg-3">
+                                        <div class="mxd-section-title__title mb-3">
+                                            <h2>Why Choose Edion Web Technologies?</h2>
+                                        </div>
+                                        <p class="t-large t-medium mb-4" style="opacity: 0.9;">
+                                            We believe every business deserves a customized marketing strategy based on its goals, audience, and industry.
+                                        </p>
+
+                                        <div class="mxd-why-choose-list mt-4">
+                                            <!-- Feature 1 -->
+                                            <div class="mxd-why-choose-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Experienced Digital Marketing Experts</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Our certified professionals have extensive experience in SEO, PPC, social media, and performance marketing across multiple industries.
+                                                </p>
+                                            </div>
+
+                                            <!-- Feature 2 -->
+                                            <div class="mxd-why-choose-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">ROI-Focused Strategies</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Every campaign is designed to maximize conversions, improve lead quality, and increase return on investment.
+                                                </p>
+                                            </div>
+
+                                            <!-- Feature 3 -->
+                                            <div class="mxd-why-choose-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Transparent Reporting</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Receive detailed monthly reports with keyword rankings, traffic insights, campaign performance, and actionable recommendations.
+                                                </p>
+                                            </div>
+
+                                            <!-- Feature 4 -->
+                                            <div class="mxd-why-choose-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Ethical Marketing Practices</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    We follow Google's latest best practices and white-hat SEO techniques to ensure sustainable growth.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Why Choose Ediontech End -->
+
+                    <!-- Block - Digital Marketing Services USPs Start -->
+                    <style>
+                        .mxd-service-card {
+                            background: rgba(255, 255, 255, 0.04);
+                            border: 1px solid rgba(255, 255, 255, 0.12);
+                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                            transition: all 0.3s ease;
+                        }
+                        .mxd-service-card h3 {
+                            font-size: 1.4rem !important;
+                            font-weight: 700 !important;
+                            line-height: 1.35 !important;
+                            margin-bottom: 1.1rem !important;
+                        }
+                        .mxd-service-card__icon {
+                            background: rgba(255, 255, 255, 0.08);
+                            border: 1px solid rgba(255, 255, 255, 0.15);
+                            margin-bottom: 1.1rem !important;
+                        }
+                        .mxd-service-card-list {
+                            list-style: none;
+                            padding-left: 0;
+                            margin-bottom: 0;
+                            font-size: 1.15rem !important;
+                        }
+                        .mxd-service-card-list li {
+                            position: relative;
+                            padding-left: 1.25rem;
+                            line-height: 1.9;
+                            margin-bottom: 0.45rem;
+                        }
+                        .mxd-service-card-list li::before {
+                            content: "•";
+                            position: absolute;
+                            left: 0;
+                            color: #2563eb;
+                            font-weight: bold;
+                            font-size: 1.25rem;
+                        }
+
+                        /* Light Theme Support */
+                        [color-scheme="light"] .mxd-service-card,
+                        [data-theme="light"] .mxd-service-card,
+                        html.light .mxd-service-card,
+                        body.light-mode .mxd-service-card {
+                            background: #ffffff !important;
+                            border: 1px solid #cbd5e1 !important;
+                            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07) !important;
+                        }
+                        [color-scheme="light"] .mxd-service-card h3,
+                        [data-theme="light"] .mxd-service-card h3,
+                        html.light .mxd-service-card h3,
+                        body.light-mode .mxd-service-card h3 {
+                            color: #0f172a !important;
+                        }
+                        [color-scheme="light"] .mxd-service-card-list,
+                        [data-theme="light"] .mxd-service-card-list,
+                        html.light .mxd-service-card-list,
+                        body.light-mode .mxd-service-card-list {
+                            color: #334155 !important;
+                        }
+                        [color-scheme="light"] .mxd-service-card-list li::before,
+                        [data-theme="light"] .mxd-service-card-list li::before,
+                        html.light .mxd-service-card-list li::before,
+                        body.light-mode .mxd-service-card-list li::before {
+                            color: #2563eb !important;
+                        }
+                        [color-scheme="light"] .mxd-service-card__icon,
+                        [data-theme="light"] .mxd-service-card__icon,
+                        html.light .mxd-service-card__icon,
+                        body.light-mode .mxd-service-card__icon {
+                            background: #f1f5f9 !important;
+                            border: 1px solid #cbd5e1 !important;
+                        }
+                        [color-scheme="light"] .mxd-service-card__icon svg,
+                        [data-theme="light"] .mxd-service-card__icon svg,
+                        html.light .mxd-service-card__icon svg,
+                        body.light-mode .mxd-service-card__icon svg {
+                            fill: #0f172a !important;
+                            color: #0f172a !important;
+                        }
+                    </style>
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row text-center mb-5">
+                                <div class="col-12">
+                                    <div class="mxd-section-title__title text-center">
+                                        <h2 class="mxd-split-lines text-center">Our Digital Marketing Services</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <!-- Card 1: SEO -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Search Engine Optimization (SEO)</h3>
+                                        <ul class="mxd-service-card-list">
+                                            <li>Technical SEO</li>
+                                            <li>On-Page SEO</li>
+                                            <li>Off-Page SEO</li>
+                                            <li>Local SEO</li>
+                                            <li>E-commerce SEO</li>
+                                            <li>SEO Audits</li>
+                                            <li>Keyword Research</li>
+                                            <li>Link Building</li>
+                                            <li>Content Optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: PPC -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M14.08 6.08a.5.5 0 0 0-.5-.5H10.5V1.5a.5.5 0 0 0-.854-.354L3.146 7.646a.5.5 0 0 0 .354.854H6.5v4.5a.5.5 0 0 0 .854.354l6.5-6.5a.5.5 0 0 0 .226-.774z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Pay-Per-Click (PPC) Advertising</h3>
+                                        <ul class="mxd-service-card-list">
+                                            <li>Google Ads</li>
+                                            <li>Search Campaigns</li>
+                                            <li>Display Ads</li>
+                                            <li>Shopping Ads</li>
+                                            <li>YouTube Ads</li>
+                                            <li>Performance Max Campaigns</li>
+                                            <li>Conversion Tracking</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: Social Media -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zM4.5 5.025a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM0 8.525a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Social Media Marketing</h3>
+                                        <ul class="mxd-service-card-list">
+                                            <li>Facebook Marketing</li>
+                                            <li>Instagram Marketing</li>
+                                            <li>LinkedIn Marketing</li>
+                                            <li>X (Twitter) Marketing</li>
+                                            <li>TikTok Marketing</li>
+                                            <li>Social Media Advertising</li>
+                                            <li>Community Management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Content Marketing -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Content Marketing</h3>
+                                        <ul class="mxd-service-card-list">
+                                            <li>SEO Blog Writing</li>
+                                            <li>Website Content</li>
+                                            <li>Landing Pages</li>
+                                            <li>Product Descriptions</li>
+                                            <li>Email Marketing Content</li>
+                                            <li>Content Strategy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5: Website Design & Development -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Website Design &amp; Development</h3>
+                                        <ul class="mxd-service-card-list">
+                                            <li>Business Websites</li>
+                                            <li>Corporate Websites</li>
+                                            <li>E-commerce Development</li>
+                                            <li>WordPress Development</li>
+                                            <li>Landing Page Design</li>
+                                            <li>Website Speed Optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6: Online Reputation Management -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99 1.636 2.138 3.58 3.037 4.17 3.284a.5.5 0 0 0 .448 0c.59-.247 2.534-1.146 4.17-3.284 1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Online Reputation Management</h3>
+                                        <ul class="mxd-service-card-list">
+                                            <li>Brand Monitoring</li>
+                                            <li>Review Management</li>
+                                            <li>Reputation Recovery</li>
+                                            <li>Customer Feedback Management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Digital Marketing Services USPs End -->
+
+                    <!-- Block - What Makes Our Digital Marketing Services Different Start -->
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row align-items-center g-4 g-xl-5">
+                                <!-- Left side image -->
+                                <div class="col-12 col-lg-5 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__image position-relative text-center p-2">
+                                        <img src="{{ asset('img/home/what_makes_our_digital_marketing.jpg') }}" alt="What Makes Our Digital Marketing Services Different" class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: auto; max-height: 580px; object-fit: contain;" loading="lazy">
+                                    </div>
+                                </div>
+                                <!-- Right side content -->
+                                <div class="col-12 col-lg-7 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__content ps-lg-3">
+                                        <div class="mxd-section-title__title mb-4">
+                                            <h2>What Makes Our Digital Marketing Services Different?</h2>
+                                        </div>
+
+                                        <div class="mxd-different-services-list mt-4">
+                                            <!-- Feature 1 -->
+                                            <div class="mxd-different-service-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Customized Marketing Plans</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Every strategy is tailored to your business goals and target audience.
+                                                </p>
+                                            </div>
+
+                                            <!-- Feature 2 -->
+                                            <div class="mxd-different-service-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Data-Driven Decision Making</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    We use analytics, performance tracking, and market research to optimize every campaign.
+                                                </p>
+                                            </div>
+
+                                            <!-- Feature 3 -->
+                                            <div class="mxd-different-service-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Continuous Campaign Optimization</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Our team regularly analyzes campaign performance to improve results and maximize ROI.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - What Makes Our Digital Marketing Services Different End -->
+
+                    <!-- Block - Industries We Serve Start -->
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row align-items-center g-4 g-xl-5">
+                                <!-- Left side image -->
+                                <div class="col-12 col-lg-5 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__image position-relative text-center p-2">
+                                        <img src="{{ asset('img/home/industries_we_serve.jpg') }}" alt="Industries We Serve" class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: auto; max-height: 580px; object-fit: contain;" loading="lazy">
+                                    </div>
+                                </div>
+                                <!-- Right side content -->
+                                <div class="col-12 col-lg-7 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__content ps-lg-3">
+                                        <div class="mxd-section-title__title mb-4">
+                                            <h2>Industries We Serve</h2>
+                                        </div>
+
+                                        <div class="mxd-industries-list mt-4">
+                                            <!-- Industry 1 -->
+                                            <div class="mxd-industry-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Healthcare</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Helping clinics, hospitals, and healthcare providers increase online visibility and patient inquiries.
+                                                </p>
+                                            </div>
+
+                                            <!-- Industry 2 -->
+                                            <div class="mxd-industry-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Real Estate</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Generating qualified property leads through SEO and paid advertising.
+                                                </p>
+                                            </div>
+
+                                            <!-- Industry 3 -->
+                                            <div class="mxd-industry-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">E-commerce</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Driving online sales with optimized shopping campaigns and conversion-focused SEO.
+                                                </p>
+                                            </div>
+
+                                            <!-- Industry 4 -->
+                                            <div class="mxd-industry-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Education</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Promoting educational institutions, coaching centers, and online learning platforms.
+                                                </p>
+                                            </div>
+
+                                            <!-- Industry 5 -->
+                                            <div class="mxd-industry-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Travel &amp; Hospitality</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Increasing bookings through targeted digital marketing campaigns.
+                                                </p>
+                                            </div>
+
+                                            <!-- Industry 6 -->
+                                            <div class="mxd-industry-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">IT &amp; Software</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Helping technology companies generate B2B leads and improve brand authority.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Industries We Serve End -->
+
+                    <!-- Block - Our Working Process Start -->
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row align-items-center g-4 g-xl-5">
+                                <!-- Left side image -->
+                                <div class="col-12 col-lg-5 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__image position-relative text-center p-2">
+                                        <img src="{{ asset('img/home/Our_Working_Process.jpg') }}" alt="Our Working Process" class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: auto; max-height: 580px; object-fit: contain;" loading="lazy">
+                                    </div>
+                                </div>
+                                <!-- Right side content -->
+                                <div class="col-12 col-lg-7 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__content ps-lg-3">
+                                        <div class="mxd-section-title__title mb-4">
+                                            <h2>Our Working Process</h2>
+                                        </div>
+
+                                        <div class="mxd-process-list mt-4">
+                                            <!-- Step 1 -->
+                                            <div class="mxd-process-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Business Analysis</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Understanding your business objectives, competitors, and target audience.
+                                                </p>
+                                            </div>
+
+                                            <!-- Step 2 -->
+                                            <div class="mxd-process-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Strategy Development</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Creating a customized digital marketing roadmap.
+                                                </p>
+                                            </div>
+
+                                            <!-- Step 3 -->
+                                            <div class="mxd-process-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Campaign Execution</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Launching SEO, PPC, social media, and content marketing campaigns.
+                                                </p>
+                                            </div>
+
+                                            <!-- Step 4 -->
+                                            <div class="mxd-process-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Performance Monitoring</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Tracking campaign performance using industry-leading analytics tools.
+                                                </p>
+                                            </div>
+
+                                            <!-- Step 5 -->
+                                            <div class="mxd-process-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Optimization &amp; Growth</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Continuously improving campaigns based on real-time performance data.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Our Working Process End -->
+
+                    <!-- Block - Our Unique Selling Points (USPs) Start -->
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row text-center mb-5">
+                                <div class="col-12">
+                                    <div class="mxd-section-title__title text-center">
+                                        <h2 class="mxd-split-lines text-center">Our Unique Selling Points</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-4 justify-content-center">
+                                <!-- USP Card 1 -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Customized Business Strategies</h3>
+                                        <p class="t-medium mb-0" style="opacity: 0.85; line-height: 1.6;">
+                                            No generic solutions—every campaign is built specifically for your business.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- USP Card 2 -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                                <path fill-rule="evenodd" d="M5.216 14A5.772 5.772 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Dedicated Marketing Specialists</h3>
+                                        <p class="t-medium mb-0" style="opacity: 0.85; line-height: 1.6;">
+                                            A dedicated team manages your campaigns and provides expert support.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- USP Card 3 -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                                <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm13 1a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h1V6h-1zM3 6v5h1A1 1 0 0 0 5 10V7a1 1 0 0 0-1-1H3z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Affordable Digital Marketing Packages</h3>
+                                        <p class="t-medium mb-0" style="opacity: 0.85; line-height: 1.6;">
+                                            Flexible solutions designed for startups, SMEs, and enterprise businesses.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- USP Card 4 -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.09 9.5H2.255a7.025 7.025 0 0 0 3.072 2.472 6.7 6.7 0 0 1-.597-.933A9.267 9.267 0 0 1 4.09 9.5zM7.5 14.923V12H5.145c.299.704.664 1.341 1.077 1.867.423.54.912.915 1.278 1.056z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Multi-Country Digital Marketing Expertise</h3>
+                                        <p class="t-medium mb-0" style="opacity: 0.85; line-height: 1.6;">
+                                            We successfully manage campaigns for businesses targeting both local and international markets.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- USP Card 5 -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="mxd-service-card h-100 p-4 rounded-4">
+                                        <div class="mxd-service-card__icon mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.646 3.647a.5.5 0 0 1-.708-.708l4-4a.5.5 0 0 1 .708 0l2.586 2.586 4.148-5.071a.5.5 0 0 1 .704-.07Z"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Long-Term Business Growth</h3>
+                                        <p class="t-medium mb-0" style="opacity: 0.85; line-height: 1.6;">
+                                            Our focus is not just on traffic but on sustainable business growth through measurable results.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Our Unique Selling Points (USPs) End -->
+
+                    <!-- Block - Benefits of Choosing Ediontech Start -->
+                    <div class="mxd-block mt-5 pt-5">
+                        <div class="p-0 container-fluid">
+                            <div class="row align-items-center g-4 g-xl-5">
+                                <!-- Left side image -->
+                                <div class="col-12 col-lg-5 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__image position-relative text-center p-2">
+                                        <img src="{{ asset('img/home/get_a_free_consultation.png') }}" alt="Benefits of Choosing Edion Web Technologies" class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: auto; max-height: 580px; object-fit: contain;" loading="lazy">
+                                    </div>
+                                </div>
+                                <!-- Right side content -->
+                                <div class="col-12 col-lg-7 col-xl-6 mxd-grid-item">
+                                    <div class="mxd-block__content ps-lg-3">
+                                        <div class="mxd-section-title__title mb-4">
+                                            <h2>Benefits of Choosing Edion Web Technologies</h2>
+                                        </div>
+
+                                        <div class="mxd-benefits-list mt-4">
+                                            <!-- Benefit 1 -->
+                                            <div class="mxd-benefit-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Increase Organic Traffic</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Improve search engine rankings and attract relevant visitors.
+                                                </p>
+                                            </div>
+
+                                            <!-- Benefit 2 -->
+                                            <div class="mxd-benefit-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Generate High-Quality Leads</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Reach potential customers actively searching for your products and services.
+                                                </p>
+                                            </div>
+
+                                            <!-- Benefit 3 -->
+                                            <div class="mxd-benefit-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Build Brand Authority</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Strengthen your online presence through consistent digital marketing efforts.
+                                                </p>
+                                            </div>
+
+                                            <!-- Benefit 4 -->
+                                            <div class="mxd-benefit-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Improve Conversion Rates</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Optimize campaigns and landing pages to convert more visitors into customers.
+                                                </p>
+                                            </div>
+
+                                            <!-- Benefit 5 -->
+                                            <div class="mxd-benefit-item mb-4">
+                                                <h3 class="mb-2" style="font-size: 1.5rem;">Achieve Sustainable Growth</h3>
+                                                <p class="t-medium mb-0" style="opacity: 0.8; line-height: 1.6;">
+                                                    Build a strong digital foundation that supports long-term business success.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block - Benefits of Choosing Ediontech End -->
+
+            </div>
+        </div>
+        <!-- Section - Additional Services & Content End -->
+
         <div class="mxd-section">
             <div class="mxd-container fullwidth-container">
 

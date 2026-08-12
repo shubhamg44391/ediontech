@@ -44,7 +44,7 @@
         content="@yield('description', 'Edion Web Technologies is a leading technology company delivering innovative digital solutions, including website development, SEO, and digital marketing.')">
     <meta name="keywords"
         content="@yield('keywords', 'website development, digital marketing, SEO, web design, Edion Web Technologies')">
-
+    <link rel="canonical" href="{{ env('APP_URL') }}" />
     <!-- Viewport Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">

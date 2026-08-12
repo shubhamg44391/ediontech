@@ -213,12 +213,12 @@
                       <div class="services-card__tags">
                         <div class="tags-column">
                           <span class="tag tag-s-mobile mxd-scramble">SEO&nbsp;Services</span>
-                          <span class="tag tag-s-mobile mxd-scramble">Email&nbsp;Marketting</span>
-                          <span class="tag tag-s-mobile mxd-scramble">Social&nbsp;Media&nbsp;Marketting</span>
+                          <span class="tag tag-s-mobile mxd-scramble">Email&nbsp;Marketing</span>
+                          <span class="tag tag-s-mobile mxd-scramble">Social&nbsp;Media&nbsp;Marketing</span>
                         </div>
                         <div class="tags-column">
                           <span class="tag tag-s-mobile mxd-scramble">PPC&nbsp;Advertising</span>
-                          <span class="tag tag-s-mobile mxd-scramble">Content&nbsp;Marketting</span>
+                          <span class="tag tag-s-mobile mxd-scramble">Content&nbsp;Marketing</span>
                         </div>
                       </div>
                     </div>

@@ -102,3 +102,18 @@
         padding-bottom: 18rem;
     }
 }
+
+/* Smooth Scrolling & Performance Optimizations (60 FPS fluid scroll) */
+html {
+    scroll-behavior: smooth;
+}
+
+.mxd-section, .mxd-block, img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.blur-container, .blur-layer {
+    pointer-events: none;
+    will-change: transform;
+}
