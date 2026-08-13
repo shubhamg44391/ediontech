@@ -101,7 +101,7 @@
    <span class="awards-eyebrow">RECOGNITION &amp; AWARDS</span>
    <h2 class="awards-title">Awarded as the <span>Best Digital Marketing Agency</span></h2>
    <p class="awards-desc">
-    Ediontech is proud to be recognized as one of the best digital marketing agencies. These distinctions are a testament to our diligent work, effective strategies, and our ability to achieve results time and again. We focus on helping businesses grow online through SEO, PPC, content marketing, and digital solutions that deliver real value and measurable success.
+    Edion Web Technologies is proud to be recognized as one of the best digital marketing agencies. These distinctions are a testament to our diligent work, effective strategies, and our ability to achieve results time and again. We focus on helping businesses grow online through SEO, PPC, content marketing, and digital solutions that deliver real value and measurable success.
    </p>
   </div>
   <div class="awards-grid-box" data-reveal>

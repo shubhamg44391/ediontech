@@ -4,7 +4,7 @@
  <title>@yield('title', 'Car Rental Software & Web Development Company | Edion Web Technologies')</title>
  <meta name="description" content="@yield('description', 'Edion Web Technologies builds car rental and fleet management software, booking platforms, websites, mobile apps and AI solutions, plus SEO and digital marketing, for businesses in India, Jordan, the UAE, Bahrain, the USA, the UK and Canada.')">
  <meta name="keywords" content="@yield('keywords', 'car rental software, car rental software development, fleet management software, booking engine development, website development company, mobile app development, SEO services, digital marketing company, custom software development, Edion Web Technologies')">
- <link rel="canonical" href="https://ediontech.com/">
+<link rel="canonical" href="{{ url()->current() }}">
  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
  <meta property="og:type" content="website">
