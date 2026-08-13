@@ -7,17 +7,20 @@
   /* --- Mobile drawer ----------------------------------------------------- */
   var burger = document.querySelector(".burger");
   var drawer = document.getElementById("drawer");
+  var masthead = document.querySelector(".masthead");
   if (burger && drawer) {
     burger.addEventListener("click", function () {
       var open = burger.getAttribute("aria-expanded") === "true";
       burger.setAttribute("aria-expanded", String(!open));
       drawer.setAttribute("data-open", String(!open));
+      if (masthead) masthead.setAttribute("data-drawer-open", String(!open));
       document.body.style.overflow = open ? "" : "hidden";
     });
     drawer.addEventListener("click", function (e) {
       if (e.target.closest("a")) {
         burger.setAttribute("aria-expanded", "false");
         drawer.setAttribute("data-open", "false");
+        if (masthead) masthead.setAttribute("data-drawer-open", "false");
         document.body.style.overflow = "";
       }
     });
@@ -33,7 +36,7 @@
   var targets = document.querySelectorAll("[data-reveal]");
   if (targets.length) {
     if (!("IntersectionObserver" in window) ||
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       targets.forEach(function (el) { el.classList.add("is-in"); });
     } else {
       var io = new IntersectionObserver(function (entries) {
@@ -134,7 +137,7 @@
 (function () {
   "use strict";
 
-  /* --- Mega menu: hover on pointer devices, click/keyboard always -------- */
+  /* --- Mega menu: hover to open, click outside to close ------------------- */
   var items = document.querySelectorAll("[data-mega]");
   if (items.length) {
     var closeAll = function (except) {
@@ -161,11 +164,7 @@
       });
       if (window.matchMedia("(hover: hover)").matches) {
         item.addEventListener("mouseenter", open);
-        item.addEventListener("mouseleave", close);
       }
-      item.addEventListener("focusout", function (e) {
-        if (!item.contains(e.relatedTarget)) close();
-      });
     });
     document.addEventListener("click", function (e) {
       if (!e.target.closest("[data-mega]")) closeAll(null);

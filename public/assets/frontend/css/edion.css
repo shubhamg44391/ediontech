@@ -224,11 +224,12 @@ table { border-collapse: collapse; width: 100%; }
   border-radius: var(--radius); transition: color .18s var(--ease);
 }
 .nav a:hover { color: var(--text); }
-.nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
-.nav a[aria-current="page"]::after {
-  content: ""; position: absolute; left: var(--sp-3); right: var(--sp-3); bottom: -2px;
-  height: 2px; background: var(--signal); border-radius: 2px;
+.nav a[aria-current="page"], .nav__trigger[aria-current="page"], .nav__item[data-open="true"] .nav__trigger { color: #000000 !important; font-weight: 700 !important; position: relative; }
+.nav a[aria-current="page"]::after, .nav__trigger[aria-current="page"]::after {
+  content: ""; position: absolute; left: var(--sp-3); right: var(--sp-3); bottom: -4px;
+  height: 3px; background: var(--signal, #e60000); border-radius: 3px;
 }
+/* .mega a[aria-current="page"] { color: var(--signal, #e60000) !important; font-weight: 700 !important; background-color: rgba(230, 0, 0, 0.08); border-radius: 4px; padding-left: 6px; padding-right: 6px; } */
 .masthead__cta { display: flex; align-items: center; gap: var(--sp-3); flex: none; }
 
 .burger { display: none; width: 42px; height: 42px; border: 1px solid var(--paper-3); border-radius: var(--radius); align-items: center; justify-content: center; }
@@ -242,16 +243,34 @@ table { border-collapse: collapse; width: 100%; }
 @media (max-width: 1080px) {
   .nav, .masthead__cta .btn { display: none; }
   .burger { display: flex; }
+  .masthead[data-drawer-open="true"],
+  .masthead:has(.drawer[data-open="true"]) {
+    background: #FFFFFF !important;
+    z-index: 10000 !important;
+    backdrop-filter: none !important;
+  }
   .drawer[data-open="true"] { display: block; }
   .drawer {
-    display: none; position: fixed; inset: 72px 0 0; z-index: 99;
-    background: var(--paper); overflow-y: auto; padding: var(--sp-6) var(--gutter) var(--sp-8);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 68px);
+    max-height: calc(100dvh - 68px);
+    z-index: 9999;
+    background: #FFFFFF !important;
+    overflow-y: auto;
+    padding: var(--sp-4) var(--gutter) var(--sp-8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid var(--paper-3);
   }
-  .drawer ol { display: grid; gap: 2px; }
+  .drawer ol { display: grid; gap: 2px; list-style: none; margin: 0; padding: 0; }
   .drawer a {
     display: flex; align-items: baseline; gap: var(--sp-4);
     padding: var(--sp-4) 0; border-bottom: 1px solid var(--paper-3);
-    font: 700 1.375rem/1.1 var(--font-display); letter-spacing: -0.02em;
+    font: 700 1.25rem/1.1 var(--font-display); letter-spacing: -0.02em; color: var(--text);
   }
   .drawer a i {
     font: 400 var(--fs-micro)/1 var(--font-mono); color: var(--text-3); font-style: normal; flex: none;
@@ -855,8 +874,7 @@ body[data-todo-off] [data-todo]::after { display: none; }
 .footcats .inline i { color: var(--ink-3); font-style: normal; }
 
 .footbadges { display: flex; flex-wrap: wrap; gap: var(--sp-4); align-items: center; justify-content: center; padding-block: var(--sp-6); border-top: 1px solid var(--ink-3); }
-.footbadges img { height: 46px; width: auto; opacity: .85; filter: grayscale(1) brightness(1.9); transition: opacity .2s var(--ease), filter .2s var(--ease); }
-.footbadges img:hover { opacity: 1; filter: none; }
+.footbadges img { height: 46px; width: auto; opacity: 1; filter: none; }
 
 /* --- Client logo wall ---------------------------------------------------- */
 .clientwall {
@@ -876,8 +894,7 @@ body[data-todo-off] [data-todo]::after { display: none; }
 .band--ink .clientlogo:hover { background: var(--ink-3); }
 .clientlogo__img {
   max-width: 100%; height: 42px; width: auto; object-fit: contain;
-  filter: grayscale(1); opacity: .72;
-  transition: filter .25s var(--ease), opacity .25s var(--ease);
+  filter: none; opacity: 1;
 }
 .clientlogo:hover .clientlogo__img { filter: none; opacity: 1; }
 .clientlogo span {
@@ -1196,3 +1213,103 @@ h1 .kw, h2 .kw, h3 .kw { font-weight: inherit; }
 /* Industry badge sits on its own line above the H1 */
 .ind-badge { margin-bottom: var(--sp-5); }
 .phero .ind-badge + h1 { margin-top: 0; }
+
+/* --- Awards & Recognition Section ----------------------------------------- */
+.awards-sec {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  background: var(--paper, #F6F7F8);
+  color: var(--text, #141A1F);
+}
+.awards-header {
+  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+.awards-eyebrow {
+  color: #111827;
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow, 0.75rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.awards-title {
+  color: #111827;
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 1.5rem + 1.9vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
+}
+.awards-title span {
+  color: #111827;
+}
+.awards-desc {
+  color: #4C5A66;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.0625rem);
+  line-height: 1.65;
+  max-width: 820px;
+  margin-inline: auto;
+}
+.awards-grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #E2E8F0;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg, 12px);
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 991px) {
+  .awards-grid-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .awards-grid-box {
+    grid-template-columns: 1fr;
+  }
+}
+.award-item {
+  background: #FFFFFF;
+  padding: clamp(1.75rem, 3vw, 2.5rem) 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.award-item:hover {
+  background-color: #F8FAFC;
+}
+.award-icon-wrap {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.award-icon-wrap img {
+  max-height: 60px;
+  max-width: 170px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.award-label {
+  color: #334155;
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 0.85rem + 0.2vw, 0.95rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+

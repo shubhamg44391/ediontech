@@ -71,7 +71,7 @@
 
  <div class="footcats"><details><summary>Rental &amp; fleet software</summary><div class="inline"><a href="{{ url('/car-rental-software-development') }}">Car rental software development</a> <i>|</i> <a href="{{ url('/fleet-management-software') }}">Fleet management software</a> <i>|</i> <a href="{{ url('/car-rental-booking-engine') }}">Car rental booking engine</a> <i>|</i> <a href="{{ url('/vehicle-rental-app-development') }}">Vehicle rental app development</a> <i>|</i> <a href="{{ url('/chauffeur-limousine-booking-software') }}">Chauffeur &amp; limousine software</a> <i>|</i> <a href="{{ url('/rental-pricing-engine') }}">Dynamic pricing engine</a> <i>|</i> <a href="{{ url('/telematics-integration') }}">Telematics integration</a> <i>|</i> <a href="{{ url('/damage-inspection-module') }}">Damage &amp; inspection capture</a> <i>|</i> <a href="{{ url('/corporate-accounts-billing') }}">Corporate accounts &amp; billing</a> <i>|</i> <a href="{{ url('/rental-software-cost-calculator') }}">Rental software cost calculator</a></div></details><details><summary>Design &amp; development</summary><div class="inline"><a href="{{ url('/website-development') }}">Website development</a> <i>|</i> <a href="{{ url('/website-design') }}">Website design</a> <i>|</i> <a href="{{ url('/custom-software-development') }}">Custom software development</a> <i>|</i> <a href="{{ url('/mobile-app-development') }}">Mobile app development</a> <i>|</i> <a href="{{ url('/mobile-app-design') }}">Mobile app design</a> <i>|</i> <a href="{{ url('/ecommerce-development') }}">E-commerce development</a> <i>|</i> <a href="{{ url('/cms-development') }}">CMS development</a> <i>|</i> <a href="{{ url('/ui-ux-design') }}">UI/UX design</a> <i>|</i> <a href="{{ url('/logo-branding') }}">Logo &amp; branding</a></div></details><details><summary>SEO &amp; digital marketing</summary><div class="inline"><a href="{{ url('/seo-services') }}">SEO services</a> <i>|</i> <a href="{{ url('/local-seo-services') }}">Local SEO services</a> <i>|</i> <a href="{{ url('/technical-seo-audit') }}">Technical SEO audit</a> <i>|</i> <a href="{{ url('/ecommerce-seo') }}">E-commerce SEO</a> <i>|</i> <a href="{{ url('/link-building-services') }}">Link building services</a> <i>|</i> <a href="{{ url('/ppc-advertising') }}">PPC advertising</a> <i>|</i> <a href="{{ url('/social-media-marketing') }}">Social media marketing</a> <i>|</i> <a href="{{ url('/content-marketing') }}">Content marketing</a> <i>|</i> <a href="{{ url('/email-marketing') }}">Email marketing</a> <i>|</i> <a href="{{ url('/seo-package') }}">SEO packages &amp; pricing</a></div></details><details><summary>AI search</summary><div class="inline"><a href="{{ url('/ai-search-optimisation') }}">AI search optimisation</a> <i>|</i> <a href="{{ url('/answer-engine-optimisation') }}">Answer engine optimisation</a> <i>|</i> <a href="{{ url('/ai-assistant-visibility') }}">AI assistant visibility</a> <i>|</i> <a href="{{ url('/ai-development') }}">AI &amp; machine learning development</a></div></details><details><summary>Technology</summary><div class="inline"><a href="{{ url('/cloud-solutions') }}">Cloud solutions</a> <i>|</i> <a href="{{ url('/iot-solutions') }}">IoT solutions</a> <i>|</i> <a href="{{ url('/big-data-analytics') }}">Big data analytics</a></div></details><details><summary>Locations</summary><div class="inline"><a href="{{ url('/software-development-dubai') }}">Dubai</a> <i>|</i> <a href="{{ url('/software-development-abu-dhabi') }}">Abu Dhabi</a> <i>|</i> <a href="{{ url('/software-development-riyadh') }}">Riyadh</a> <i>|</i> <a href="{{ url('/software-development-jeddah') }}">Jeddah</a> <i>|</i> <a href="{{ url('/software-development-doha') }}">Doha</a> <i>|</i> <a href="{{ url('/software-development-manama') }}">Manama</a> <i>|</i> <a href="{{ url('/software-development-amman') }}">Amman</a> <i>|</i> <a href="{{ url('/software-development-london') }}">London</a> <i>|</i> <a href="{{ url('/software-development-manchester') }}">Manchester</a> <i>|</i> <a href="{{ url('/software-development-lucknow') }}">Lucknow</a> <i>|</i> <a href="{{ url('/software-development-delhi') }}">New Delhi</a> <i>|</i> <a href="{{ url('/software-development-mumbai') }}">Mumbai</a> <i>|</i> <a href="{{ url('/software-development-bangalore') }}">Bangalore</a> <i>|</i> <a href="{{ url('/software-development-toronto') }}">Toronto</a> <i>|</i> <a href="{{ url('/software-development-new-york') }}">New York</a> <i>|</i> <a href="{{ url('/locations') }}">All locations</a></div></details><details><summary>Industries</summary><div class="inline"><a href="{{ url('/software-for-travel-tourism') }}">Travel &amp; tourism</a> <i>|</i> <a href="{{ url('/software-for-hospitality') }}">Hospitality</a> <i>|</i> <a href="{{ url('/software-for-logistics') }}">Logistics &amp; transport</a> <i>|</i> <a href="{{ url('/software-for-healthcare') }}">Healthcare</a> <i>|</i> <a href="{{ url('/software-for-real-estate') }}">Real estate</a> <i>|</i> <a href="{{ url('/software-for-education') }}">Education</a> <i>|</i> <a href="{{ url('/software-for-ecommerce-retail') }}">E-commerce &amp; retail</a> <i>|</i> <a href="{{ url('/software-for-automotive') }}">Automotive</a></div></details></div>
 
- <div class="footbadges"><img src="{{ asset('assets/frontend/img/badges/google-partner.svg') }}" alt="Google Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/badges/meta-partner.svg') }}" alt="Meta Business Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/badges/microsoft-partner.svg') }}" alt="Microsoft Advertising Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/badges/iso-9001.svg') }}" alt="ISO 9001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/badges/iso-27001.svg') }}" alt="ISO 27001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/badges/clutch.svg') }}" alt="Clutch" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/badges/goodfirms.svg') }}" alt="GoodFirms" width="240" height="96" loading="lazy"></div>
+ <div class="footbadges"><img src="{{ asset('assets/frontend/img/certified/google-partner-badge.webp') }}" alt="Google Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/meta-business-partner.png') }}" alt="Meta Business Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/microsoft-solutions-partner.png') }}" alt="Microsoft Advertising Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/iso-certification.webp') }}" alt="ISO 9001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/iso-27001.jpeg') }}" alt="ISO 27001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/clutch.webp') }}" alt="Clutch" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/Goodfirms.co.png') }}" alt="GoodFirms" width="240" height="96" loading="lazy"></div>
 
  <div class="foot__bar">
  <span>&copy;<span data-year>2026</span> Edion Web Technologies (OPC) Private Limited</span>
@@ -85,5 +85,191 @@
  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9a9.8 9.8 0 0 0 1.35 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2h.01a9.9 9.9 0 0 0 9.93-9.9A9.9 9.9 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.54-3.95-4.68-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34l.52.01c.17 0 .39-.06.61.47l.83 2.02c.07.14.11.3.02.48l-.3.5-.29.31c-.1.1-.2.21-.09.4.11.19.5.83 1.08 1.34.74.66 1.37.87 1.56.97.19.1.3.08.41-.05l.6-.7c.16-.19.3-.14.49-.07l2 .95c.19.09.32.13.37.21.05.08.05.53-.19 1.2Z"/></svg><span>Chat on WhatsApp</span></a>
 
 <script src="{{ asset('assets/frontend/js/edion.js') }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+  .swal2-container { z-index: 9999999 !important; }
+</style>
+
+<!-- Case Study Lead Modal -->
+<div id="csLeadModal" style="display:none; position:fixed; inset:0; z-index:9000; background:rgba(11, 27, 43, 0.88); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:1rem; overflow-y:auto;">
+  <div class="card" style="background:var(--paper); border:1px solid var(--paper-3); border-radius:var(--radius-lg); width:100%; max-width:580px; padding:clamp(1.5rem,3vw,2.5rem); position:relative; box-shadow:0 25px 50px -12px rgba(0,0,0,0.6); max-height:90vh; overflow-y:auto; z-index:9001;">
+    <button type="button" onclick="closeCsModal()" style="position:absolute; top:1.25rem; right:1.25rem; background:transparent; border:none; color:var(--text-3); font-size:1.6rem; cursor:pointer; line-height:1;">&times;</button>
+    <h3 id="csModalTitle" style="margin:0 0 0.25rem; font-size:var(--fs-h3); font-weight:700; color:var(--text-1);">Download Case Study</h3>
+    <p style="margin:0 0 1.25rem; font-size:var(--fs-small); color:var(--text-2);">Fill in your details to download the complete PDF case study.</p>
+    
+    <form id="csLeadForm" class="form" action="{{ route('case-study.lead') }}" method="POST" style="margin-top:var(--sp-4)">
+      @csrf
+      <input type="hidden" id="csProjectName" name="project_name" value="">
+      <input type="hidden" id="csPdfFile" name="pdf_file" value="">
+      
+      <div class="row">
+        <div class="field">
+          <label for="cs-name">Name <i style="color:var(--hold);font-style:normal">*</i></label>
+          <input id="cs-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="cs-email">Email <i style="color:var(--hold);font-style:normal">*</i></label>
+          <input id="cs-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="field">
+          <label for="cs-phone">Phone or WhatsApp</label>
+          <input id="cs-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+        </div>
+        <div class="field">
+          <label for="cs-subject">Subject <i style="color:var(--hold);font-style:normal">*</i></label>
+          <select id="cs-subject" name="subject" required>
+            <option value="">Choose one</option>
+            <option value="New project enquiry">New project enquiry</option>
+            <option value="Car rental / fleet software">Car rental / fleet software</option>
+            <option value="SEO or marketing">SEO or marketing</option>
+            <option value="Support for an existing project">Support for an existing project</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label for="cs-message">Message <i style="color:var(--hold);font-style:normal">*</i></label>
+        <textarea id="cs-message" name="message" required placeholder="What can we help with?"></textarea>
+      </div>
+
+      <label class="check" style="margin-bottom:var(--sp-4);">
+        <input type="checkbox" name="consent" required>
+        <span>I agree to Edion contacting me about this enquiry. See our
+        <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
+        <i style="color:var(--hold);font-style:normal">*</i></span>
+      </label>
+      
+      <button type="submit" id="csSubmitBtn" class="btn btn--signal" style="width:100%; justify-content:center;">
+        Submit &amp; Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openCaseStudyModal(projectName, pdfFileName) {
+  document.getElementById('csProjectName').value = projectName;
+  document.getElementById('csPdfFile').value = pdfFileName;
+  document.getElementById('csModalTitle').textContent = 'Download ' + projectName + ' Case Study';
+  document.getElementById('csLeadModal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCsModal() {
+  document.getElementById('csLeadModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const modalElem = document.getElementById('csLeadModal');
+  if (modalElem) {
+    modalElem.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeCsModal();
+      }
+    });
+  }
+
+  const csForm = document.getElementById('csLeadForm');
+  if (csForm) {
+    csForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Native browser validation trigger
+      if (!csForm.checkValidity()) {
+        csForm.reportValidity();
+        
+        let missing = [];
+        const name = csForm.querySelector('input[name="name"]');
+        const email = csForm.querySelector('input[name="email"]');
+        const subject = csForm.querySelector('select[name="subject"]');
+        const message = csForm.querySelector('textarea[name="message"]');
+        const consent = csForm.querySelector('input[name="consent"]');
+
+        if (!name || !name.value.trim()) missing.push('Name');
+        if (!email || !email.value.trim()) missing.push('Email');
+        if (!subject || !subject.value) missing.push('Subject');
+        if (!message || !message.value.trim()) missing.push('Message');
+        if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
+
+        Swal.fire({
+          title: 'Validation Error',
+          html: 'Please complete all required fields:<br><br><b>' + missing.join(', ') + '</b>',
+          icon: 'warning',
+          confirmButtonColor: '#2563EB'
+        });
+        return;
+      }
+
+      const btn = document.getElementById('csSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      const formData = new FormData(csForm);
+
+      fetch(csForm.action, {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+        },
+        body: formData
+      })
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(errData => {
+            let errorMsg = 'Please fill out all required fields correctly.';
+            if (errData.errors) {
+              errorMsg = Object.values(errData.errors).flat().join('<br>');
+            } else if (errData.message) {
+              errorMsg = errData.message;
+            }
+            Swal.fire({
+              title: 'Validation Error',
+              html: errorMsg,
+              icon: 'error',
+              confirmButtonColor: '#2563EB'
+            });
+            throw new Error(errorMsg);
+          });
+        }
+        return res.json();
+      })
+      .then(data => {
+        btn.disabled = false;
+        btn.innerHTML = 'Submit & Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        if (data.success) {
+          closeCsModal();
+          csForm.reset();
+          
+          Swal.fire({
+            title: 'Success!',
+            text: data.message || 'Thank you! Your enquiry has been received.',
+            icon: 'success',
+            confirmButtonColor: '#2563EB'
+          });
+
+          if (data.pdf_url) {
+            const link = document.createElement('a');
+            link.href = data.pdf_url;
+            link.download = data.pdf_url.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }
+        }
+      })
+      .catch(err => {
+        btn.disabled = false;
+        btn.innerHTML = 'Submit & Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      });
+    });
+  }
+});
+</script>
 </body>
 @stack('scripts')

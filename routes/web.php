@@ -38,6 +38,9 @@ use App\Http\Controllers\Frontend\PricingController;
 use App\Http\Controllers\Frontend\InsightsController;
 use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\RentalSoftwareController;
+use App\Http\Controllers\Frontend\SeoMarketingController;
+use App\Http\Controllers\Frontend\ResourcesController;
 use App\Http\Controllers\Frontend\PrivacyPolicyController;
 use App\Http\Controllers\Frontend\TermsAndConditionsController;
 
@@ -368,3 +371,77 @@ Route::middleware('auth')->group(function () {
 
 // Auth routes
 require __DIR__ . '/auth.php';
+
+// Rental Software routes
+Route::get('/car-rental-software-development', [RentalSoftwareController::class, 'carRentalSoftwareDevelopment'])->name('rental.car-software');
+Route::get('/fleet-management-software', [RentalSoftwareController::class, 'fleetManagementSoftware'])->name('rental.fleet-management');
+Route::get('/car-rental-booking-engine', [RentalSoftwareController::class, 'carRentalBookingEngine'])->name('rental.booking-engine');
+Route::get('/vehicle-rental-app-development', [RentalSoftwareController::class, 'vehicleRentalAppDevelopment'])->name('rental.app-development');
+Route::get('/chauffeur-limousine-booking-software', [RentalSoftwareController::class, 'chauffeurLimousineBookingSoftware'])->name('rental.chauffeur-limousine');
+Route::get('/rental-pricing-engine', [RentalSoftwareController::class, 'rentalPricingEngine'])->name('rental.pricing-engine');
+Route::get('/telematics-integration', [RentalSoftwareController::class, 'telematicsIntegration'])->name('rental.telematics');
+Route::get('/damage-inspection-module', [RentalSoftwareController::class, 'damageInspectionModule'])->name('rental.damage-inspection');
+Route::get('/corporate-accounts-billing', [RentalSoftwareController::class, 'corporateAccountsBilling'])->name('rental.corporate-billing');
+Route::get('/car-rental-software-development-dubai', [RentalSoftwareController::class, 'carRentalSoftwareDevelopmentDubai'])->name('rental.dubai');
+Route::get('/car-rental-software-development-amman', [RentalSoftwareController::class, 'carRentalSoftwareDevelopmentAmman'])->name('rental.amman');
+Route::get('/car-rental-software-development-riyadh', [RentalSoftwareController::class, 'carRentalSoftwareDevelopmentRiyadh'])->name('rental.riyadh');
+Route::get('/locations', [RentalSoftwareController::class, 'locations'])->name('rental.locations');
+Route::get('/rental-software-cost-calculator', [RentalSoftwareController::class, 'rentalSoftwareCostCalculator'])->name('rental.calculator');
+
+// Services routes
+Route::get('/services', [ServicesController::class, 'index'])->name('services.index');
+Route::get('/website-development', [ServicesController::class, 'websiteDevelopment'])->name('services.website-development');
+Route::get('/custom-software-development', [ServicesController::class, 'customSoftwareDevelopment'])->name('services.custom-software');
+Route::get('/mobile-app-development', [ServicesController::class, 'mobileAppDevelopment'])->name('services.mobile-app-dev');
+Route::get('/ecommerce-development', [ServicesController::class, 'ecommerceDevelopment'])->name('services.ecommerce-dev');
+Route::get('/cms-development', [ServicesController::class, 'cmsDevelopment'])->name('services.cms-dev');
+Route::get('/website-design', [ServicesController::class, 'websiteDesign'])->name('services.website-design');
+Route::get('/logo-branding', [ServicesController::class, 'logoBranding'])->name('services.logo-branding');
+Route::get('/mobile-app-design', [ServicesController::class, 'mobileAppDesign'])->name('services.mobile-app-design');
+Route::get('/ui-ux-design', [ServicesController::class, 'uiUxDesign'])->name('services.ui-ux-design');
+Route::get('/ai-development', [ServicesController::class, 'aiDevelopment'])->name('services.ai-dev');
+Route::get('/cloud-solutions', [ServicesController::class, 'cloudSolutions'])->name('services.cloud');
+Route::get('/iot-solutions', [ServicesController::class, 'iotSolutions'])->name('services.iot');
+Route::get('/big-data-analytics', [ServicesController::class, 'bigDataAnalytics'])->name('services.big-data');
+
+// SEO & Marketing routes
+Route::get('/seo-services', [SeoMarketingController::class, 'seoServices'])->name('seo.services');
+Route::get('/local-seo-services', [SeoMarketingController::class, 'localSeoServices'])->name('seo.local');
+Route::get('/technical-seo-audit', [SeoMarketingController::class, 'technicalSeoAudit'])->name('seo.technical-audit');
+Route::get('/ecommerce-seo', [SeoMarketingController::class, 'ecommerceSeo'])->name('seo.ecommerce');
+Route::get('/link-building-services', [SeoMarketingController::class, 'linkBuildingServices'])->name('seo.link-building');
+Route::get('/ppc-advertising', [SeoMarketingController::class, 'ppcAdvertising'])->name('seo.ppc');
+Route::get('/social-media-marketing', [SeoMarketingController::class, 'socialMediaMarketing'])->name('seo.social-media');
+Route::get('/content-marketing', [SeoMarketingController::class, 'contentMarketing'])->name('seo.content');
+Route::get('/email-marketing', [SeoMarketingController::class, 'emailMarketing'])->name('seo.email');
+Route::get('/ai-search-optimisation', [SeoMarketingController::class, 'aiSearchOptimisation'])->name('seo.ai-search');
+Route::get('/answer-engine-optimisation', [SeoMarketingController::class, 'answerEngineOptimisation'])->name('seo.answer-engine');
+Route::get('/ai-assistant-visibility', [SeoMarketingController::class, 'aiAssistantVisibility'])->name('seo.ai-assistant');
+
+// Resources & Company routes
+Route::get('/blog', [ResourcesController::class, 'blog'])->name('resources.blog');
+Route::get('/blog-details', [ResourcesController::class, 'blogDetails'])->name('resources.blog-details');
+Route::get('/blog/{slug}', [ResourcesController::class, 'blogDetails'])->name('resources.blog-single');
+Route::get('/works', [ResourcesController::class, 'works'])->name('resources.works');
+Route::get('/faq', [ResourcesController::class, 'faq'])->name('resources.faq');
+Route::get('/glossary', [ResourcesController::class, 'glossary'])->name('resources.glossary');
+Route::get('/free-consultation', [ResourcesController::class, 'freeConsultation'])->name('resources.free-consultation');
+Route::get('/about', [ResourcesController::class, 'about'])->name('resources.about');
+Route::get('/industries', [ResourcesController::class, 'industries'])->name('resources.industries');
+Route::get('/certifications', [ResourcesController::class, 'certifications'])->name('resources.certifications');
+Route::get('/contact', [ResourcesController::class, 'contact'])->name('resources.contact');
+Route::post('/contact', [ResourcesController::class, 'submitContact'])->name('contact.store');
+Route::post('/free-consultation', [ResourcesController::class, 'submitConsultation'])->name('consultation.store');
+Route::post('/case-study-lead', [ResourcesController::class, 'submitCaseStudyLead'])->name('case-study.lead');
+Route::get('/seo-package', [ResourcesController::class, 'pricing'])->name('resources.pricing');
+
+// Legal & Policy routes
+Route::get('/privacy-policy', [ResourcesController::class, 'privacyPolicy'])->name('resources.privacy-policy');
+Route::get('/term-and-condition', [ResourcesController::class, 'termsAndConditions'])->name('resources.term-and-condition');
+Route::get('/terms-and-conditions', [ResourcesController::class, 'termsAndConditions'])->name('resources.terms-and-conditions');
+Route::get('/refund-and-cancellation-policy', [ResourcesController::class, 'refundAndCancellationPolicy'])->name('resources.refund-and-cancellation-policy');
+
+// Industry sub-pages & dynamic detail route
+Route::get('/{slug}', [ResourcesController::class, 'industryDetail'])->name('industry.detail');
+
+

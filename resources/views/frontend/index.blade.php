@@ -60,33 +60,7 @@
 
 <div class="rail" aria-label="Production systems we build and maintain"><ul class="rail__track"><li class="rail__item"><span class="dot dot--live"></span><b>Dunya Car Rental</b> &middot; Rental &amp; booking platform</li><li class="rail__item"><span class="dot dot--live"></span><b>Autonation Rent a Car</b> &middot; Fleet + reservations</li><li class="rail__item"><span class="dot dot--live"></span><b>Bxience</b> &middot; Corporate web platform</li><li class="rail__item"><span class="dot dot--build"></span><b>Tutorwale</b> &middot; Marketplace build</li><li class="rail__item"><span class="dot dot--live"></span><b>Jarry Logistics</b> &middot; Ops dashboard</li><li class="rail__item"><span class="dot dot--live"></span><b>Link Loop</b> &middot; SEO campaign, month 14</li><li class="rail__item"><span class="dot dot--live"></span><b>Vepo</b> &middot; Mobile app, iOS + Android</li><li class="rail__item"><span class="dot dot--build"></span><b>BII</b> &middot; CRM integration</li></ul></div>
 
-<section class="band band--tight">
- <div class="shell">
- 
- <div class="badgegrid" data-reveal><a class="badge" href="https://www.google.com/partners/" rel="noopener nofollow" target="_blank">
- <img src="{{ asset('assets/frontend/img/badges/google-partner.svg') }}" alt="Google Partner, Google Ads certified" width="240" height="96" loading="lazy" decoding="async">
- <b>Google Partner</b><span>Google Ads certified</span>
-</a><a class="badge" href="https://www.facebook.com/business/partner-directory" rel="noopener nofollow" target="_blank">
- <img src="{{ asset('assets/frontend/img/badges/meta-partner.svg') }}" alt="Meta Business Partner, Facebook &amp; Instagram" width="240" height="96" loading="lazy" decoding="async">
- <b>Meta Business Partner</b><span>Facebook &amp; Instagram</span>
-</a><a class="badge" href="https://about.ads.microsoft.com/en/partners" rel="noopener nofollow" target="_blank">
- <img src="{{ asset('assets/frontend/img/badges/microsoft-partner.svg') }}" alt="Microsoft Advertising Partner, Bing network" width="240" height="96" loading="lazy" decoding="async">
- <b>Microsoft Advertising Partner</b><span>Bing network</span>
-</a><a class="badge" href="#" rel="noopener nofollow">
- <img src="{{ asset('assets/frontend/img/badges/iso-9001.svg') }}" alt="ISO 9001, Quality management" width="240" height="96" loading="lazy" decoding="async">
- <b>ISO 9001</b><span>Quality management</span>
-</a><a class="badge" href="#" rel="noopener nofollow">
- <img src="{{ asset('assets/frontend/img/badges/iso-27001.svg') }}" alt="ISO 27001, Information security" width="240" height="96" loading="lazy" decoding="async">
- <b>ISO 27001</b><span>Information security</span>
-</a><a class="badge" href="https://clutch.co/" rel="noopener nofollow" target="_blank">
- <img src="{{ asset('assets/frontend/img/badges/clutch.svg') }}" alt="Clutch, Verified client reviews" width="240" height="96" loading="lazy" decoding="async">
- <b>Clutch</b><span>Verified client reviews</span>
-</a><a class="badge" href="https://www.goodfirms.co/" rel="noopener nofollow" target="_blank">
- <img src="{{ asset('assets/frontend/img/badges/goodfirms.svg') }}" alt="GoodFirms, Listed agency" width="240" height="96" loading="lazy" decoding="async">
- <b>GoodFirms</b><span>Listed agency</span>
-</a></div>
- </div>
-</section>
+@include('frontend.partials.badgegrid')
 
 
 <section class="band shell">
@@ -118,6 +92,68 @@
  <p class="card__idx">Practice area</p>
  <img class="ind-icon" src="{{ asset('assets/frontend/img/industry/healthcare.svg') }}" alt="" width="52" height="52" loading="lazy" decoding="async"><h3>Healthcare &amp; education</h3><p>Compliance-aware platforms for clinics, hospitals and institutions.</p>
  <div class="taglist"><span class="tag">Patient portals</span><span class="tag">LMS platforms</span><span class="tag">Admissions</span></div><a class="post__more" href="{{ url('/software-for-healthcare') }}" style="margin-top:var(--sp-4)">Explore this sector<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+ </div>
+</section>
+
+<section class="awards-sec">
+ <div class="shell">
+  <div class="awards-header" data-reveal>
+   <span class="awards-eyebrow">RECOGNITION &amp; AWARDS</span>
+   <h2 class="awards-title">Awarded as the <span>Best Digital Marketing Agency</span></h2>
+   <p class="awards-desc">
+    Ediontech is proud to be recognized as one of the best digital marketing agencies. These distinctions are a testament to our diligent work, effective strategies, and our ability to achieve results time and again. We focus on helping businesses grow online through SEO, PPC, content marketing, and digital solutions that deliver real value and measurable success.
+   </p>
+  </div>
+  <div class="awards-grid-box" data-reveal>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/forbes1-logo.webp') }}" alt="Forbes" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best Digital Marketing Company</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/entrepreneur.webp') }}" alt="Entrepreneur" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Agency India</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/clutch.webp') }}" alt="Clutch" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Agency</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/fitsmallbusiness.webp') }}" alt="FitSmallBusiness" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Agency</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/goodfirms.webp') }}" alt="GoodFirms" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best Digital Marketing Company In India</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/hindustan.webp') }}" alt="Hindustan Times" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Experts</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/software-world.webp') }}" alt="Software World" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best Marketing Consultant</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/clouds.webp') }}" alt="The Times of India" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best SEO Company in World</p>
+   </div>
+  </div>
  </div>
 </section>
 
@@ -190,40 +226,40 @@
  </div>
  <a class="btn btn--line" href="{{ url('/works') }}">All case studies<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
- <div class="grid g-2">
- <a class="work" href="{{ url('/works') }}" data-reveal>
- <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/dunya_light.png') }}" alt="Dunya Car Rental logo" height="26" loading="lazy" decoding="async"></span>
- <span class="work__status"><span class="dot dot--live"></span>Live</span>
- <img src="{{ asset('img/works/showcase-grid-x3/dunyacarental.png') }}" alt="Dunya Car Rental platform"
- width="1600" height="1000" loading="lazy" decoding="async"
- style="width:100%;height:100%;object-fit:cover">
- </div>
- <div class="work__body">
- <h3>Dunya Car Rental</h3>
- <p>End-to-end rental platform: multi-branch fleet, dynamic seasonal pricing,
- online reservations and a back office the counter staff can actually use.</p>
- <div class="taglist">
- <span class="tag">Booking engine</span><span class="tag">Fleet</span><span class="tag">Payments</span>
- </div>
- </div>
- </a>
- <a class="work" href="{{ url('/works') }}" data-reveal>
- <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/auto-nation-light.png') }}" alt="Autonation Rent a Car logo" height="26" loading="lazy" decoding="async"></span>
- <span class="work__status"><span class="dot dot--live"></span>Live</span>
- <img src="{{ asset('img/works/showcase-grid-x3/trivocase-study.png') }}" alt="Autonation Rent a Car platform"
- width="1600" height="1000" loading="lazy" decoding="async"
- style="width:100%;height:100%;object-fit:cover">
- </div>
- <div class="work__body">
- <h3>Autonation Rent a Car</h3>
- <p>Reservation and fleet operations for a Gulf rental business, built to handle
- walk-ins, corporate accounts and long-term leases in the same flow.</p>
- <div class="taglist">
- <span class="tag">Reservations</span><span class="tag">Corporate accounts</span><span class="tag">Reporting</span>
- </div>
- </div>
- </a>
- </div>
+  <div class="grid g-2">
+  <a class="work" href="#" onclick="openCaseStudyModal('Dunya Car Rental', 'Dunya Car Rental Case Study.pdf'); return false;" data-reveal>
+  <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/dunya_light.png') }}" alt="Dunya Car Rental logo" height="26" loading="lazy" decoding="async"></span>
+  <span class="work__status"><span class="dot dot--live"></span>Live</span>
+  <img src="{{ asset('assets/frontend/img/work/studyimg/dunya.png') }}" alt="Dunya Car Rental platform"
+  width="800" height="500" loading="lazy" decoding="async"
+  style="width:100%;height:100%;object-fit:cover">
+  </div>
+  <div class="work__body">
+  <h3>Dunya Car Rental</h3>
+  <p>End-to-end rental platform: multi-branch fleet, dynamic seasonal pricing,
+  online reservations and a back office the counter staff can actually use.</p>
+  <div class="taglist">
+  <span class="tag">Booking engine</span><span class="tag">Fleet</span><span class="tag">Payments</span>
+  </div>
+  </div>
+  </a>
+  <a class="work" href="#" onclick="openCaseStudyModal('Autonation Rent a Car', 'Autonation Rent a Car Case Study.pdf'); return false;" data-reveal>
+  <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/auto-nation-light.png') }}" alt="Autonation Rent a Car logo" height="26" loading="lazy" decoding="async"></span>
+  <span class="work__status"><span class="dot dot--live"></span>Live</span>
+  <img src="{{ asset('assets/frontend/img/work/studyimg/autonation.png') }}" alt="Autonation Rent a Car platform"
+  width="800" height="500" loading="lazy" decoding="async"
+  style="width:100%;height:100%;object-fit:cover">
+  </div>
+  <div class="work__body">
+  <h3>Autonation Rent a Car</h3>
+  <p>Reservation and fleet operations for a Gulf rental business, built to handle
+  walk-ins, corporate accounts and long-term leases in the same flow.</p>
+  <div class="taglist">
+  <span class="tag">Reservations</span><span class="tag">Corporate accounts</span><span class="tag">Reporting</span>
+  </div>
+  </div>
+  </a>
+  </div>
 </section>
 
 <section class="band band--ink">
@@ -361,46 +397,30 @@
  <a class="btn btn--line" href="{{ url('/blog') }}">All insights<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="posts">
- <article class="post" data-post-cat="Product engineering" data-reveal>
- <a href="{{ url('/blog-details') }}" aria-label="Car Rental Software Development in 2026: Features, Cost, and How to Choose the Right Partner">
- <div class="post__media">
- <div class="ph" data-todo>Featured image<br>car-rental-software-development-in&hellip;</div>
- </div>
- </a>
- <div class="post__body">
- <p class="post__kicker"><span>Product engineering</span><span>&middot;</span>
- <time datetime="2026-08-09">09 August 2026</time><span>&middot;</span><span>12 min read</span></p>
- <h3><a href="{{ url('/blog-details') }}">Car Rental Software Development in 2026: Features, Cost, and How to Choose the Right Partner</a></h3>
- <p>What a rental platform actually needs in 2026, what each module costs to build, and the questions to ask a vendor before you sign.</p>
- <a class="post__more" href="{{ url('/blog-details') }}">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
- </div>
-</article><article class="post" data-post-cat="Growth" data-reveal>
- <a href="{{ url('/blog-details') }}" aria-label="Why SEO Services Are Essential for Business Growth in 2026">
- <div class="post__media">
- <div class="ph" data-todo>Featured image<br>why-seo-services-are-essential-for&hellip;</div>
- </div>
- </a>
- <div class="post__body">
- <p class="post__kicker"><span>Growth</span><span>&middot;</span>
- <time datetime="2026-07-30">30 July 2026</time><span>&middot;</span><span>9 min read</span></p>
- <h3><a href="{{ url('/blog-details') }}">Why SEO Services Are Essential for Business Growth in 2026</a></h3>
- <p>Search has changed shape. Here's what still compounds, what's stopped working, and how to judge whether your SEO spend is earning its keep.</p>
- <a class="post__more" href="{{ url('/blog-details') }}">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
- </div>
-</article><article class="post" data-post-cat="Company" data-reveal>
- <a href="{{ url('/blog-details') }}" aria-label="Why Edion Web Technologies is the Top Choice for Web Development in Jordan">
- <div class="post__media">
- <div class="ph" data-todo>Featured image<br>why-edion-web-technologies-is-the-&hellip;</div>
- </div>
- </a>
- <div class="post__body">
- <p class="post__kicker"><span>Company</span><span>&middot;</span>
- <time datetime="2026-07-08">08 July 2026</time><span>&middot;</span><span>6 min read</span></p>
- <h3><a href="{{ url('/blog-details') }}">Why Edion Web Technologies is the Top Choice for Web Development in Jordan</a></h3>
- <p>How we work with teams in Amman and across the Levant, and why local context matters more than a lower hourly rate.</p>
- <a class="post__more" href="{{ url('/blog-details') }}">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
- </div>
-</article>
+  @if(isset($blogs) && count($blogs) > 0)
+    @foreach($blogs as $blog)
+      <article class="post" data-post-cat="Engineering" data-reveal>
+        <a href="{{ url('/blog/' . $blog->slug) }}" aria-label="{{ $blog->title }}">
+          <div class="post__media">
+            @if(!empty($blog->image))
+              <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" width="800" height="500" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=ph>Featured image</div>';">
+            @else
+              <div class="ph">Featured image<br>1200&times;750 WebP</div>
+            @endif
+          </div>
+        </a>
+        <div class="post__body">
+          <p class="post__kicker"><span>Engineering</span><span>&middot;</span>
+          <time datetime="{{ date('Y-m-d', strtotime($blog->created_at ?? now())) }}">{{ date('d F Y', strtotime($blog->created_at ?? now())) }}</time></p>
+          <h3><a href="{{ url('/blog/' . $blog->slug) }}">{{ $blog->title }}</a></h3>
+          <p>{{ Str::limit(strip_tags($blog->description ?? $blog->meta_description ?? ''), 150) }}</p>
+          <a class="post__more" href="{{ url('/blog/' . $blog->slug) }}">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+    @endforeach
+  @else
+    <p style="grid-column: 1 / -1; text-align: center; color: var(--text-2); padding: 2rem 0;">No recent articles available.</p>
+  @endif
  </div>
 </section>
 
