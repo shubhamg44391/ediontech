@@ -34,37 +34,49 @@ class RazorpayPaymentController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'confirm_email' => 'required|email|same:email',
+            'confirm_email' => 'nullable|email',
             'whatsapp_number' => 'required|string|max:20',
             'package_name' => 'required|string',
             'package_type' => 'required|string|in:monthly,yearly',
             'package_price' => 'required|numeric|min:0',
         ]);
 
+        if (empty($validated['confirm_email'])) {
+            $validated['confirm_email'] = $validated['email'];
+        }
+
         $packageName = $validated['package_name'];
         $packageType = $validated['package_type'];
 
-        // Retrieve dynamic price from database to prevent price tampering
-        $package = DB::table('seo_packages')->where('name', $packageName)->first();
-        if (!$package) {
-            return response()->json(['error' => 'Invalid package selected.'], 400);
-        }
-        $priceField = ($packageType === 'yearly') ? 'yearly_price' : 'monthly_price';
-        $baseAmount = floatval($package->$priceField);
+        $inrMap = [
+            'Basic SEO' => ['monthly_base' => 34338, 'yearly_base' => 343378, 'monthly_total' => 40519, 'yearly_total' => 405185],
+            'Standard SEO' => ['monthly_base' => 56084, 'yearly_base' => 560842, 'monthly_total' => 66179, 'yearly_total' => 661794],
+            'Gold SEO' => ['monthly_base' => 81265, 'yearly_base' => 877661, 'monthly_total' => 95893, 'yearly_total' => 1035640],
+            'Premium SEO' => ['monthly_base' => 125904, 'yearly_base' => 1359758, 'monthly_total' => 148566, 'yearly_total' => 1604514],
+        ];
 
-        $countryCode = $this->getCountryCode();
+        // Find matching key in map
+        $matchedKey = null;
+        foreach (array_keys($inrMap) as $k) {
+            if (stripos($packageName, explode(' ', $k)[0]) !== false) {
+                $matchedKey = $k;
+                break;
+            }
+        }
+
+        if ($matchedKey && isset($inrMap[$matchedKey])) {
+            $baseAmount = ($packageType === 'yearly') ? $inrMap[$matchedKey]['yearly_base'] : $inrMap[$matchedKey]['monthly_base'];
+            $totalAmount = ($packageType === 'yearly') ? $inrMap[$matchedKey]['yearly_total'] : $inrMap[$matchedKey]['monthly_total'];
+            $taxAmount = $totalAmount - $baseAmount;
+        } else {
+            $baseAmount = floatval($validated['package_price']);
+            $taxAmount = round($baseAmount * 0.18, 2);
+            $totalAmount = $baseAmount + $taxAmount;
+        }
+
         $currency = 'INR';
 
-        // Mirror currency.php helper conversion logic
-        if ($countryCode !== 'IN') {
-            $currency = 'USD';
-            $baseAmount = round($baseAmount / 83, 2);
-        }
-
-        $taxAmount = round($baseAmount * 0.18, 2);
-        $totalAmount = $baseAmount + $taxAmount;
-
-        // Razorpay expects amount in subunits (paise for INR, cents for USD)
+        // Razorpay expects amount in subunits (paise for INR)
         $amountInSubunits = intval(round($totalAmount * 100));
 
         // OVERRIDE FOR TESTING: Set to 100 for 1 INR (Note: Razorpay minimum is 100 paise = 1 INR)
@@ -92,8 +104,13 @@ class RazorpayPaymentController extends Controller
                 'receipt' => $receipt,
             ]);
             if ($response->failed()) {
+                $errJson = $response->json();
+                $errDesc = $errJson['error']['description'] ?? 'Failed to create order with Razorpay.';
                 Log::error('Razorpay Order API Failed: ' . $response->body());
-                return response()->json(['error' => 'Failed to create order with Razorpay.'], 500);
+                if (stripos($errDesc, 'exceeds maximum amount') !== false) {
+                    return response()->json(['error' => 'Razorpay Transaction Limit Exceeded: Your Razorpay account limit per transaction is lower than this total amount. Please choose a monthly plan or contact us for direct bank transfer / invoice payment.'], 400);
+                }
+                return response()->json(['error' => 'Razorpay Error: ' . $errDesc], 400);
             }
 
             $orderData = $response->json();

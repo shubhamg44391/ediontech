@@ -22,50 +22,63 @@
  <div class="sec-head" data-reveal>
  <div><p class="eyebrow">Current</p><h2>What we hold today</h2></div>
  </div>
- <div class="grid g-3"><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl">Google Partner</p><p><b class="kw2">Google Ads</b> certified</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl">Meta Business Partner</p><p>Facebook &amp; Instagram</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl">Microsoft Advertising Partner</p><p>Bing network</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl"><b class="kw3">ISO 9001</b></p><p>Quality management</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl"><b class="kw3">ISO 27001</b></p><p>Information security</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl">Clutch</p><p>Verified client reviews</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div><div class="card" data-reveal>
- <p class="card__idx">Verified</p><p class="lbl">GoodFirms</p><p>Listed agency</p>
- <div class="taglist"><span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text)">Active</span></div>
-</div></div>
-</section>
-<section class="band band--ink">
- <div class="shell">
- <div class="sec-head" data-reveal>
- <div><p class="eyebrow">Roadmap</p><h2>Worth adding, and how</h2>
- <p>These are the badges your competitors display that you do not hold yet. Most are
- genuinely obtainable, the paths are below.</p></div>
+ <div class="grid g-3"><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
  </div>
- <div class="grid g-2"><div class="card card--ink" data-reveal>
- <p class="card__idx" style="color:var(--text-on-ink-2)">Not yet held</p>
- <p class="lbl">DMCA Protected</p><p>Free. Register at dmca.com, add the badge, done in about five minutes.</p>
-</div><div class="card card--ink" data-reveal>
- <p class="card__idx" style="color:var(--text-on-ink-2)">Not yet held</p>
- <p class="lbl">NASSCOM Member</p><p>Paid membership. Worth it mainly for enterprise procurement in India and for Gulf tenders that ask for industry body affiliation.</p>
-</div><div class="card card--ink" data-reveal>
- <p class="card__idx" style="color:var(--text-on-ink-2)">Not yet held</p>
- <p class="lbl">Google Premier Partner</p><p>The tier above Partner. Requires higher ad spend and performance thresholds across managed accounts.</p>
-</div><div class="card card--ink" data-reveal>
- <p class="card__idx" style="color:var(--text-on-ink-2)">Not yet held</p>
- <p class="lbl">DesignRush / Clutch awards</p><p>Awarded off the back of verified client reviews. Free to pursue, set up a review request flow and the badges follow.</p>
-</div></div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/google-partner-badge.webp') }}" alt="Google Partner" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
  </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/meta-business-partner.png') }}" alt="Meta Business Partner" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/microsoft-solutions-partner.png') }}" alt="Microsoft Advertising Partner" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/iso-certification.webp') }}" alt="ISO 9001" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/iso-27001.jpeg') }}" alt="ISO 27001" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/clutch.webp') }}" alt="Clutch" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/Goodfirms.co.png') }}" alt="GoodFirms" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
+ <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
+  <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
+  <img src="{{ asset('assets/frontend/img/certified/dmc.webp') }}" alt="DMCA Protected" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
+ </div>
+</div> </div>
 </section>
 <section class="band shell">
  <div class="sec-head" data-reveal>

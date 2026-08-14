@@ -93,12 +93,18 @@
         </ul>
 
     </li>
-    <li class="menu-item">
+    <li class="menu-item {{ Request::is('admin/blog*') ? 'active open' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+            <i class="menu-icon tf-icons bx bx-book-open"></i>
             <div data-i18n="Authentications">Blog Page</div>
         </a>
         <ul class="menu-sub">
+
+            <li class="menu-item {{ Request::is('admin/blog/category*') ? 'active' : '' }}">
+                <a href="{{ route('category.index') }}" class="menu-link">
+                    <div data-i18n="Basic">Category</div>
+                </a>
+            </li>
 
             <li class="menu-item {{ Request::is('admin/blog/post*') ? 'active' : '' }}">
                 <a href="{{ route('post.index') }}" class="menu-link">
@@ -110,12 +116,29 @@
     </li>
 
     
-     <li class="menu-item {{ Request::is('admin/leads*') ? 'active' : '' }}">
-        <a href="{{ route('leads.index') }}" class="menu-link ">
+    <li class="menu-item {{ Request::is('admin/leads*') ? 'active open' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bxs-envelope"></i>
-            <div data-i18n="Basic">Leads</div>
+            <div data-i18n="Authentications">Leads</div>
         </a>
-    </li> 
+        <ul class="menu-sub">
+            <li class="menu-item {{ request('source') == 'contact' ? 'active' : '' }}">
+                <a href="{{ route('leads.index', ['source' => 'contact']) }}" class="menu-link">
+                    <div data-i18n="Basic">Contact Us Leads</div>
+                </a>
+            </li>
+            <li class="menu-item {{ request('source') == 'consultation' ? 'active' : '' }}">
+                <a href="{{ route('leads.index', ['source' => 'consultation']) }}" class="menu-link">
+                    <div data-i18n="Basic">Free Consultation Leads</div>
+                </a>
+            </li>
+            <li class="menu-item {{ request('source') == 'works' ? 'active' : '' }}">
+                <a href="{{ route('leads.index', ['source' => 'works']) }}" class="menu-link">
+                    <div data-i18n="Basic">Works Leads</div>
+                </a>
+            </li>
+        </ul>
+    </li>
 
      <li class="menu-item {{ Request::is('admin/seo-orders*') ? 'active' : '' }}">
         <a href="{{ route('admin.seo-orders.index') }}" class="menu-link ">

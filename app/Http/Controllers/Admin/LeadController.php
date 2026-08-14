@@ -52,9 +52,34 @@ class LeadController extends Controller
     public function store(Request $request) {}
 
     // Display the list of leads
-    public function index()
+    public function index(Request $request)
     {
-        $leads = DB::table('leads')->paginate(10);
+        $query = DB::table('leads');
+
+        if ($request->filled('source')) {
+            $source = $request->source;
+            if ($source === 'contact') {
+                $query->where(function ($q) {
+                    $q->where('source', 'Contact Us')
+                        ->orWhereNull('source')
+                        ->orWhere('source', '')
+                        ->orWhere('message', 'LIKE', '%Page Source: Contact Us%');
+                });
+            } elseif ($source === 'consultation') {
+                $query->where(function ($q) {
+                    $q->where('source', 'Free Consultation')
+                        ->orWhere('message', 'LIKE', '%Free Consultation%');
+                });
+            } elseif ($source === 'works') {
+                $query->where(function ($q) {
+                    $q->where('source', 'Works')
+                        ->orWhere('message', 'LIKE', '%Downloaded Case Study%')
+                        ->orWhere('message', 'LIKE', '%Case Study%');
+                });
+            }
+        }
+
+        $leads = $query->orderBy('id', 'DESC')->paginate(10)->withQueryString();
 
         return view('admin.leads', compact('leads'));
     }

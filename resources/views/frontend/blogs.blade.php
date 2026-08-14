@@ -62,10 +62,9 @@
                                                     
                                                   
                                                     <td class="px-5">
-                                                        @if($blog->image!="")
-                                                            <img style="height:50px; width:50px " class=" d-flex align-item-center" src="{{asset('/uploads/blogs/'.$blog->image)}}" alt="">
-                                                        
-                                                        @endif
+                                                         @if($blog->image!="")
+                                                             <img style="height:50px; width:50px " class=" d-flex align-item-center" src="{{asset('/uploads/blogs/'.$blog->image)}}" alt="{{ $blog->title ?? 'Blog Thumbnail' }}">
+                                                         @endif
                                                     </td>
                                                       <td class="px-5">{{ $blog->title }}</td>
                                                     <td class="px-5">{{ $blog->meta_title }}</td>

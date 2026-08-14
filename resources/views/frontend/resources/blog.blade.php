@@ -19,7 +19,12 @@
 
 <section class="band band--tight shell" style="padding-bottom:0">
  <div class="chips" data-filter role="group" aria-label="Filter by category" data-reveal>
- <button class="chip" type="button" data-cat="all" aria-current="true">All articles</button><button class="chip" type="button" data-cat="Product engineering" aria-current="false">Product engineering</button><button class="chip" type="button" data-cat="Growth" aria-current="false">Growth</button><button class="chip" type="button" data-cat="Engineering" aria-current="false">Engineering</button><button class="chip" type="button" data-cat="Company" aria-current="false">Company</button>
+  <button class="chip" type="button" data-cat="all" aria-current="true">All articles</button>
+  @if(isset($categories) && count($categories) > 0)
+    @foreach($categories as $category)
+      <button class="chip" type="button" data-cat="{{ $category->name }}" aria-current="false">{{ $category->name }}</button>
+    @endforeach
+  @endif
  </div>
 </section>
 
@@ -28,11 +33,18 @@
  <div class="posts">
   @if(isset($posts) && count($posts) > 0)
     @foreach($posts as $key => $post)
-      <article class="post {{ $key === 0 ? 'post--wide' : '' }}" data-post-cat="Engineering" data-reveal>
+      @php
+        $postCatName = 'Engineering';
+        if (!empty($post->category_id)) {
+            $catObj = \Illuminate\Support\Facades\DB::table('categories')->where('id', $post->category_id)->first();
+            if ($catObj) { $postCatName = $catObj->name; }
+        }
+      @endphp
+      <article class="post {{ $key === 0 ? 'post--wide' : '' }}" data-post-cat="{{ $postCatName }}" data-reveal>
         <a href="{{ url('/blog/' . $post->slug) }}" tabindex="-1" aria-hidden="true">
           <div class="post__media">
             @if(!empty($post->image))
-              <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=ph>Featured image</div>';">
+              <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->image_alt ?? $post->title }}" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=ph>Featured image</div>';">
             @else
               <div class="ph">Featured image<br>1600&times;900 WebP</div>
             @endif
@@ -40,7 +52,7 @@
         </a>
         <div class="post__body">
           <p class="post__kicker">
-            <span>Engineering</span><span>&middot;</span>
+            <span>{{ $postCatName }}</span><span>&middot;</span>
             <time datetime="{{ date('Y-m-d', strtotime($post->created_at ?? now())) }}">{{ date('d F Y', strtotime($post->created_at ?? now())) }}</time>
           </p>
           <h3><a href="{{ url('/blog/' . $post->slug) }}">{{ $post->title }}</a></h3>
@@ -80,5 +92,30 @@
  </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chips = document.querySelectorAll('.chips .chip');
+    const posts = document.querySelectorAll('.posts .post');
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', function() {
+            chips.forEach(c => {
+                c.setAttribute('aria-current', 'false');
+            });
+            this.setAttribute('aria-current', 'true');
+
+            const selectedCat = this.getAttribute('data-cat');
+            posts.forEach(post => {
+                const postCat = post.getAttribute('data-post-cat');
+                if (selectedCat === 'all' || postCat === selectedCat) {
+                    post.style.display = '';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 </main>
 @endsection

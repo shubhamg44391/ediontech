@@ -22,8 +22,8 @@
 <section class="band">
  <div class="shell">
  <h2 class="vh">Case studies</h2>
-  <div class="grid g-2" style="grid-template-columns:repeat(2,minmax(0,1fr))">
-  <a class="work" href="#" data-reveal>
+  <div class="grid g-2">
+  <a class="work" href="javascript:void(0);" onclick="openCaseStudyModal('Dunya Car Rental', 'Dunya Car Rental Case Study.pdf')" data-reveal>
   <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/dunya_light.png') }}" alt="Dunya Car Rental logo" height="26" loading="lazy" decoding="async"></span>
   <span class="work__status"><span class="dot dot--live"></span>Live</span>
      <span class="work__brand"><img class="worklogo" src="{{ asset('assets/frontend/img/clients/dunya_light.png') }}" alt="Dunya Car Rental logo" height="26" loading="lazy" decoding="async"></span>
@@ -34,7 +34,7 @@
   <h3>Dunya Car Rental</h3><p>A full rental operation in one system: <b class="kw2">multi-branch</b> fleet, seasonal pricing rules, online reservations, and a counter interface staff can learn in a morning.</p>
   <div class="taglist"><span class="tag">Booking engine</span><span class="tag">Fleet management</span><span class="tag">Payments</span><span class="tag">Multi-branch</span></div>
   </div>
- </a><a class="work" href="#" data-reveal>
+ </a><a class="work" href="javascript:void(0);" onclick="openCaseStudyModal('Autonation Rent a Car', 'Autonation Rent a Car Case Study.pdf')" data-reveal>
   <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/auto-nation-light.png') }}" alt="Autonation Rent a Car logo" height="26" loading="lazy" decoding="async"></span>
   <span class="work__status"><span class="dot dot--live"></span>Live</span>
      <span class="work__brand"><img class="worklogo" src="{{ asset('assets/frontend/img/clients/auto-nation-light.png') }}" alt="Autonation Rent a Car logo" height="26" loading="lazy" decoding="async"></span>
@@ -45,7 +45,7 @@
   <h3>Autonation Rent a Car</h3><p>Walk-ins, corporate accounts and long-term leases handled in a single reservation flow, with the reporting the finance team asked for.</p>
   <div class="taglist"><span class="tag">Reservations</span><span class="tag">Corporate accounts</span><span class="tag">Reporting</span></div>
   </div>
- </a><a class="work" href="#" data-reveal>
+ </a><a class="work" href="javascript:void(0);" onclick="openCaseStudyModal('Bxience', 'Bxience Case Study.pdf')" data-reveal>
   <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/bxience-light.png') }}" alt="Bxience logo" height="26" loading="lazy" decoding="async"></span>
   <span class="work__status"><span class="dot dot--live"></span>Live</span>
      <span class="work__brand"><img class="worklogo" src="{{ asset('assets/frontend/img/clients/bxience-light.png') }}" alt="Bxience logo" height="26" loading="lazy" decoding="async"></span>
@@ -56,7 +56,7 @@
   <h3>Bxience</h3><p>A content-managed corporate site with a structure that survives a growing team publishing to it.</p>
   <div class="taglist"><span class="tag">CMS</span><span class="tag">Web development</span><span class="tag">SEO</span></div>
   </div>
- </a><a class="work" href="#" data-reveal>
+ </a><a class="work" href="javascript:void(0);" onclick="openCaseStudyModal('Tutorwale', 'Tutorwale Case Study.pdf')" data-reveal>
   <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/tukarwale_light.png') }}" alt="Tutorwale logo" height="26" loading="lazy" decoding="async"></span>
   <span class="work__status"><span class="dot dot--build"></span>In build</span>
      <span class="work__brand"><img class="worklogo" src="{{ asset('assets/frontend/img/clients/tukarwale_light.png') }}" alt="Tutorwale logo" height="26" loading="lazy" decoding="async"></span>
@@ -100,7 +100,7 @@
   <h3>Vepo</h3><p>Cross-platform consumer app shipped to both stores from a single codebase.</p>
   <div class="taglist"><span class="tag">Flutter</span><span class="tag">Mobile app</span><span class="tag">UI/UX</span></div>
   </div>
- </a><a class="work" href="#" data-reveal>
+ </a><a class="work" href="javascript:void(0);" onclick="openCaseStudyModal('Brand In India', 'Brand In India Case Study.pdf')" data-reveal>
   <div class="work__media"><span class="work__logo"><img src="{{ asset('assets/frontend/img/clients/bii-light.png') }}" alt="BII logo" height="26" loading="lazy" decoding="async"></span>
   <span class="work__status"><span class="dot dot--build"></span>In build</span>
      <span class="work__brand"><img class="worklogo" src="{{ asset('assets/frontend/img/clients/bii-light.png') }}" alt="BII logo" height="26" loading="lazy" decoding="async"></span>

@@ -27,7 +27,7 @@
 
                                     @if (!empty($blog->image))
                                         <div class="mb-5 text-center">
-                                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}"
+                                            <img src="{{ asset('storage/' . $blog- alt="Edion Web Technologies">image) }}" alt="{{ $blog->title }}"
                                                 class="rounded img-fluid"
                                                 style="width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto;">
                                         </div>

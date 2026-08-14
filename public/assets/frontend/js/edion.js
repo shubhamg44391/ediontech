@@ -62,8 +62,6 @@
   /* --- Pricing billing toggle ------------------------------------------- */
   var toggle = document.querySelector("[data-billing-toggle]");
   if (toggle) {
-    var YEARLY_DISCOUNT = 0.15; // 15% off when billed yearly
-    var prices = document.querySelectorAll("[data-monthly]");
     toggle.addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-cycle]");
       if (!btn) return;
@@ -71,13 +69,21 @@
         b.setAttribute("aria-pressed", String(b === btn));
       });
       var yearly = btn.dataset.cycle === "yearly";
-      prices.forEach(function (el) {
-        var m = parseFloat(el.dataset.monthly);
-        var v = yearly ? m * (1 - YEARLY_DISCOUNT) : m;
-        el.textContent = "$" + v.toFixed(2);
+
+      // Update price numbers from dataset
+      document.querySelectorAll("[data-monthly]").forEach(function (el) {
+        var val = yearly ? el.dataset.yearly : el.dataset.monthly;
+        el.textContent = "$" + parseFloat(val).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
       });
+
+      // Update cycle labels
       document.querySelectorAll("[data-cycle-label]").forEach(function (el) {
-        el.textContent = yearly ? "/mo, billed yearly" : "/mo + 18% tax";
+        el.textContent = yearly ? el.dataset.yearlyLabel : el.dataset.monthlyLabel;
+      });
+
+      // Toggle discount badges
+      document.querySelectorAll(".plan-discount-badge").forEach(function (badge) {
+        badge.style.display = yearly ? "inline-block" : "none";
       });
     });
   }

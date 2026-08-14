@@ -58,7 +58,8 @@
  <div class="card" style="padding:clamp(1.5rem,3vw,2.5rem)" data-reveal>
  <h2 style="font-size:var(--fs-h3)">Book your slot</h2>
  <p style="color:var(--text-2)">Fields marked <i style="color:var(--hold);font-style:normal">*</i> are required.</p>
- <form class="form" data-validate novalidate style="margin-top:var(--sp-4)">
+ <form class="form" id="consultationForm" action="{{ route('consultation.store') }}" method="POST" style="margin-top:var(--sp-4)">
+ @csrf
  <div class="row">
  <div class="field">
  <label for="fc-name">Full name <i>*</i></label>
@@ -117,11 +118,101 @@
  <span>I agree to Edion contacting me about this enquiry.
  See our <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>. <i style="color:var(--hold);font-style:normal">*</i></span></label>
  </div>
- <button class="btn btn--signal" type="submit" style="justify-content:center">
+ <button class="btn btn--signal" id="fcSubmitBtn" type="submit" style="justify-content:center">
  Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
- <p class="hint" data-form-note hidden
- style="color:var(--available);font-weight:600"></p>
  </form>
+
+ @push('scripts')
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+   const consultationForm = document.getElementById('consultationForm');
+   if (consultationForm) {
+     consultationForm.addEventListener('submit', function(e) {
+       e.preventDefault();
+
+       if (!consultationForm.checkValidity()) {
+         consultationForm.reportValidity();
+         
+         let missing = [];
+         const name = consultationForm.querySelector('input[name="name"]');
+         const email = consultationForm.querySelector('input[name="email"]');
+         const phone = consultationForm.querySelector('input[name="phone"]');
+         const interest = consultationForm.querySelector('select[name="interest"]');
+         const brief = consultationForm.querySelector('textarea[name="brief"]');
+         const consent = consultationForm.querySelector('input[name="consent"]');
+
+         if (!name || !name.value.trim()) missing.push('Full Name');
+         if (!email || !email.value.trim()) missing.push('Work Email');
+         if (!phone || !phone.value.trim()) missing.push('WhatsApp Number');
+         if (!interest || !interest.value) missing.push('What do you need');
+         if (!brief || !brief.value.trim()) missing.push('Project Brief');
+         if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
+
+         Swal.fire({
+           title: 'Validation Error',
+           html: 'Please complete all required fields:<br><br><b>' + missing.join(', ') + '</b>',
+           icon: 'warning',
+           confirmButtonColor: '#2563EB'
+         });
+         return;
+       }
+
+       const btn = document.getElementById('fcSubmitBtn');
+       btn.disabled = true;
+       btn.textContent = 'Submitting...';
+
+       const formData = new FormData(consultationForm);
+
+       fetch(consultationForm.action, {
+         method: 'POST',
+         headers: {
+           'X-Requested-With': 'XMLHttpRequest',
+           'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+         },
+         body: formData
+       })
+       .then(res => {
+         if (!res.ok) {
+           return res.json().then(errData => {
+             let errorMsg = 'Please fill out all required fields correctly.';
+             if (errData.errors) {
+               errorMsg = Object.values(errData.errors).flat().join('<br>');
+             } else if (errData.message) {
+               errorMsg = errData.message;
+             }
+             Swal.fire({
+               title: 'Validation Error',
+               html: errorMsg,
+               icon: 'error',
+               confirmButtonColor: '#2563EB'
+             });
+             throw new Error(errorMsg);
+           });
+         }
+         return res.json();
+       })
+       .then(data => {
+         btn.disabled = false;
+         btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+         if (data.success) {
+           consultationForm.reset();
+           Swal.fire({
+             title: 'Success!',
+             text: data.message || 'Thank you! Your consultation request has been received.',
+             icon: 'success',
+             confirmButtonColor: '#2563EB'
+           });
+         }
+       })
+       .catch(err => {
+         btn.disabled = false;
+         btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+       });
+     });
+   }
+ });
+ </script>
+ @endpush
  </div>
  </div>
 </section>

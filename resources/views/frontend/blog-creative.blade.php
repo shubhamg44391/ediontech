@@ -156,7 +156,7 @@
                         </div>
                         <a class="post-simple-alt__media active-cursor-permanent" data-cursor-text="Read Post"
                           href="{{ route('frontend.blog') }}">
-                          <img class="" src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}">
+                          <img class="" src="{{ asset('storage/' . $blog- alt="Edion Web Technologies">image) }}" alt="{{ $blog->title }}">
                         </a>
                         <div class="post-simple-alt__caption">
                           <div class="post-simple-alt__title">

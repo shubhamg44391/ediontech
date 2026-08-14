@@ -2,7 +2,7 @@
  <div class="shell">
  <div class="megafoot__top">
  <div>
- <a class="brand" href="{{ url('/') }}" style="margin-bottom:var(--sp-5);display:inline-block">
+ <a class="brand" href="{{ route('frontend.home') }}" style="margin-bottom:var(--sp-5);display:inline-block">
  <img src="{{ asset('assets/frontend/img/brand/logo-lockup-light.png') }}" alt="Edion Web Technologies"
  width="1001" height="360" loading="lazy"></a>
  <p style="font-size:var(--fs-small);line-height:1.65;max-width:36ch;margin-bottom:var(--sp-5)">
@@ -20,30 +20,30 @@
  <div>
  <p class="lbl">Company</p>
  <ul>
- <li><a href="{{ url('/industries') }}">Industries</a></li><li><a href="{{ url('/about') }}">About us</a></li>
- <li><a href="{{ url('/services') }}">Services</a></li>
- <li><a href="{{ url('/works') }}">Works &amp; case studies</a></li>
- <li><a href="{{ url('/certifications') }}">Certifications</a></li>
- <li><a href="{{ url('/locations') }}">Locations</a></li>
- <li><a href="{{ url('/faq') }}">FAQ</a></li>
- <li><a href="{{ url('/contact') }}">Contact</a></li>
+ <li><a href="{{ route('resources.industries') }}">Industries</a></li><li><a href="{{ route('resources.about') }}">About us</a></li>
+ <li><a href="{{ route('services.index') }}">Services</a></li>
+ <li><a href="{{ route('resources.works') }}">Works &amp; case studies</a></li>
+ <li><a href="{{ route('resources.certifications') }}">Certifications</a></li>
+ <li><a href="{{ route('rental.locations') }}">Locations</a></li>
+ <li><a href="{{ route('resources.faq') }}">FAQ</a></li>
+ <li><a href="{{ route('resources.contact') }}">Contact</a></li>
  </ul>
  </div>
 
  <div>
  <p class="lbl">Resources</p>
  <ul>
- <li><a href="{{ url('/blog') }}">Insights</a></li>
- <li><a href="{{ url('/glossary') }}">Glossary</a></li>
- <li><a href="{{ url('/rental-software-cost-calculator') }}">Cost calculator</a></li>
- <li><a href="{{ url('/seo-package') }}">SEO pricing</a></li>
- <li><a href="{{ url('/free-consultation') }}">Free consultation</a></li>
+ <li><a href="{{ route('resources.blog') }}">Insights</a></li>
+ <li><a href="{{ route('resources.glossary') }}">Glossary</a></li>
+ <li><a href="{{ route('rental.calculator') }}">Cost calculator</a></li>
+ <li><a href="{{ route('resources.pricing') }}">SEO pricing</a></li>
+ <li><a href="{{ route('resources.free-consultation') }}">Free consultation</a></li>
  </ul>
  <p class="lbl" style="margin-top:var(--sp-6)">Legal</p>
  <ul>
- <li><a href="{{ url('/privacy-policy') }}">Privacy policy</a></li>
- <li><a href="{{ url('/term-and-condition') }}">Terms &amp; conditions</a></li>
- <li><a href="{{ url('/refund-and-cancellation-policy') }}">Refund &amp; cancellation</a></li>
+ <li><a href="{{ route('resources.privacy-policy') }}">Privacy policy</a></li>
+ <li><a href="{{ route('resources.term-and-condition') }}">Terms &amp; conditions</a></li>
+ <li><a href="{{ route('resources.refund-and-cancellation-policy') }}">Refund &amp; cancellation</a></li>
  </ul>
  </div>
 
@@ -69,9 +69,9 @@
  </div>
  </div>
 
- <div class="footcats"><details><summary>Rental &amp; fleet software</summary><div class="inline"><a href="{{ url('/car-rental-software-development') }}">Car rental software development</a> <i>|</i> <a href="{{ url('/fleet-management-software') }}">Fleet management software</a> <i>|</i> <a href="{{ url('/car-rental-booking-engine') }}">Car rental booking engine</a> <i>|</i> <a href="{{ url('/vehicle-rental-app-development') }}">Vehicle rental app development</a> <i>|</i> <a href="{{ url('/chauffeur-limousine-booking-software') }}">Chauffeur &amp; limousine software</a> <i>|</i> <a href="{{ url('/rental-pricing-engine') }}">Dynamic pricing engine</a> <i>|</i> <a href="{{ url('/telematics-integration') }}">Telematics integration</a> <i>|</i> <a href="{{ url('/damage-inspection-module') }}">Damage &amp; inspection capture</a> <i>|</i> <a href="{{ url('/corporate-accounts-billing') }}">Corporate accounts &amp; billing</a> <i>|</i> <a href="{{ url('/rental-software-cost-calculator') }}">Rental software cost calculator</a></div></details><details><summary>Design &amp; development</summary><div class="inline"><a href="{{ url('/website-development') }}">Website development</a> <i>|</i> <a href="{{ url('/website-design') }}">Website design</a> <i>|</i> <a href="{{ url('/custom-software-development') }}">Custom software development</a> <i>|</i> <a href="{{ url('/mobile-app-development') }}">Mobile app development</a> <i>|</i> <a href="{{ url('/mobile-app-design') }}">Mobile app design</a> <i>|</i> <a href="{{ url('/ecommerce-development') }}">E-commerce development</a> <i>|</i> <a href="{{ url('/cms-development') }}">CMS development</a> <i>|</i> <a href="{{ url('/ui-ux-design') }}">UI/UX design</a> <i>|</i> <a href="{{ url('/logo-branding') }}">Logo &amp; branding</a></div></details><details><summary>SEO &amp; digital marketing</summary><div class="inline"><a href="{{ url('/seo-services') }}">SEO services</a> <i>|</i> <a href="{{ url('/local-seo-services') }}">Local SEO services</a> <i>|</i> <a href="{{ url('/technical-seo-audit') }}">Technical SEO audit</a> <i>|</i> <a href="{{ url('/ecommerce-seo') }}">E-commerce SEO</a> <i>|</i> <a href="{{ url('/link-building-services') }}">Link building services</a> <i>|</i> <a href="{{ url('/ppc-advertising') }}">PPC advertising</a> <i>|</i> <a href="{{ url('/social-media-marketing') }}">Social media marketing</a> <i>|</i> <a href="{{ url('/content-marketing') }}">Content marketing</a> <i>|</i> <a href="{{ url('/email-marketing') }}">Email marketing</a> <i>|</i> <a href="{{ url('/seo-package') }}">SEO packages &amp; pricing</a></div></details><details><summary>AI search</summary><div class="inline"><a href="{{ url('/ai-search-optimisation') }}">AI search optimisation</a> <i>|</i> <a href="{{ url('/answer-engine-optimisation') }}">Answer engine optimisation</a> <i>|</i> <a href="{{ url('/ai-assistant-visibility') }}">AI assistant visibility</a> <i>|</i> <a href="{{ url('/ai-development') }}">AI &amp; machine learning development</a></div></details><details><summary>Technology</summary><div class="inline"><a href="{{ url('/cloud-solutions') }}">Cloud solutions</a> <i>|</i> <a href="{{ url('/iot-solutions') }}">IoT solutions</a> <i>|</i> <a href="{{ url('/big-data-analytics') }}">Big data analytics</a></div></details><details><summary>Locations</summary><div class="inline"><a href="{{ url('/software-development-dubai') }}">Dubai</a> <i>|</i> <a href="{{ url('/software-development-abu-dhabi') }}">Abu Dhabi</a> <i>|</i> <a href="{{ url('/software-development-riyadh') }}">Riyadh</a> <i>|</i> <a href="{{ url('/software-development-jeddah') }}">Jeddah</a> <i>|</i> <a href="{{ url('/software-development-doha') }}">Doha</a> <i>|</i> <a href="{{ url('/software-development-manama') }}">Manama</a> <i>|</i> <a href="{{ url('/software-development-amman') }}">Amman</a> <i>|</i> <a href="{{ url('/software-development-london') }}">London</a> <i>|</i> <a href="{{ url('/software-development-manchester') }}">Manchester</a> <i>|</i> <a href="{{ url('/software-development-lucknow') }}">Lucknow</a> <i>|</i> <a href="{{ url('/software-development-delhi') }}">New Delhi</a> <i>|</i> <a href="{{ url('/software-development-mumbai') }}">Mumbai</a> <i>|</i> <a href="{{ url('/software-development-bangalore') }}">Bangalore</a> <i>|</i> <a href="{{ url('/software-development-toronto') }}">Toronto</a> <i>|</i> <a href="{{ url('/software-development-new-york') }}">New York</a> <i>|</i> <a href="{{ url('/locations') }}">All locations</a></div></details><details><summary>Industries</summary><div class="inline"><a href="{{ url('/software-for-travel-tourism') }}">Travel &amp; tourism</a> <i>|</i> <a href="{{ url('/software-for-hospitality') }}">Hospitality</a> <i>|</i> <a href="{{ url('/software-for-logistics') }}">Logistics &amp; transport</a> <i>|</i> <a href="{{ url('/software-for-healthcare') }}">Healthcare</a> <i>|</i> <a href="{{ url('/software-for-real-estate') }}">Real estate</a> <i>|</i> <a href="{{ url('/software-for-education') }}">Education</a> <i>|</i> <a href="{{ url('/software-for-ecommerce-retail') }}">E-commerce &amp; retail</a> <i>|</i> <a href="{{ url('/software-for-automotive') }}">Automotive</a></div></details></div>
+ <div class="footcats"><details><summary>Rental &amp; fleet software</summary><div class="inline"><a href="{{ route('rental.car-software') }}">Car rental software development</a> <i>|</i> <a href="{{ route('rental.fleet-management') }}">Fleet management software</a> <i>|</i> <a href="{{ route('rental.booking-engine') }}">Car rental booking engine</a> <i>|</i> <a href="{{ route('rental.app-development') }}">Vehicle rental app development</a> <i>|</i> <a href="{{ route('rental.chauffeur-limousine') }}">Chauffeur &amp; limousine software</a> <i>|</i> <a href="{{ route('rental.pricing-engine') }}">Dynamic pricing engine</a> <i>|</i> <a href="{{ route('rental.telematics') }}">Telematics integration</a> <i>|</i> <a href="{{ route('rental.damage-inspection') }}">Damage &amp; inspection capture</a> <i>|</i> <a href="{{ route('rental.corporate-billing') }}">Corporate accounts &amp; billing</a> <i>|</i> <a href="{{ route('rental.calculator') }}">Rental software cost calculator</a></div></details><details><summary>Design &amp; development</summary><div class="inline"><a href="{{ route('services.website-development') }}">Website development</a> <i>|</i> <a href="{{ route('services.website-design') }}">Website design</a> <i>|</i> <a href="{{ route('services.custom-software') }}">Custom software development</a> <i>|</i> <a href="{{ route('services.mobile-app-dev') }}">Mobile app development</a> <i>|</i> <a href="{{ route('services.mobile-app-design') }}">Mobile app design</a> <i>|</i> <a href="{{ route('services.ecommerce-dev') }}">E-commerce development</a> <i>|</i> <a href="{{ route('services.cms-dev') }}">CMS development</a> <i>|</i> <a href="{{ route('services.ui-ux-design') }}">UI/UX design</a> <i>|</i> <a href="{{ route('services.logo-branding') }}">Logo &amp; branding</a></div></details><details><summary>SEO &amp; digital marketing</summary><div class="inline"><a href="{{ route('seo.services') }}">SEO services</a> <i>|</i> <a href="{{ route('seo.local') }}">Local SEO services</a> <i>|</i> <a href="{{ route('seo.technical-audit') }}">Technical SEO audit</a> <i>|</i> <a href="{{ route('seo.ecommerce') }}">E-commerce SEO</a> <i>|</i> <a href="{{ route('seo.link-building') }}">Link building services</a> <i>|</i> <a href="{{ route('seo.ppc') }}">PPC advertising</a> <i>|</i> <a href="{{ route('seo.social-media') }}">Social media marketing</a> <i>|</i> <a href="{{ route('seo.content') }}">Content marketing</a> <i>|</i> <a href="{{ route('seo.email') }}">Email marketing</a> <i>|</i> <a href="{{ route('resources.pricing') }}">SEO packages &amp; pricing</a></div></details><details><summary>AI search</summary><div class="inline"><a href="{{ route('seo.ai-search') }}">AI search optimisation</a> <i>|</i> <a href="{{ route('seo.answer-engine') }}">Answer engine optimisation</a> <i>|</i> <a href="{{ route('seo.ai-assistant') }}">AI assistant visibility</a> <i>|</i> <a href="{{ route('services.ai-dev') }}">AI &amp; machine learning development</a></div></details><details><summary>Technology</summary><div class="inline"><a href="{{ route('services.cloud') }}">Cloud solutions</a> <i>|</i> <a href="{{ route('services.iot') }}">IoT solutions</a> <i>|</i> <a href="{{ route('services.big-data') }}">Big data analytics</a></div></details><details><summary>Locations</summary><div class="inline"><a href="{{ route('industry.detail', ['slug' => 'software-development-dubai']) }}">Dubai</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-abu-dhabi']) }}">Abu Dhabi</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-riyadh']) }}">Riyadh</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-jeddah']) }}">Jeddah</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-doha']) }}">Doha</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-manama']) }}">Manama</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-amman']) }}">Amman</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-london']) }}">London</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-manchester']) }}">Manchester</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-lucknow']) }}">Lucknow</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-delhi']) }}">New Delhi</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-mumbai']) }}">Mumbai</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-bangalore']) }}">Bangalore</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-toronto']) }}">Toronto</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-development-new-york']) }}">New York</a> <i>|</i> <a href="{{ route('rental.locations') }}">All locations</a></div></details><details><summary>Industries</summary><div class="inline"><a href="{{ route('industry.detail', ['slug' => 'software-for-travel-tourism']) }}">Travel &amp; tourism</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-hospitality']) }}">Hospitality</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-logistics']) }}">Logistics &amp; transport</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-healthcare']) }}">Healthcare</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-real-estate']) }}">Real estate</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-education']) }}">Education</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-ecommerce-retail']) }}">E-commerce &amp; retail</a> <i>|</i> <a href="{{ route('industry.detail', ['slug' => 'software-for-automotive']) }}">Automotive</a></div></details></div>
 
- <div class="footbadges"><img src="{{ asset('assets/frontend/img/certified/google-partner-badge.webp') }}" alt="Google Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/meta-business-partner.png') }}" alt="Meta Business Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/microsoft-solutions-partner.png') }}" alt="Microsoft Advertising Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/iso-certification.webp') }}" alt="ISO 9001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/iso-27001.jpeg') }}" alt="ISO 27001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/clutch.webp') }}" alt="Clutch" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/Goodfirms.co.png') }}" alt="GoodFirms" width="240" height="96" loading="lazy"></div>
+ <div class="footbadges"><img src="{{ asset('assets/frontend/img/certified/google-partner-badge.webp') }}" alt="Google Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/meta-business-partner.png') }}" alt="Meta Business Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/microsoft-solutions-partner.png') }}" alt="Microsoft Advertising Partner" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/iso-certification.webp') }}" alt="ISO 9001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/iso-27001.jpeg') }}" alt="ISO 27001" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/clutch.webp') }}" alt="Clutch" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/Goodfirms.co.png') }}" alt="GoodFirms" width="240" height="96" loading="lazy"><img src="{{ asset('assets/frontend/img/certified/dmc.webp') }}" alt="DMCA Protection" width="240" height="96" loading="lazy"></div>
 
  <div class="foot__bar">
  <span>&copy;<span data-year>2026</span> Edion Web Technologies (OPC) Private Limited</span>
@@ -92,7 +92,7 @@
 
 <!-- Case Study Lead Modal -->
 <div id="csLeadModal" style="display:none; position:fixed; inset:0; z-index:9000; background:rgba(11, 27, 43, 0.88); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:1rem; overflow-y:auto;">
-  <div class="card" style="background:var(--paper); border:1px solid var(--paper-3); border-radius:var(--radius-lg); width:100%; max-width:580px; padding:clamp(1.5rem,3vw,2.5rem); position:relative; box-shadow:0 25px 50px -12px rgba(0,0,0,0.6); max-height:90vh; overflow-y:auto; z-index:9001;">
+  <div class="card" style="background:var(--paper); border:1px solid var(--paper-3); border-radius:var(--radius-lg); width:100%; max-width:780px; padding:clamp(1.5rem,3vw,2.5rem); position:relative; box-shadow:0 25px 50px -12px rgba(0,0,0,0.6); max-height:90vh; overflow-y:auto; z-index:9001;">
     <button type="button" onclick="closeCsModal()" style="position:absolute; top:1.25rem; right:1.25rem; background:transparent; border:none; color:var(--text-3); font-size:1.6rem; cursor:pointer; line-height:1;">&times;</button>
     <h3 id="csModalTitle" style="margin:0 0 0.25rem; font-size:var(--fs-h3); font-weight:700; color:var(--text-1);">Download Case Study</h3>
     <p style="margin:0 0 1.25rem; font-size:var(--fs-small); color:var(--text-2);">Fill in your details to download the complete PDF case study.</p>
@@ -104,46 +104,70 @@
       
       <div class="row">
         <div class="field">
-          <label for="cs-name">Name <i style="color:var(--hold);font-style:normal">*</i></label>
+          <label for="cs-name">Full name <i style="color:var(--hold);font-style:normal">*</i></label>
           <input id="cs-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
         </div>
         <div class="field">
-          <label for="cs-email">Email <i style="color:var(--hold);font-style:normal">*</i></label>
-          <input id="cs-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+          <label for="cs-company">Company</label>
+          <input id="cs-company" name="company" type="text" autocomplete="organization" placeholder="Optional">
         </div>
       </div>
       
       <div class="row">
         <div class="field">
-          <label for="cs-phone">Phone or WhatsApp</label>
-          <input id="cs-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+          <label for="cs-email">Work email <i style="color:var(--hold);font-style:normal">*</i></label>
+          <input id="cs-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
         </div>
         <div class="field">
-          <label for="cs-subject">Subject <i style="color:var(--hold);font-style:normal">*</i></label>
-          <select id="cs-subject" name="subject" required>
+          <label for="cs-phone">WhatsApp number <i style="color:var(--hold);font-style:normal">*</i></label>
+          <input id="cs-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+91 00000 00000">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="field">
+          <label for="cs-interest">What do you need? <i style="color:var(--hold);font-style:normal">*</i></label>
+          <select id="cs-interest" name="interest" required>
             <option value="">Choose one</option>
-            <option value="New project enquiry">New project enquiry</option>
-            <option value="Car rental / fleet software">Car rental / fleet software</option>
-            <option value="SEO or marketing">SEO or marketing</option>
-            <option value="Support for an existing project">Support for an existing project</option>
-            <option value="Something else">Something else</option>
+            <option>Car rental or fleet software</option>
+            <option>Website design &amp; development</option>
+            <option>E-commerce build</option>
+            <option>Mobile app</option>
+            <option>Custom software or internal system</option>
+            <option>SEO or digital marketing</option>
+            <option>AI, data or cloud work</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="cs-budget">Budget range</label>
+          <select id="cs-budget" name="budget">
+            <option value="">Prefer not to say</option>
+            <option>Under $2,000</option>
+            <option>$2,000 - $10,000</option>
+            <option>$10,000 - $50,000</option>
+            <option>$50,000+</option>
+            <option>Monthly retainer</option>
           </select>
         </div>
       </div>
       
       <div class="field">
-        <label for="cs-message">Message <i style="color:var(--hold);font-style:normal">*</i></label>
-        <textarea id="cs-message" name="message" required placeholder="What can we help with?"></textarea>
+        <label for="cs-message">Tell us about the project <i style="color:var(--hold);font-style:normal">*</i></label>
+        <textarea id="cs-message" name="message" required placeholder="What are you building or fixing? What's the deadline? Anything already in place?"></textarea>
       </div>
 
-      <label class="check" style="margin-bottom:var(--sp-4);">
-        <input type="checkbox" name="consent" required>
+      <div class="checks" style="margin-top:var(--sp-4);">
+        <label class="check"><input type="checkbox" name="nda">
+        <span>I'd like an NDA in place before we talk in detail.</span></label>
+        <label class="check"><input type="checkbox" name="consent" required>
         <span>I agree to Edion contacting me about this enquiry. See our
-        <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
-        <i style="color:var(--hold);font-style:normal">*</i></span>
-      </label>
+        <a href="{{ route('resources.privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
+        <i style="color:var(--hold);font-style:normal">*</i></span></label>
+      </div>
       
-      <button type="submit" id="csSubmitBtn" class="btn btn--signal" style="width:100%; justify-content:center;">
+      <button type="submit" id="csSubmitBtn" class="btn btn--signal" style="width:100%; justify-content:center; margin-top:var(--sp-4);">
         Submit &amp; Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </form>
@@ -186,14 +210,16 @@ document.addEventListener('DOMContentLoaded', function() {
         let missing = [];
         const name = csForm.querySelector('input[name="name"]');
         const email = csForm.querySelector('input[name="email"]');
-        const subject = csForm.querySelector('select[name="subject"]');
+        const phone = csForm.querySelector('input[name="phone"]');
+        const interest = csForm.querySelector('select[name="interest"]');
         const message = csForm.querySelector('textarea[name="message"]');
         const consent = csForm.querySelector('input[name="consent"]');
 
-        if (!name || !name.value.trim()) missing.push('Name');
-        if (!email || !email.value.trim()) missing.push('Email');
-        if (!subject || !subject.value) missing.push('Subject');
-        if (!message || !message.value.trim()) missing.push('Message');
+        if (!name || !name.value.trim()) missing.push('Full Name');
+        if (!email || !email.value.trim()) missing.push('Work Email');
+        if (!phone || !phone.value.trim()) missing.push('WhatsApp Number');
+        if (!interest || !interest.value) missing.push('What do you need?');
+        if (!message || !message.value.trim()) missing.push('Project Message');
         if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
 
         Swal.fire({
@@ -241,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(data => {
         btn.disabled = false;
-        btn.innerHTML = 'Submit & Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        btn.innerHTML = 'Submit &amp; Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         if (data.success) {
           closeCsModal();
           csForm.reset();
@@ -265,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(err => {
         btn.disabled = false;
-        btn.innerHTML = 'Submit & Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        btn.innerHTML = 'Submit &amp; Download PDF <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       });
     });
   }

@@ -91,10 +91,37 @@
                                                                     required value="{{ $lead->title }}">
                                                             </div>
 
+                                                            <!-- Custom Slug Input -->
+                                                            <div class="mb-3">
+                                                                <label for="slug_{{ $lead->id }}" class="form-label">Custom Slug (URL)</label>
+                                                                <input type="text" class="form-control" id="slug_{{ $lead->id }}" name="slug"
+                                                                    value="{{ $lead->slug }}" placeholder="e.g. custom-post-url-slug">
+                                                            </div>
+
+                                                            <!-- Category Select -->
+                                                            <div class="mb-3">
+                                                                <label for="category_id_{{ $lead->id }}" class="form-label">Category</label>
+                                                                <select class="form-select" id="category_id_{{ $lead->id }}" name="category_id">
+                                                                    <option value="">-- Select Category --</option>
+                                                                    @if(isset($categories))
+                                                                        @foreach($categories as $cat)
+                                                                            <option value="{{ $cat->id }}" {{ ($lead->category_id ?? null) == $cat->id ? 'selected' : '' }}>{{ $cat->name }}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </select>
+                                                            </div>
+
                                                             <!-- Image Input -->
                                                             <div class="mb-3">
                                                                 <label for="image" class="form-label">Post Banner Image</label>
                                                                 <input type="file" class="form-control" id="image" name="image">
+                                                            </div>
+
+                                                            <!-- Image Alt Input -->
+                                                            <div class="mb-3">
+                                                                <label for="image_alt_{{ $lead->id }}" class="form-label">Image Alt Text</label>
+                                                                <input type="text" class="form-control" id="image_alt_{{ $lead->id }}" name="image_alt"
+                                                                    value="{{ $lead->image_alt ?? '' }}" placeholder="Descriptive alt text for banner image">
                                                             </div>
 
                                                             <!-- Display Existing Image -->
@@ -220,9 +247,33 @@
                             <input type="text" class="form-control" id="title" name="title" required>
                         </div>
 
+                        <!-- Custom Slug Input -->
+                        <div class="mb-3">
+                            <label for="add_slug" class="form-label">Custom Slug (URL)</label>
+                            <input type="text" class="form-control" id="add_slug" name="slug" placeholder="e.g. custom-post-url-slug">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="add_category_id" class="form-label">Category</label>
+                            <select class="form-select" id="add_category_id" name="category_id">
+                                <option value="">-- Select Category --</option>
+                                @if(isset($categories))
+                                    @foreach($categories as $cat)
+                                        <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
+
                         <div class="mb-3">
                             <label for="image" class="form-label">Post Banner Image</label>
                             <input type="file" class="form-control" id="image" name="image" required>
+                        </div>
+
+                        <!-- Image Alt Input -->
+                        <div class="mb-3">
+                            <label for="add_image_alt" class="form-label">Image Alt Text</label>
+                            <input type="text" class="form-control" id="add_image_alt" name="image_alt" placeholder="Descriptive alt text for banner image">
                         </div>
 
                         <div class="mb-3">

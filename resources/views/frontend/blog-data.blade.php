@@ -11,7 +11,7 @@
                       </div>
                       <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post"
                         href="{{ route('frontend.blog-details', $blog->slug) }}">
-                        <img class="" src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" loading="lazy">
+                        <img class="" src="{{ asset('storage/' . $blog- alt="Edion Web Technologies">image) }}" alt="{{ $blog->title }}" loading="lazy">
                       </a>
                       <div class="mxd-blog-item__caption">
                         <div class="mxd-blog-item__title">

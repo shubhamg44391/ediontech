@@ -15,7 +15,7 @@ class BlogController extends Controller
     public function show_blog()
     {
         // this is the query builder 
-        $blogs = DB::table('blogs')->orderBy('id', 'DESC')->get();
+        $blogs = DB::table('posts')->orderBy('id', 'DESC')->get();
 
 
 

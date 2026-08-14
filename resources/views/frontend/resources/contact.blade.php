@@ -19,174 +19,199 @@
 
 <section class="band band--tight shell">
  <div class="split">
- <div class="card" style="padding:clamp(1.5rem,3vw,2.5rem);order:2" data-reveal>
- <h2 style="font-size:var(--fs-h3)">Send a message</h2>
- <form class="form" id="contactForm" action="{{ route('contact.store') }}" method="POST" style="margin-top:var(--sp-4)">
- @csrf
- <div class="row">
- <div class="field">
- <label for="c-name">Name <i>*</i></label>
- <input id="c-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
- </div>
- <div class="field">
- <label for="c-email">Email <i>*</i></label>
- <input id="c-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
- </div>
- </div>
- <div class="row">
- <div class="field">
- <label for="c-phone">Phone or WhatsApp</label>
- <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
- </div>
- <div class="field">
- <label for="c-subject">Subject <i>*</i></label>
- <select id="c-subject" name="subject" required>
- <option value="">Choose one</option>
- <option value="New project enquiry">New project enquiry</option>
- <option value="Car rental / fleet software">Car rental / fleet software</option>
- <option value="SEO or marketing">SEO or marketing</option>
- <option value="Support for an existing project">Support for an existing project</option>
- <option value="Careers">Careers</option>
- <option value="Something else">Something else</option>
- </select>
- </div>
- </div>
- <div class="field">
- <label for="c-message">Message <i>*</i></label>
- <textarea id="c-message" name="message" required
- placeholder="What can we help with?"></textarea>
- </div>
- <label class="check"><input type="checkbox" name="consent" required>
- <span>I agree to Edion contacting me about this enquiry. See our
- <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
- <i style="color:var(--hold);font-style:normal">*</i></span></label>
- <button class="btn btn--signal" id="cSubmitBtn" type="submit" style="justify-content:center">
- Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
- </form>
+  <div class="card" style="padding:clamp(1.5rem,3vw,2.5rem);order:2" data-reveal>
+  <h2 style="font-size:var(--fs-h3)">Send a message</h2>
+  <p style="color:var(--text-2)">Fields marked <i style="color:var(--hold);font-style:normal">*</i> are required.</p>
+  <form class="form" id="contactForm" action="{{ route('contact.store') }}" method="POST" style="margin-top:var(--sp-4)">
+  @csrf
+  <div class="row">
+  <div class="field">
+  <label for="c-name">Full name <i>*</i></label>
+  <input id="c-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
+  </div>
+  <div class="field">
+  <label for="c-company">Company</label>
+  <input id="c-company" name="company" type="text" autocomplete="organization" placeholder="Optional">
+  </div>
+  </div>
+  <div class="row">
+  <div class="field">
+  <label for="c-email">Work email <i>*</i></label>
+  <input id="c-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+  </div>
+  <div class="field">
+  <label for="c-phone">WhatsApp number <i>*</i></label>
+  <input id="c-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+91 00000 00000">
+  </div>
+  </div>
+  <div class="field">
+  <label for="c-interest">What do you need? <i>*</i></label>
+  <select id="c-interest" name="interest" required>
+  <option value="">Choose one</option>
+  <option>Car rental or fleet software</option>
+  <option>Website design &amp; development</option>
+  <option>E-commerce build</option>
+  <option>Mobile app</option>
+  <option>Custom software or internal system</option>
+  <option>SEO or digital marketing</option>
+  <option>AI, data or cloud work</option>
+  <option>Something else</option>
+  </select>
+  </div>
+  <div class="field">
+  <label for="c-budget">Budget range</label>
+  <select id="c-budget" name="budget">
+  <option value="">Prefer not to say</option>
+  <option>Under $2,000</option>
+  <option>$2,000 - $10,000</option>
+  <option>$10,000 - $50,000</option>
+  <option>$50,000+</option>
+  <option>Monthly retainer</option>
+  </select>
+  <p class="hint">A range helps us bring the right person to the call. It isn't a commitment.</p>
+  </div>
+  <div class="field">
+  <label for="c-message">Tell us about the project <i>*</i></label>
+  <textarea id="c-message" name="message" required
+  placeholder="What are you building or fixing? What's the deadline? Anything already in place?"></textarea>
+  </div>
+  <div class="checks">
+  <label class="check"><input type="checkbox" name="nda">
+  <span>I'd like an NDA in place before we talk in detail.</span></label>
+  <label class="check"><input type="checkbox" name="consent" required>
+  <span>I agree to Edion contacting me about this enquiry. See our
+  <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
+  <i style="color:var(--hold);font-style:normal">*</i></span></label>
+  </div>
+  <button class="btn btn--signal" id="cSubmitBtn" type="submit" style="justify-content:center">
+  Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </form>
 
- @push('scripts')
- <script>
- document.addEventListener('DOMContentLoaded', function() {
-   const contactForm = document.getElementById('contactForm');
-   if (contactForm) {
-     contactForm.addEventListener('submit', function(e) {
-       e.preventDefault();
+  @push('scripts')
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-       if (!contactForm.checkValidity()) {
-         contactForm.reportValidity();
-         
-         let missing = [];
-         const name = contactForm.querySelector('input[name="name"]');
-         const email = contactForm.querySelector('input[name="email"]');
-         const subject = contactForm.querySelector('select[name="subject"]');
-         const message = contactForm.querySelector('textarea[name="message"]');
-         const consent = contactForm.querySelector('input[name="consent"]');
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          
+          let missing = [];
+          const name = contactForm.querySelector('input[name="name"]');
+          const email = contactForm.querySelector('input[name="email"]');
+          const phone = contactForm.querySelector('input[name="phone"]');
+          const interest = contactForm.querySelector('select[name="interest"]');
+          const message = contactForm.querySelector('textarea[name="message"]');
+          const consent = contactForm.querySelector('input[name="consent"]');
 
-         if (!name || !name.value.trim()) missing.push('Name');
-         if (!email || !email.value.trim()) missing.push('Email');
-         if (!subject || !subject.value) missing.push('Subject');
-         if (!message || !message.value.trim()) missing.push('Message');
-         if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
+          if (!name || !name.value.trim()) missing.push('Full Name');
+          if (!email || !email.value.trim()) missing.push('Work Email');
+          if (!phone || !phone.value.trim()) missing.push('WhatsApp Number');
+          if (!interest || !interest.value) missing.push('What do you need');
+          if (!message || !message.value.trim()) missing.push('Project Brief');
+          if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
 
-         Swal.fire({
-           title: 'Validation Error',
-           html: 'Please complete all required fields:<br><br><b>' + missing.join(', ') + '</b>',
-           icon: 'warning',
-           confirmButtonColor: '#2563EB'
-         });
-         return;
-       }
+          Swal.fire({
+            title: 'Validation Error',
+            html: 'Please complete all required fields:<br><br><b>' + missing.join(', ') + '</b>',
+            icon: 'warning',
+            confirmButtonColor: '#2563EB'
+          });
+          return;
+        }
 
-       const btn = document.getElementById('cSubmitBtn');
-       btn.disabled = true;
-       btn.textContent = 'Sending...';
+        const btn = document.getElementById('cSubmitBtn');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
 
-       const formData = new FormData(contactForm);
+        const formData = new FormData(contactForm);
 
-       fetch(contactForm.action, {
-         method: 'POST',
-         headers: {
-           'X-Requested-With': 'XMLHttpRequest',
-           'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
-         },
-         body: formData
-       })
-       .then(res => {
-         if (!res.ok) {
-           return res.json().then(errData => {
-             let errorMsg = 'Please fill out all required fields correctly.';
-             if (errData.errors) {
-               errorMsg = Object.values(errData.errors).flat().join('<br>');
-             } else if (errData.message) {
-               errorMsg = errData.message;
-             }
-             Swal.fire({
-               title: 'Validation Error',
-               html: errorMsg,
-               icon: 'error',
-               confirmButtonColor: '#2563EB'
-             });
-             throw new Error(errorMsg);
-           });
-         }
-         return res.json();
-       })
-       .then(data => {
-         btn.disabled = false;
-         btn.innerHTML = 'Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-         if (data.success) {
-           contactForm.reset();
-           Swal.fire({
-             title: 'Success!',
-             text: data.message || 'Thank you! Your message has been sent successfully.',
-             icon: 'success',
-             confirmButtonColor: '#2563EB'
-           });
-         }
-       })
-       .catch(err => {
-         btn.disabled = false;
-         btn.innerHTML = 'Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-       });
-     });
-   }
- });
- </script>
- @endpush
- </div>
+        fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+          },
+          body: formData
+        })
+        .then(res => {
+          if (!res.ok) {
+            return res.json().then(errData => {
+              let errorMsg = 'Please fill out all required fields correctly.';
+              if (errData.errors) {
+                errorMsg = Object.values(errData.errors).flat().join('<br>');
+              } else if (errData.message) {
+                errorMsg = errData.message;
+              }
+              Swal.fire({
+                title: 'Validation Error',
+                html: errorMsg,
+                icon: 'error',
+                confirmButtonColor: '#2563EB'
+              });
+              throw new Error(errorMsg);
+            });
+          }
+          return res.json();
+        })
+        .then(data => {
+          btn.disabled = false;
+          btn.innerHTML = 'Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          if (data.success) {
+            contactForm.reset();
+            Swal.fire({
+              title: 'Success!',
+              text: data.message || 'Thank you! Your message has been sent successfully.',
+              icon: 'success',
+              confirmButtonColor: '#2563EB'
+            });
+          }
+        })
+        .catch(err => {
+          btn.disabled = false;
+          btn.innerHTML = 'Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        });
+      });
+    }
+  });
+  </script>
+  @endpush
+  </div>
 
- <div style="order:1" data-reveal>
- <div class="band--ink" style="border-radius:var(--radius-lg);padding:clamp(1.5rem,3vw,2.5rem)">
- <p class="eyebrow">Direct lines</p>
- <dl class="contact-list" style="margin-top:var(--sp-5)">
- <div class="contact-item">
- <dt>Call or WhatsApp</dt>
- <dd><a href="tel:+919696787596">+91 96967 87596</a>
- <small>Mon-Sat, 10:00-20:00 IST</small></dd>
- </div>
- <div class="contact-item">
- <dt>WhatsApp</dt>
- <dd><a href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">+91 96967 87596</a>
- <small>Fastest route to a reply during business hours</small></dd>
- </div>
- <div class="contact-item">
- <dt>Email</dt>
- <dd><a href="mailto:contact@ediontech.com">contact@ediontech.com</a>
- <small>Replies within one working day</small></dd>
- </div>
- <div class="contact-item">
- <dt>Office</dt>
- <dd style="font-size:var(--fs-body);font-family:var(--font-body);font-weight:400;color:var(--text-on-ink-2);line-height:1.7">
- Edion Web Technologies (OPC) Private Limited<br>
- 4C 487, Sector 4, Gomti Nagar Extension<br>Lucknow, Uttar Pradesh 226010<br>India
- </dd>
- </div>
- </dl>
- <a class="btn btn--signal" href="{{ url('/free-consultation') }}"
- style="margin-top:var(--sp-6);justify-content:center;width:100%">
- Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
- </div>
- </div>
+  <div style="order:1" data-reveal>
+  <div class="band--ink" style="border-radius:var(--radius-lg);padding:clamp(1.5rem,3vw,2.5rem)">
+  <p class="eyebrow">Direct lines</p>
+  <dl class="contact-list" style="margin-top:var(--sp-5)">
+  <div class="contact-item">
+  <dt>Call or WhatsApp</dt>
+  <dd><a href="tel:+919696787596">+91 96967 87596</a>
+  <small>Mon-Sat, 10:00-20:00 IST</small></dd>
+  </div>
+  <div class="contact-item">
+  <dt>WhatsApp</dt>
+  <dd><a href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">+91 96967 87596</a>
+  <small>Fastest route to a reply during business hours</small></dd>
+  </div>
+  <div class="contact-item">
+  <dt>Email</dt>
+  <dd><a href="mailto:contact@ediontech.com">contact@ediontech.com</a>
+  <small>Replies within one working day</small></dd>
+  </div>
+  <div class="contact-item">
+  <dt>Office</dt>
+  <dd style="font-size:var(--fs-body);font-family:var(--font-body);font-weight:400;color:var(--text-on-ink-2);line-height:1.7">
+  Edion Web Technologies (OPC) Private Limited<br>
+  4C 487, Sector 4, Gomti Nagar Extension<br>Lucknow, Uttar Pradesh 226010<br>India
+  </dd>
+  </div>
+  </dl>
+  <a class="btn btn--signal" href="{{ url('/free-consultation') }}"
+  style="margin-top:var(--sp-6);justify-content:center;width:100%">
+  Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  </div>
  </div>
 </section>
 

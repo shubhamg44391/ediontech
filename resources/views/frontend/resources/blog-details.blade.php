@@ -26,7 +26,7 @@
 
 @if(isset($post->image) && !empty($post->image))
 <figure class="shell" style="margin:0 auto var(--sp-8)">
- <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title ?? 'Blog Post' }}" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;border-radius:var(--radius-lg);object-fit:cover" onerror="this.onerror=null;this.src='{{ asset('assets/frontend/img/work/studyimg/dunya.png') }}';">
+ <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->image_alt ?? $post->title ?? 'Blog Post' }}" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;border-radius:var(--radius-lg);object-fit:cover" onerror="this.onerror=null;this.src='{{ asset('assets/frontend/img/work/studyimg/dunya.png') }}';">
 </figure>
 @endif
 
@@ -266,44 +266,84 @@
 <section class="band shell">
  <div class="sec-head" data-reveal>
  <div><p class="eyebrow">Keep reading</p><h2>Related articles</h2></div>
- <a class="btn btn--line" href="{{ url('/blog') }}">All insights<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--line" href="{{ route('resources.blog') }}">All insights<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="posts">
- <article class="post" data-post-cat="Product engineering" data-reveal>
- <a href="{{ url('/blog-details') }}" tabindex="-1" aria-hidden="true">
- <div class="post__media"></div>
- </a>
- <div class="post__body">
- <p class="post__kicker"><span>Product engineering</span><span>&middot;</span>
- <time datetime="2026-06-22">22 June 2026</time><span>&middot;</span><span>8 min read</span></p>
- <h3><a href="{{ url('/blog-details') }}">Fleet Management System vs Spreadsheets: When It's Time to Switch</a></h3>
- <p>Spreadsheets work longer than most vendors admit. Here are the four signals that mean you've genuinely outgrown them.</p>
- <span class="post__more">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
- </div>
-</article><article class="post" data-post-cat="Engineering" data-reveal>
- <a href="{{ url('/blog-details') }}" tabindex="-1" aria-hidden="true">
- <div class="post__media"></div>
- </a>
- <div class="post__body">
- <p class="post__kicker"><span>Engineering</span><span>&middot;</span>
- <time datetime="2026-06-05">05 June 2026</time><span>&middot;</span><span>10 min read</span></p>
- <h3><a href="{{ url('/blog-details') }}">Core Web Vitals in 2026: What Actually Moves the Numbers</a></h3>
- <p>The interventions that produced real LCP and INP gains on client sites this year, ranked by effort against impact.</p>
- <span class="post__more">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
- </div>
-</article><article class="post" data-post-cat="Engineering" data-reveal>
- <a href="{{ url('/blog-details') }}" tabindex="-1" aria-hidden="true">
- <div class="post__media"></div>
- </a>
- <div class="post__body">
- <p class="post__kicker"><span>Engineering</span><span>&middot;</span>
- <time datetime="2026-05-18">18 May 2026</time><span>&middot;</span><span>7 min read</span></p>
- <h3><a href="{{ url('/blog-details') }}">Choosing Between Native and Flutter in 2026</a></h3>
- <p>A decision framework based on team size, hiring market and how much platform-specific behaviour your app really needs.</p>
- <span class="post__more">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
- </div>
-</article>
- </div>
+  @if(isset($recentPosts) && count($recentPosts) > 0)
+    @foreach($recentPosts as $rPost)
+      @php
+        $rCatName = 'Engineering';
+        if (!empty($rPost->category_id)) {
+            $catObj = \Illuminate\Support\Facades\DB::table('categories')->where('id', $rPost->category_id)->first();
+            if ($catObj) { $rCatName = $catObj->name; }
+        }
+      @endphp
+      <article class="post" data-post-cat="{{ $rCatName }}" data-reveal>
+        <a href="{{ route('resources.blog-details', ['slug' => $rPost->slug]) }}" tabindex="-1" aria-hidden="true">
+          <div class="post__media">
+            @if(!empty($rPost->image))
+              <img src="{{ asset('storage/' . $rPost->image) }}" alt="{{ $rPost->image_alt ?? $rPost->title }}" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.onerror=null;this.src='{{ asset('assets/frontend/img/work/studyimg/dunya.png') }}';">
+            @else
+              <img src="{{ asset('assets/frontend/img/work/studyimg/dunya.png') }}" alt="{{ $rPost->title }}" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            @endif
+          </div>
+        </a>
+        <div class="post__body">
+          <p class="post__kicker">
+            <span>{{ $rCatName }}</span><span>&middot;</span>
+            <time datetime="{{ date('Y-m-d', strtotime($rPost->created_at ?? now())) }}">{{ date('d F Y', strtotime($rPost->created_at ?? now())) }}</time>
+          </p>
+          <h3><a href="{{ route('resources.blog-details', ['slug' => $rPost->slug]) }}">{{ $rPost->title }}</a></h3>
+          <p>{{ Str::limit(strip_tags($rPost->description ?? $rPost->meta_description ?? ''), 120) }}</p>
+          <a href="{{ route('resources.blog-details', ['slug' => $rPost->slug]) }}" class="post__more" style="display:inline-flex;align-items:center;">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+    @endforeach
+  @else
+    <article class="post" data-post-cat="Product engineering" data-reveal>
+      <a href="{{ route('resources.blog') }}" tabindex="-1" aria-hidden="true">
+        <div class="post__media">
+          <img src="{{ asset('assets/frontend/img/work/studyimg/dunya.png') }}" alt="Fleet Management System" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </a>
+      <div class="post__body">
+        <p class="post__kicker"><span>Product engineering</span><span>&middot;</span>
+        <time datetime="2026-06-22">22 June 2026</time><span>&middot;</span><span>8 min read</span></p>
+        <h3><a href="{{ route('resources.blog') }}">Fleet Management System vs Spreadsheets: When It's Time to Switch</a></h3>
+        <p>Spreadsheets work longer than most vendors admit. Here are the four signals that mean you've genuinely outgrown them.</p>
+        <span class="post__more">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </article>
+    <article class="post" data-post-cat="Engineering" data-reveal>
+      <a href="{{ route('resources.blog') }}" tabindex="-1" aria-hidden="true">
+        <div class="post__media">
+          <img src="{{ asset('assets/frontend/img/work/studyimg/autonation.png') }}" alt="Core Web Vitals" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </a>
+      <div class="post__body">
+        <p class="post__kicker"><span>Engineering</span><span>&middot;</span>
+        <time datetime="2026-06-05">05 June 2026</time><span>&middot;</span><span>10 min read</span></p>
+        <h3><a href="{{ route('resources.blog') }}">Core Web Vitals in 2026: What Actually Moves the Numbers</a></h3>
+        <p>The interventions that produced real LCP and INP gains on client sites this year, ranked by effort against impact.</p>
+        <span class="post__more">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </article>
+    <article class="post" data-post-cat="Engineering" data-reveal>
+      <a href="{{ route('resources.blog') }}" tabindex="-1" aria-hidden="true">
+        <div class="post__media">
+          <img src="{{ asset('assets/frontend/img/work/studyimg/bxience.png') }}" alt="Native and Flutter" width="800" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </a>
+      <div class="post__body">
+        <p class="post__kicker"><span>Engineering</span><span>&middot;</span>
+        <time datetime="2026-05-18">18 May 2026</time><span>&middot;</span><span>7 min read</span></p>
+        <h3><a href="{{ route('resources.blog') }}">Choosing Between Native and Flutter in 2026</a></h3>
+        <p>A decision framework based on team size, hiring market and how much platform-specific behaviour your app really needs.</p>
+        <span class="post__more">Read the article<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </article>
+  @endif
+  </div>
 </section>
 
 </main>

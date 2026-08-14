@@ -21,6 +21,9 @@
   </a><a class="badge" href="https://www.goodfirms.co/" rel="noopener nofollow" target="_blank">
    <img src="{{ asset('assets/frontend/img/certified/Goodfirms.co.png') }}" alt="GoodFirms, Listed agency" width="240" height="96" loading="lazy" decoding="async">
    <b>GoodFirms</b><span>Listed agency</span>
+  </a><a class="badge" href="#" rel="noopener nofollow">
+   <img src="{{ asset('assets/frontend/img/certified/dmc.webp') }}" alt="DMCA Protected" width="240" height="96" loading="lazy" decoding="async">
+   <b>DMCA Protected</b><span>Copyright Protection</span>
   </a></div>
  </div>
 </section>

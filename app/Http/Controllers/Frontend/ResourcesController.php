@@ -9,7 +9,8 @@ class ResourcesController extends Controller
     public function blog()
     {
         $posts = \Illuminate\Support\Facades\DB::table('posts')->latest()->get();
-        return view('frontend.resources.blog', compact('posts'));
+        $categories = \Illuminate\Support\Facades\DB::table('categories')->get();
+        return view('frontend.resources.blog', compact('posts', 'categories'));
     }
 
     public function blogDetails($slug = null)
@@ -70,7 +71,11 @@ class ResourcesController extends Controller
             'email' => 'required|email|max:255',
             'phone' => 'nullable|string|max:100',
             'number' => 'nullable|string|max:100',
+            'company' => 'nullable|string|max:255',
+            'budget' => 'nullable|string|max:255',
+            'interest' => 'nullable|string|max:255',
             'message' => 'nullable|string',
+            'brief' => 'nullable|string',
         ]);
 
         $phoneVal = $request->phone ?? $request->number ?? null;
@@ -78,11 +83,21 @@ class ResourcesController extends Controller
             $phoneVal = substr($phoneVal, 0, 95);
         }
 
+        $sourcePage = 'Contact Us';
+        $interestVal = $request->interest ?? null;
+        $ndaVal = $request->has('nda') ? 'Yes' : 'No';
+        $userMsg = $request->message ?? $request->brief ?? null;
+
         \Illuminate\Support\Facades\DB::table('leads')->insert([
             'name' => $request->name,
             'email' => $request->email,
             'number' => $phoneVal,
-            'message' => $request->message ?? 'Contact Form Lead',
+            'company' => $request->company,
+            'service' => $interestVal,
+            'source' => $sourcePage,
+            'nda' => $ndaVal,
+            'budget' => $request->budget,
+            'message' => $userMsg,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -90,16 +105,59 @@ class ResourcesController extends Controller
         if ($request->ajax() || $request->wantsJson()) {
             return response()->json([
                 'success' => true,
-                'message' => 'Thank you! Your message has been sent successfully.',
+                'message' => 'Thank you! Your enquiry has been sent successfully.',
             ]);
         }
 
-        return redirect()->back()->with('success', 'Thank you! Your message has been sent successfully.');
+        return redirect()->back()->with('success', 'Thank you! Your enquiry has been sent successfully.');
     }
 
     public function submitConsultation(\Illuminate\Http\Request $request)
     {
-        return $this->submitContact($request);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:100',
+            'number' => 'nullable|string|max:100',
+            'company' => 'nullable|string|max:255',
+            'budget' => 'nullable|string|max:255',
+            'interest' => 'nullable|string|max:255',
+            'brief' => 'nullable|string',
+            'message' => 'nullable|string',
+        ]);
+
+        $phoneVal = $request->phone ?? $request->number ?? null;
+        if ($phoneVal) {
+            $phoneVal = substr($phoneVal, 0, 95);
+        }
+
+        $sourcePage = 'Free Consultation';
+        $interestVal = $request->interest ?? null;
+        $ndaVal = $request->has('nda') ? 'Yes' : 'No';
+        $userBrief = $request->brief ?? $request->message ?? null;
+
+        \Illuminate\Support\Facades\DB::table('leads')->insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'number' => $phoneVal,
+            'company' => $request->company,
+            'service' => $interestVal,
+            'source' => $sourcePage,
+            'nda' => $ndaVal,
+            'budget' => $request->budget,
+            'message' => $userBrief,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Thank you! Your consultation request has been submitted successfully.',
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'Thank you! Your consultation request has been submitted successfully.');
     }
 
     public function submitCaseStudyLead(\Illuminate\Http\Request $request)
@@ -107,27 +165,34 @@ class ResourcesController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'nullable|string|max:100',
+            'phone' => 'required|string|max:100',
             'number' => 'nullable|string|max:100',
-            'subject' => 'nullable|string|max:255',
-            'message' => 'nullable|string',
+            'company' => 'nullable|string|max:255',
+            'budget' => 'nullable|string|max:255',
+            'interest' => 'required|string|max:255',
+            'message' => 'required|string',
         ]);
 
         $projectName = $request->project_name ?? 'Case Study';
         $pdfFile = $request->pdf_file ?? '';
-        $userMsg = $request->message ? (" | User Note: " . $request->message) : "";
-        $subjectStr = $request->subject ? (" [Subject: " . $request->subject . "]") : "";
-
         $phoneVal = $request->phone ?? $request->number ?? null;
         if ($phoneVal) {
             $phoneVal = substr($phoneVal, 0, 95);
         }
 
+        $interestVal = $request->interest ?? 'N/A';
+        $ndaVal = $request->has('nda') ? 'Yes' : 'No';
+
         \Illuminate\Support\Facades\DB::table('leads')->insert([
             'name' => $request->name,
             'email' => $request->email,
             'number' => $phoneVal,
-            'message' => 'Downloaded Case Study PDF: ' . $projectName . $subjectStr . $userMsg,
+            'company' => $request->company,
+            'service' => $interestVal,
+            'source' => 'Works',
+            'nda' => $ndaVal,
+            'budget' => $request->budget,
+            'message' => "Downloaded Case Study PDF: " . $projectName . "\nMessage: " . $request->message,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
