@@ -38,9 +38,9 @@ class ContactUsController extends Controller
       
 
         $data = $request->only(['name', 'email', 'number', 'company', 'message', 'budget']);
-
-          $data['created_at']=now();
-        $data['updated_at']=now();
+        $data['source'] = 'Contact Us';
+        $data['created_at'] = now();
+        $data['updated_at'] = now();
         
         DB::table('leads')->insert($data);
 

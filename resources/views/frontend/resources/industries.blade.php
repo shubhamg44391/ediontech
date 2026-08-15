@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Industries We Serve | Software, Web & SEO by Sector | Edion')
-@section('description', 'Software development, web, mobile and SEO services by industry: car rental and mobility, travel, hospitality, logistics, healthcare, education, real estate, e-commerce and automotive.')
-@section('keywords', 'software development by industry, industry specific software, car rental software, healthcare software development, e-commerce development, logistics software, education software')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Industries We Serve | Software, Web & SEO by Sector | Edion')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Software development, web, mobile and SEO services by industry: car rental and mobility, travel, hospitality, logistics, healthcare, education, real estate, e-commerce and automotive.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'software development by industry, industry specific software, car rental software, healthcare software development, e-commerce development, logistics software, education software')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

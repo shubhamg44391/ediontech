@@ -1,5 +1,9 @@
 @extends('frontend.layouts.app')
 
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Edion Web Technologies | Web Development & Car Rental Software')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies - Custom Software Development & Car Rental Software')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software, web development, edion tech')
+
 @section('main-container')
 <main id="main"><a id="top"></a>
 

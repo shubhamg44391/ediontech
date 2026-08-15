@@ -143,22 +143,28 @@
                                       <span id="err-budget"
                                         style="color:red; font-size:12px; display:{{ $errors->has('budget') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('budget') }}</span>
                                     </div>
-                                    <div class="gap-3 col-12 row mxd-grid-item loading-item d-flex">
-
-                                      <div class="col-12"> <span id="captcha-img"> {!! captcha_img()!!}</span></div>
-                                      <div class="col-12"> <button id="reloadCaptcha"><img
-                                            style="height:40px; width:40px; background-color:whitesmoke;"
-                                            src="{{ asset('img/favicon/two-blue-cycle-arrows_78370-7799.avif') }}" alt=""></button></div>
-                                    </div>
-                                    <div class="col-12 col-md-6 mxd-grid-item loading-item d-flex"
-                                      style="flex-direction: column;">
-                                      <php class="ini"></php>
-                                      <input name="captcha" type="text"
-                                        class="form-control {{ $errors->has('captcha') ? 'error-input' : '' }}"
-                                        placeholder="Captcha">
-                                      <span id="err-captcha"
-                                        style="color:red; font-size:12px; display:{{ $errors->has('captcha') ? 'block' : 'none' }}; margin-top:5px;">{{ $errors->first('captcha') }}</span>
-                                    </div>
+                                     <div class="col-12 mxd-grid-item loading-item">
+                                       <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px; margin-top:12px; margin-bottom:20px;">
+                                         <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                                           <div style="background:#ffffff; padding:6px 12px; border-radius:8px; border:1px solid #cbd5e1; display:inline-flex; align-items:center;">
+                                             <span id="captcha-img">{!! captcha_img() !!}</span>
+                                           </div>
+                                           <button type="button" id="reloadCaptcha" style="display:inline-flex; align-items:center; gap:8px; background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; padding:8px 14px; font-size:13px; font-weight:600; color:#475569; cursor:pointer; transition:all 0.2s ease;">
+                                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+                                             <span>Click to refresh code</span>
+                                           </button>
+                                         </div>
+                                         
+                                         <label style="display:block; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#475569; margin-top:16px; margin-bottom:8px;">CAPTCHA</label>
+                                         <input name="captcha" type="text"
+                                           class="form-control {{ $errors->has('captcha') ? 'error-input' : '' }}"
+                                           placeholder="Enter Captcha Code"
+                                           style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:12px 16px; font-size:15px; width:100%; color:#0f172a;"
+                                           required>
+                                         <span id="err-captcha"
+                                           style="color:#ef4444; font-size:12px; display:{{ $errors->has('captcha') ? 'block' : 'none' }}; margin-top:6px;">{{ $errors->first('captcha') }}</span>
+                                       </div>
+                                     </div>
                                     <div class="col-12 mxd-grid-item loading-item">
                                       <button class="btn btn-default-icon btn-default-accent slide-right" type="submit">
                                         <span class="btn-caption mxd-scramble">Submit</span>
@@ -459,13 +465,19 @@
   <!-- Page Content End -->
 
   <script type="text/javascript">
-    document.getElementById('reloadCaptcha').addEventListener('click', function (e) {
-      e.preventDefault();
-      fetch('{{ url("reload-captcha") }}')
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('captcha-img').innerHTML = data.captcha;
-        });
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('#cReloadCaptcha, #reloadCaptcha');
+      if (btn) {
+        e.preventDefault();
+        fetch('{{ url("reload-captcha") }}')
+          .then(res => res.json())
+          .then(data => {
+            document.querySelectorAll('#c-captcha-img, #captcha-img').forEach(el => {
+              el.innerHTML = data.captcha;
+            });
+          })
+          .catch(err => console.error('Captcha refresh error:', err));
+      }
     });
 
     function validateForm(e) {

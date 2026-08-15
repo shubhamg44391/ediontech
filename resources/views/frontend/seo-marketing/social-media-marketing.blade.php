@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Social media marketing | Edion Web Technologies')
-@section('description', 'Organic and paid across Meta, LinkedIn, X and TikTok, with the reporting tied to enquiries rather than impressions.')
-@section('keywords', 'social media marketing, social media marketing, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Social media marketing | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Organic and paid across Meta, LinkedIn, X and TikTok, with the reporting tied to enquiries rather than impressions.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'social media marketing, social media marketing, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

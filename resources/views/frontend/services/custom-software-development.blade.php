@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Custom software development | Edion Web Technologies')
-@section('description', 'Bookings, inventory, dispatch, billing and internal tools. The systems that are specific enough to your operation that no off-the-shelf product fits, and imp')
-@section('keywords', 'custom software development, custom software development, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Custom software development | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Bookings, inventory, dispatch, billing and internal tools. The systems that are specific enough to your operation that no off-the-shelf product fits, and imp')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'custom software development, custom software development, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

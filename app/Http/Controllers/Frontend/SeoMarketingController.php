@@ -3,66 +3,84 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class SeoMarketingController extends Controller
 {
+    private function getPageHeader($slug)
+    {
+        return DB::table('pages')->where('slug', $slug)->first();
+    }
+
     public function seoServices()
     {
-        return view('frontend.seo-marketing.seo-services');
+        $headerdata = $this->getPageHeader('seo-services');
+        return view('frontend.seo-marketing.seo-services', compact('headerdata'));
     }
 
     public function localSeoServices()
     {
-        return view('frontend.seo-marketing.local-seo-services');
+        $headerdata = $this->getPageHeader('local-seo-services');
+        return view('frontend.seo-marketing.local-seo-services', compact('headerdata'));
     }
 
     public function technicalSeoAudit()
     {
-        return view('frontend.seo-marketing.technical-seo-audit');
+        $headerdata = $this->getPageHeader('technical-seo-audit');
+        return view('frontend.seo-marketing.technical-seo-audit', compact('headerdata'));
     }
 
     public function ecommerceSeo()
     {
-        return view('frontend.seo-marketing.ecommerce-seo');
+        $headerdata = $this->getPageHeader('ecommerce-seo');
+        return view('frontend.seo-marketing.ecommerce-seo', compact('headerdata'));
     }
 
     public function linkBuildingServices()
     {
-        return view('frontend.seo-marketing.link-building-services');
+        $headerdata = $this->getPageHeader('link-building-services');
+        return view('frontend.seo-marketing.link-building-services', compact('headerdata'));
     }
 
     public function ppcAdvertising()
     {
-        return view('frontend.seo-marketing.ppc-advertising');
+        $headerdata = $this->getPageHeader('ppc-advertising');
+        return view('frontend.seo-marketing.ppc-advertising', compact('headerdata'));
     }
 
     public function socialMediaMarketing()
     {
-        return view('frontend.seo-marketing.social-media-marketing');
+        $headerdata = $this->getPageHeader('social-media-marketing');
+        return view('frontend.seo-marketing.social-media-marketing', compact('headerdata'));
     }
 
     public function contentMarketing()
     {
-        return view('frontend.seo-marketing.content-marketing');
+        $headerdata = $this->getPageHeader('content-marketing');
+        return view('frontend.seo-marketing.content-marketing', compact('headerdata'));
     }
 
     public function emailMarketing()
     {
-        return view('frontend.seo-marketing.email-marketing');
+        $headerdata = $this->getPageHeader('email-marketing');
+        return view('frontend.seo-marketing.email-marketing', compact('headerdata'));
     }
 
     public function aiSearchOptimisation()
     {
-        return view('frontend.seo-marketing.ai-search-optimisation');
+        $headerdata = $this->getPageHeader('ai-search-optimisation');
+        return view('frontend.seo-marketing.ai-search-optimisation', compact('headerdata'));
     }
 
     public function answerEngineOptimisation()
     {
-        return view('frontend.seo-marketing.answer-engine-optimisation');
+        $headerdata = $this->getPageHeader('answer-engine-optimisation');
+        return view('frontend.seo-marketing.answer-engine-optimisation', compact('headerdata'));
     }
 
     public function aiAssistantVisibility()
     {
-        return view('frontend.seo-marketing.ai-assistant-visibility');
+        $headerdata = $this->getPageHeader('ai-assistant-visibility');
+        return view('frontend.seo-marketing.ai-assistant-visibility', compact('headerdata'));
     }
 }

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'AI assistant visibility | Edion Web Technologies')
-@section('description', 'Auditing how assistants currently describe your business, correcting what they get wrong, and building the citable sources they draw on.')
-@section('keywords', 'ai assistant visibility, ai assistant visibility, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'AI assistant visibility | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Auditing how assistants currently describe your business, correcting what they get wrong, and building the citable sources they draw on.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'ai assistant visibility, ai assistant visibility, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

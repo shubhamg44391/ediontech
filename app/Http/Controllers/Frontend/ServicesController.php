@@ -3,76 +3,96 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ServicesController extends Controller
 {
+    private function getPageHeader($slug)
+    {
+        return DB::table('pages')->where('slug', $slug)->first();
+    }
+
     public function index()
     {
-        return view('frontend.services.services');
+        $headerdata = $this->getPageHeader('services');
+        return view('frontend.services.services', compact('headerdata'));
     }
 
     public function websiteDevelopment()
     {
-        return view('frontend.services.website-development');
+        $headerdata = $this->getPageHeader('website-development');
+        return view('frontend.services.website-development', compact('headerdata'));
     }
 
     public function customSoftwareDevelopment()
     {
-        return view('frontend.services.custom-software-development');
+        $headerdata = $this->getPageHeader('custom-software-development');
+        return view('frontend.services.custom-software-development', compact('headerdata'));
     }
 
     public function mobileAppDevelopment()
     {
-        return view('frontend.services.mobile-app-development');
+        $headerdata = $this->getPageHeader('mobile-app-development');
+        return view('frontend.services.mobile-app-development', compact('headerdata'));
     }
 
     public function ecommerceDevelopment()
     {
-        return view('frontend.services.ecommerce-development');
+        $headerdata = $this->getPageHeader('ecommerce-development');
+        return view('frontend.services.ecommerce-development', compact('headerdata'));
     }
 
     public function cmsDevelopment()
     {
-        return view('frontend.services.cms-development');
+        $headerdata = $this->getPageHeader('cms-development');
+        return view('frontend.services.cms-development', compact('headerdata'));
     }
 
     public function websiteDesign()
     {
-        return view('frontend.services.website-design');
+        $headerdata = $this->getPageHeader('website-design');
+        return view('frontend.services.website-design', compact('headerdata'));
     }
 
     public function logoBranding()
     {
-        return view('frontend.services.logo-branding');
+        $headerdata = $this->getPageHeader('logo-branding');
+        return view('frontend.services.logo-branding', compact('headerdata'));
     }
 
     public function mobileAppDesign()
     {
-        return view('frontend.services.mobile-app-design');
+        $headerdata = $this->getPageHeader('mobile-app-design');
+        return view('frontend.services.mobile-app-design', compact('headerdata'));
     }
 
     public function uiUxDesign()
     {
-        return view('frontend.services.ui-ux-design');
+        $headerdata = $this->getPageHeader('ui-ux-design');
+        return view('frontend.services.ui-ux-design', compact('headerdata'));
     }
 
     public function aiDevelopment()
     {
-        return view('frontend.services.ai-development');
+        $headerdata = $this->getPageHeader('ai-development');
+        return view('frontend.services.ai-development', compact('headerdata'));
     }
 
     public function cloudSolutions()
     {
-        return view('frontend.services.cloud-solutions');
+        $headerdata = $this->getPageHeader('cloud-solutions');
+        return view('frontend.services.cloud-solutions', compact('headerdata'));
     }
 
     public function iotSolutions()
     {
-        return view('frontend.services.iot-solutions');
+        $headerdata = $this->getPageHeader('iot-solutions');
+        return view('frontend.services.iot-solutions', compact('headerdata'));
     }
 
     public function bigDataAnalytics()
     {
-        return view('frontend.services.big-data-analytics');
+        $headerdata = $this->getPageHeader('big-data-analytics');
+        return view('frontend.services.big-data-analytics', compact('headerdata'));
     }
 }

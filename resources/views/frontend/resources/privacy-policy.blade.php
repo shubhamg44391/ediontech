@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Privacy Policy | Edion Web Technologies')
-@section('description', 'How Edion Web Technologies collects, processes and safeguards your personal data, including cookies, your rights, and how to correct information we hold.')
-@section('keywords', 'privacy policy, Edion data protection, privacy terms')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Privacy Policy | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'How Edion Web Technologies collects, processes and safeguards your personal data, including cookies, your rights, and how to correct information we hold.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'privacy policy, Edion data protection, privacy terms')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

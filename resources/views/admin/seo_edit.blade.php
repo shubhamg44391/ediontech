@@ -6,23 +6,48 @@
         <div class="card">
             <div class="card-header">
               @php
-                $slug = request()->route('slug');
-            
+                $slug = request()->route('slug') ?? $slug ?? '';
               @endphp
                {{-- <h4 class="py-3 mb-4">Update {{ ucfirst($slug ?? '') }} Data</h4> --}}
                <h4 class="py-3 mb-4">Update Meta</h4>
             </div>
             @if(session('success'))
-                        <div class="mx-4 alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-                    
-                    @if(session('error'))
-                        <div class="mx-3 alert alert-danger">
-                            {{ session('error') }}
-                        </div>
-                    @endif
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: "{{ session('success') }}",
+                            icon: 'success',
+                            timer: 3000,
+                            showConfirmButton: true,
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-primary'
+                            },
+                            buttonsStyling: false
+                        });
+                    });
+                </script>
+            @endif
+
+            @if(session('error'))
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: "{{ session('error') }}",
+                            icon: 'error',
+                            timer: 3000,
+                            showConfirmButton: true,
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-danger'
+                            },
+                            buttonsStyling: false
+                        });
+                    });
+                </script>
+            @endif
             <div class="card-body">
                 <form method="POST" action="{{ route('title.update',['slug'=>$slug]) }}">
                     @csrf

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Website development | Edion Web Technologies')
-@section('description', 'Marketing sites through to complex web applications, built to stay maintainable after we hand them over. Clean markup, sensible dependencies, and code your n')
-@section('keywords', 'website development, website development, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Website development | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Marketing sites through to complex web applications, built to stay maintainable after we hand them over. Clean markup, sensible dependencies, and code your n')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'website development, website development, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

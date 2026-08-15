@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Content marketing | Edion Web Technologies')
-@section('description', 'Editorial, landing pages and technical content that ranks and holds attention once it does.')
-@section('keywords', 'content marketing, content marketing, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Content marketing | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Editorial, landing pages and technical content that ranks and holds attention once it does.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'content marketing, content marketing, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

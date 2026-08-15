@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Glossary | Rental Software & SEO Terms Explained | Edion')
-@section('description', 'Plain-language definitions of car rental software, fleet management and SEO terms, availability logic, card holds, canonical tags, Core Web Vitals, telematics and more.')
-@section('keywords', 'car rental software glossary, fleet management terms, SEO glossary, availability logic, telematics definition')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Glossary | Rental Software & SEO Terms Explained | Edion')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Plain-language definitions of car rental software, fleet management and SEO terms, availability logic, card holds, canonical tags, Core Web Vitals, telematics and more.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software glossary, fleet management terms, SEO glossary, availability logic, telematics definition')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

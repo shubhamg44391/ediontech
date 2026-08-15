@@ -434,12 +434,20 @@ Route::post('/contact', [ResourcesController::class, 'submitContact'])->name('co
 Route::post('/free-consultation', [ResourcesController::class, 'submitConsultation'])->name('consultation.store');
 Route::post('/case-study-lead', [ResourcesController::class, 'submitCaseStudyLead'])->name('case-study.lead');
 Route::get('/seo-package', [ResourcesController::class, 'pricing'])->name('resources.pricing');
+Route::get('/seo-package-details', [ResourcesController::class, 'pricingDetails'])->name('resources.pricing-details');
+Route::get('/seo-package-details/{slug}', [ResourcesController::class, 'pricingDetails'])->name('resources.pricing-details-slug');
+Route::get('/pricing-details', [ResourcesController::class, 'pricingDetails'])->name('resources.pricing-details-alt');
 
 // Legal & Policy routes
 Route::get('/privacy-policy', [ResourcesController::class, 'privacyPolicy'])->name('resources.privacy-policy');
 Route::get('/term-and-condition', [ResourcesController::class, 'termsAndConditions'])->name('resources.term-and-condition');
 Route::get('/terms-and-conditions', [ResourcesController::class, 'termsAndConditions'])->name('resources.terms-and-conditions');
 Route::get('/refund-and-cancellation-policy', [ResourcesController::class, 'refundAndCancellationPolicy'])->name('resources.refund-and-cancellation-policy');
+
+// Captcha Reload Route
+Route::get('/reload-captcha', function () {
+    return response()->json(['captcha' => captcha_img()]);
+})->name('captcha.reload');
 
 // Industry sub-pages & dynamic detail route
 Route::get('/{slug}', [ResourcesController::class, 'industryDetail'])->name('industry.detail');

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Terms & Conditions | Edion Web Technologies')
-@section('description', 'The rules governing use of the Edion Web Technologies website and services, including intellectual property, user responsibilities and governing law.')
-@section('keywords', 'terms and conditions, Edion legal terms, terms of service')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Terms & Conditions | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'The rules governing use of the Edion Web Technologies website and services, including intellectual property, user responsibilities and governing law.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'terms and conditions, Edion legal terms, terms of service')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Book a Free Consultation | Edion Web Technologies')
-@section('description', 'Book a free 30-minute consultation with an Edion engineer. Get a realistic scope, timeline and budget for your website, app, car rental platform or SEO campaign, with no obligation.')
-@section('keywords', 'free consultation, free website consultation, software project quote, car rental software consultation, SEO audit consultation')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Book a Free Consultation | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Book a free 30-minute consultation with an Edion engineer. Get a realistic scope, timeline and budget for your website, app, car rental platform or SEO campaign, with no obligation.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'free consultation, free website consultation, software project quote, car rental software consultation, SEO audit consultation')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

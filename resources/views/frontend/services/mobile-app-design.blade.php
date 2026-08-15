@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Mobile app design | Edion Web Technologies')
-@section('description', 'iOS and Android patterns followed rather than fought, so your app feels native to the phone it is running on.')
-@section('keywords', 'mobile app design, mobile app design, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Mobile app design | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'iOS and Android patterns followed rather than fought, so your app feels native to the phone it is running on.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'mobile app design, mobile app design, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

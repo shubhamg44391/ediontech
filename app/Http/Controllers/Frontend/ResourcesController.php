@@ -10,7 +10,8 @@ class ResourcesController extends Controller
     {
         $posts = \Illuminate\Support\Facades\DB::table('posts')->latest()->get();
         $categories = \Illuminate\Support\Facades\DB::table('categories')->get();
-        return view('frontend.resources.blog', compact('posts', 'categories'));
+        $headerdata = $this->getPageHeader('blog');
+        return view('frontend.resources.blog', compact('posts', 'categories', 'headerdata'));
     }
 
     public function blogDetails($slug = null)
@@ -26,42 +27,56 @@ class ResourcesController extends Controller
             $post = \Illuminate\Support\Facades\DB::table('posts')->latest()->first();
         }
         $recentPosts = \Illuminate\Support\Facades\DB::table('posts')->where('id', '!=', $post->id ?? 0)->latest()->take(5)->get();
-        return view('frontend.resources.blog-details', compact('post', 'recentPosts'));
+        $headerdata = $this->getPageHeader('blog-details');
+        return view('frontend.resources.blog-details', compact('post', 'recentPosts', 'headerdata'));
+    }
+
+    private function getPageHeader($slug)
+    {
+        return \Illuminate\Support\Facades\DB::table('pages')->where('slug', $slug)->first();
     }
 
     public function works()
     {
-        return view('frontend.resources.works');
+        $headerdata = $this->getPageHeader('works');
+        return view('frontend.resources.works', compact('headerdata'));
     }
 
     public function faq()
     {
-        return view('frontend.resources.faq');
+        $faqs = \Illuminate\Support\Facades\DB::table('faqs')->latest()->get();
+        $headerdata = $this->getPageHeader('faq');
+        return view('frontend.resources.faq', compact('faqs', 'headerdata'));
     }
 
     public function glossary()
     {
-        return view('frontend.resources.glossary');
+        $headerdata = $this->getPageHeader('glossary');
+        return view('frontend.resources.glossary', compact('headerdata'));
     }
 
     public function freeConsultation()
     {
-        return view('frontend.resources.free-consultation');
+        $headerdata = $this->getPageHeader('free-consultation');
+        return view('frontend.resources.free-consultation', compact('headerdata'));
     }
 
     public function about()
     {
-        return view('frontend.resources.about');
+        $headerdata = $this->getPageHeader('about');
+        return view('frontend.resources.about', compact('headerdata'));
     }
 
     public function certifications()
     {
-        return view('frontend.resources.certifications');
+        $headerdata = $this->getPageHeader('certifications');
+        return view('frontend.resources.certifications', compact('headerdata'));
     }
 
     public function contact()
     {
-        return view('frontend.resources.contact');
+        $headerdata = $this->getPageHeader('contact');
+        return view('frontend.resources.contact', compact('headerdata'));
     }
 
     public function submitContact(\Illuminate\Http\Request $request)
@@ -76,6 +91,7 @@ class ResourcesController extends Controller
             'interest' => 'nullable|string|max:255',
             'message' => 'nullable|string',
             'brief' => 'nullable|string',
+            'captcha' => 'required|captcha',
         ]);
 
         $phoneVal = $request->phone ?? $request->number ?? null;
@@ -131,9 +147,9 @@ class ResourcesController extends Controller
             $phoneVal = substr($phoneVal, 0, 95);
         }
 
-        $sourcePage = 'Free Consultation';
+        $sourcePage = $request->source ?? 'Consultation Popup';
         $interestVal = $request->interest ?? null;
-        $ndaVal = $request->has('nda') ? 'Yes' : 'No';
+        $ndaVal = ($request->has('nda') && ($request->nda === 'Yes' || $request->nda === true || $request->nda == 1 || $request->nda === '1' || $request->nda === 'on')) ? 'Yes' : 'No';
         $userBrief = $request->brief ?? $request->message ?? null;
 
         \Illuminate\Support\Facades\DB::table('leads')->insert([
@@ -218,12 +234,20 @@ class ResourcesController extends Controller
 
     public function pricing()
     {
-        return view('frontend.resources.pricing');
+        $headerdata = $this->getPageHeader('seo-package');
+        return view('frontend.resources.pricing', compact('headerdata'));
+    }
+
+    public function pricingDetails($slug = null)
+    {
+        $headerdata = $this->getPageHeader('seo-package-details');
+        return view('frontend.resources.pricing-details', compact('slug', 'headerdata'));
     }
 
     public function industries()
     {
-        return view('frontend.resources.industries');
+        $headerdata = $this->getPageHeader('industries');
+        return view('frontend.resources.industries', compact('headerdata'));
     }
 
     public function privacyPolicy()

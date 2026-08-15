@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Logo and branding | Edion Web Technologies')
-@section('description', 'Marks, type systems, colour and the usage guidance that keeps them consistent once twelve different people start using them.')
-@section('keywords', 'logo and branding, logo branding, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Logo and branding | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Marks, type systems, colour and the usage guidance that keeps them consistent once twelve different people start using them.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'logo and branding, logo branding, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Link building services | Edion Web Technologies')
-@section('description', 'Digital PR, guest placement and resource outreach. No private blog networks, no paid link schemes, nothing that produces a spike and a manual action six mont')
-@section('keywords', 'link building services, link building services, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Link building services | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Digital PR, guest placement and resource outreach. No private blog networks, no paid link schemes, nothing that produces a spike and a manual action six mont')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'link building services, link building services, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Answer engine optimisation | Edion Web Technologies')
-@section('description', 'Question-led architecture, FAQ and How-To structured data, and factual precision so answer engines can extract your content with confidence.')
-@section('keywords', 'answer engine optimisation, answer engine optimisation, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Answer engine optimisation | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Question-led architecture, FAQ and How-To structured data, and factual precision so answer engines can extract your content with confidence.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'answer engine optimisation, answer engine optimisation, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

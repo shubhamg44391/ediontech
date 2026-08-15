@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Contact Edion Web Technologies | Lucknow, India')
-@section('description', 'Talk to Edion Web Technologies about your website, app, car rental platform or SEO campaign. Call or WhatsApp +91 96967 87596, or email contact@ediontech.com. Replies within one working day.')
-@section('keywords', 'contact Edion Web Technologies, web development company Lucknow contact, car rental software company contact, software development enquiry')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Contact Edion Web Technologies | Lucknow, India')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Talk to Edion Web Technologies about your website, app, car rental platform or SEO campaign. Call or WhatsApp +91 96967 87596, or email contact@ediontech.com. Replies within one working day.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'contact Edion Web Technologies, web development company Lucknow contact, car rental software company contact, software development enquiry')
 
 @section('main-container')
 <main id="main"><a id="top"></a>
@@ -83,6 +83,26 @@
   <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
   <i style="color:var(--hold);font-style:normal">*</i></span></label>
   </div>
+  
+  <div class="field" style="margin-top:var(--sp-4); margin-bottom:var(--sp-4);">
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <div style="background:#ffffff; padding:6px 12px; border-radius:8px; border:1px solid #cbd5e1; display:inline-flex; align-items:center;">
+          <span id="c-captcha-img">{!! captcha_img() !!}</span>
+        </div>
+        <button type="button" id="cReloadCaptcha" style="display:inline-flex; align-items:center; gap:8px; background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; padding:8px 14px; font-size:13px; font-weight:600; color:#475569; cursor:pointer; transition:all 0.2s ease;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+          <span>Click to refresh code</span>
+        </button>
+      </div>
+      
+      <label style="display:block; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#475569; margin-top:16px; margin-bottom:8px;">CAPTCHA</label>
+      <input name="captcha" type="text" required
+        placeholder="Enter Captcha Code"
+        style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:12px 16px; font-size:15px; width:100%; color:#0f172a;">
+    </div>
+  </div>
+
   <button class="btn btn--signal" id="cSubmitBtn" type="submit" style="justify-content:center">
   Send message<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </form>
@@ -90,6 +110,21 @@
   @push('scripts')
   <script>
   document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('#cReloadCaptcha, #reloadCaptcha');
+      if (btn) {
+        e.preventDefault();
+        fetch('{{ url("reload-captcha") }}')
+          .then(res => res.json())
+          .then(data => {
+            document.querySelectorAll('#c-captcha-img, #captcha-img').forEach(el => {
+              el.innerHTML = data.captcha;
+            });
+          })
+          .catch(err => console.error('Captcha refresh error:', err));
+      }
+    });
+
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -105,6 +140,7 @@
           const interest = contactForm.querySelector('select[name="interest"]');
           const message = contactForm.querySelector('textarea[name="message"]');
           const consent = contactForm.querySelector('input[name="consent"]');
+          const captcha = contactForm.querySelector('input[name="captcha"]');
 
           if (!name || !name.value.trim()) missing.push('Full Name');
           if (!email || !email.value.trim()) missing.push('Work Email');
@@ -112,6 +148,7 @@
           if (!interest || !interest.value) missing.push('What do you need');
           if (!message || !message.value.trim()) missing.push('Project Brief');
           if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
+          if (!captcha || !captcha.value.trim()) missing.push('Captcha Code');
 
           Swal.fire({
             title: 'Validation Error',

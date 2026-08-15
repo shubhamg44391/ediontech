@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Insights | Software, Rental Tech, Web Performance & SEO | Edion')
-@section('description', 'Practical writing on car rental and fleet software, custom development, Core Web Vitals, mobile stack choices and search, from the Edion Web Technologies team.')
-@section('keywords', 'car rental software blog, fleet management insights, web development blog, Core Web Vitals, SEO insights, software development articles')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Insights | Software, Rental Tech, Web Performance & SEO | Edion')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Practical writing on car rental and fleet software, custom development, Core Web Vitals, mobile stack choices and search, from the Edion Web Technologies team.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software blog, fleet management insights, web development blog, Core Web Vitals, SEO insights, software development articles')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

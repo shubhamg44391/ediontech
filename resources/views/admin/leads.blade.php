@@ -6,17 +6,7 @@
             <div class="card">
                 <div class="row row-bordered g-0">
                     <div class="col-md-12">
-                        <h5 class="pb-3 m-0 card-header me-2">
-                            @if(request('source') == 'contact')
-                                Contact Us Leads List
-                            @elseif(request('source') == 'consultation')
-                                Free Consultation Leads List
-                            @elseif(request('source') == 'works')
-                                Works & Case Study Leads List
-                            @else
-                                All Website Leads List
-                            @endif
-                        </h5>
+                        <h5 class="pb-3 m-0 card-header me-2">Leads List</h5>
                         <script>
                             document.addEventListener('DOMContentLoaded', function () {
                                 @if(session('success'))
@@ -31,33 +21,35 @@
                             });
                         </script>
                         
-                        <div class="table-responsive text-nowrap">
-                            <table class="table table-hover">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
                                 <thead>
                                     <tr>
-                                        <th>Serial</th>
+                                        <th style="width:60px;">Serial</th>
                                         <th>Name</th>
+                                        <th>Source</th>
                                         <th>Number</th>
                                         <th>Email</th>
                                         <th>Company</th>
                                         <th>Message</th>
                                         <th>Budget</th>
                                         <th>Date/Time</th>
-                                        <th>Actions</th>
+                                        <th style="width:110px;">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @if ($leads->count() > 0)
                                         @foreach ($leads as $index => $lead)
                                             <tr>
-                                                <td>{{ $index + 1 }}</td>
+                                                <td>{{ $leads->total() - (($leads->currentPage() - 1) * $leads->perPage() + $index) }}</td>
                                                 <td><strong>{{ $lead->name }}</strong></td>
+                                                <td><span class="fw-semibold">{{ $lead->source ?? 'Contact Us' }}</span></td>
                                                 <td>{{ $lead->number }}</td>
-                                                <td>{{ $lead->email }}</td>
-                                                <td>{{ $lead->company }}</td>
-                                                <td>{{ \Illuminate\Support\Str::limit($lead->message, 50) }}</td>
-                                                <td>{{ $lead->budget }}</td>
-                                                <td>{{ $lead->created_at }}</td>
+                                                <td style="word-break:break-word;">{{ $lead->email }}</td>
+                                                <td>{{ $lead->company ?: '—' }}</td>
+                                                <td><span class="text-truncate d-inline-block" style="max-width:180px;" title="{{ $lead->message }}">{{ \Illuminate\Support\Str::limit($lead->message, 35) }}</span></td>
+                                                <td>{{ $lead->budget ?: '—' }}</td>
+                                                <td><small class="text-muted">{{ \Carbon\Carbon::parse($lead->created_at)->format('d M Y, h:i A') }}</small></td>
                                                 <td>
                                                     <div class="d-flex align-items-center gap-1">
                                                         <!-- View Details Modal Button -->

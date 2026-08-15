@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Services | Web, Software, Mobile, AI & SEO | Edion Web Technologies')
-@section('description', 'Design, development, online marketing, business systems, AI and content strategy, including car rental and fleet software, e-commerce, mobile apps and SEO. Thirty services under one accountable team.')
-@section('keywords', 'web development services, software development services, car rental software development, mobile app development, SEO services, PPC advertising, AI development, cloud solutions, e-commerce development, content strategy')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Services | Web, Software, Mobile, AI & SEO | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Design, development, online marketing, business systems, AI and content strategy, including car rental and fleet software, e-commerce, mobile apps and SEO.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'web development services, software development services, car rental software development')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

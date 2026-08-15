@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Technical SEO audit | Edion Web Technologies')
-@section('description', 'Crawlability, indexation, canonicals, Core Web Vitals, structured data, redirects and internal linking. Delivered as a ranked list of fixes with effort estim')
-@section('keywords', 'technical seo audit, technical seo audit, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Technical SEO audit | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Crawlability, indexation, canonicals, Core Web Vitals, structured data, redirects and internal linking. Delivered as a ranked list of fixes with effort estim')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'technical seo audit, technical seo audit, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

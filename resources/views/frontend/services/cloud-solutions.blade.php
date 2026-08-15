@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Cloud solutions | Edion Web Technologies')
-@section('description', 'Migration, cost control and reliability engineering. Mostly this means removing things you are paying for and not using.')
-@section('keywords', 'cloud solutions, cloud solutions, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Cloud solutions | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Migration, cost control and reliability engineering. Mostly this means removing things you are paying for and not using.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'cloud solutions, cloud solutions, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Email marketing | Edion Web Technologies')
-@section('description', 'Lifecycle flows, segmentation and deliverability work for businesses with a list worth looking after.')
-@section('keywords', 'email marketing, email marketing, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Email marketing | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Lifecycle flows, segmentation and deliverability work for businesses with a list worth looking after.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'email marketing, email marketing, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

@@ -297,5 +297,464 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<!-- TIMED CONSULTATION POPUP (EDION-POPUP-V3) -->
+<style>
+.swal2-container.ed-wrap{padding:16px;z-index:9999999!important}
+.swal2-popup.ed-card{
+  width:min(700px,100%);padding:0;border-radius:16px;text-align:left;
+  background:#FFFFFF;border:1px solid #E2E3E6;
+  box-shadow:0 30px 70px -18px rgba(19,23,27,.28);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+}
+.swal2-popup.ed-card .swal2-html-container{
+  margin:0;padding:0;overflow:visible;font-size:16px;color:#13171B;
+}
+.swal2-popup.ed-card .swal2-close{
+  color:#9AA1A9;font-size:30px;margin:14px 16px 0 0;
+}
+.swal2-popup.ed-card .swal2-close:hover{color:#13171B}
+
+.ed-top{padding:34px 36px 0}
+.ed-top h2{
+  margin:16px 0 0;font:800 34px/1.05 'Inter Tight',system-ui,-apple-system,sans-serif;letter-spacing:-.035em;color:#13171B;
+}
+.ed-req{margin:14px 0 0;font-size:14.5px;color:#3F484F}
+.ed-req i{font-style:normal;color:#CE2F24;font-weight:600}
+
+.ed-scroll{padding:0 36px;max-height:50vh;overflow-y:auto;overscroll-behavior:contain}
+.ed-sec{padding:28px 0 4px}
+.ed-sec + .ed-sec{border-top:1px solid #E2E3E6;margin-top:24px}
+.ed-sec > .ed-mono{display:block;margin-bottom:20px}
+
+.ed-mono{
+  font:500 11px/1 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;
+  color:#717983;
+}
+.ed-dot::before{
+  content:"";display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:#CE2F24;margin-right:9px;vertical-align:1px;
+}
+.ed-rule::before{
+  content:"";display:inline-block;width:22px;height:1px;
+  background:#C7CBD1;margin-right:11px;vertical-align:4px;
+}
+
+.ed-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 20px}
+.ed-fld{display:flex;flex-direction:column;gap:8px}
+.ed-fld.wide{grid-column:1 / -1}
+.ed-fld > label{font:600 13.5px/1 'Inter',sans-serif;color:#13171B}
+.ed-fld > label i{font-style:normal;color:#CE2F24}
+
+.ed-fld input[type=text],.ed-fld input[type=email],.ed-fld input[type=tel],
+.ed-fld select,.ed-fld textarea{
+  font:400 15px/1.5 'Inter',sans-serif;color:#13171B;width:100%;
+  padding:13px 14px;background:#fff;
+  border:1px solid #E2E3E6;border-radius:8px;
+  transition:border-color .16s ease,box-shadow .16s ease;
+}
+.ed-fld textarea{min-height:92px;resize:vertical}
+.ed-fld select{
+  appearance:none;cursor:pointer;padding-right:38px;
+  background-image:linear-gradient(45deg,transparent 50%,#6C7885 50%),
+                   linear-gradient(135deg,#6C7885 50%,transparent 50%);
+  background-position:calc(100% - 20px) calc(50% + 1px),calc(100% - 14px) calc(50% + 1px);
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;
+}
+.ed-fld input::placeholder,.ed-fld textarea::placeholder{color:#707983}
+.ed-fld input:focus,.ed-fld select:focus,.ed-fld textarea:focus{
+  outline:none;border-color:#13171B;box-shadow:0 0 0 3px rgba(19,23,27,.07);
+}
+.ed-fld .hint{font-size:13px;line-height:1.5;color:#717983}
+.ed-fld .err{
+  display:none;font:500 11px/1.4 'IBM Plex Mono',monospace;letter-spacing:.08em;
+  text-transform:uppercase;color:#CE2F24;
+}
+.ed-fld.bad input,.ed-fld.bad select,.ed-fld.bad textarea{
+  border-color:#CE2F24;box-shadow:0 0 0 3px rgba(206,47,36,.08);
+}
+.ed-fld.bad .err{display:block}
+
+.ed-chk{
+  display:flex;gap:12px;align-items:flex-start;cursor:pointer;
+  font-size:14px;line-height:1.55;color:#3F484F;
+}
+.ed-chk + .ed-chk{margin-top:16px}
+.ed-chk input{
+  appearance:none;flex:0 0 auto;width:18px;height:18px;margin:2px 0 0;
+  border:1px solid #C2C7CD;border-radius:4px;background:#fff;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease;
+}
+.ed-chk input:checked{background:#CE2F24;border-color:#CE2F24}
+.ed-chk input:checked::after{
+  content:"";display:block;width:4px;height:9px;margin:2px 0 0 6px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg);
+}
+.ed-chk input:focus-visible{outline:2px solid #13171B;outline-offset:2px}
+.ed-chk a{color:#13171B}
+.ed-chk i{font-style:normal;color:#CE2F24}
+.ed-chk.bad{color:#CE2F24}
+.ed-chk.bad input{border-color:#CE2F24}
+
+.ed-foot{
+  margin-top:26px;padding:16px 36px;border-top:1px solid #E2E3E6;
+  background:#FAFAFB;border-radius:0 0 16px 16px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font:500 10.5px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;
+  color:#717983;
+}
+.ed-foot a{color:#13171B;text-decoration:none}
+
+.swal2-popup.ed-card .swal2-actions{
+  margin:0;padding:24px 36px 30px;width:100%;
+  display:flex !important;flex-direction:row !important;
+  justify-content:flex-start;align-items:center !important;gap:12px;
+}
+.swal2-popup.ed-card .swal2-actions button,
+.swal2-popup.ed-card .swal2-actions .swal2-confirm,
+.swal2-popup.ed-card .swal2-actions .swal2-cancel,
+.swal2-styled.ed-send,.swal2-styled.ed-skip,.ed-pill{
+  display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;
+  white-space:nowrap !important;word-break:keep-all !important;flex-shrink:0 !important;
+  margin:0;box-shadow:none!important
+}
+.swal2-popup.ed-card .swal2-actions button svg,
+.ed-pill svg{
+  width:16px !important;height:16px !important;flex-shrink:0 !important;display:inline-block !important;
+}
+.swal2-popup.ed-card .swal2-actions .swal2-deny {
+  display: none !important;
+}
+.swal2-popup.ed-card .swal2-validation-message{
+  margin:0 36px;background:#FCF0EF;color:#CE2F24;border-radius:8px;
+  justify-content:flex-start;text-align:left;
+  font:500 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;
+}
+.swal2-popup.ed-card .swal2-validation-message::before{display:none}
+
+/* success */
+.ed-done{padding:34px 36px 4px}
+.ed-done h2{margin:16px 0 0;font:800 30px/1.08 'Inter Tight',sans-serif;letter-spacing:-.035em}
+.ed-done p{margin:14px 0 0;font-size:15px;line-height:1.65;color:#3F484F}
+.ed-done .ed-green{color:#0C9268}
+.ed-done .ed-green::before{background:#0C9268}
+.ed-done dl{
+  margin:26px 0 0;padding-top:22px;border-top:1px solid #E2E3E6;
+  display:grid;grid-template-columns:auto 1fr;gap:11px 22px;
+}
+.ed-done dt{
+  font:500 10.5px/1.7 'IBM Plex Mono',monospace;letter-spacing:.12em;
+  text-transform:uppercase;color:#717983;
+}
+.ed-done dd{margin:0;font-size:14.5px;color:#13171B}
+
+.ed-pill{
+  display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;
+  background:#CE2F24;color:#fff;border:0;cursor:pointer;
+  font:700 15px/1 'Inter',sans-serif;padding:15px 26px;border-radius:999px;
+  transition:background .18s ease;
+  white-space:nowrap !important;
+}
+.ed-pill:hover{background:#B3261C}
+.ed-pill svg{width:16px;height:16px}
+.ed-pill.ghost{
+  background:transparent;color:#13171B;
+  border:1px solid #E2E3E6;font-weight:500;
+}
+.ed-pill.ghost:hover{background:#EDECF0;border-color:#D3D6DB}
+
+@media (max-width:640px){
+  .ed-top,.ed-done{padding-left:22px;padding-right:22px;padding-top:28px}
+  .ed-top h2{font-size:27px}
+  .ed-scroll{padding:0 22px;max-height:54vh}
+  .ed-grid{grid-template-columns:1fr}
+  .ed-foot{padding:14px 22px}
+  .swal2-popup.ed-card .swal2-actions{padding:20px 22px 24px;flex-direction:column-reverse}
+  .swal2-styled.ed-send,.swal2-styled.ed-skip{width:100%;justify-content:center}
+  .swal2-popup.ed-card .swal2-validation-message{margin:0 22px}
+}
+</style>
+
+<script>
+(function() {
+  const POPUP_DELAY_MS = 10000; // 1 second delay as requested
+
+  const NEEDS = [
+    'Car rental or fleet software',
+    'Website design & development',
+    'E-commerce build',
+    'Mobile app',
+    'Custom software or internal system',
+    'SEO or digital marketing',
+    'AI, data or cloud work',
+    'Something else'
+  ];
+
+  const BUDGETS = [
+    'Prefer not to say',
+    'Under $2,000',
+    '$2,000 - $10,000',
+    '$10,000 - $50,000',
+    '$50,000+',
+    'Monthly retainer'
+  ];
+
+  const options = list => list.map(v => `<option value="${v}">${v}</option>`).join('');
+
+  const ARROW = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+    stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+
+  const markup = `
+    <div class="ed-top">
+      <span class="ed-mono ed-dot">Usually booked within 2 working days</span>
+      <h2>Book your slot</h2>
+      <p class="ed-req">Fields marked <i>*</i> are required.</p>
+    </div>
+
+    <div class="ed-scroll">
+      <div class="ed-sec">
+        <span class="ed-mono ed-rule">Your details</span>
+        <div class="ed-grid">
+          <div class="ed-fld">
+            <label for="ed-name">Full name <i>*</i></label>
+            <input id="ed-name" type="text" autocomplete="name" placeholder="Your name">
+            <span class="err">Enter your full name</span>
+          </div>
+          <div class="ed-fld">
+            <label for="ed-company">Company</label>
+            <input id="ed-company" type="text" autocomplete="organization" placeholder="Optional">
+          </div>
+          <div class="ed-fld">
+            <label for="ed-email">Work email <i>*</i></label>
+            <input id="ed-email" type="email" autocomplete="email" placeholder="you@company.com">
+            <span class="err">Enter a valid work email</span>
+          </div>
+          <div class="ed-fld">
+            <label for="ed-phone">WhatsApp number <i>*</i></label>
+            <input id="ed-phone" type="tel" autocomplete="tel" placeholder="+91 00000 00000">
+            <span class="err">Include the country code</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-sec">
+        <span class="ed-mono ed-rule">The project</span>
+        <div class="ed-grid">
+          <div class="ed-fld wide">
+            <label for="ed-need">What do you need? <i>*</i></label>
+            <select id="ed-need">
+              <option value="">Choose one</option>
+              ${options(NEEDS)}
+            </select>
+            <span class="err">Pick the closest match</span>
+          </div>
+          <div class="ed-fld wide">
+            <label for="ed-budget">Budget range</label>
+            <select id="ed-budget">${options(BUDGETS)}</select>
+            <span class="hint">A range helps us bring the right person to the call. It isn't a commitment.</span>
+          </div>
+          <div class="ed-fld wide">
+            <label for="ed-brief">Tell us about the project <i>*</i></label>
+            <textarea id="ed-brief" placeholder="A paragraph is enough. Links to anything relevant help."></textarea>
+            <span class="err">A sentence or two, so we can prepare</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-sec">
+        <span class="ed-mono ed-rule">Before we talk</span>
+        <label class="ed-chk">
+          <input id="ed-nda" type="checkbox">
+          <span>I'd like an NDA in place before we talk in detail.</span>
+        </label>
+        <label class="ed-chk" id="ed-consent-row">
+          <input id="ed-consent" type="checkbox">
+          <span>I agree to Edion contacting me about this enquiry. See our
+            <a href="{{ route('resources.privacy-policy') }}" target="_blank" rel="noopener">privacy policy</a>. <i>*</i></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="ed-foot">
+      <span>Prefer to call? <a href="tel:+919696787596">+91 96967 87596</a></span>
+      <span>Mon–Sat · 10:00–20:00 IST</span>
+    </div>
+  `;
+
+  const flag = (el, bad) => {
+    const holder = el.closest('.ed-fld');
+    if (holder) holder.classList.toggle('bad', bad);
+  };
+
+  function collect(){
+    const $ = id => document.getElementById(id);
+    const name = $('ed-name'), email = $('ed-email'), phone = $('ed-phone'),
+          need = $('ed-need'), brief = $('ed-brief'), consent = $('ed-consent');
+
+    if (!name || !email || !phone || !need || !brief || !consent) return false;
+
+    const checks = [
+      [name,  name.value.trim().length >= 2],
+      [email, /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email.value.trim())],
+      [phone, phone.value.replace(/\D/g,'').length >= 8],
+      [need,  need.value !== ''],
+      [brief, brief.value.trim().length >= 10]
+    ];
+    checks.forEach(([el, ok]) => flag(el, !ok));
+
+    document.getElementById('ed-consent-row').classList.toggle('bad', !consent.checked);
+
+    const bad = checks.find(([, ok]) => !ok);
+    if (bad){
+      bad[0].focus();
+      Swal.showValidationMessage('Check the marked fields');
+      return false;
+    }
+    if (!consent.checked){
+      consent.focus();
+      Swal.showValidationMessage('Tick the consent box so we can reply');
+      return false;
+    }
+
+    return {
+      name:    name.value.trim(),
+      company: $('ed-company').value.trim(),
+      email:   email.value.trim(),
+      phone:   phone.value.trim(),
+      need:    need.value,
+      budget:  $('ed-budget').value,
+      brief:   brief.value.trim(),
+      nda:     $('ed-nda').checked
+    };
+  }
+
+  let popupFired = false;
+
+  window.openEdionConsultationPopup = function() {
+    if (Swal.isVisible()) return;
+    popupFired = true;
+
+    try {
+      sessionStorage.setItem('edion_consultation_popup_shown', 'true');
+      localStorage.setItem('edion_consultation_popup_last', Date.now());
+    } catch(e){}
+
+    Swal.fire({
+      html: markup,
+      width: 700,
+      padding: 0,
+      showCloseButton: true,
+      showCancelButton: true,
+      showDenyButton: false,
+      buttonsStyling: false,
+      focusConfirm: false,
+      allowOutsideClick: false,
+      confirmButtonText: `<span style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">Request my consultation ${ARROW}</span>`,
+      cancelButtonText: 'Not right now',
+      customClass: {
+        container: 'ed-wrap',
+        popup: 'ed-card',
+        confirmButton: 'ed-pill ed-send',
+        cancelButton: 'ed-pill ghost ed-skip'
+      },
+      didOpen: () => {
+        const nameEl = document.getElementById('ed-name');
+        if (nameEl) nameEl.focus();
+        document.querySelectorAll('.ed-scroll input, .ed-scroll select, .ed-scroll textarea')
+          .forEach(el => el.addEventListener('input', () => flag(el, false)));
+        const consentEl = document.getElementById('ed-consent');
+        if (consentEl) {
+          consentEl.addEventListener('change', e => {
+            document.getElementById('ed-consent-row').classList.toggle('bad', !e.target.checked);
+          });
+        }
+      },
+      preConfirm: () => {
+        Swal.resetValidationMessage();
+        const data = collect();
+        if (!data) return false;
+
+        return fetch("{{ route('consultation.store') }}", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          body: JSON.stringify({
+            name: data.name,
+            company: data.company,
+            email: data.email,
+            phone: data.phone,
+            number: data.phone,
+            interest: data.need,
+            budget: data.budget,
+            brief: data.brief,
+            message: data.brief,
+            nda: data.nda ? 1 : 0
+          })
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Submission failed');
+          return res.json();
+        })
+        .then(resData => {
+          return data;
+        })
+        .catch(err => {
+          Swal.showValidationMessage('Failed to submit request. Please try again.');
+          return false;
+        });
+      }
+    }).then(r => {
+      if (!r.isConfirmed || !r.value) return;
+
+      const d = r.value;
+      Swal.fire({
+        html: `
+          <div class="ed-done">
+            <span class="ed-mono ed-dot ed-green">Request received</span>
+            <h2>We'll confirm your slot.</h2>
+            <p>Thanks, ${d.name.split(' ')[0]}. Before the call we'll look at your site, your
+               competitors and your stack, so we don't spend the thirty minutes asking basics.</p>
+            <dl>
+              <dt>Reply to</dt><dd>${d.email}</dd>
+              <dt>Topic</dt><dd>${d.need}</dd>
+              <dt>NDA first</dt><dd>${d.nda ? 'Yes' : 'Not requested'}</dd>
+            </dl>
+          </div>`,
+        width: 560,
+        buttonsStyling: false,
+        confirmButtonText: `Back to the site ${ARROW}`,
+        customClass: { container:'ed-wrap', popup:'ed-card', confirmButton:'ed-pill ed-send' }
+      });
+    });
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    let sessionShown = false;
+    try {
+      sessionShown = sessionStorage.getItem('edion_consultation_popup_shown') === 'true';
+    } catch(e){}
+
+    if (!sessionShown) {
+      setTimeout(function() {
+        if (!popupFired) {
+          window.openEdionConsultationPopup();
+        }
+      }, POPUP_DELAY_MS);
+    }
+
+    document.querySelectorAll('a[href*="free-consultation"], .js-open-consultation').forEach(el => {
+      el.addEventListener('click', function(e) {
+        if (window.location.pathname !== '/free-consultation') {
+          e.preventDefault();
+          window.openEdionConsultationPopup();
+        }
+      });
+    });
+  });
+})();
+</script>
 </body>
 @stack('scripts')

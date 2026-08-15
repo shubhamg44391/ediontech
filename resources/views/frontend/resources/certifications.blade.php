@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Certifications & Partner Status | Edion Web Technologies')
-@section('description', 'Edion Web Technologies is a Google Partner, Meta Business Partner and Microsoft Advertising Partner, ISO 9001 and 27001 certified, with verified Clutch and GoodFirms profiles.')
-@section('keywords', 'Google Partner agency, Meta Business Partner, Microsoft Advertising Partner, ISO 9001 certified software company, ISO 27001 certified, Clutch verified agency')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Certifications & Partner Status | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a Google Partner, Meta Business Partner and Microsoft Advertising Partner, ISO 9001 and 27001 certified, with verified Clutch and GoodFirms profiles.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'Google Partner agency, Meta Business Partner, Microsoft Advertising Partner, ISO 9001 certified software company, ISO 27001 certified, Clutch verified agency')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

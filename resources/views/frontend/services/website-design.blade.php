@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Website design | Edion Web Technologies')
-@section('description', 'Structure and page design that survives contact with real content, real photography and real word counts. Clickable prototypes you review before anything get')
-@section('keywords', 'website design, website design, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Website design | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Structure and page design that survives contact with real content, real photography and real word counts. Clickable prototypes you review before anything get')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'website design, website design, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Works & Case Studies | Car Rental Software, Apps & Websites | Edion')
-@section('description', 'Rental platforms, fleet systems, marketplaces, mobile apps, dashboards and SEO programmes built by Edion Web Technologies, with the status of each system.')
-@section('keywords', 'web development portfolio, car rental software case study, fleet management case study, mobile app portfolio, custom software portfolio, SEO case study')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Works & Case Studies | Car Rental Software, Apps & Websites | Edion')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Rental platforms, fleet systems, marketplaces, mobile apps, dashboards and SEO programmes built by Edion Web Technologies, with the status of each system.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'web development portfolio, car rental software case study, fleet management case study, mobile app portfolio, custom software portfolio, SEO case study')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

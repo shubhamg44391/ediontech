@@ -1,348 +1,9 @@
+
 @extends('frontend.layouts.app')
 
-@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'SEO Packages & Monthly Pricing | Edion Web Technologies')
-@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Transparent monthly SEO packages from 1.45: technical SEO, on-page optimisation, content, link building and local SEO for businesses in India, Jordan, the UAE, Bahrain, the USA, the UK and Canada.')
-@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'SEO packages, monthly SEO plans, SEO pricing, SEO services cost, technical SEO, local SEO services, link building services, enterprise SEO')
-
-@section('main-container')
-<main id="main"><a id="top"></a>
-
-<!-- Razorpay JS SDK -->
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-<style>
-.feat-section-header {
-  font-family: var(--font-display);
-  font-size: var(--fs-micro);
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: var(--ink);
-  padding: 0;
-  background: transparent;
-  border: none;
-  margin: var(--sp-4) 0 var(--sp-2) 0;
-  text-transform: uppercase;
-  list-style: none;
-  display: block;
-  width: 100%;
-}
-.feat li[data-no] {
-  color: var(--text-3);
-}
-.feat li[data-no] svg {
-  color: #ef4444 !important;
-  stroke: #ef4444 !important;
-}
-
-.plans {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--sp-4);
-  align-items: start;
-}
-
-@media (max-width: 1100px) {
-  .plans {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 620px) {
-  .plans {
-    grid-template-columns: 1fr;
-  }
-}
-
-.plan {
-  border: 1px solid var(--paper-3) !important;
-  box-shadow: none !important;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-  cursor: pointer;
-}
-
-/* When hovering over the plans grid, unhighlight unhovered cards */
-.plans:hover .plan {
-  border-color: var(--paper-3) !important;
-  box-shadow: none !important;
-}
-
-/* Card currently being hovered gets red outline */
-.plans:hover .plan:hover {
-  border-color: var(--signal) !important;
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--signal) 25%, transparent), 0 12px 32px rgba(0,0,0,0.12) !important;
-  transform: translateY(-3px);
-}
-
-/* When mouse is not hovering, highlight only the active selected/pick card */
-.plans:not(:hover) .plan.is-selected,
-.plans:not(:hover):not(.has-user-selection) .plan--pick {
-  border-color: var(--signal) !important;
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--signal) 25%, transparent), 0 12px 32px rgba(0,0,0,0.12) !important;
-}
-
-/* Button hover & selection styling: hovered or selected card button turns RED */
-.plan .btn {
-  transition: all 0.2s ease !important;
-}
-
-.plans:hover .plan:hover .btn,
-.plan.is-selected .btn,
-.plans:not(:hover):not(.has-user-selection) .plan--pick .btn {
-  background: var(--signal) !important;
-  color: var(--signal-ink, #ffffff) !important;
-  border-color: var(--signal) !important;
-}
-
-.plans:hover .plan:not(:hover) .btn {
-  background: transparent !important;
-  color: var(--ink) !important;
-  border-color: var(--paper-3) !important;
-}
-
-.plan__price {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-block: var(--sp-3);
-  border-block: 1px solid var(--paper-3);
-}
-
-.plan-discount-badge {
-  display: none;
-  background: rgba(239, 68, 68, 0.12);
-  color: #ef4444;
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  font-size: 11px;
-  font-weight: 700;
-  font-family: var(--font-mono);
-  padding: 3px 8px;
-  border-radius: 100px;
-  white-space: nowrap;
-}
-
-.plan {
-  position: relative !important;
-}
-
-.plan-top-view-btn {
-  position: absolute !important;
-  top: 18px !important;
-  right: 18px !important;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--signal, #ef4444);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border-radius: 100px;
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.25);
-  transition: all 0.2s ease;
-  z-index: 2;
-  white-space: nowrap;
-}
-.plan-top-view-btn:hover {
-  background: var(--signal, #ef4444) !important;
-  color: #ffffff !important;
-  border-color: var(--signal, #ef4444) !important;
-  transform: scale(1.04);
-}
-
-.btn-card-details-secondary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
-  padding: 8px 12px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  font-family: var(--font-mono);
-  color: var(--ink);
-  background: var(--paper-1);
-  border: 1px solid var(--paper-3);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin-top: 6px;
-}
-.btn-card-details-secondary:hover {
-  background: var(--paper-2);
-  color: var(--signal);
-  border-color: var(--signal);
-}
-
-.btn-toggle-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 10px 14px;
-  font-size: var(--fs-micro);
-  font-weight: 700;
-  font-family: var(--font-mono);
-  letter-spacing: 0.03em;
-  color: var(--signal);
-  background: var(--paper-1);
-  border: 1px solid var(--signal);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: var(--sp-3);
-  margin-bottom: var(--sp-2);
-}
-.btn-toggle-details:hover {
-  background: var(--signal);
-  color: var(--signal-ink);
-}
-.btn-read-less {
-  margin-top: var(--sp-4);
-}
-
-/* Checkout Modal Overlay & Dialog */
-.checkout-modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(8px);
-  z-index: 9999;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-.checkout-modal-backdrop.is-active {
-  display: flex;
-  opacity: 1;
-}
-
-.checkout-modal {
-  background: #ffffff;
-  color: #0f172a;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 480px;
-  padding: 28px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  position: relative;
-  max-height: 90vh;
-  overflow-y: auto;
-  font-family: var(--font-body);
-}
-
-.checkout-modal__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.checkout-modal__title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #0f172a;
-  font-family: var(--font-display);
-  margin: 0;
-}
-.checkout-modal__close {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #64748b;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-.checkout-modal__close:hover {
-  background: #f1f5f9;
-  color: #0f172a;
-}
-
-.checkout-summary {
-  background: #f8fafc;
-  border: 1px dashed #cbd5e1;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 20px;
-  font-size: 0.875rem;
-}
-.checkout-summary__row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  color: #475569;
-}
-.checkout-summary__row:last-child {
-  margin-bottom: 0;
-  padding-top: 8px;
-  border-top: 1px solid #e2e8f0;
-}
-.checkout-summary__val {
-  font-weight: 700;
-  color: #0f172a;
-}
-.checkout-summary__val--total {
-  color: #2563eb;
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-
-.checkout-form .form-group {
-  margin-bottom: 16px;
-}
-.checkout-form label {
-  display: block;
-  font-size: 0.825rem;
-  font-weight: 600;
-  color: #334155;
-  margin-bottom: 6px;
-}
-.checkout-form input {
-  width: 100%;
-  padding: 10px 14px;
-  font-size: 0.9rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #0f172a;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.checkout-form input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-.btn-proceed-pay {
-  width: 100%;
-  padding: 14px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
-  background: #2563eb;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 24px;
-}
-.btn-proceed-pay:hover {
-  background: #1d4ed8;
-}
-</style>
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'SEO Package Details - Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Detailed breakdown of SEO packages, features, and deliverables.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'SEO package details, SEO pricing breakdown, search engine optimization')
 
 @php
 $sections = [
@@ -570,7 +231,7 @@ $plans = [
     'inr_m_total' => '40,519',
     'inr_y_total' => '405,185',
     'discount' => '16.7%',
-    'flag' => 'Special offer',
+    'flag' => 'SPECIAL OFFER',
     'btn_class' => 'btn--line',
     'pick' => false,
     'specs' => [
@@ -589,7 +250,7 @@ $plans = [
     'inr_m_total' => '66,179',
     'inr_y_total' => '661,794',
     'discount' => '16.7%',
-    'flag' => 'Best choice',
+    'flag' => 'BEST CHOICE',
     'btn_class' => 'btn--signal',
     'pick' => true,
     'specs' => [
@@ -608,7 +269,7 @@ $plans = [
     'inr_m_total' => '95,893',
     'inr_y_total' => '1,035,640',
     'discount' => '10.0%',
-    'flag' => 'High Growth',
+    'flag' => 'HIGH GROWTH',
     'btn_class' => 'btn--line',
     'pick' => false,
     'specs' => [
@@ -627,7 +288,7 @@ $plans = [
     'inr_m_total' => '148,566',
     'inr_y_total' => '1,604,514',
     'discount' => '10.0%',
-    'flag' => 'Enterprise',
+    'flag' => 'ENTERPRISE',
     'btn_class' => 'btn--line',
     'pick' => false,
     'specs' => [
@@ -638,113 +299,489 @@ $plans = [
     ]
   ]
 ];
+
+$slugMap = [
+  'basic-seo' => 0,
+  'standard-seo' => 1,
+  'gold-seo' => 2,
+  'premium-seo' => 3,
+];
+
+$activeSlug = isset($slug) ? strtolower($slug) : 'standard-seo';
+$currentIdx = isset($slugMap[$activeSlug]) ? $slugMap[$activeSlug] : 1;
+$selectedPlan = $plans[$currentIdx];
 @endphp
 
+@section('title', $selectedPlan['name'] . ' Package Details & Deliverables | Edion Web Technologies')
+@section('description', 'Full scope, deliverables and itemised specifications for the ' . $selectedPlan['name'] . ' package at $' . $selectedPlan['price_m'] . '/mo.')
+@section('keywords', strtolower($selectedPlan['name']) . ', SEO package details, SEO package scope, technical SEO deliverables')
+
+@section('main-container')
+<main id="main"><a id="top"></a>
+
+<!-- Razorpay JS SDK -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+.single-pkg-hero-card {
+  background: #ffffff;
+  border: 2px solid var(--signal);
+  border-radius: 20px;
+  padding: var(--sp-7);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  margin-bottom: var(--sp-8);
+  position: relative;
+}
+
+.single-pkg-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--signal, #ef4444);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: var(--sp-3);
+}
+
+.single-pkg-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.single-pkg-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-2);
+  margin-top: 6px;
+  margin-bottom: var(--sp-5);
+}
+
+.single-pkg-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  background: var(--paper-1);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--paper-3);
+  margin-bottom: var(--sp-6);
+}
+
+.single-pkg-price-val {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+}
+
+.single-pkg-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+@media (max-width: 800px) {
+  .single-pkg-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .single-pkg-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spec-tile {
+  background: var(--paper-1);
+  padding: var(--sp-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--paper-3);
+}
+.spec-tile-lbl {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.spec-tile-val {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.single-pkg-features-box {
+  margin-top: var(--sp-6);
+  margin-bottom: var(--sp-6);
+  padding-top: var(--sp-6);
+  border-top: 1px dashed var(--paper-3);
+}
+.single-pkg-features-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: var(--sp-5);
+}
+
+.sec-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  margin-top: var(--sp-4);
+}
+.sec-group-card {
+  background: #ffffff;
+  border: 1px solid var(--paper-3);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4) var(--sp-5);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.sec-group-hdr {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--paper-2);
+}
+.sec-group-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+@media (max-width: 768px) {
+  .sec-group-items {
+    grid-template-columns: 1fr;
+  }
+}
+.feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  background: var(--paper-1);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--paper-3);
+}
+.feat-item--disabled {
+  opacity: 0.55;
+  background: var(--paper-2);
+}
+.feat-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.feat-lbl {
+  color: var(--text-2);
+}
+.feat-val {
+  color: var(--ink);
+  font-weight: 700;
+}
+.feat-val--exc {
+  color: #ef4444 !important;
+  font-weight: 600 !important;
+}
+
+.single-deliv-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  border: 1px solid var(--paper-3);
+  margin-bottom: var(--sp-8);
+}
+.single-deliv-table th {
+  background: var(--ink);
+  color: #ffffff;
+  padding: 16px var(--sp-5);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  text-align: left;
+}
+.single-deliv-table td {
+  padding: 14px var(--sp-5);
+  border-bottom: 1px solid var(--paper-3);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+.single-deliv-table tr.sec-hdr td {
+  background: var(--paper-2);
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Checkout Modal Overlay & Dialog */
+.checkout-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.checkout-modal-backdrop.is-active {
+  display: flex;
+  opacity: 1;
+}
+
+.checkout-modal {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: var(--font-body);
+}
+
+.checkout-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.checkout-modal__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  font-family: var(--font-display);
+  margin: 0;
+}
+.checkout-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.checkout-modal__close:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.checkout-summary {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+.checkout-summary__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #475569;
+}
+.checkout-summary__row:last-child {
+  margin-bottom: 0;
+  padding-top: 8px;
+  border-top: 1px solid #e2e8f0;
+}
+.checkout-summary__val {
+  font-weight: 700;
+  color: #0f172a;
+}
+.checkout-summary__val--total {
+  color: #2563eb;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.checkout-form .form-group {
+  margin-bottom: 16px;
+}
+.checkout-form label {
+  display: block;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+.checkout-form input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.checkout-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.btn-proceed-pay {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.btn-proceed-pay:hover {
+  background: #1d4ed8;
+}
+
+.badge-inc {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.badge-exc {
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+</style>
+
 <section class="phero shell">
-  <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li aria-current="page">Pricing</li></ol></nav>
-  <p class="eyebrow">Pricing</p>
-  <h1 style="margin-top:var(--sp-4)">SEO pricing, published. No discovery call required.</h1>
-  <p class="lead">
-    Four monthly packages. The scope of each is listed in full below, including what is
-    <em>not</em> included, because the exclusions are usually what a vendor hides.
-    Development and design work is quoted per project; <a href="{{ url('/free-consultation') }}"
-    style="text-decoration:underline;text-decoration-color:var(--signal);text-underline-offset:3px">book
-    a consultation</a> for that.
-  </p>
-  <div style="margin-top:var(--sp-7);display:flex;flex-wrap:wrap;gap:var(--sp-5);align-items:center">
-    <div class="toggle" data-billing-toggle role="group" aria-label="Billing cycle">
-      <button type="button" data-cycle="monthly" aria-pressed="true">Billed monthly</button>
-      <button type="button" data-cycle="yearly" aria-pressed="false">Billed yearly &middot; save up to 16.7%</button>
-    </div>
-    <p style="font:400 var(--fs-micro)/1.5 var(--font-mono);color:var(--text-3);max-width:32ch">
-      Prices in USD. Indian clients are billed in INR at 1 USD = 95.00 INR plus 18% GST at checkout.
-    </p>
-  </div>
+  <nav aria-label="Breadcrumb">
+    <ol class="crumbs">
+      <li><a href="{{ url('/') }}">Home</a></li>
+      <li><a href="{{ route('resources.pricing') }}">Pricing</a></li>
+      <li aria-current="page">{{ $selectedPlan['name'] }} Details</li>
+    </ol>
+  </nav>
+
+  <h1 style="margin-top:var(--sp-2)">{{ $selectedPlan['name'] }}</h1>
+ 
 </section>
 
-<!-- MAIN CARDS SECTION -->
+<!-- FEATURED SINGLE PACKAGE SPOTLIGHT CARD -->
 <section class="band band--tight shell">
-  <div class="plans">
-    @foreach($plans as $planIdx => $plan)
-      <div class="plan {{ $plan['pick'] ? 'plan--pick' : '' }}" data-reveal data-plan-name="{{ $plan['name'] }}" onclick="selectPlanCard(this)">
-        <div style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-bottom:var(--sp-2);">
-          <span class="plan__flag">{{ $plan['flag'] }}</span>
-        </div>
-        <div>
-          <p class="plan__name">{{ $plan['name'] }}</p>
-          <p class="plan__for">{{ $plan['for'] }}</p>
-        </div>
-        <div class="plan__price">
-          <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
-            <b data-monthly="{{ $plan['price_m'] }}" data-yearly="{{ $plan['price_y'] }}">${{ number_format($plan['price_m'], 2) }}</b>
-            <span class="plan-discount-badge">
-              Save {{ $plan['discount'] }}
-            </span>
-          </div>
-          <span data-cycle-label 
-                data-monthly-label="/mo + 18% tax" 
-                data-yearly-label="/mo, billed yearly (${{ $plan['annual_total'] }}/yr + 18% tax)">
-            /mo + 18% tax
-          </span>
-        </div>
-        <dl class="plan__spec">
-          @foreach($plan['specs'] as $k => $v)
-            <div><dt>{{ $k }}</dt><dd>{{ $v }}</dd></div>
-          @endforeach
-        </dl>
-        <button type="button" class="btn {{ $plan['btn_class'] }}" onclick="openCheckoutModal('{{ $plan['name'] }}', '{{ $plan['price_m'] }}', '{{ $plan['price_y'] }}', '{{ $plan['annual_total'] }}', '{{ $plan['inr_m_total'] }}', '{{ $plan['inr_y_total'] }}', this)" style="justify-content:center;width:100%;">
-          Start with {{ explode(' ', $plan['name'])[0] }}
-        </button>
-
-        <a href="{{ route('resources.pricing-details-slug', ['slug' => Str::slug($plan['name'])]) }}" class="btn-card-details-secondary" onclick="event.stopPropagation();">
-          <span>View Package Details</span>
-          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <ul class="feat">
-          @php $secCount = 0; @endphp
-          @foreach($sections as $secName => $items)
-            @php $secCount++; @endphp
-
-            @if($secCount == 3)
-              </ul>
-              <button type="button" class="btn-toggle-details btn-read-more" onclick="expandPackageDetails(this)">
-                <span>Read More (Sections 3-24)</span>
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="margin-left:6px;"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
-              <div class="extra-sections" style="display:none;">
-                <ul class="feat">
-            @endif
-
-            <li class="feat-section-header">{{ $secName }}</li>
-            @foreach($items as $item)
-              @php $val = $item[1][$planIdx]; @endphp
-              @if($val === '—')
-                <li data-no>
-                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/></svg>
-                  <span>{{ $item[0] }}</span>
-                </li>
-              @else
-                <li>
-                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>{{ $item[0] }}: <strong>{{ $val }}</strong></span>
-                </li>
-              @endif
-            @endforeach
-          @endforeach
-
-          @if($secCount >= 3)
-                </ul>
-                <button type="button" class="btn-toggle-details btn-read-less" onclick="collapsePackageDetails(this)">
-                  <span>Read Less</span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="margin-left:6px;transform:rotate(180deg)"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-              </div>
-          @else
-            </ul>
-          @endif
+  <div class="single-pkg-hero-card" data-reveal>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;">
+      <div>
+        <span class="single-pkg-badge">{{ $selectedPlan['flag'] }}</span>
+        <h2 class="single-pkg-title">{{ $selectedPlan['name'] }}</h2>
+        <p class="single-pkg-subtitle"><strong>{{ $selectedPlan['for'] }}</strong></p>
       </div>
-    @endforeach
+
+      <div style="display:flex;flex-direction:column;align-items:flex-end;">
+        <div class="toggle" data-billing-toggle role="group" aria-label="Billing cycle" style="margin-bottom:12px;">
+          <button type="button" data-cycle="monthly" aria-pressed="true" onclick="setBillingCycle('monthly')">Monthly</button>
+          <button type="button" data-cycle="yearly" aria-pressed="false" onclick="setBillingCycle('yearly')">Yearly (Save {{ $selectedPlan['discount'] }})</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-pkg-price-box">
+      <div>
+        <span class="single-pkg-price-val" data-monthly="{{ $selectedPlan['price_m'] }}" data-yearly="{{ $selectedPlan['price_y'] }}">${{ number_format($selectedPlan['price_m'], 2) }}</span>
+        <span style="font-family:var(--font-mono);font-size:0.9rem;color:var(--text-3);" data-cycle-label>/month + 18% tax</span>
+      </div>
+    </div>
+
+    <div class="single-pkg-specs-grid">
+      @foreach($selectedPlan['specs'] as $k => $v)
+        <div class="spec-tile">
+          <div class="spec-tile-lbl">{{ $k }}</div>
+          <div class="spec-tile-val">{{ $v }}</div>
+        </div>
+      @endforeach
+    </div>
+
+    <!-- SECTION-WISE POINT-WISE DELIVERABLES BREAKDOWN INSIDE BOX -->
+    <div class="single-pkg-features-box">
+      <div class="sec-group-list">
+        @foreach($sections as $secName => $items)
+          @php
+            $includedItems = array_filter($items, function($item) use ($currentIdx) {
+              return $item[1][$currentIdx] !== '—';
+            });
+          @endphp
+          @if(count($includedItems) > 0)
+            <div class="sec-group-card">
+              <h4 class="sec-group-hdr">{{ $secName }}</h4>
+              <div class="sec-group-items">
+                @foreach($includedItems as $item)
+                  @php $val = $item[1][$currentIdx]; @endphp
+                  <div class="feat-item">
+                    <svg class="feat-icon" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round"/></svg>
+                    <div>
+                      <span class="feat-lbl">{{ $item[0] }}:</span>
+                      <strong class="feat-val">{{ $val }}</strong>
+                    </div>
+                  </div>
+                @endforeach
+              </div>
+            </div>
+          @endif
+        @endforeach
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;">
+      <button type="button" class="btn btn--signal" onclick="openCheckoutModal('{{ $selectedPlan['name'] }}', '{{ $selectedPlan['price_m'] }}', '{{ $selectedPlan['price_y'] }}', '{{ $selectedPlan['annual_total'] }}', '{{ $selectedPlan['inr_m_total'] }}', '{{ $selectedPlan['inr_y_total'] }}', this)" style="padding:14px 28px;font-size:1.05rem;">
+        Start with {{ explode(' ', $selectedPlan['name'])[0] }}
+      </button>
+      <a href="{{ route('resources.pricing') }}" class="btn btn--line" style="padding:14px 24px;">
+        &larr; Back to Pricing Page
+      </a>
+    </div>
   </div>
 </section>
 
@@ -752,14 +789,14 @@ $plans = [
 <div class="checkout-modal-backdrop" id="checkoutModal" onclick="if(event.target===this)closeCheckoutModal()">
   <div class="checkout-modal">
     <div class="checkout-modal__header">
-      <h3 class="checkout-modal__title">Confirm Your Details</h3>
+      <h3 class="checkout-modal__title">Confirm Your Order Details</h3>
       <button type="button" class="checkout-modal__close" onclick="closeCheckoutModal()">&times;</button>
     </div>
 
     <div class="checkout-summary">
       <div class="checkout-summary__row">
         <span>Selected Package:</span>
-        <span class="checkout-summary__val" id="summaryPackageName">Standard SEO</span>
+        <span class="checkout-summary__val" id="summaryPackageName">{{ $selectedPlan['name'] }}</span>
       </div>
       <div class="checkout-summary__row">
         <span>Billing Cycle:</span>
@@ -767,7 +804,7 @@ $plans = [
       </div>
       <div class="checkout-summary__row">
         <span>Total Price (incl. 18% tax):</span>
-        <span class="checkout-summary__val checkout-summary__val--total" id="summaryTotalPrice">$696.62 / Monthly</span>
+        <span class="checkout-summary__val checkout-summary__val--total" id="summaryTotalPrice">₹{{ $selectedPlan['inr_m_total'] }} (incl. 18% GST) / Monthly</span>
       </div>
     </div>
 
@@ -794,59 +831,37 @@ $plans = [
 
 <script>
 let currentSelectedPackage = {
-  name: 'Standard SEO',
-  priceM: '590.36',
-  priceY: '491.97',
-  annualTotal: '5,903.60'
+  name: "{{ $selectedPlan['name'] }}",
+  priceM: "{{ $selectedPlan['price_m'] }}",
+  priceY: "{{ $selectedPlan['price_y'] }}",
+  annualTotal: "{{ $selectedPlan['annual_total'] }}",
+  inrM: "{{ $selectedPlan['inr_m_total'] }}",
+  inrY: "{{ $selectedPlan['inr_y_total'] }}"
 };
 
-function selectPlanCard(cardEl) {
-  const container = document.querySelector('.plans');
-  if (container) {
-    container.classList.add('has-user-selection');
-  }
-
-  document.querySelectorAll('.plan').forEach(c => {
-    c.classList.remove('is-selected');
-    c.classList.remove('plan--pick');
+function setBillingCycle(cycle) {
+  const btns = document.querySelectorAll('[data-billing-toggle] button');
+  btns.forEach(b => {
+    const isThis = b.dataset.cycle === cycle;
+    b.setAttribute('aria-pressed', isThis ? 'true' : 'false');
   });
 
-  if (cardEl) {
-    cardEl.classList.add('is-selected');
-  }
-}
-
-function expandPackageDetails() {
-  document.querySelectorAll('.extra-sections').forEach(div => {
-    div.style.display = 'block';
-  });
-  document.querySelectorAll('.btn-read-more').forEach(btn => {
-    btn.style.display = 'none';
-  });
-}
-
-function collapsePackageDetails() {
-  document.querySelectorAll('.extra-sections').forEach(div => {
-    div.style.display = 'none';
-  });
-  document.querySelectorAll('.btn-read-more').forEach(btn => {
-    btn.style.display = 'flex';
-  });
-  const plansSection = document.querySelector('.plans');
-  if (plansSection) {
-    plansSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const priceEl = document.querySelector('.single-pkg-price-val');
+  const cycleLabel = document.querySelector('[data-cycle-label]');
+  if (priceEl && cycleLabel) {
+    if (cycle === 'yearly') {
+      priceEl.textContent = '$' + parseFloat(priceEl.dataset.yearly).toFixed(2);
+      cycleLabel.textContent = '/month (billed yearly $' + currentSelectedPackage.annualTotal + '/yr + 18% tax)';
+    } else {
+      priceEl.textContent = '$' + parseFloat(priceEl.dataset.monthly).toFixed(2);
+      cycleLabel.textContent = '/month + 18% tax';
+    }
   }
 }
 
 function openCheckoutModal(name, priceM, priceY, annualTotal, inrM, inrY, btnEl) {
-  if (btnEl) {
-    const card = btnEl.closest('.plan');
-    selectPlanCard(card);
-  }
-
   currentSelectedPackage = { name, priceM, priceY, annualTotal, inrM, inrY };
 
-  // Detect billing cycle
   const activeCycleBtn = document.querySelector('[data-billing-toggle] button[aria-pressed="true"]');
   const isYearly = activeCycleBtn && activeCycleBtn.dataset.cycle === 'yearly';
 

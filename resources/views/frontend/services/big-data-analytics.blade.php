@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Big data analytics | Edion Web Technologies')
-@section('description', 'Warehousing, pipelines and reporting built so that two people asking the same question get the same answer.')
-@section('keywords', 'big data analytics, big data analytics, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Big data analytics | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Warehousing, pipelines and reporting built so that two people asking the same question get the same answer.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'big data analytics, big data analytics, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

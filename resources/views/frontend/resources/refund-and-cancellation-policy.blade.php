@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Refund & Cancellation Policy | Edion Web Technologies')
-@section('description', "Edion Web Technologies' refund and cancellation terms for website development, mobile apps, SEO, custom software and digital marketing services.")
-@section('keywords', 'refund policy, cancellation policy, Edion Web Technologies refund')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Refund & Cancellation Policy | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies\' refund and cancellation terms for website development, mobile apps, SEO, custom software and digital marketing services.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'refund policy, cancellation policy, Edion Web Technologies refund')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

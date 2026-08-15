@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'About Edion Web Technologies | Software & Web Development Company')
-@section('description', 'Edion Web Technologies is a Lucknow-based software company building car rental and fleet platforms, websites, mobile apps, custom software and growth campaigns for clients across India, Jordan, the UAE, Bahrain, the USA, the UK and Canada.')
-@section('keywords', 'about Edion Web Technologies, software development company Lucknow, car rental software company, web development company India, software company Jordan, software company UAE')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'About Edion Web Technologies | Software & Web Development Company')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies is a Lucknow-based software company building car rental and fleet platforms, websites, mobile apps, custom software and growth campaigns for clients across India, Jordan, the UAE, Bahrain, the USA, the UK and Canada.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'about Edion Web Technologies, software development company Lucknow, car rental software company, web development company India, software company Jordan, software company UAE')
 
 @section('main-container')
 <main id="main"><a id="top"></a>
