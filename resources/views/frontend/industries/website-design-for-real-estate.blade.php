@@ -1,15 +1,15 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Website design for real estate | Edion Web Technologies')
-@section('description', 'Website design for real estate businesses. Property buyers decide on photography and floor plans, so the design job is getting media to load fast and read cl')
-@section('keywords', 'website design for real estate, real estate website design, website design real estate, real estate software company, website design company')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Website design for real estate | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Website design for real estate businesses. Property buyers decide on photography and floor plans, so the design job is getting media to load fast and read cl')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'website design for real estate, real estate website design, website design real estate, real estate software company, website design company')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 
 <section class="phero shell">
-  <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/industries') }}">Industries</a></li><li><a href="{{ url('/software-for-real-estate') }}">Real estate</a></li><li aria-current="page">Website design</li></ol></nav>
+  <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'industries']) }}">Industries</a></li><li><a href="{{ route('industry.detail', ['slug'=>'software-for-real-estate']) }}">Real estate</a></li><li aria-current="page">Website design</li></ol></nav>
   <span class="ind-badge" style="display:inline-flex">
     <img src="{{ asset('assets/frontend/img/industry/real-estate.svg') }}" alt="" width="34" height="34" loading="eager">
     <span>Real estate</span></span>
@@ -17,7 +17,7 @@
   <p class="lead">Design that starts with the flow, reviewed as clickable prototypes. This page covers what changes when the client is a real estate business,
      and what we build first.</p>
   <div class="btn-row" style="margin-top:var(--sp-6)">
-    <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
   </div>
 </section>
@@ -38,13 +38,13 @@
         <p class="card__idx">Free, 30 minutes</p>
         <h3 style="font-size:var(--fs-h4)">Scope this properly</h3>
         <p>Talk to an engineer, not a salesperson. Scope, timeline and budget in writing afterwards.</p>
-        <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <div class="card" style="padding:var(--sp-5)">
         <p class="card__idx">Real estate</p>
         <h3 style="font-size:var(--fs-h4)">All services for this sector</h3>
         <p>See every service we deliver to real estate businesses.</p>
-        <a class="btn btn--line" href="{{ url('/software-for-real-estate') }}" style="justify-content:center">View sector<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--line" href="{{ route('industry.detail', ['slug'=>'software-for-real-estate']) }}" style="justify-content:center">View sector<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </aside>
   </div>

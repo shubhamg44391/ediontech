@@ -1,20 +1,20 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Local SEO services in Lucknow, India | Edion Web Technologies')
-@section('description', 'Local SEO services for businesses in Lucknow, India. Google Business Profile optimisation, citation consistency, review management and location-based content')
-@section('keywords', 'local seo services lucknow, local seo services india, local seo services lucknow, local seo services company lucknow, best local seo services lucknow')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Local SEO services in Lucknow, India | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Local SEO services for businesses in Lucknow, India. Google Business Profile optimisation, citation consistency, review management and location-based content')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'local seo services lucknow, local seo services india, local seo services lucknow, local seo services company lucknow, best local seo services lucknow')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 
 <section class="phero shell">
- <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/locations') }}">Locations</a></li><li aria-current="page"><b class="kw">Local <b class="kw">SEO services</b></b> in Lucknow</li></ol></nav>
+ <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">Locations</a></li><li aria-current="page"><b class="kw">Local <b class="kw">SEO services</b></b> in Lucknow</li></ol></nav>
  <p class="eyebrow">SEO &middot; India</p>
  <h1 style="margin-top:var(--sp-4)">Local SEO services in Lucknow</h1>
  <p class="lead"><span class="kw kw--pri"><b class="kw2">Google Business Profile</b></span> optimisation, citation consistency, review management and location-based content for businesses competing in a specific place. We work with businesses in <span class="kw kw--loc">Lucknow</span> and across <span class="kw kw--loc">India</span>.</p>
  <div class="btn-row" style="margin-top:var(--sp-6)">
- <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
  </div>
 </section>
@@ -40,13 +40,13 @@
  <p class="card__idx">Free, 30 minutes</p>
  <h3 style="font-size:var(--fs-h4)">Get a real number</h3>
  <p>Talk to an engineer, not a salesperson. Scope, timeline and budget in writing afterwards.</p>
- <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="card" style="padding:var(--sp-5)">
  <p class="card__idx">Free tool</p>
  <h3 style="font-size:var(--fs-h4)">Cost calculator</h3>
  <p>Estimate a rental platform build by module. No email required.</p>
- <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}"
+ <a class="btn btn--line" href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}"
  style="justify-content:center">Open it<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  </aside>
@@ -59,7 +59,7 @@
  <div><p class="eyebrow">Questions</p><h2>Local SEO services in Lucknow: common questions</h2></div>
  </div>
  <div class="acc" style="max-width:62rem;border-color:var(--ink-3)" data-reveal>
- <details><summary style="color:var(--text-on-ink)">Do you deliver local seo services to clients in Lucknow?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Lucknow and the wider India market is one we work in regularly. Working hours overlap IST (UTC+5:30), we quote in INR or USD, and we deliver in Hindi and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How is local seo services priced?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Scope drives price, not location. SEO packages are published on our <a href="{{ url('/pricing') }}">pricing page</a> from $361.45 per month; design and development are quoted per project after a 30-minute scoping call.</p></div></details><details><summary style="color:var(--text-on-ink)">Who owns the code and design files?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>You do, on final payment, written into the contract, repository, design sources, credentials and deployment documentation.</p></div></details>
+ <details><summary style="color:var(--text-on-ink)">Do you deliver local seo services to clients in Lucknow?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Lucknow and the wider India market is one we work in regularly. Working hours overlap IST (UTC+5:30), we quote in INR or USD, and we deliver in Hindi and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How is local seo services priced?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Scope drives price, not location. SEO packages are published on our <a href="{{ route('industry.detail', ['slug'=>'pricing']) }}">pricing page</a> from $361.45 per month; design and development are quoted per project after a 30-minute scoping call.</p></div></details><details><summary style="color:var(--text-on-ink)">Who owns the code and design files?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>You do, on final payment, written into the contract, repository, design sources, credentials and deployment documentation.</p></div></details>
  </div>
  </div>
 </section>
@@ -76,13 +76,13 @@
  <div><p class="eyebrow">Nearby</p><h2>Local SEO services in other markets</h2></div>
  </div>
  <div class="linkmatrix" data-reveal>
- <div><p class="lbl">India</p><ul><li><a href="{{ url('/local-seo-services-delhi') }}">Delhi</a></li><li><a href="{{ url('/local-seo-services-mumbai') }}">Mumbai</a></li><li><a href="{{ url('/local-seo-services-bangalore') }}">Bangalore</a></li></ul></div>
- <div><p class="lbl">Other services in Lucknow</p><ul><li><a href="{{ url('/car-rental-software-development-lucknow') }}">Car rental software development</a></li><li><a href="{{ url('/fleet-management-software-lucknow') }}">Fleet management software</a></li><li><a href="{{ url('/car-rental-booking-engine-lucknow') }}">Car rental booking engine</a></li><li><a href="{{ url('/vehicle-rental-app-development-lucknow') }}">Vehicle rental app development</a></li><li><a href="{{ url('/chauffeur-limousine-booking-software-lucknow') }}">Chauffeur and limousine booking software</a></li><li><a href="{{ url('/website-development-lucknow') }}">Website development</a></li><li><a href="{{ url('/custom-software-development-lucknow') }}">Custom software development</a></li></ul></div>
+ <div><p class="lbl">India</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'local-seo-services-delhi']) }}">Delhi</a></li><li><a href="{{ route('industry.detail', ['slug'=>'local-seo-services-mumbai']) }}">Mumbai</a></li><li><a href="{{ route('industry.detail', ['slug'=>'local-seo-services-bangalore']) }}">Bangalore</a></li></ul></div>
+ <div><p class="lbl">Other services in Lucknow</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-lucknow']) }}">Car rental software development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'fleet-management-software-lucknow']) }}">Fleet management software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-booking-engine-lucknow']) }}">Car rental booking engine</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-lucknow']) }}">Vehicle rental app development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'chauffeur-limousine-booking-software-lucknow']) }}">Chauffeur and limousine booking software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'website-development-lucknow']) }}">Website development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'custom-software-development-lucknow']) }}">Custom software development</a></li></ul></div>
  <div><p class="lbl">Go deeper</p><ul>
- <li><a href="{{ url('/software-development-lucknow') }}">All services in Lucknow</a></li>
- <li><a href="{{ url('/local-seo-services') }}">Local SEO services overview</a></li>
- <li><a href="{{ url('/rental-software-cost-calculator') }}">Cost calculator</a></li>
- <li><a href="{{ url('/locations') }}">All locations</a></li></ul></div>
+ <li><a href="{{ route('industry.detail', ['slug'=>'software-development-lucknow']) }}">All services in Lucknow</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'local-seo-services']) }}">Local SEO services overview</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}">Cost calculator</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">All locations</a></li></ul></div>
  </div>
  </div>
 </section>

@@ -1,15 +1,15 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Software Development for Car rental and mobility | Edion Web Technologies')
-@section('description', 'Custom software, web, mobile and SEO for car rental and mobility businesses. Rental and mobility operators run three revenue streams at once: walk-in retail')
-@section('keywords', 'software for car rental and mobility, car rental and mobility software development, car rental and mobility web development, car rental and mobility seo')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Software Development for Car rental and mobility | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Custom software, web, mobile and SEO for car rental and mobility businesses. Rental and mobility operators run three revenue streams at once: walk-in retail')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'software for car rental and mobility, car rental and mobility software development, car rental and mobility web development, car rental and mobility seo')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 <section class="phero shell">
   <nav aria-label="Breadcrumb"><ol class="crumbs">
-    <li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/industries') }}">Industries</a></li>
+    <li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'industries']) }}">Industries</a></li>
     <li aria-current="page">Car rental and mobility</li></ol></nav>
   <span class="ind-badge" style="display:inline-flex">
     <img src="{{ asset('assets/frontend/img/industry/mobility.svg') }}" alt="" width="34" height="34" loading="eager">
@@ -19,7 +19,7 @@
      a first release so the capabilities that change operations arrive before the ones that change
      appearance.</p>
   <div class="btn-row" style="margin-top:var(--sp-6)">
-    <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
   </div>
 </section>
@@ -44,7 +44,7 @@
       <div class="card" style="padding:var(--sp-5)">
         <p class="card__idx">Free, 30 minutes</p><h3 style="font-size:var(--fs-h4)">Get a real number</h3>
         <p>Scope, timeline and budget in writing after one call.</p>
-        <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </aside>
   </div>

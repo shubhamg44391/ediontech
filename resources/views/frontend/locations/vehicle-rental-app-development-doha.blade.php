@@ -1,20 +1,20 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Vehicle rental app development in Doha, Qatar | Edion Web Technologies')
-@section('description', 'Vehicle rental app development for businesses in Doha, Qatar. iOS and Android apps for rental and mobility operators. Browse and book, upload a licence, sign the agree')
-@section('keywords', 'vehicle rental app development doha, vehicle rental app development qatar, vehicle rental app development doha, vehicle rental app development company doha, best vehicle rental app development doha')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Vehicle rental app development in Doha, Qatar | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Vehicle rental app development for businesses in Doha, Qatar. iOS and Android apps for rental and mobility operators. Browse and book, upload a licence, sign the agree')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'vehicle rental app development doha, vehicle rental app development qatar, vehicle rental app development doha, vehicle rental app development company doha, best vehicle rental app development doha')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 
 <section class="phero shell">
- <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/locations') }}">Locations</a></li><li aria-current="page">Vehicle rental app development in Doha</li></ol></nav>
+ <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">Locations</a></li><li aria-current="page">Vehicle rental app development in Doha</li></ol></nav>
  <p class="eyebrow">Mobile &middot; Qatar</p>
  <h1 style="margin-top:var(--sp-4)">Vehicle rental app development in Doha</h1>
  <p class="lead">iOS and Android apps for rental and mobility operators. Browse and book, upload a licence, sign the agreement, photograph condition at collection and return, extend a hire without calling the branch. We work with businesses in <span class="kw kw--loc">Doha</span> and across <span class="kw kw--loc">Qatar</span>.</p>
  <div class="btn-row" style="margin-top:var(--sp-6)">
- <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
  </div>
 </section>
@@ -40,13 +40,13 @@
  <p class="card__idx">Free, 30 minutes</p>
  <h3 style="font-size:var(--fs-h4)">Get a real number</h3>
  <p>Talk to an engineer, not a salesperson. Scope, timeline and budget in writing afterwards.</p>
- <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="card" style="padding:var(--sp-5)">
  <p class="card__idx">Free tool</p>
  <h3 style="font-size:var(--fs-h4)">Cost calculator</h3>
  <p>Estimate a rental platform build by module. No email required.</p>
- <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}"
+ <a class="btn btn--line" href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}"
  style="justify-content:center">Open it<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  </aside>
@@ -59,7 +59,7 @@
  <div><p class="eyebrow">Questions</p><h2>Vehicle rental app development in Doha: common questions</h2></div>
  </div>
  <div class="acc" style="max-width:62rem;border-color:var(--ink-3)" data-reveal>
- <details><summary style="color:var(--text-on-ink)">Do you deliver vehicle rental app development to clients in Doha?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Doha and the wider Qatar market is one we work in regularly. Working hours overlap AST (UTC+3), we quote in QAR or USD, and we deliver in Arabic and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How is vehicle rental app development priced?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Scope drives price, not location. SEO packages are published on our <a href="{{ url('/pricing') }}">pricing page</a> from $361.45 per month; design and development are quoted per project after a 30-minute scoping call.</p></div></details><details><summary style="color:var(--text-on-ink)">Who owns the code and design files?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>You do, on final payment, written into the contract, repository, design sources, credentials and deployment documentation.</p></div></details>
+ <details><summary style="color:var(--text-on-ink)">Do you deliver vehicle rental app development to clients in Doha?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Doha and the wider Qatar market is one we work in regularly. Working hours overlap AST (UTC+3), we quote in QAR or USD, and we deliver in Arabic and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How is vehicle rental app development priced?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Scope drives price, not location. SEO packages are published on our <a href="{{ route('industry.detail', ['slug'=>'pricing']) }}">pricing page</a> from $361.45 per month; design and development are quoted per project after a 30-minute scoping call.</p></div></details><details><summary style="color:var(--text-on-ink)">Who owns the code and design files?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>You do, on final payment, written into the contract, repository, design sources, credentials and deployment documentation.</p></div></details>
  </div>
  </div>
 </section>
@@ -76,13 +76,13 @@
  <div><p class="eyebrow">Nearby</p><h2>Vehicle rental app development in other markets</h2></div>
  </div>
  <div class="linkmatrix" data-reveal>
- <div><p class="lbl">Gulf</p><ul><li><a href="{{ url('/vehicle-rental-app-development-dubai') }}">Dubai</a></li><li><a href="{{ url('/vehicle-rental-app-development-abu-dhabi') }}">Abu Dhabi</a></li><li><a href="{{ url('/vehicle-rental-app-development-sharjah') }}">Sharjah</a></li><li><a href="{{ url('/vehicle-rental-app-development-manama') }}">Manama</a></li><li><a href="{{ url('/vehicle-rental-app-development-riyadh') }}">Riyadh</a></li><li><a href="{{ url('/vehicle-rental-app-development-jeddah') }}">Jeddah</a></li><li><a href="{{ url('/vehicle-rental-app-development-kuwait-city') }}">Kuwait City</a></li></ul></div>
- <div><p class="lbl">Other services in Doha</p><ul><li><a href="{{ url('/car-rental-software-development-doha') }}">Car rental software development</a></li><li><a href="{{ url('/fleet-management-software-doha') }}">Fleet management software</a></li><li><a href="{{ url('/car-rental-booking-engine-doha') }}">Car rental booking engine</a></li><li><a href="{{ url('/chauffeur-limousine-booking-software-doha') }}">Chauffeur and limousine booking software</a></li><li><a href="{{ url('/website-development-doha') }}">Website development</a></li><li><a href="{{ url('/custom-software-development-doha') }}">Custom software development</a></li></ul></div>
+ <div><p class="lbl">Gulf</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-dubai']) }}">Dubai</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-abu-dhabi']) }}">Abu Dhabi</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-sharjah']) }}">Sharjah</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-manama']) }}">Manama</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-riyadh']) }}">Riyadh</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-jeddah']) }}">Jeddah</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-kuwait-city']) }}">Kuwait City</a></li></ul></div>
+ <div><p class="lbl">Other services in Doha</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-doha']) }}">Car rental software development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'fleet-management-software-doha']) }}">Fleet management software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-booking-engine-doha']) }}">Car rental booking engine</a></li><li><a href="{{ route('industry.detail', ['slug'=>'chauffeur-limousine-booking-software-doha']) }}">Chauffeur and limousine booking software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'website-development-doha']) }}">Website development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'custom-software-development-doha']) }}">Custom software development</a></li></ul></div>
  <div><p class="lbl">Go deeper</p><ul>
- <li><a href="{{ url('/software-development-doha') }}">All services in Doha</a></li>
- <li><a href="{{ url('/vehicle-rental-app-development') }}">Vehicle rental app development overview</a></li>
- <li><a href="{{ url('/rental-software-cost-calculator') }}">Cost calculator</a></li>
- <li><a href="{{ url('/locations') }}">All locations</a></li></ul></div>
+ <li><a href="{{ route('industry.detail', ['slug'=>'software-development-doha']) }}">All services in Doha</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development']) }}">Vehicle rental app development overview</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}">Cost calculator</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">All locations</a></li></ul></div>
  </div>
  </div>
 </section>

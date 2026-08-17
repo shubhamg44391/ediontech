@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Car rental software development in Amman, Jordan | Edion Web Technologies')
-@section('description', 'Car rental software development for businesses in Amman, Jordan. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
-@section('keywords', 'car rental software development amman, car rental software development jordan, car rental software development amman, car rental software development company amman, best car rental software development amman')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Car rental software development in Amman, Jordan | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Car rental software development for businesses in Amman, Jordan. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software development amman, car rental software development jordan, car rental software development amman, car rental software development company amman, best car rental software development amman')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

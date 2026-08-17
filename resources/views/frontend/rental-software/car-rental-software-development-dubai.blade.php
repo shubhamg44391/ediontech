@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Car rental software development in Dubai, United Arab Emirates | Edion Web Technologies')
-@section('description', 'Car rental software development for businesses in Dubai, United Arab Emirates. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
-@section('keywords', 'car rental software development dubai, car rental software development united arab emirates, car rental software development dubai, car rental software development company dubai, best car rental software development dubai')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Car rental software development in Dubai, United Arab Emirates | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Car rental software development for businesses in Dubai, United Arab Emirates. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software development dubai, car rental software development united arab emirates, car rental software development dubai, car rental software development company dubai, best car rental software development dubai')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

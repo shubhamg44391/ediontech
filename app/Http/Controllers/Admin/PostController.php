@@ -43,7 +43,8 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             if ($file->isValid()) {
-                $imagePath = $file->store('header', 'public');
+                $filename = $file->getClientOriginalName();
+                $imagePath = $file->storeAs('header', $filename, 'public');
                 $data['image'] = $imagePath;
             } else {
                 return redirect()->back()->with('error', 'File upload failed.');
@@ -125,8 +126,9 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             if ($file->isValid()) {
-                // Store the file and get the path
-                $imagePath = $file->store('header', 'public');
+                // Store the file and get the path using original name
+                $filename = $file->getClientOriginalName();
+                $imagePath = $file->storeAs('header', $filename, 'public');
                 $data['image'] = $imagePath;
             } else {
                 // Handle the file upload error

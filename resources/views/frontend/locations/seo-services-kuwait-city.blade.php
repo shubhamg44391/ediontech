@@ -1,20 +1,20 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'SEO services in Kuwait City, Kuwait | Edion Web Technologies')
-@section('description', 'SEO services for businesses in Kuwait City, Kuwait. SEO services that start with the technical problems nobody sold you. Technical SEO audits, on-page optimi')
-@section('keywords', 'seo services kuwait city, seo services kuwait, seo services kuwait city, seo services company kuwait city, best seo services kuwait city')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'SEO services in Kuwait City, Kuwait | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'SEO services for businesses in Kuwait City, Kuwait. SEO services that start with the technical problems nobody sold you. Technical SEO audits, on-page optimi')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'seo services kuwait city, seo services kuwait, seo services kuwait city, seo services company kuwait city, best seo services kuwait city')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 
 <section class="phero shell">
- <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/locations') }}">Locations</a></li><li aria-current="page"><b class="kw">SEO services</b> in Kuwait City</li></ol></nav>
+ <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">Locations</a></li><li aria-current="page"><b class="kw">SEO services</b> in Kuwait City</li></ol></nav>
  <p class="eyebrow">SEO &middot; Kuwait</p>
  <h1 style="margin-top:var(--sp-4)">SEO services in Kuwait City</h1>
  <p class="lead"><span class="kw kw--pri">SEO services</span> that start with the technical problems nobody sold you. Technical SEO audits, on-page optimisation, content strategy, <b class="kw2">link building</b> and local SEO for businesses in <span class="kw kw--loc">India</span>, the UAE, <span class="kw kw--loc">Saudi Arabia</span>, <span class="kw kw--loc">Jordan</span>, the UK and the USA. Published monthly pricing from <span class="kw kw--num">$361.45</span>, <b class="kw3">no ranking guarantees</b>, and monthly reporting that explains the bad months. We work with businesses in <span class="kw kw--loc">Kuwait City</span> and across <span class="kw kw--loc">Kuwait</span>.</p>
  <div class="btn-row" style="margin-top:var(--sp-6)">
- <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
  </div>
 </section>
@@ -40,13 +40,13 @@
  <p class="card__idx">Free, 30 minutes</p>
  <h3 style="font-size:var(--fs-h4)">Get a real number</h3>
  <p>Talk to an engineer, not a salesperson. Scope, timeline and budget in writing afterwards.</p>
- <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="card" style="padding:var(--sp-5)">
  <p class="card__idx">Free tool</p>
  <h3 style="font-size:var(--fs-h4)">Cost calculator</h3>
  <p>Estimate a rental platform build by module. No email required.</p>
- <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}"
+ <a class="btn btn--line" href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}"
  style="justify-content:center">Open it<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  </aside>
@@ -67,7 +67,7 @@
  <div><p class="eyebrow">Questions</p><h2>SEO services in Kuwait City: common questions</h2></div>
  </div>
  <div class="acc" style="max-width:62rem;border-color:var(--ink-3)" data-reveal>
- <details><summary style="color:var(--text-on-ink)">Do you deliver seo services to clients in Kuwait City?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Kuwait City and the wider Kuwait market is one we work in regularly. Working hours overlap AST (UTC+3), we quote in KWD or USD, and we deliver in Arabic and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How much do SEO services cost?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Our packages are published on the <a href="{{ url('/pricing') }}">pricing page</a>, starting at $361.45 per month, with the full scope of each tier listed including what is not included. We publish exclusions because that is usually what a vendor hides.</p></div></details><details><summary style="color:var(--text-on-ink)">How long before SEO produces results?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Three to six months for meaningful movement on competitive terms, longer on a new domain. Technical fixes can show faster, indexing and Core Web Vitals problems sometimes resolve within weeks. We report monthly from month one so you can see progress before you see rankings.</p></div></details><details><summary style="color:var(--text-on-ink)">Do you guarantee first-page rankings?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>No, and be cautious of anyone who does. We commit to a defined volume of work, white-hat methods and transparent monthly measurement. Guaranteed placements generally mean paid ads relabelled as SEO, or link schemes that end in a manual action.</p></div></details><details><summary style="color:var(--text-on-ink)">What is included in a technical SEO audit?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Crawlability and indexation, canonical tags, redirect chains, Core Web Vitals, structured data, internal linking, sitemap and robots configuration, broken links and crawl budget waste. Delivered as a prioritised fix list with effort estimates, plus a re-test once your developers have worked through it. See <a href="{{ url('/technical-seo-audit') }}">technical SEO audit</a>.</p></div></details>
+ <details><summary style="color:var(--text-on-ink)">Do you deliver seo services to clients in Kuwait City?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Kuwait City and the wider Kuwait market is one we work in regularly. Working hours overlap AST (UTC+3), we quote in KWD or USD, and we deliver in Arabic and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How much do SEO services cost?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Our packages are published on the <a href="{{ route('industry.detail', ['slug'=>'pricing']) }}">pricing page</a>, starting at $361.45 per month, with the full scope of each tier listed including what is not included. We publish exclusions because that is usually what a vendor hides.</p></div></details><details><summary style="color:var(--text-on-ink)">How long before SEO produces results?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Three to six months for meaningful movement on competitive terms, longer on a new domain. Technical fixes can show faster, indexing and Core Web Vitals problems sometimes resolve within weeks. We report monthly from month one so you can see progress before you see rankings.</p></div></details><details><summary style="color:var(--text-on-ink)">Do you guarantee first-page rankings?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>No, and be cautious of anyone who does. We commit to a defined volume of work, white-hat methods and transparent monthly measurement. Guaranteed placements generally mean paid ads relabelled as SEO, or link schemes that end in a manual action.</p></div></details><details><summary style="color:var(--text-on-ink)">What is included in a technical SEO audit?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Crawlability and indexation, canonical tags, redirect chains, Core Web Vitals, structured data, internal linking, sitemap and robots configuration, broken links and crawl budget waste. Delivered as a prioritised fix list with effort estimates, plus a re-test once your developers have worked through it. See <a href="{{ route('industry.detail', ['slug'=>'technical-seo-audit']) }}">technical SEO audit</a>.</p></div></details>
  </div>
  </div>
 </section>
@@ -84,13 +84,13 @@
  <div><p class="eyebrow">Nearby</p><h2>SEO services in other markets</h2></div>
  </div>
  <div class="linkmatrix" data-reveal>
- <div><p class="lbl">Gulf</p><ul><li><a href="{{ url('/seo-services-dubai') }}">Dubai</a></li><li><a href="{{ url('/seo-services-abu-dhabi') }}">Abu Dhabi</a></li><li><a href="{{ url('/seo-services-sharjah') }}">Sharjah</a></li><li><a href="{{ url('/seo-services-manama') }}">Manama</a></li><li><a href="{{ url('/seo-services-riyadh') }}">Riyadh</a></li><li><a href="{{ url('/seo-services-jeddah') }}">Jeddah</a></li><li><a href="{{ url('/seo-services-doha') }}">Doha</a></li></ul></div>
- <div><p class="lbl">Other services in Kuwait City</p><ul><li><a href="{{ url('/car-rental-software-development-kuwait-city') }}">Car rental software development</a></li><li><a href="{{ url('/fleet-management-software-kuwait-city') }}">Fleet management software</a></li><li><a href="{{ url('/car-rental-booking-engine-kuwait-city') }}">Car rental booking engine</a></li><li><a href="{{ url('/vehicle-rental-app-development-kuwait-city') }}">Vehicle rental app development</a></li><li><a href="{{ url('/chauffeur-limousine-booking-software-kuwait-city') }}">Chauffeur and limousine booking software</a></li><li><a href="{{ url('/website-development-kuwait-city') }}">Website development</a></li><li><a href="{{ url('/custom-software-development-kuwait-city') }}">Custom software development</a></li></ul></div>
+ <div><p class="lbl">Gulf</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-dubai']) }}">Dubai</a></li><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-abu-dhabi']) }}">Abu Dhabi</a></li><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-sharjah']) }}">Sharjah</a></li><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-manama']) }}">Manama</a></li><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-riyadh']) }}">Riyadh</a></li><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-jeddah']) }}">Jeddah</a></li><li><a href="{{ route('industry.detail', ['slug'=>'seo-services-doha']) }}">Doha</a></li></ul></div>
+ <div><p class="lbl">Other services in Kuwait City</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-kuwait-city']) }}">Car rental software development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'fleet-management-software-kuwait-city']) }}">Fleet management software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-booking-engine-kuwait-city']) }}">Car rental booking engine</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-kuwait-city']) }}">Vehicle rental app development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'chauffeur-limousine-booking-software-kuwait-city']) }}">Chauffeur and limousine booking software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'website-development-kuwait-city']) }}">Website development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'custom-software-development-kuwait-city']) }}">Custom software development</a></li></ul></div>
  <div><p class="lbl">Go deeper</p><ul>
- <li><a href="{{ url('/software-development-kuwait-city') }}">All services in Kuwait City</a></li>
- <li><a href="{{ url('/seo-services') }}">SEO services overview</a></li>
- <li><a href="{{ url('/rental-software-cost-calculator') }}">Cost calculator</a></li>
- <li><a href="{{ url('/locations') }}">All locations</a></li></ul></div>
+ <li><a href="{{ route('industry.detail', ['slug'=>'software-development-kuwait-city']) }}">All services in Kuwait City</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'seo-services']) }}">SEO services overview</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}">Cost calculator</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">All locations</a></li></ul></div>
  </div>
  </div>
 </section>

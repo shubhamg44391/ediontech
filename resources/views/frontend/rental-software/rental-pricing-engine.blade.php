@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Dynamic pricing engine for rentals | Edion Web Technologies')
-@section('description', 'Base rates by category and duration, seasonal multipliers, weekend and long-term tiers, corporate rate cards, promotional codes and location surcharges. All')
-@section('keywords', 'dynamic pricing engine for rentals, rental pricing engine, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Dynamic pricing engine for rentals | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Base rates by category and duration, seasonal multipliers, weekend and long-term tiers, corporate rate cards, promotional codes and location surcharges. All')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'dynamic pricing engine for rentals, rental pricing engine, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

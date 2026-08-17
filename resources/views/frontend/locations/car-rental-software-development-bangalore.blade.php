@@ -1,20 +1,20 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Car rental software development in Bangalore, India | Edion Web Technologies')
-@section('description', 'Car rental software development for businesses in Bangalore, India. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
-@section('keywords', 'car rental software development bangalore, car rental software development india, car rental software development bangalore, car rental software development company bangalore, best car rental software development bangalore')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Car rental software development in Bangalore, India | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Car rental software development for businesses in Bangalore, India. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software development bangalore, car rental software development india, car rental software development bangalore, car rental software development company bangalore, best car rental software development bangalore')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 
 <section class="phero shell">
- <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/locations') }}">Locations</a></li><li aria-current="page"><b class="kw"><b class="kw">Car rental software</b> development</b> in Bangalore</li></ol></nav>
+ <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">Locations</a></li><li aria-current="page"><b class="kw"><b class="kw">Car rental software</b> development</b> in Bangalore</li></ol></nav>
  <p class="eyebrow">Rental platforms &middot; India</p>
  <h1 style="margin-top:var(--sp-4)">Car rental software development in Bangalore</h1>
  <p class="lead">Custom <span class="kw kw--pri"><b class="kw">car rental software development</b></span> for operators who have outgrown off-the-shelf rental systems. We build reservation engines, fleet management modules, <b class="kw2">dynamic pricing</b>, <b class="kw2">damage capture</b> and <b class="kw2">multi-branch</b> back offices as one platform you own outright. Eight rental and fleet platforms shipped across the UAE, <span class="kw kw--loc">Saudi Arabia</span>, <span class="kw kw--loc">Jordan</span>, <span class="kw kw--loc">India</span> and the UK. We work with businesses in <span class="kw kw--loc">Bangalore</span> and across India.</p>
  <div class="btn-row" style="margin-top:var(--sp-6)">
- <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
  </div>
 </section>
@@ -40,13 +40,13 @@
  <p class="card__idx">Free, 30 minutes</p>
  <h3 style="font-size:var(--fs-h4)">Get a real number</h3>
  <p>Talk to an engineer, not a salesperson. Scope, timeline and budget in writing afterwards.</p>
- <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="card" style="padding:var(--sp-5)">
  <p class="card__idx">Free tool</p>
  <h3 style="font-size:var(--fs-h4)">Cost calculator</h3>
  <p>Estimate a rental platform build by module. No email required.</p>
- <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}"
+ <a class="btn btn--line" href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}"
  style="justify-content:center">Open it<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  </aside>
@@ -67,7 +67,7 @@
  <div><p class="eyebrow">Questions</p><h2>Car rental software development in Bangalore: common questions</h2></div>
  </div>
  <div class="acc" style="max-width:62rem;border-color:var(--ink-3)" data-reveal>
- <details><summary style="color:var(--text-on-ink)">Do you deliver car rental software development to clients in Bangalore?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Bangalore and the wider India market is one we work in regularly. Working hours overlap IST (UTC+5:30), we quote in INR or USD, and we deliver in Kannada, Hindi and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How much does car rental software development cost?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>It depends on which modules you need in the first release. A core platform covering fleet, availability, pricing, customer records, a booking flow and basic reporting is typically a three to six month project. Our <a href="{{ url('/rental-software-cost-calculator') }}">rental software cost calculator</a> gives you a module-by-module estimate in delivery weeks and budget, using whatever blended rate your shortlisted vendors quote. That way you can compare proposals on the same basis instead of comparing headline numbers.</p></div></details><details><summary style="color:var(--text-on-ink)">How long does it take to build a car rental system?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Three to six months for a realistic first release covering the core modules. Adding chauffeur dispatch, a customer mobile app or multiple integrations extends it. Any vendor quoting six weeks for a full platform is either reselling a template or has not understood the availability logic.</p></div></details><details><summary style="color:var(--text-on-ink)">Can you integrate with our existing accounting or telematics system?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Usually yes. We start with a short technical review of what you run and what its API or export capability actually allows, then design the integration around that reality rather than around what the vendor's marketing claims.</p></div></details><details><summary style="color:var(--text-on-ink)">Do we own the source code?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes, on final payment, and it is written into the contract. You get the repository, design source files, credentials and deployment documentation. We do not hold clients hostage through hosting or access.</p></div></details>
+ <details><summary style="color:var(--text-on-ink)">Do you deliver car rental software development to clients in Bangalore?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Bangalore and the wider India market is one we work in regularly. Working hours overlap IST (UTC+5:30), we quote in INR or USD, and we deliver in Kannada, Hindi and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How much does car rental software development cost?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>It depends on which modules you need in the first release. A core platform covering fleet, availability, pricing, customer records, a booking flow and basic reporting is typically a three to six month project. Our <a href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}">rental software cost calculator</a> gives you a module-by-module estimate in delivery weeks and budget, using whatever blended rate your shortlisted vendors quote. That way you can compare proposals on the same basis instead of comparing headline numbers.</p></div></details><details><summary style="color:var(--text-on-ink)">How long does it take to build a car rental system?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Three to six months for a realistic first release covering the core modules. Adding chauffeur dispatch, a customer mobile app or multiple integrations extends it. Any vendor quoting six weeks for a full platform is either reselling a template or has not understood the availability logic.</p></div></details><details><summary style="color:var(--text-on-ink)">Can you integrate with our existing accounting or telematics system?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Usually yes. We start with a short technical review of what you run and what its API or export capability actually allows, then design the integration around that reality rather than around what the vendor's marketing claims.</p></div></details><details><summary style="color:var(--text-on-ink)">Do we own the source code?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes, on final payment, and it is written into the contract. You get the repository, design source files, credentials and deployment documentation. We do not hold clients hostage through hosting or access.</p></div></details>
  </div>
  </div>
 </section>
@@ -84,13 +84,13 @@
  <div><p class="eyebrow">Nearby</p><h2>Car rental software development in other markets</h2></div>
  </div>
  <div class="linkmatrix" data-reveal>
- <div><p class="lbl">India</p><ul><li><a href="{{ url('/car-rental-software-development-lucknow') }}">Lucknow</a></li><li><a href="{{ url('/car-rental-software-development-delhi') }}">Delhi</a></li><li><a href="{{ url('/car-rental-software-development-mumbai') }}">Mumbai</a></li></ul></div>
- <div><p class="lbl">Other services in Bangalore</p><ul><li><a href="{{ url('/fleet-management-software-bangalore') }}">Fleet management software</a></li><li><a href="{{ url('/car-rental-booking-engine-bangalore') }}">Car rental booking engine</a></li><li><a href="{{ url('/vehicle-rental-app-development-bangalore') }}">Vehicle rental app development</a></li><li><a href="{{ url('/chauffeur-limousine-booking-software-bangalore') }}">Chauffeur and limousine booking software</a></li><li><a href="{{ url('/website-development-bangalore') }}">Website development</a></li><li><a href="{{ url('/custom-software-development-bangalore') }}">Custom software development</a></li></ul></div>
+ <div><p class="lbl">India</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-lucknow']) }}">Lucknow</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-delhi']) }}">Delhi</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-mumbai']) }}">Mumbai</a></li></ul></div>
+ <div><p class="lbl">Other services in Bangalore</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'fleet-management-software-bangalore']) }}">Fleet management software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-booking-engine-bangalore']) }}">Car rental booking engine</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-bangalore']) }}">Vehicle rental app development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'chauffeur-limousine-booking-software-bangalore']) }}">Chauffeur and limousine booking software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'website-development-bangalore']) }}">Website development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'custom-software-development-bangalore']) }}">Custom software development</a></li></ul></div>
  <div><p class="lbl">Go deeper</p><ul>
- <li><a href="{{ url('/software-development-bangalore') }}">All services in Bangalore</a></li>
- <li><a href="{{ url('/car-rental-software-development') }}">Car rental software development overview</a></li>
- <li><a href="{{ url('/rental-software-cost-calculator') }}">Cost calculator</a></li>
- <li><a href="{{ url('/locations') }}">All locations</a></li></ul></div>
+ <li><a href="{{ route('industry.detail', ['slug'=>'software-development-bangalore']) }}">All services in Bangalore</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development']) }}">Car rental software development overview</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}">Cost calculator</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">All locations</a></li></ul></div>
  </div>
  </div>
 </section>

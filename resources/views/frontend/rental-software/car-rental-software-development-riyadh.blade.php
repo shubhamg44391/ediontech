@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Car rental software development in Riyadh, Saudi Arabia | Edion Web Technologies')
-@section('description', 'Car rental software development for businesses in Riyadh, Saudi Arabia. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
-@section('keywords', 'car rental software development riyadh, car rental software development saudi arabia, car rental software development riyadh, car rental software development company riyadh, best car rental software development riyadh')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Car rental software development in Riyadh, Saudi Arabia | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Car rental software development for businesses in Riyadh, Saudi Arabia. Custom car rental software development for operators who have outgrown off-the-shelf rental systems. We b')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software development riyadh, car rental software development saudi arabia, car rental software development riyadh, car rental software development company riyadh, best car rental software development riyadh')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

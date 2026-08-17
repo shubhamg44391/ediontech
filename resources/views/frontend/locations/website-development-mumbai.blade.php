@@ -1,20 +1,20 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Website development in Mumbai, India | Edion Web Technologies')
-@section('description', 'Website development for businesses in Mumbai, India. Marketing sites through to complex web applications, built to stay maintainable after we hand them over.')
-@section('keywords', 'website development mumbai, website development india, website development mumbai, website development company mumbai, best website development mumbai')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Website development in Mumbai, India | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Website development for businesses in Mumbai, India. Marketing sites through to complex web applications, built to stay maintainable after we hand them over.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'website development mumbai, website development india, website development mumbai, website development company mumbai, best website development mumbai')
 
 @section('main-container')
 <main id="main">
 <a id="top"></a>
 
 <section class="phero shell">
- <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ url('/locations') }}">Locations</a></li><li aria-current="page"><b class="kw">Website development</b> in Mumbai</li></ol></nav>
+ <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="{{ url('/') }}">Home</a></li><li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">Locations</a></li><li aria-current="page"><b class="kw">Website development</b> in Mumbai</li></ol></nav>
  <p class="eyebrow">Build &middot; India</p>
  <h1 style="margin-top:var(--sp-4)">Website development in Mumbai</h1>
  <p class="lead">Marketing sites through to complex web applications, built to stay maintainable after we hand them over. Clean markup, sensible dependencies, and code your next developer can read. We work with businesses in <span class="kw kw--loc">Mumbai</span> and across <span class="kw kw--loc">India</span>.</p>
  <div class="btn-row" style="margin-top:var(--sp-6)">
- <a class="btn btn--ink" href="{{ url('/free-consultation') }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--ink" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}">Book a free consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  <a class="btn btn--line" href="https://wa.me/919696787596" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
  </div>
 </section>
@@ -40,13 +40,13 @@
  <p class="card__idx">Free, 30 minutes</p>
  <h3 style="font-size:var(--fs-h4)">Get a real number</h3>
  <p>Talk to an engineer, not a salesperson. Scope, timeline and budget in writing afterwards.</p>
- <a class="btn btn--signal" href="{{ url('/free-consultation') }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ <a class="btn btn--signal" href="{{ route('industry.detail', ['slug'=>'free-consultation']) }}" style="justify-content:center">Book a call<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  <div class="card" style="padding:var(--sp-5)">
  <p class="card__idx">Free tool</p>
  <h3 style="font-size:var(--fs-h4)">Cost calculator</h3>
  <p>Estimate a rental platform build by module. No email required.</p>
- <a class="btn btn--line" href="{{ url('/rental-software-cost-calculator') }}"
+ <a class="btn btn--line" href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}"
  style="justify-content:center">Open it<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
  </div>
  </aside>
@@ -59,7 +59,7 @@
  <div><p class="eyebrow">Questions</p><h2>Website development in Mumbai: common questions</h2></div>
  </div>
  <div class="acc" style="max-width:62rem;border-color:var(--ink-3)" data-reveal>
- <details><summary style="color:var(--text-on-ink)">Do you deliver website development to clients in Mumbai?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Mumbai and the wider India market is one we work in regularly. Working hours overlap IST (UTC+5:30), we quote in INR or USD, and we deliver in Hindi, Marathi and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How is website development priced?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Scope drives price, not location. SEO packages are published on our <a href="{{ url('/pricing') }}">pricing page</a> from $361.45 per month; design and development are quoted per project after a 30-minute scoping call.</p></div></details><details><summary style="color:var(--text-on-ink)">Who owns the code and design files?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>You do, on final payment, written into the contract, repository, design sources, credentials and deployment documentation.</p></div></details>
+ <details><summary style="color:var(--text-on-ink)">Do you deliver website development to clients in Mumbai?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Yes. Mumbai and the wider India market is one we work in regularly. Working hours overlap IST (UTC+5:30), we quote in INR or USD, and we deliver in Hindi, Marathi and English.</p></div></details><details><summary style="color:var(--text-on-ink)">How is website development priced?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>Scope drives price, not location. SEO packages are published on our <a href="{{ route('industry.detail', ['slug'=>'pricing']) }}">pricing page</a> from $361.45 per month; design and development are quoted per project after a 30-minute scoping call.</p></div></details><details><summary style="color:var(--text-on-ink)">Who owns the code and design files?</summary><div class="acc__body" style="color:var(--text-on-ink-2)"><p>You do, on final payment, written into the contract, repository, design sources, credentials and deployment documentation.</p></div></details>
  </div>
  </div>
 </section>
@@ -76,13 +76,13 @@
  <div><p class="eyebrow">Nearby</p><h2>Website development in other markets</h2></div>
  </div>
  <div class="linkmatrix" data-reveal>
- <div><p class="lbl">India</p><ul><li><a href="{{ url('/website-development-lucknow') }}">Lucknow</a></li><li><a href="{{ url('/website-development-delhi') }}">Delhi</a></li><li><a href="{{ url('/website-development-bangalore') }}">Bangalore</a></li></ul></div>
- <div><p class="lbl">Other services in Mumbai</p><ul><li><a href="{{ url('/car-rental-software-development-mumbai') }}">Car rental software development</a></li><li><a href="{{ url('/fleet-management-software-mumbai') }}">Fleet management software</a></li><li><a href="{{ url('/car-rental-booking-engine-mumbai') }}">Car rental booking engine</a></li><li><a href="{{ url('/vehicle-rental-app-development-mumbai') }}">Vehicle rental app development</a></li><li><a href="{{ url('/chauffeur-limousine-booking-software-mumbai') }}">Chauffeur and limousine booking software</a></li><li><a href="{{ url('/custom-software-development-mumbai') }}">Custom software development</a></li></ul></div>
+ <div><p class="lbl">India</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'website-development-lucknow']) }}">Lucknow</a></li><li><a href="{{ route('industry.detail', ['slug'=>'website-development-delhi']) }}">Delhi</a></li><li><a href="{{ route('industry.detail', ['slug'=>'website-development-bangalore']) }}">Bangalore</a></li></ul></div>
+ <div><p class="lbl">Other services in Mumbai</p><ul><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-software-development-mumbai']) }}">Car rental software development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'fleet-management-software-mumbai']) }}">Fleet management software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'car-rental-booking-engine-mumbai']) }}">Car rental booking engine</a></li><li><a href="{{ route('industry.detail', ['slug'=>'vehicle-rental-app-development-mumbai']) }}">Vehicle rental app development</a></li><li><a href="{{ route('industry.detail', ['slug'=>'chauffeur-limousine-booking-software-mumbai']) }}">Chauffeur and limousine booking software</a></li><li><a href="{{ route('industry.detail', ['slug'=>'custom-software-development-mumbai']) }}">Custom software development</a></li></ul></div>
  <div><p class="lbl">Go deeper</p><ul>
- <li><a href="{{ url('/software-development-mumbai') }}">All services in Mumbai</a></li>
- <li><a href="{{ url('/website-development') }}">Website development overview</a></li>
- <li><a href="{{ url('/rental-software-cost-calculator') }}">Cost calculator</a></li>
- <li><a href="{{ url('/locations') }}">All locations</a></li></ul></div>
+ <li><a href="{{ route('industry.detail', ['slug'=>'software-development-mumbai']) }}">All services in Mumbai</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'website-development']) }}">Website development overview</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'rental-software-cost-calculator']) }}">Cost calculator</a></li>
+ <li><a href="{{ route('industry.detail', ['slug'=>'locations']) }}">All locations</a></li></ul></div>
  </div>
  </div>
 </section>

@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Vehicle rental app development | Edion Web Technologies')
-@section('description', 'iOS and Android apps for rental and mobility operators. Browse and book, upload a licence, sign the agreement, photograph condition at collection and return,')
-@section('keywords', 'vehicle rental app development, vehicle rental app development, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Vehicle rental app development | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'iOS and Android apps for rental and mobility operators. Browse and book, upload a licence, sign the agreement, photograph condition at collection and return,')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'vehicle rental app development, vehicle rental app development, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

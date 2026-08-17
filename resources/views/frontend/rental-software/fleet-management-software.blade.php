@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Fleet management software | Edion Web Technologies')
-@section('description', 'Custom fleet management software that reports utilisation, downtime and cost per asset accurately. Built for rental operators, logistics fleets and corporate')
-@section('keywords', 'fleet management software, fleet management software, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Fleet management software | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Custom fleet management software that reports utilisation, downtime and cost per asset accurately. Built for rental operators, logistics fleets and corporate')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'fleet management software, fleet management software, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

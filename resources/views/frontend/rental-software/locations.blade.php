@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Locations | Software & Web Development Across 8 Countries | Edion')
-@section('description', 'Edion Web Technologies serves clients across India, the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Jordan, the UK, Canada and the USA. Find your market.')
-@section('keywords', 'software development company locations, web development company India UAE Jordan, car rental software Gulf, software company Middle East')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Locations | Software & Web Development Across 8 Countries | Edion')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Edion Web Technologies serves clients across India, the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Jordan, the UK, Canada and the USA. Find your market.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'software development company locations, web development company India UAE Jordan, car rental software Gulf, software company Middle East')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

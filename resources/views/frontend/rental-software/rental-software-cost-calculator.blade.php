@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Car Rental Software Cost Calculator | Free Estimate | Edion')
-@section('description', 'Estimate what a car rental or fleet management platform costs to build. Pick your modules, set a blended rate, and get a delivery-week and budget range instantly. No email required.')
-@section('keywords', 'car rental software cost, car rental software development cost, fleet management software cost, rental platform build estimate, car rental software calculator')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Car Rental Software Cost Calculator | Free Estimate | Edion')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Estimate what a car rental or fleet management platform costs to build. Pick your modules, set a blended rate, and get a delivery-week and budget range instantly. No email required.')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental software cost, car rental software development cost, fleet management software cost, rental platform build estimate, car rental software calculator')
 
 @section('main-container')
 <main id="main"><a id="top"></a>

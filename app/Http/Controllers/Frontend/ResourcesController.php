@@ -252,38 +252,43 @@ class ResourcesController extends Controller
 
     public function privacyPolicy()
     {
-        return view('frontend.resources.privacy-policy');
+        $headerdata = $this->getPageHeader('privacy-policy');
+        return view('frontend.resources.privacy-policy', compact('headerdata'));
     }
 
     public function termsAndConditions()
     {
-        return view('frontend.resources.terms-and-conditions');
+        $headerdata = $this->getPageHeader('terms-and-conditions');
+        return view('frontend.resources.terms-and-conditions', compact('headerdata'));
     }
 
     public function refundAndCancellationPolicy()
     {
-        return view('frontend.resources.refund-and-cancellation-policy');
+        $headerdata = $this->getPageHeader('refund-and-cancellation-policy');
+        return view('frontend.resources.refund-and-cancellation-policy', compact('headerdata'));
     }
 
     public function industryDetail($slug)
     {
+        $headerdata = $this->getPageHeader($slug);
+
         if (view()->exists('frontend.locations.' . $slug)) {
-            return view('frontend.locations.' . $slug);
+            return view('frontend.locations.' . $slug, compact('headerdata'));
         }
         if (view()->exists('frontend.industries.' . $slug)) {
-            return view('frontend.industries.' . $slug);
+            return view('frontend.industries.' . $slug, compact('headerdata'));
         }
         if (view()->exists('frontend.resources.' . $slug)) {
-            return view('frontend.resources.' . $slug);
+            return view('frontend.resources.' . $slug, compact('headerdata'));
         }
         if (view()->exists('frontend.services.' . $slug)) {
-            return view('frontend.services.' . $slug);
+            return view('frontend.services.' . $slug, compact('headerdata'));
         }
         if (view()->exists('frontend.seo-marketing.' . $slug)) {
-            return view('frontend.seo-marketing.' . $slug);
+            return view('frontend.seo-marketing.' . $slug, compact('headerdata'));
         }
         if (view()->exists('frontend.rental-software.' . $slug)) {
-            return view('frontend.rental-software.' . $slug);
+            return view('frontend.rental-software.' . $slug, compact('headerdata'));
         }
 
         abort(404);

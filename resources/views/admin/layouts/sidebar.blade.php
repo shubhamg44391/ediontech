@@ -27,6 +27,407 @@
         </a>
     </li>
 
+    <!-- Industries Dropdown -->
+    @php
+        $industryServices = ['car-rental-software-development-for','custom-software-development-for','ecommerce-development-for','fleet-management-software-for','local-seo-services-for','mobile-app-development-for','ppc-advertising-for','seo-services-for','software-for','technical-seo-audit-for','website-design-for','website-development-for'];
+        $industryActive = false;
+        foreach($industryServices as $s) { if(Request::is('admin/update/'.$s.'*')) { $industryActive = true; break; } }
+    @endphp
+    <li class="menu-item {{ $industryActive ? 'active open' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-building-house"></i>
+            <div data-i18n="Authentications">Industries</div>
+        </a>
+        <ul class="menu-sub">
+
+            <!-- Website Development by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/website-development-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Website Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/website-development-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'website-development-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Website Design by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/website-design-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Website Design</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/website-design-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'website-design-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Custom Software by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/custom-software-development-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Custom Software</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/custom-software-development-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'custom-software-development-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Mobile App Development by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/mobile-app-development-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Mobile App Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/mobile-app-development-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'mobile-app-development-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- E-commerce Development by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/ecommerce-development-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">E-commerce Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/ecommerce-development-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'ecommerce-development-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- SEO Services by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/seo-services-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">SEO Services</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/seo-services-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'seo-services-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Local SEO by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/local-seo-services-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Local SEO Services</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/local-seo-services-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'local-seo-services-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Technical SEO by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/technical-seo-audit-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Technical SEO Audit</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/technical-seo-audit-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'technical-seo-audit-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- PPC by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/ppc-advertising-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">PPC Advertising</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/ppc-advertising-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'ppc-advertising-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Software For by Industry -->
+            <li class="menu-item {{ Request::is('admin/update/software-for-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Industry Details</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['travel-tourism'=>'Travel & Tourism','hospitality'=>'Hospitality','logistics'=>'Logistics & Transport','healthcare'=>'Healthcare','real-estate'=>'Real Estate','education'=>'Education','ecommerce-retail'=>'E-commerce & Retail','automotive'=>'Automotive','car-rental-mobility'=>'Car Rental'] as $ind => $label)
+                    <li class="menu-item {{ Request::is('admin/update/software-for-'.$ind) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'software-for-'.$ind]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $label }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+
+    <!-- Locations Dropdown -->
+    @php
+        $locationCities = ['abu-dhabi','amman','bangalore','delhi','doha','dubai','jeddah','kuwait-city','london','lucknow','manama','manchester','mumbai','new-york','riyadh','sharjah','toronto'];
+        $locationServices = ['car-rental-booking-engine','car-rental-software-development','chauffeur-limousine-booking-software','custom-software-development','ecommerce-development','fleet-management-software','local-seo-services','mobile-app-development','ppc-advertising','seo-services','software-development','vehicle-rental-app-development','website-development'];
+        $locActive = false;
+        foreach($locationServices as $ls) { foreach($locationCities as $lc) { if(Request::is('admin/update/'.$ls.'-'.$lc)) { $locActive = true; break 2; } } }
+    @endphp
+    <li class="menu-item {{ $locActive ? 'active open' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-map-alt"></i>
+            <div data-i18n="Authentications">Locations</div>
+        </a>
+        <ul class="menu-sub">
+
+            <!-- Car Rental Software by City -->
+            <li class="menu-item {{ Request::is('admin/update/car-rental-software-development-*') && !Request::is('admin/update/car-rental-software-development') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Car Rental Software</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/car-rental-software-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'car-rental-software-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- SEO Services by City -->
+            <li class="menu-item {{ Request::is('admin/update/seo-services-*') && !Request::is('admin/update/seo-services') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">SEO Services</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/seo-services-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'seo-services-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Fleet Management by City -->
+            <li class="menu-item {{ Request::is('admin/update/fleet-management-software-*') && !Request::is('admin/update/fleet-management-software') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Fleet Management</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/fleet-management-software-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'fleet-management-software-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Mobile App Development by City -->
+            <li class="menu-item {{ Request::is('admin/update/mobile-app-development-*') && !Request::is('admin/update/mobile-app-development') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Mobile App Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/mobile-app-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'mobile-app-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Website Development by City -->
+            <li class="menu-item {{ Request::is('admin/update/website-development-*') && !Request::is('admin/update/website-development') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Website Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/website-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'website-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- E-commerce Development by City -->
+            <li class="menu-item {{ Request::is('admin/update/ecommerce-development-*') && !Request::is('admin/update/ecommerce-development') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">E-commerce Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/ecommerce-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'ecommerce-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Custom Software by City -->
+            <li class="menu-item {{ Request::is('admin/update/custom-software-development-*') && !Request::is('admin/update/custom-software-development') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Custom Software</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/custom-software-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'custom-software-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Local SEO by City -->
+            <li class="menu-item {{ Request::is('admin/update/local-seo-services-*') && !Request::is('admin/update/local-seo-services') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Local SEO Services</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/local-seo-services-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'local-seo-services-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- PPC by City -->
+            <li class="menu-item {{ Request::is('admin/update/ppc-advertising-*') && !Request::is('admin/update/ppc-advertising') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">PPC Advertising</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/ppc-advertising-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'ppc-advertising-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Vehicle Rental App by City -->
+            <li class="menu-item {{ Request::is('admin/update/vehicle-rental-app-development-*') && !Request::is('admin/update/vehicle-rental-app-development') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Vehicle Rental App</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/vehicle-rental-app-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'vehicle-rental-app-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Car Rental Booking Engine by City -->
+            <li class="menu-item {{ Request::is('admin/update/car-rental-booking-engine-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Car Rental Booking Engine</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/car-rental-booking-engine-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'car-rental-booking-engine-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Chauffeur Software by City -->
+            <li class="menu-item {{ Request::is('admin/update/chauffeur-limousine-booking-software-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Chauffeur & Limousine</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/chauffeur-limousine-booking-software-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'chauffeur-limousine-booking-software-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+            <!-- Software Development by City -->
+            <li class="menu-item {{ Request::is('admin/update/software-development-*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Basic">Software Development</div>
+                </a>
+                <ul class="menu-sub">
+                    @foreach(['abu-dhabi'=>'Abu Dhabi','amman'=>'Amman','bangalore'=>'Bangalore','delhi'=>'Delhi','doha'=>'Doha','dubai'=>'Dubai','jeddah'=>'Jeddah','kuwait-city'=>'Kuwait City','london'=>'London','lucknow'=>'Lucknow','manama'=>'Manama','manchester'=>'Manchester','mumbai'=>'Mumbai','new-york'=>'New York','riyadh'=>'Riyadh','sharjah'=>'Sharjah','toronto'=>'Toronto'] as $city => $cityLabel)
+                    <li class="menu-item {{ Request::is('admin/update/software-development-'.$city) ? 'active' : '' }}">
+                        <a href="{{ route('title.content',['slug'=>'software-development-'.$city]) }}" class="menu-link">
+                            <div data-i18n="Basic">{{ $cityLabel }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+
     <!-- 2. Rental Software Dropdown -->
     <li class="menu-item {{ (Request::is('admin/update/car-rental*') || Request::is('admin/update/fleet*') || Request::is('admin/update/vehicle*') || Request::is('admin/update/chauffeur*') || Request::is('admin/update/rental*') || Request::is('admin/update/telematics*') || Request::is('admin/update/damage*') || Request::is('admin/update/corporate*') || Request::is('admin/update/locations')) ? 'active open' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -472,6 +873,31 @@
             <i class="menu-icon tf-icons bx bx-phone-call"></i>
             <div data-i18n="Basic">Free Consultation</div>
         </a>
+    </li>
+
+    <!-- 10. Legal & Policies Dropdown -->
+    <li class="menu-item {{ (Request::is('admin/update/privacy-policy') || Request::is('admin/update/terms-and-conditions') || Request::is('admin/update/refund-and-cancellation-policy')) ? 'active open' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-shield-quarter"></i>
+            <div data-i18n="Authentications">Legal & Policies</div>
+        </a>
+        <ul class="menu-sub">
+            <li class="menu-item {{ Request::is('admin/update/privacy-policy') ? 'active' : '' }}">
+                <a href="{{ route('title.content',['slug'=>'privacy-policy']) }}" class="menu-link">
+                    <div data-i18n="Basic">Privacy Policy</div>
+                </a>
+            </li>
+            <li class="menu-item {{ Request::is('admin/update/terms-and-conditions') ? 'active' : '' }}">
+                <a href="{{ route('title.content',['slug'=>'terms-and-conditions']) }}" class="menu-link">
+                    <div data-i18n="Basic">Terms & Conditions</div>
+                </a>
+            </li>
+            <li class="menu-item {{ Request::is('admin/update/refund-and-cancellation-policy') ? 'active' : '' }}">
+                <a href="{{ route('title.content',['slug'=>'refund-and-cancellation-policy']) }}" class="menu-link">
+                    <div data-i18n="Basic">Refund & Cancellation</div>
+                </a>
+            </li>
+        </ul>
     </li>
 
     <li class="menu-header small text-uppercase">

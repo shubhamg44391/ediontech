@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
+﻿@extends('frontend.layouts.app')
 
-@section('title', 'Car rental booking engine | Edion Web Technologies')
-@section('description', 'Aggregator commissions have kept climbing, which has quietly improved the arithmetic on owning your own booking flow. For most operators a direct booking eng')
-@section('keywords', 'car rental booking engine, car rental booking engine, Edion Web Technologies')
+@section('title', !empty($headerdata->meta_title) ? $headerdata->meta_title : 'Car rental booking engine | Edion Web Technologies')
+@section('description', !empty($headerdata->meta_description) ? $headerdata->meta_description : 'Aggregator commissions have kept climbing, which has quietly improved the arithmetic on owning your own booking flow. For most operators a direct booking eng')
+@section('keywords', !empty($headerdata->meta_keywords) ? $headerdata->meta_keywords : 'car rental booking engine, car rental booking engine, Edion Web Technologies')
 
 @section('main-container')
 <main id="main"><a id="top"></a>
