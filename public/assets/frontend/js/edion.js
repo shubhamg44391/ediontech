@@ -14,14 +14,12 @@
       burger.setAttribute("aria-expanded", String(!open));
       drawer.setAttribute("data-open", String(!open));
       if (masthead) masthead.setAttribute("data-drawer-open", String(!open));
-      document.body.style.overflow = open ? "" : "hidden";
     });
     drawer.addEventListener("click", function (e) {
       if (e.target.closest("a")) {
         burger.setAttribute("aria-expanded", "false");
         drawer.setAttribute("data-open", "false");
         if (masthead) masthead.setAttribute("data-drawer-open", "false");
-        document.body.style.overflow = "";
       }
     });
     document.addEventListener("keydown", function (e) {

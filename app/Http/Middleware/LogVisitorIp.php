@@ -10,16 +10,24 @@ class LogVisitorIp
 {
     public function handle(Request $request, Closure $next)
     {
-        // Only log GET requests and exclude AJAX, admin, and background routes
-        if ($request->isMethod('GET') && !$request->ajax() && !$request->is('admin*') && !$request->is('clear*') && !$request->is('api*')) {
-            try {
-                IpAddressController::logIp($request);
-                IpAddressController::logPageView($request);
-            } catch (\Exception $e) {
-                // Silently ignore to avoid breaking any visitor request
+        $response = $next($request);
+
+        // Sirf successful HTTP 200 GET requests aur strictly Frontend Controllers ke routes ko hi log karein
+        if ($request->isMethod('GET') && !$request->ajax() && $response->getStatusCode() === 200) {
+            $route = $request->route();
+            $action = $route ? $route->getActionName() : '';
+
+            // Check if controller belongs to Frontend namespace
+            if (str_contains($action, 'App\Http\Controllers\Frontend\\')) {
+                try {
+                    IpAddressController::logIp($request);
+                    IpAddressController::logPageView($request);
+                } catch (\Exception $e) {
+                    // Silently ignore to prevent breaking visitor requests
+                }
             }
         }
 
-        return $next($request);
+        return $response;
     }
 }

@@ -47,7 +47,7 @@
  <noscript><link rel="stylesheet"
  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
 
- <link rel="stylesheet" href="{{ asset('assets/frontend/css/edion.css') }}">
+ <link rel="stylesheet" href="{{ asset('assets/frontend/css/edion.css') }}?v=2.1">
 
  <script type="application/ld+json">{
   "@@context": "https://schema.org",

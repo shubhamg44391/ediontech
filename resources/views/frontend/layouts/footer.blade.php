@@ -84,7 +84,7 @@
  target="_blank" rel="noopener noreferrer" aria-label="Chat with Edion on WhatsApp (opens in a new tab)">
  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9a9.8 9.8 0 0 0 1.35 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2h.01a9.9 9.9 0 0 0 9.93-9.9A9.9 9.9 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.54-3.95-4.68-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34l.52.01c.17 0 .39-.06.61.47l.83 2.02c.07.14.11.3.02.48l-.3.5-.29.31c-.1.1-.2.21-.09.4.11.19.5.83 1.08 1.34.74.66 1.37.87 1.56.97.19.1.3.08.41-.05l.6-.7c.16-.19.3-.14.49-.07l2 .95c.19.09.32.13.37.21.05.08.05.53-.19 1.2Z"/></svg><span>Chat on WhatsApp</span></a>
 
-<script src="{{ asset('assets/frontend/js/edion.js') }}" defer></script>
+<script src="{{ asset('assets/frontend/js/edion.js') }}?v=2.1" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style>
   .swal2-container { z-index: 9999999 !important; }
@@ -562,6 +562,26 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="ed-sec">
+        <span class="ed-mono ed-rule">Verification</span>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+            <div style="background:#ffffff; padding:6px 12px; border-radius:8px; border:1px solid #cbd5e1; display:inline-flex; align-items:center;">
+              <span id="popup-captcha-img">{!! captcha_img() !!}</span>
+            </div>
+            <button type="button" id="popupReloadCaptcha" style="display:inline-flex; align-items:center; gap:8px; background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; padding:8px 14px; font-size:13px; font-weight:600; color:#475569; cursor:pointer; transition:all 0.2s ease;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+              <span>Click to refresh code</span>
+            </button>
+          </div>
+          <div class="ed-fld wide" style="margin-top:12px;">
+            <label for="popup-captcha" style="font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#475569;">CAPTCHA <i>*</i></label>
+            <input id="popup-captcha" type="text" placeholder="Enter Captcha Code" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; padding:10px 14px; font-size:14px; width:100%; color:#0f172a;">
+            <span class="err">Enter the captcha code</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-sec">
         <span class="ed-mono ed-rule">Before we talk</span>
         <label class="ed-chk">
           <input id="ed-nda" type="checkbox">
@@ -589,16 +609,18 @@ document.addEventListener('DOMContentLoaded', function() {
   function collect(){
     const $ = id => document.getElementById(id);
     const name = $('ed-name'), email = $('ed-email'), phone = $('ed-phone'),
-          need = $('ed-need'), brief = $('ed-brief'), consent = $('ed-consent');
+          need = $('ed-need'), brief = $('ed-brief'), consent = $('ed-consent'),
+          captcha = $('popup-captcha');
 
-    if (!name || !email || !phone || !need || !brief || !consent) return false;
+    if (!name || !email || !phone || !need || !brief || !consent || !captcha) return false;
 
     const checks = [
       [name,  name.value.trim().length >= 2],
       [email, /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email.value.trim())],
       [phone, phone.value.replace(/\D/g,'').length >= 8],
       [need,  need.value !== ''],
-      [brief, brief.value.trim().length >= 10]
+      [brief, brief.value.trim().length >= 10],
+      [captcha, captcha.value.trim().length >= 1]
     ];
     checks.forEach(([el, ok]) => flag(el, !ok));
 
@@ -624,7 +646,8 @@ document.addEventListener('DOMContentLoaded', function() {
       need:    need.value,
       budget:  $('ed-budget').value,
       brief:   brief.value.trim(),
-      nda:     $('ed-nda').checked
+      nda:     $('ed-nda').checked,
+      captcha: captcha.value.trim()
     };
   }
 
@@ -668,6 +691,19 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('ed-consent-row').classList.toggle('bad', !e.target.checked);
           });
         }
+        const reloadBtn = document.getElementById('popupReloadCaptcha');
+        if (reloadBtn) {
+          reloadBtn.addEventListener('click', e => {
+            e.preventDefault();
+            fetch('{{ url("reload-captcha") }}')
+              .then(res => res.json())
+              .then(data => {
+                const img = document.getElementById('popup-captcha-img');
+                if (img) img.innerHTML = data.captcha;
+              })
+              .catch(err => console.error('Captcha refresh error:', err));
+          });
+        }
       },
       preConfirm: () => {
         Swal.resetValidationMessage();
@@ -691,14 +727,36 @@ document.addEventListener('DOMContentLoaded', function() {
             budget: data.budget,
             brief: data.brief,
             message: data.brief,
-            nda: data.nda ? 1 : 0
+            nda: data.nda ? 1 : 0,
+            captcha: data.captcha
           })
         })
         .then(res => {
-          if (!res.ok) throw new Error('Submission failed');
+          if (!res.ok) {
+            fetch('{{ url("reload-captcha") }}')
+              .then(r => r.json())
+              .then(d => {
+                const img = document.getElementById('popup-captcha-img');
+                if (img) img.innerHTML = d.captcha;
+                const inp = document.getElementById('popup-captcha');
+                if (inp) inp.value = '';
+              });
+
+            return res.json().then(errData => {
+              let errorMsg = 'Failed to submit request. Please try again.';
+              if (errData.errors) {
+                errorMsg = Object.values(errData.errors).flat().join('<br>');
+              } else if (errData.message) {
+                errorMsg = errData.message;
+              }
+              Swal.showValidationMessage(errorMsg);
+              return false;
+            });
+          }
           return res.json();
         })
         .then(resData => {
+          if (!resData || !resData.success) return false;
           return data;
         })
         .catch(err => {
@@ -732,29 +790,31 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   document.addEventListener('DOMContentLoaded', function() {
+    const ONE_DAY_MS = 24 * 60 * 60 * 1000; // 24 hours cooldown
     let sessionShown = false;
+    let isRecentlyShown = false;
+    
     try {
       sessionShown = sessionStorage.getItem('edion_consultation_popup_shown') === 'true';
+      const lastShown = parseInt(localStorage.getItem('edion_consultation_popup_last') || '0', 10);
+      if (lastShown && (Date.now() - lastShown) < ONE_DAY_MS) {
+        isRecentlyShown = true;
+      }
     } catch(e){}
 
-    if (!sessionShown) {
+    const isConsultationPage = window.location.pathname.includes('free-consultation');
+
+    // Show popup only ONCE in the whole site after 10s (not shown again until session reset or 24h)
+    if (!sessionShown && !isRecentlyShown && !isConsultationPage) {
       setTimeout(function() {
-        if (!popupFired) {
+        if (!popupFired && !window.location.pathname.includes('free-consultation')) {
           window.openEdionConsultationPopup();
         }
       }, POPUP_DELAY_MS);
     }
-
-    document.querySelectorAll('a[href*="free-consultation"], .js-open-consultation').forEach(el => {
-      el.addEventListener('click', function(e) {
-        if (window.location.pathname !== '/free-consultation') {
-          e.preventDefault();
-          window.openEdionConsultationPopup();
-        }
-      });
-    });
   });
 })();
 </script>
 </body>
 @stack('scripts')
+

@@ -16,8 +16,62 @@
  of building trust.
  </p>
 </section>
-@include('frontend.partials.badgegrid')
+<!-- @include('frontend.partials.badgegrid') -->
+<section class="awards-sec">
+ <div class="shell">
 
+  <div class="awards-grid-box" data-reveal>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/forbes1-logo.webp') }}" alt="Forbes" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best Digital Marketing Company</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/entrepreneur.webp') }}" alt="Entrepreneur" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Agency India</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/clutch.webp') }}" alt="Clutch" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Agency</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/fitsmallbusiness.webp') }}" alt="FitSmallBusiness" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Agency</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/goodfirms.webp') }}" alt="GoodFirms" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best Digital Marketing Company In India</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/hindustan.webp') }}" alt="Hindustan Times" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Top Digital Marketing Experts</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/software-world.webp') }}" alt="Software World" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best Marketing Consultant</p>
+   </div>
+   <div class="award-item">
+    <div class="award-icon-wrap">
+     <img src="{{ asset('assets/frontend/img/awards/clouds.webp') }}" alt="The Times of India" loading="lazy" decoding="async">
+    </div>
+    <p class="award-label">Best SEO Company in World</p>
+   </div>
+  </div>
+ </div>
+</section>
 <section class="band shell">
  <div class="sec-head" data-reveal>
  <div><p class="eyebrow">Current</p><h2>What we hold today</h2></div>
@@ -28,7 +82,8 @@
  </div>
  <div style="display:flex; justify-content:center; align-items:center; width:100%; height:75px; margin:auto 0;">
   <img src="{{ asset('assets/frontend/img/certified/google-partner-badge.webp') }}" alt="Google Partner" style="max-height:65px; width:auto; max-width:85%; object-fit:contain;" loading="lazy">
- </div>
+
+</div>
 </div><div class="card" data-reveal style="display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:1.75rem 1.5rem; min-height:160px;">
  <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.5rem;">
   <span class="tag" style="background:color-mix(in srgb,var(--available) 18%,transparent);color:var(--text); margin:0;">Active</span>

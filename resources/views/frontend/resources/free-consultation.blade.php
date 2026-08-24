@@ -118,101 +118,146 @@
  <span>I agree to Edion contacting me about this enquiry.
  See our <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>. <i style="color:var(--hold);font-style:normal">*</i></span></label>
  </div>
- <button class="btn btn--signal" id="fcSubmitBtn" type="submit" style="justify-content:center">
- Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
- </form>
+  <div class="field" style="margin-top:var(--sp-4); margin-bottom:var(--sp-4);">
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <div style="background:#ffffff; padding:6px 12px; border-radius:8px; border:1px solid #cbd5e1; display:inline-flex; align-items:center;">
+          <span id="fc-captcha-img">{!! captcha_img() !!}</span>
+        </div>
+        <button type="button" id="fcReloadCaptcha" style="display:inline-flex; align-items:center; gap:8px; background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; padding:8px 14px; font-size:13px; font-weight:600; color:#475569; cursor:pointer; transition:all 0.2s ease;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+          <span>Click to refresh code</span>
+        </button>
+      </div>
+      
+      <label style="display:block; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#475569; margin-top:16px; margin-bottom:8px;">CAPTCHA</label>
+      <input name="captcha" type="text" required
+        placeholder="Enter Captcha Code"
+        style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:12px 16px; font-size:15px; width:100%; color:#0f172a;">
+    </div>
+  </div>
 
- @push('scripts')
- <script>
- document.addEventListener('DOMContentLoaded', function() {
-   const consultationForm = document.getElementById('consultationForm');
-   if (consultationForm) {
-     consultationForm.addEventListener('submit', function(e) {
-       e.preventDefault();
+  <button class="btn btn--signal" id="fcSubmitBtn" type="submit" style="justify-content:center">
+  Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </form>
 
-       if (!consultationForm.checkValidity()) {
-         consultationForm.reportValidity();
-         
-         let missing = [];
-         const name = consultationForm.querySelector('input[name="name"]');
-         const email = consultationForm.querySelector('input[name="email"]');
-         const phone = consultationForm.querySelector('input[name="phone"]');
-         const interest = consultationForm.querySelector('select[name="interest"]');
-         const brief = consultationForm.querySelector('textarea[name="brief"]');
-         const consent = consultationForm.querySelector('input[name="consent"]');
+  @push('scripts')
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function refreshFcCaptcha() {
+      fetch('{{ url("reload-captcha") }}')
+        .then(res => res.json())
+        .then(data => {
+          document.querySelectorAll('#fc-captcha-img, #c-captcha-img, #captcha-img').forEach(el => {
+            el.innerHTML = data.captcha;
+          });
+        })
+        .catch(err => console.error('Captcha refresh error:', err));
+    }
 
-         if (!name || !name.value.trim()) missing.push('Full Name');
-         if (!email || !email.value.trim()) missing.push('Work Email');
-         if (!phone || !phone.value.trim()) missing.push('WhatsApp Number');
-         if (!interest || !interest.value) missing.push('What do you need');
-         if (!brief || !brief.value.trim()) missing.push('Project Brief');
-         if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('#fcReloadCaptcha, #cReloadCaptcha, #reloadCaptcha');
+      if (btn) {
+        e.preventDefault();
+        refreshFcCaptcha();
+      }
+    });
 
-         Swal.fire({
-           title: 'Validation Error',
-           html: 'Please complete all required fields:<br><br><b>' + missing.join(', ') + '</b>',
-           icon: 'warning',
-           confirmButtonColor: '#2563EB'
-         });
-         return;
-       }
+    const consultationForm = document.getElementById('consultationForm');
+    if (consultationForm) {
+      consultationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-       const btn = document.getElementById('fcSubmitBtn');
-       btn.disabled = true;
-       btn.textContent = 'Submitting...';
+        if (!consultationForm.checkValidity()) {
+          consultationForm.reportValidity();
+          
+          let missing = [];
+          const name = consultationForm.querySelector('input[name="name"]');
+          const email = consultationForm.querySelector('input[name="email"]');
+          const phone = consultationForm.querySelector('input[name="phone"]');
+          const interest = consultationForm.querySelector('select[name="interest"]');
+          const brief = consultationForm.querySelector('textarea[name="brief"]');
+          const consent = consultationForm.querySelector('input[name="consent"]');
+          const captcha = consultationForm.querySelector('input[name="captcha"]');
 
-       const formData = new FormData(consultationForm);
+          if (!name || !name.value.trim()) missing.push('Full Name');
+          if (!email || !email.value.trim()) missing.push('Work Email');
+          if (!phone || !phone.value.trim()) missing.push('WhatsApp Number');
+          if (!interest || !interest.value) missing.push('What do you need');
+          if (!brief || !brief.value.trim()) missing.push('Project Brief');
+          if (!consent || !consent.checked) missing.push('Privacy Policy agreement');
+          if (!captcha || !captcha.value.trim()) missing.push('Captcha Code');
 
-       fetch(consultationForm.action, {
-         method: 'POST',
-         headers: {
-           'X-Requested-With': 'XMLHttpRequest',
-           'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
-         },
-         body: formData
-       })
-       .then(res => {
-         if (!res.ok) {
-           return res.json().then(errData => {
-             let errorMsg = 'Please fill out all required fields correctly.';
-             if (errData.errors) {
-               errorMsg = Object.values(errData.errors).flat().join('<br>');
-             } else if (errData.message) {
-               errorMsg = errData.message;
-             }
-             Swal.fire({
-               title: 'Validation Error',
-               html: errorMsg,
-               icon: 'error',
-               confirmButtonColor: '#2563EB'
-             });
-             throw new Error(errorMsg);
-           });
-         }
-         return res.json();
-       })
-       .then(data => {
-         btn.disabled = false;
-         btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-         if (data.success) {
-           consultationForm.reset();
-           Swal.fire({
-             title: 'Success!',
-             text: data.message || 'Thank you! Your consultation request has been received.',
-             icon: 'success',
-             confirmButtonColor: '#2563EB'
-           });
-         }
-       })
-       .catch(err => {
-         btn.disabled = false;
-         btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-       });
-     });
-   }
- });
- </script>
- @endpush
+          Swal.fire({
+            title: 'Validation Error',
+            html: 'Please complete all required fields:<br><br><b>' + missing.join(', ') + '</b>',
+            icon: 'warning',
+            confirmButtonColor: '#2563EB'
+          });
+          return;
+        }
+
+        const btn = document.getElementById('fcSubmitBtn');
+        btn.disabled = true;
+        btn.textContent = 'Submitting...';
+
+        const formData = new FormData(consultationForm);
+
+        fetch(consultationForm.action, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+          },
+          body: formData
+        })
+        .then(res => {
+          if (!res.ok) {
+            refreshFcCaptcha();
+            const captchaInput = consultationForm.querySelector('input[name="captcha"]');
+            if (captchaInput) captchaInput.value = '';
+
+            return res.json().then(errData => {
+              let errorMsg = 'Please fill out all required fields correctly.';
+              if (errData.errors) {
+                errorMsg = Object.values(errData.errors).flat().join('<br>');
+              } else if (errData.message) {
+                errorMsg = errData.message;
+              }
+              Swal.fire({
+                title: 'Validation Error',
+                html: errorMsg,
+                icon: 'error',
+                confirmButtonColor: '#2563EB'
+              });
+              throw new Error(errorMsg);
+            });
+          }
+          return res.json();
+        })
+        .then(data => {
+          btn.disabled = false;
+          btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          if (data.success) {
+            consultationForm.reset();
+            refreshFcCaptcha();
+            Swal.fire({
+              title: 'Success!',
+              text: data.message || 'Thank you! Your consultation request has been received.',
+              icon: 'success',
+              confirmButtonColor: '#2563EB'
+            });
+          }
+        })
+        .catch(err => {
+          btn.disabled = false;
+          btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        });
+      });
+    }
+  });
+  </script>
+  @endpush
  </div>
  </div>
 </section>

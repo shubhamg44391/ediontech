@@ -130,7 +130,7 @@ class ResourcesController extends Controller
 
     public function submitConsultation(\Illuminate\Http\Request $request)
     {
-        $request->validate([
+        $rules = [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'nullable|string|max:100',
@@ -140,7 +140,15 @@ class ResourcesController extends Controller
             'interest' => 'nullable|string|max:255',
             'brief' => 'nullable|string',
             'message' => 'nullable|string',
-        ]);
+            'captcha' => 'required|captcha',
+        ];
+
+        // If from popup without captcha input, allow fallback if needed, but require captcha for standard submissions
+        if ($request->source === 'Consultation Popup' && !$request->has('captcha')) {
+            unset($rules['captcha']);
+        }
+
+        $request->validate($rules);
 
         $phoneVal = $request->phone ?? $request->number ?? null;
         if ($phoneVal) {
