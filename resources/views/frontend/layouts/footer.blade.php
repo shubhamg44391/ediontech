@@ -468,16 +468,131 @@ document.addEventListener('DOMContentLoaded', function() {
   .ed-top h2{font-size:27px}
   .ed-scroll{padding:0 22px;max-height:54vh}
   .ed-grid{grid-template-columns:1fr}
-  .ed-foot{padding:14px 22px}
-  .swal2-popup.ed-card .swal2-actions{padding:20px 22px 24px;flex-direction:column-reverse}
-  .swal2-styled.ed-send,.swal2-styled.ed-skip{width:100%;justify-content:center}
-  .swal2-popup.ed-card .swal2-validation-message{margin:0 22px}
+/* Popup Modal intl-tel-input styling */
+.ed-card .iti {
+  width: 100% !important;
+  display: block !important;
+  position: relative !important;
+}
+.ed-card .iti input#ed-phone,
+.ed-card .iti input[type="tel"] {
+  width: 100% !important;
+  padding-left: 95px !important;
+  padding-right: 14px !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  font: 400 15px/1.5 'Inter', sans-serif !important;
+  color: #13171B !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E2E3E6 !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  transition: border-color .16s ease, box-shadow .16s ease !important;
+}
+.ed-card .iti input#ed-phone:focus {
+  outline: none !important;
+  border-color: #13171B !important;
+  box-shadow: 0 0 0 3px rgba(19, 23, 27, .07) !important;
+}
+.ed-card .iti__selected-flag {
+  position: absolute !important;
+  top: 1px !important;
+  bottom: 1px !important;
+  left: 1px !important;
+  height: calc(100% - 2px) !important;
+  width: 86px !important;
+  padding: 0 6px 0 10px !important;
+  background: #F8FAFC !important;
+  border-right: 1px solid #E2E3E6 !important;
+  border-radius: 7px 0 0 7px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 4px !important;
+  box-sizing: border-box !important;
+}
+.ed-card .iti__flag {
+  flex-shrink: 0 !important;
+}
+.ed-card .iti__selected-dial-code {
+  color: #1E293B !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+.ed-card .iti__arrow {
+  border-top-color: #64748B !important;
+  flex-shrink: 0 !important;
+  margin-left: 2px !important;
+}
+.ed-card .iti__arrow--up {
+  border-bottom-color: #64748B !important;
+}
+.ed-card .iti__dropdown-content {
+  background: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  color: #1E293B !important;
+  z-index: 999999 !important;
+  width: 145px !important;
+  min-width: 135px !important;
+  max-width: 160px !important;
+}
+.ed-card .iti__search-input-container {
+  padding: 8px !important;
+  background: #F8FAFC !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+.ed-card .iti__search-input {
+  background: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 6px !important;
+  padding: 6px 8px !important;
+  font-size: 12px !important;
+  width: 100% !important;
+  outline: none !important;
+  color: #0F172A !important;
+  box-sizing: border-box !important;
+}
+.ed-card .iti__search-input:focus {
+  border-color: #2563EB !important;
+}
+.ed-card .iti__country-list {
+  max-height: 200px !important;
+  background: #FFFFFF !important;
+  color: #1E293B !important;
+  padding: 3px 0 !important;
+}
+.ed-card .iti__country {
+  padding: 7px 10px !important;
+  font-size: 13px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+}
+.ed-card .iti__country:hover, .ed-card .iti__country.iti__highlight {
+  background: #F1F5F9 !important;
+}
+.ed-card .iti__country-name {
+  display: none !important;
+}
+.ed-card .iti__dial-code {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+  margin-left: 6px !important;
+  font-size: 13px !important;
 }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/css/intlTelInput.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/intlTelInput.min.js"></script>
 
 <script>
 (function() {
-  const POPUP_DELAY_MS = 10000; // 1 second delay as requested
+  const POPUP_DELAY_MS = 10000; // 10 seconds delay as requested
 
   const NEEDS = [
     'Car rental or fleet software',
@@ -531,8 +646,8 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div class="ed-fld">
             <label for="ed-phone">WhatsApp number <i>*</i></label>
-            <input id="ed-phone" type="tel" autocomplete="tel" placeholder="+91 00000 00000">
-            <span class="err">Include the country code</span>
+            <input id="ed-phone" type="tel" autocomplete="tel" placeholder="00000 00000">
+            <span class="err">Enter your WhatsApp number</span>
           </div>
         </div>
       </div>
@@ -606,6 +721,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (holder) holder.classList.toggle('bad', bad);
   };
 
+  let popupIti = null;
+
   function collect(){
     const $ = id => document.getElementById(id);
     const name = $('ed-name'), email = $('ed-email'), phone = $('ed-phone'),
@@ -617,7 +734,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const checks = [
       [name,  name.value.trim().length >= 2],
       [email, /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email.value.trim())],
-      [phone, phone.value.replace(/\D/g,'').length >= 8],
+      [phone, phone.value.replace(/\D/g,'').length >= 6],
       [need,  need.value !== ''],
       [brief, brief.value.trim().length >= 10],
       [captcha, captcha.value.trim().length >= 1]
@@ -638,11 +755,28 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
 
+    let fullPhone = phone.value.trim();
+    if (popupIti) {
+      const countryData = popupIti.getSelectedCountryData();
+      const rawDigits = phone.value.trim().replace(/^\+/, '');
+      let itiNum = popupIti.getNumber();
+      if (!itiNum || !itiNum.startsWith('+')) {
+        const dialCode = countryData && countryData.dialCode ? ('+' + countryData.dialCode) : '';
+        if (dialCode && rawDigits) {
+          fullPhone = rawDigits.startsWith(countryData.dialCode) ? ('+' + rawDigits) : (dialCode + ' ' + rawDigits);
+        } else {
+          fullPhone = rawDigits;
+        }
+      } else {
+        fullPhone = itiNum;
+      }
+    }
+
     return {
       name:    name.value.trim(),
       company: $('ed-company').value.trim(),
       email:   email.value.trim(),
-      phone:   phone.value.trim(),
+      phone:   fullPhone,
       need:    need.value,
       budget:  $('ed-budget').value,
       brief:   brief.value.trim(),
@@ -691,6 +825,45 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('ed-consent-row').classList.toggle('bad', !e.target.checked);
           });
         }
+
+        const phoneEl = document.getElementById('ed-phone');
+        if (phoneEl && window.intlTelInput) {
+          popupIti = window.intlTelInput(phoneEl, {
+            preferredCountries: ["in", "ae", "sa", "us", "gb", "qa", "om", "kw", "bh", "jo", "ca", "au"],
+            initialCountry: "in",
+            showSelectedDialCode: true,
+            countrySearch: true,
+            autoPlaceholder: "polite",
+            placeholderNumberType: "MOBILE",
+            customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+              return selectedCountryPlaceholder ? selectedCountryPlaceholder.replace(/^\+?\d+\s*/, '') : "00000 00000";
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js"
+          });
+
+          fetch('https://ipapi.co/json/')
+            .then(res => res.json())
+            .then(data => {
+              if (data && data.country_code && popupIti) {
+                popupIti.setCountry(data.country_code.toLowerCase());
+              }
+            })
+            .catch(() => {
+              fetch('https://ip-api.com/json')
+                .then(res => res.json())
+                .then(data => {
+                  if (data && data.countryCode && popupIti) {
+                    popupIti.setCountry(data.countryCode.toLowerCase());
+                  }
+                })
+                .catch(() => {});
+            });
+
+          phoneEl.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9\s]/g, '');
+          });
+        }
+
         const reloadBtn = document.getElementById('popupReloadCaptcha');
         if (reloadBtn) {
           reloadBtn.addEventListener('click', e => {

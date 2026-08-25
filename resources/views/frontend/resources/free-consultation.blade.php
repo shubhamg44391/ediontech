@@ -76,9 +76,9 @@
  <input id="fc-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
  </div>
  <div class="field">
- <label for="fc-phone">WhatsApp number <i>*</i></label>
- <input id="fc-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+91 00000 00000">
- </div>
+  <label for="fc-phone">WhatsApp number <i>*</i></label>
+  <input id="fc-phone" name="phone" type="tel" required autocomplete="tel" placeholder="00000 00000">
+  </div>
  </div>
  <div class="field">
  <label for="fc-interest">What do you need? <i>*</i></label>
@@ -109,14 +109,15 @@
  <div class="field">
  <label for="fc-brief">Tell us about the project <i>*</i></label>
  <textarea id="fc-brief" name="brief" required
- placeholder="What are you building or fixing? What's the deadline? Anything already in place?"></textarea>
+ placeholder="What are you building or fixing? What's the deadline? What's already in place? Links to specs or current systems help."></textarea>
  </div>
  <div class="checks">
  <label class="check"><input type="checkbox" name="nda">
  <span>I'd like an NDA in place before we talk in detail.</span></label>
  <label class="check"><input type="checkbox" name="consent" required>
- <span>I agree to Edion contacting me about this enquiry.
- See our <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>. <i style="color:var(--hold);font-style:normal">*</i></span></label>
+ <span>I agree to Edion contacting me about this enquiry. See our
+ <a href="{{ url('/privacy-policy') }}" style="text-decoration:underline">privacy policy</a>.
+ <i style="color:var(--hold);font-style:normal">*</i></span></label>
  </div>
   <div class="field" style="margin-top:var(--sp-4); margin-bottom:var(--sp-4);">
     <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
@@ -141,9 +142,173 @@
   Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </form>
 
+@push('head')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/css/intlTelInput.css"/>
+<style>
+  .iti {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+  }
+  .iti input#fc-phone,
+  .iti input[type="tel"] {
+    width: 100% !important;
+    padding-left: 95px !important;
+    padding-right: 14px !important;
+    padding-top: 0.8125rem !important;
+    padding-bottom: 0.8125rem !important;
+    font: 400 var(--fs-body)/1.5 var(--font-body) !important;
+    color: var(--text) !important;
+    background: var(--paper-2, #FFFFFF) !important;
+    border: 1px solid var(--paper-3, #E4E8EB) !important;
+    border-radius: var(--radius, 4px) !important;
+    box-sizing: border-box !important;
+    transition: border-color .18s var(--ease), box-shadow .18s var(--ease) !important;
+  }
+  .iti input#fc-phone:focus {
+    outline: none !important;
+    border-color: var(--ink) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ink) 10%, transparent) !important;
+  }
+  .iti__selected-flag {
+    position: absolute !important;
+    top: 1px !important;
+    bottom: 1px !important;
+    left: 1px !important;
+    height: calc(100% - 2px) !important;
+    width: 86px !important;
+    padding: 0 6px 0 10px !important;
+    background: #F8FAFC !important;
+    border-right: 1px solid var(--paper-3, #E4E8EB) !important;
+    border-radius: 3px 0 0 3px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 4px !important;
+    box-sizing: border-box !important;
+  }
+  .iti__flag {
+    flex-shrink: 0 !important;
+  }
+  .iti__selected-dial-code {
+    color: #1E293B !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+  .iti__arrow {
+    border-top-color: #64748B !important;
+    flex-shrink: 0 !important;
+    margin-left: 2px !important;
+  }
+  .iti__arrow--up {
+    border-bottom-color: #64748B !important;
+  }
+  .iti__dropdown-content {
+    background: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+    color: #1E293B !important;
+    z-index: 99999 !important;
+    width: 145px !important;
+    min-width: 135px !important;
+    max-width: 160px !important;
+  }
+  .iti__search-input-container {
+    padding: 8px !important;
+    background: #F8FAFC !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+  }
+  .iti__search-input {
+    background: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 6px !important;
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+    width: 100% !important;
+    outline: none !important;
+    color: #0F172A !important;
+    box-sizing: border-box !important;
+  }
+  .iti__search-input:focus {
+    border-color: #2563EB !important;
+  }
+  .iti__country-list {
+    max-height: 200px !important;
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    padding: 3px 0 !important;
+  }
+  .iti__country {
+    padding: 7px 10px !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+  }
+  .iti__country:hover, .iti__country.iti__highlight {
+    background: #F1F5F9 !important;
+  }
+  /* Hide country name - show only flag and dial code */
+  .iti__country-name {
+    display: none !important;
+  }
+  .iti__dial-code {
+    color: #1E293B !important;
+    font-weight: 600 !important;
+    margin-left: 6px !important;
+    font-size: 13px !important;
+  }
+</style>
+@endpush
+
   @push('scripts')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/intlTelInput.min.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
+    let fcIti = null;
+    const phoneInput = document.getElementById('fc-phone');
+    if (phoneInput && window.intlTelInput) {
+      fcIti = window.intlTelInput(phoneInput, {
+        preferredCountries: ["in", "ae", "sa", "us", "gb", "qa", "om", "kw", "bh", "jo", "ca", "au"],
+        initialCountry: "in",
+        showSelectedDialCode: true,
+        countrySearch: true,
+        autoPlaceholder: "polite",
+        placeholderNumberType: "MOBILE",
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+          return selectedCountryPlaceholder ? selectedCountryPlaceholder.replace(/^\+?\d+\s*/, '') : "00000 00000";
+        },
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js"
+      });
+
+      fetch('https://ipapi.co/json/')
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.country_code) {
+            fcIti.setCountry(data.country_code.toLowerCase());
+          }
+        })
+        .catch(() => {
+          fetch('https://ip-api.com/json')
+            .then(res => res.json())
+            .then(data => {
+              if (data && data.countryCode) {
+                fcIti.setCountry(data.countryCode.toLowerCase());
+              }
+            })
+            .catch(() => {});
+        });
+
+      phoneInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9\s]/g, '');
+      });
+    }
+
     function refreshFcCaptcha() {
       fetch('{{ url("reload-captcha") }}')
         .then(res => res.json())
@@ -202,6 +367,22 @@
         btn.textContent = 'Submitting...';
 
         const formData = new FormData(consultationForm);
+        if (fcIti) {
+          const countryData = fcIti.getSelectedCountryData();
+          const rawDigits = phoneInput.value.trim().replace(/^\+/, '');
+          let fullNumber = fcIti.getNumber();
+          if (!fullNumber || !fullNumber.startsWith('+')) {
+            const dialCode = countryData && countryData.dialCode ? ('+' + countryData.dialCode) : '';
+            if (dialCode && rawDigits) {
+              fullNumber = rawDigits.startsWith(countryData.dialCode) ? ('+' + rawDigits) : (dialCode + ' ' + rawDigits);
+            } else {
+              fullNumber = rawDigits;
+            }
+          }
+          if (fullNumber) {
+            formData.set('phone', fullNumber);
+          }
+        }
 
         fetch(consultationForm.action, {
           method: 'POST',
@@ -240,6 +421,9 @@
           btn.innerHTML = 'Request my consultation<svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
           if (data.success) {
             consultationForm.reset();
+            if (fcIti) {
+              fcIti.setCountry('in');
+            }
             refreshFcCaptcha();
             Swal.fire({
               title: 'Success!',

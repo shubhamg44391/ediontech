@@ -18,7 +18,7 @@ class LeadController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'number' => 'required|string|max:10',
+            'number' => 'required|string|max:15',
             'company' => 'nullable|string',
             'message' => 'nullable|string',
         ]);
@@ -36,7 +36,7 @@ class LeadController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'number' => 'required|string|max:10',
+            'number' => 'required|string|max:15',
             'company' => 'nullable|string',
             'message' => 'nullable|string',
         ]);

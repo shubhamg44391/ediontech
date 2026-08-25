@@ -44,7 +44,13 @@
                                                 <td>{{ $leads->total() - (($leads->currentPage() - 1) * $leads->perPage() + $index) }}</td>
                                                 <td><strong>{{ $lead->name }}</strong></td>
                                                 <td><span class="fw-semibold">{{ $lead->source ?? 'Contact Us' }}</span></td>
-                                                <td>{{ $lead->number }}</td>
+                                                <td>
+                                                    @if (!empty($lead->number))
+                                                        <a href="tel:{{ $lead->number }}" class="fw-semibold text-dark text-decoration-none">{{ $lead->number }}</a>
+                                                    @else
+                                                        <span class="text-muted">—</span>
+                                                    @endif
+                                                </td>
                                                 <td style="word-break:break-word;">{{ $lead->email }}</td>
                                                 <td>{{ $lead->company ?: '—' }}</td>
                                                 <td><span class="text-truncate d-inline-block" style="max-width:180px;" title="{{ $lead->message }}">{{ \Illuminate\Support\Str::limit($lead->message, 35) }}</span></td>
@@ -97,6 +103,7 @@
                 $sourcePage = $lead->source ?? 'Contact Us';
                 $serviceNeeded = $lead->service ?? 'N/A';
                 $ndaRequested = $lead->nda ?? 'No';
+                $cleanNum = !empty($lead->number) ? preg_replace('/[^0-9]/', '', $lead->number) : null;
             @endphp
 
             <!-- View Lead Details Modal -->
@@ -128,9 +135,13 @@
                                     </p>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="fw-bold text-muted d-block small mb-1">PHONE / WHATSAPP</label>
+                                    <label class="fw-bold text-muted d-block small mb-1">PHONE / WHATSAPP NUMBER</label>
                                     <p class="fs-6 text-dark font-weight-bold bg-light p-2 rounded border mb-0">
-                                        <a href="tel:{{ $lead->number }}" class="text-dark text-decoration-none">{{ $lead->number ?? 'N/A' }}</a>
+                                        @if(!empty($lead->number))
+                                            <a href="tel:{{ $lead->number }}" class="text-dark text-decoration-none">{{ $lead->number }}</a>
+                                        @else
+                                            N/A
+                                        @endif
                                     </p>
                                 </div>
                                 <div class="col-md-6">
@@ -180,9 +191,10 @@
                                         value="{{ $lead->name }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="contact-number-{{ $lead->id }}" class="form-label">Phone Number</label>
+                                    <label for="contact-number-{{ $lead->id }}" class="form-label">Phone / WhatsApp (with Country Code)</label>
                                     <input type="text" class="form-control" id="contact-number-{{ $lead->id }}" name="number"
-                                        value="{{ $lead->number }}">
+                                        value="{{ $lead->number }}" placeholder="+91 9876543210">
+                                    <small class="text-muted">Enter full number including country code (e.g. +91, +971, +1)</small>
                                 </div>
                                 <div class="mb-3">
                                     <label for="contact-email-{{ $lead->id }}" class="form-label">Email</label>
